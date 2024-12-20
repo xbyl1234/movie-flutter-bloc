@@ -73,7 +73,8 @@ class _MainScreenState extends State<MainScreen> {
                     activeIcon: const SvgWidget(ic: kTabSelectedProfile)),
               ],
               currentIndex: state.tabIndex,
-              selectedFontSize: 14,
+              selectedFontSize: 12,
+              unselectedFontSize: 12,
               onTap: (index) {
                 BlocProvider.of<MainBloc>(context).add(TabChangeEvent(index));
               },

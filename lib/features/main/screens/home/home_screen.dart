@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMi
                       : const SizedBox(),
                   MainView(
                     movies: state.data!.newReleaseMovies,
-                    moviesTop: state.data!.topRateMovies,
+                    topMovies: state.data!.topRateMovies,
                   ),
                 ],
               ),

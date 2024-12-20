@@ -8,12 +8,12 @@ import '../widgets/title_widget.dart';
 
 class MainView extends StatelessWidget {
   final List<MovieModel> movies;
-  final List<MovieModel> moviesTop;
+  final List<MovieModel> topMovies;
 
   const MainView({
     super.key,
     required this.movies,
-    required this.moviesTop,
+    required this.topMovies,
   });
 
   @override
@@ -25,28 +25,33 @@ class MainView extends StatelessWidget {
           TitleWidget(
             title: S.of(context).title_top_movie,
             action: () {
-              Navigator.pushNamed(context, listMovieRoute, arguments: apiTopRate);
+              Navigator.pushNamed(context, listMovieRoute,
+                  arguments: apiTopRate);
             },
           ),
-          const SizedBox(
-            height: 16,
-          ),
-          MoviesWidget(items: moviesTop),
-          const SizedBox(
-            height: 20,
-          ),
+          const SizedBox(height: 16),
+          MoviesWidget(items: topMovies),
+          const SizedBox(height: 20),
           TitleWidget(
             title: S.of(context).title_new_release,
             action: () {
-              Navigator.pushNamed(context, listMovieRoute, arguments: apiNowPlaying);
+              Navigator.pushNamed(context, listMovieRoute,
+                  arguments: apiNowPlaying);
             },
           ),
-          const SizedBox(
-            height: 16,
+          const SizedBox(height: 16),
+          MoviesWidget(items: movies),
+          const SizedBox(height: 20),
+          TitleWidget(
+            title: 'Top rate',
+            action: () {
+              Navigator.pushNamed(context, listMovieRoute,
+                  arguments: apiTopRate);
+            },
           ),
-          MoviesWidget(
-            items: movies,
-          ),
+          const SizedBox(height: 16),
+          MoviesWidget(items: topMovies),
+          const SizedBox(height: 20),
         ],
       ),
     );

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../main.dart';
 
 
@@ -16,8 +15,8 @@ ThemeData themeData(BuildContext context) {
         selectedItemColor: Theme.of(context).colorScheme.primary,
         type: BottomNavigationBarType.fixed,
         unselectedItemColor: Colors.grey,
-        unselectedLabelStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.grey),
-        selectedLabelStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Theme.of(context).colorScheme.primary),
+        unselectedLabelStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.grey[500]),
+        selectedLabelStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.black),
       ),
       appBarTheme: AppBarTheme(
         scrolledUnderElevation: 0,
