@@ -3,18 +3,21 @@ import 'package:movie/features/auth/forgot_pass_word/forgot_pass_word_screen.dar
 import 'package:movie/features/auth/login/login_screen.dart';
 import 'package:movie/features/auth/sign_up/sign_up_screen.dart';
 import 'package:movie/features/comments/post_comment_screen.dart';
+import 'package:movie/features/edit_profile/edit_profile_screen.dart';
+import 'package:movie/features/language/language_screen.dart';
 import 'package:movie/features/main/bloc/main_bloc.dart';
 import 'package:movie/features/main/screens/main_screen.dart';
 import 'package:movie/features/movie_detail/presentation/screens/movie_detail_screen.dart';
 import 'package:movie/features/movies/presentation/bloc/list_movie_cubit.dart';
 import 'package:movie/features/movies/presentation/screen/list_movie_screen.dart';
+import 'package:movie/features/notification/notification_screen.dart';
 import 'package:movie/features/splash/splash_screen.dart';
+import 'package:movie/features/subscribe/subscribe_screen.dart';
 import 'package:movie/features/watch_video/watch_video_screen.dart';
 import 'package:movie/features/wellcome/bloc/well_come_bloc.dart';
 import 'package:movie/features/wellcome/wellcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../common/contants/routers.dart';
 
 class AppRouters {
@@ -78,7 +81,22 @@ class AppRouters {
             child: const MainScreen(),
           ),
         );
-
+      case editProfileRoute:
+        return MaterialPageRoute(
+          builder: (_) => const EditProfileScreen(),
+        );
+      case notificationRoute:
+        return MaterialPageRoute(
+          builder: (_) => const NotificationScreen(),
+        );
+      case languageRoute:
+        return MaterialPageRoute(
+          builder: (_) => const LanguageScreen(),
+        );
+      case subscribeRouter:
+        return MaterialPageRoute(
+          builder: (_) => const SubscribeScreen(),
+        );
       default:
         return _errorRoute();
     }

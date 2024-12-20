@@ -15,7 +15,10 @@ class ProfileScreen extends StatelessWidget {
       appBar: AppBar(
         leading: const SvgWidget(ic: 'assets/icons/ic_logo.svg'),
         title: Text('Profile',
-            style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Colors.black, fontSize: 18)),
+            style: Theme.of(context)
+                .textTheme
+                .titleMedium!
+                .copyWith(color: Colors.black, fontSize: 18)),
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
@@ -28,32 +31,50 @@ class ProfileScreen extends StatelessWidget {
             ),
             Text(
               'Andrew Ainsley',
-              style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Colors.black, fontSize: 18),
+              style: Theme.of(context)
+                  .textTheme
+                  .titleMedium!
+                  .copyWith(color: Colors.black, fontSize: 18),
             ),
             const SizedBox(
               height: 4,
             ),
-            Text('andrew_ainsley@yourdomain.com', style: Theme.of(context).textTheme.bodyMedium),
+            Text('andrew_ainsley@yourdomain.com',
+                style: Theme.of(context).textTheme.bodyMedium),
             const SizedBox(
               height: 24,
             ),
-            const AddPremium(),
+            const SubscribePremium(),
             const SizedBox(
               height: 24,
             ),
-            MenuItem(title: S.of(context).label_menu_edit_profile, icLeft: 'assets/icons/ic_person.svg', action: () {}),
+            MenuItem(
+              title: S.of(context).label_menu_edit_profile,
+              icLeft: 'assets/icons/ic_person.svg',
+              action: () => Navigator.pushNamed(context, editProfileRoute),
+            ),
             const SizedBox(
               height: 20,
             ),
-            MenuItem(title: S.of(context).label_menu_notification, icLeft: 'assets/icons/ic_noti.svg', action: () {}),
+            MenuItem(
+              title: S.of(context).label_menu_notification,
+              icLeft: 'assets/icons/ic_noti.svg',
+              action: () => Navigator.pushNamed(context, notificationRoute),
+            ),
             const SizedBox(
               height: 20,
             ),
-            MenuItem(title: S.of(context).label_menu_download, icLeft: 'assets/icons/ic_download.svg', action: () {}),
+            MenuItem(
+                title: S.of(context).label_menu_download,
+                icLeft: 'assets/icons/ic_download.svg',
+                action: () {}),
             const SizedBox(
               height: 20,
             ),
-            MenuItem(title: S.of(context).label_menu_security, icLeft: 'assets/icons/ic_security.svg', action: () {}),
+            MenuItem(
+                title: S.of(context).label_menu_security,
+                icLeft: 'assets/icons/ic_security.svg',
+                action: () {}),
             const SizedBox(
               height: 20,
             ),
@@ -65,12 +86,17 @@ class ProfileScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            MenuItem(title: S.of(context).label_menu_help_center, icLeft: 'assets/icons/ic_helper.svg', action: () {}),
+            MenuItem(
+                title: S.of(context).label_menu_help_center,
+                icLeft: 'assets/icons/ic_helper.svg',
+                action: () {}),
             const SizedBox(
               height: 20,
             ),
             MenuItem(
-                title: S.of(context).label_menu_privacy_policy, icLeft: 'assets/icons/ic_person.svg', action: () {}),
+                title: S.of(context).label_menu_privacy_policy,
+                icLeft: 'assets/icons/ic_person.svg',
+                action: () {}),
             const SizedBox(
               height: 20,
             ),
@@ -87,12 +113,14 @@ class ProfileScreen extends StatelessWidget {
                           width: MediaQuery.sizeOf(context).width,
                           decoration: const BoxDecoration(
                               color: Colors.white,
-                              borderRadius:
-                                  BorderRadius.only(topLeft: Radius.circular(16), topRight: Radius.circular(16))),
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(16),
+                                  topRight: Radius.circular(16))),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              const SvgWidget(ic: 'assets/icons/ic_divider.svg'),
+                              const SvgWidget(
+                                  ic: 'assets/icons/ic_divider.svg'),
                               const SizedBox(
                                 height: 20,
                               ),
@@ -101,18 +129,22 @@ class ProfileScreen extends StatelessWidget {
                                 style: Theme.of(context)
                                     .textTheme
                                     .titleLarge!
-                                    .copyWith(color: Theme.of(context).primaryColor),
+                                    .copyWith(
+                                        color: Theme.of(context).primaryColor),
                               ),
                               const Padding(
                                 padding: EdgeInsets.all(16),
                                 child: Divider(),
                               ),
-                              Text('Are you sure you want to log out?', style: Theme.of(context).textTheme.titleMedium),
+                              Text('Are you sure you want to log out?',
+                                  style:
+                                      Theme.of(context).textTheme.titleMedium),
                               const SizedBox(
                                 height: 20,
                               ),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   const SizedBox(
@@ -123,8 +155,13 @@ class ProfileScreen extends StatelessWidget {
                                       Navigator.pop(context);
                                     },
                                     style: TextButton.styleFrom(
-                                        backgroundColor: Colors.red.withOpacity(0.5),
-                                        minimumSize: Size((MediaQuery.sizeOf(context).width * 0.5 - 20), 46)),
+                                        backgroundColor:
+                                            Colors.red.withOpacity(0.5),
+                                        minimumSize: Size(
+                                            (MediaQuery.sizeOf(context).width *
+                                                    0.5 -
+                                                20),
+                                            46)),
                                     child: const Text('Cancel'),
                                   ),
                                   const SizedBox(
@@ -132,14 +169,26 @@ class ProfileScreen extends StatelessWidget {
                                   ),
                                   TextButton(
                                       onPressed: () {
-                                        Navigator.pushNamedAndRemoveUntil(context, loginRoute, (route) => false);
+                                        Navigator.pushNamedAndRemoveUntil(
+                                            context,
+                                            loginRoute,
+                                            (route) => false);
                                       },
                                       style: TextButton.styleFrom(
-                                          backgroundColor: Theme.of(context).primaryColor,
-                                          minimumSize: Size((MediaQuery.sizeOf(context).width * 0.5 - 20), 46)),
+                                          backgroundColor:
+                                              Theme.of(context).primaryColor,
+                                          minimumSize: Size(
+                                              (MediaQuery.sizeOf(context)
+                                                          .width *
+                                                      0.5 -
+                                                  20),
+                                              46)),
                                       child: Text(
                                         'Yes, Logout',
-                                        style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Colors.white),
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .titleMedium!
+                                            .copyWith(color: Colors.white),
                                       )),
                                   const SizedBox(
                                     width: 16,
@@ -178,30 +227,25 @@ class AvatarAccount extends StatelessWidget {
   }
 }
 
-class AddPremium extends StatelessWidget {
-  const AddPremium({super.key});
+class SubscribePremium extends StatelessWidget {
+  const SubscribePremium({super.key});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Navigator.pushNamed(context, subscribeRouter),
       child: Container(
         padding: const EdgeInsets.all(16),
         margin: const EdgeInsets.symmetric(horizontal: 16),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: Theme
-                .of(context)
-                .colorScheme
-                .primary, width: 1.5)),
+            border: Border.all(
+                color: Theme.of(context).colorScheme.primary, width: 1.5)),
         child: Row(
           children: [
             SvgWidget(
               ic: 'assets/icons/ic_ premium.svg',
-              color: Theme
-                  .of(context)
-                  .colorScheme
-                  .primary,
+              color: Theme.of(context).colorScheme.primary,
             ),
             const SizedBox(
               width: 16,
@@ -212,24 +256,16 @@ class AddPremium extends StatelessWidget {
                 children: [
                   Text(
                     'Join Premium!',
-                    style: Theme
-                        .of(context)
-                        .textTheme
-                        .titleMedium!
-                        .copyWith(color: Theme
-                        .of(context)
-                        .colorScheme
-                        .primary, fontSize: 18),
+                    style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                        color: Theme.of(context).colorScheme.primary,
+                        fontSize: 18),
                   ),
                   const SizedBox(
                     height: 4,
                   ),
                   Text(
                       'Enjoy watching Full-HD movies, without restrictions and without ads',
-                      style: Theme
-                          .of(context)
-                          .textTheme
-                          .bodyMedium),
+                      style: Theme.of(context).textTheme.bodyMedium),
                 ],
               ),
             ),
@@ -238,10 +274,7 @@ class AddPremium extends StatelessWidget {
             ),
             SvgWidget(
               ic: 'assets/icons/ic_arrow_right.svg',
-              color: Theme
-                  .of(context)
-                  .colorScheme
-                  .primary,
+              color: Theme.of(context).colorScheme.primary,
             )
           ],
         ),

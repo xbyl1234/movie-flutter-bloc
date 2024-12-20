@@ -73,12 +73,7 @@ class _MainScreenState extends State<MainScreen> {
                     activeIcon: const SvgWidget(ic: kTabSelectedProfile)),
               ],
               currentIndex: state.tabIndex,
-              selectedItemColor: Theme.of(context).colorScheme.primary,
-              type: BottomNavigationBarType.fixed,
-              unselectedItemColor: Colors.grey,
               selectedFontSize: 14,
-              unselectedLabelStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.grey),
-              selectedLabelStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Theme.of(context).colorScheme.primary),
               onTap: (index) {
                 BlocProvider.of<MainBloc>(context).add(TabChangeEvent(index));
               },

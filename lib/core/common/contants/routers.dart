@@ -9,3 +9,7 @@ const String movieDetailRoute = '/movie-detail-screen';
 const String listMovieRoute = '/list-movie-screen';
 const String watchVideoRoute = '/watch-video-screen';
 const String postCommentRoute = '/post-comment-screen';
+const String editProfileRoute = '/edit-profile-screen';
+const String notificationRoute = '/notification-screen';
+const String subscribeRouter = '/subscribe-screen';
+const String languageRoute = '/language-screen';

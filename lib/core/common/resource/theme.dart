@@ -10,8 +10,18 @@ ThemeData themeData(BuildContext context) {
       useMaterial3: true,
       textTheme: textTheme(),
       dividerTheme: const DividerThemeData(color: Color(0xFFEEEEEE)),
+      scaffoldBackgroundColor: Colors.white,
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        backgroundColor: Colors.white,
+        selectedItemColor: Theme.of(context).colorScheme.primary,
+        type: BottomNavigationBarType.fixed,
+        unselectedItemColor: Colors.grey,
+        unselectedLabelStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.grey),
+        selectedLabelStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Theme.of(context).colorScheme.primary),
+      ),
       appBarTheme: AppBarTheme(
         scrolledUnderElevation: 0,
+        backgroundColor: Colors.white,
         titleTextStyle: Theme.of(context).textTheme.titleLarge,
       ),
       inputDecorationTheme: inputDecorationTheme());

@@ -24,27 +24,28 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "app_name": MessageLookupByLibrary.simpleMessage("Ung dung"),
         "label_menu_dark_mode":
-            MessageLookupByLibrary.simpleMessage("Dark Mode"),
-        "label_menu_download": MessageLookupByLibrary.simpleMessage("Download"),
+            MessageLookupByLibrary.simpleMessage("Chế độ tối"),
+        "label_menu_download":
+            MessageLookupByLibrary.simpleMessage("Tải xuống"),
         "label_menu_edit_profile":
-            MessageLookupByLibrary.simpleMessage("Edit Profile"),
+            MessageLookupByLibrary.simpleMessage("Chỉnh sửa hồ sơ"),
         "label_menu_help_center":
-            MessageLookupByLibrary.simpleMessage("Help Center"),
-        "label_menu_language": MessageLookupByLibrary.simpleMessage("Language"),
-        "label_menu_log_out": MessageLookupByLibrary.simpleMessage("Log out"),
+            MessageLookupByLibrary.simpleMessage("Trung tâm trợ giúp"),
+        "label_menu_language": MessageLookupByLibrary.simpleMessage("Ngôn ngữ"),
+        "label_menu_log_out": MessageLookupByLibrary.simpleMessage("Đăng xuất"),
         "label_menu_notification":
-            MessageLookupByLibrary.simpleMessage("Notification"),
+            MessageLookupByLibrary.simpleMessage("Thông báo"),
         "label_menu_privacy_policy":
-            MessageLookupByLibrary.simpleMessage("Privacy Policy"),
-        "label_menu_security": MessageLookupByLibrary.simpleMessage("Security"),
+            MessageLookupByLibrary.simpleMessage("Chính sách bảo mật"),
+        "label_menu_security": MessageLookupByLibrary.simpleMessage("Bảo mật"),
         "tab_download": MessageLookupByLibrary.simpleMessage("Tải xuống"),
         "tab_home": MessageLookupByLibrary.simpleMessage("Trang chủ"),
         "tab_my_list": MessageLookupByLibrary.simpleMessage("Danh sách"),
         "tab_profile": MessageLookupByLibrary.simpleMessage("Cá nhân"),
         "title_add_text": MessageLookupByLibrary.simpleMessage("Add task"),
         "title_new_release":
-            MessageLookupByLibrary.simpleMessage("New Releases"),
+            MessageLookupByLibrary.simpleMessage("Bản phát hành mới"),
         "title_top_movie":
-            MessageLookupByLibrary.simpleMessage("Top 10 Movies This Week")
+            MessageLookupByLibrary.simpleMessage("Top 10 phim tuần này")
       };
 }
