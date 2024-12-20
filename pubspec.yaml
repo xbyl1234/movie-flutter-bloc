@@ -1,0 +1,84 @@
+name: movie
+description: "App movie."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.0.10+1
+  get_it: ^7.7.0
+  dio: ^5.4.3+1
+  intl:
+  flutter_bloc: ^8.1.5
+  equatable: ^2.0.5
+  pull_to_refresh: ^2.0.0
+  sliver_tools: ^0.2.12
+  loading_animation_widget: ^1.2.1
+  youtube_player_flutter: ^9.0.1
+  retrofit: ^4.1.0
+  logger: any
+  json_annotation: ^4.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  retrofit_generator: '>=7.0.0 <8.0.0'
+  build_runner: '>=2.3.0 <4.0.0'
+  json_serializable: ^6.6.2
+  flutter_lints: ^5.0.0
+
+flutter_intl:
+  main_locale: en
+  enabled: true
+  output_dir: lib/core/common/translations
+  arb_dir: lib/core/common/translations
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/icons/
+    - assets/images/
+
+  fonts:
+    - family: koHo_regular
+      fonts:
+        - asset: assets/fonts/KoHo-Regular.ttf
+          weight: 400
+    - family: koHo_semi_bold
+      fonts:
+        - asset: assets/fonts/KoHo-SemiBold.ttf
+          weight: 600
+    - family: koHo
+      fonts:
+        - asset: assets/fonts/KoHo-Regular.ttf
+        - asset: assets/fonts/KoHo-Italic.ttf
+          style: italic
+        - asset: assets/fonts/KoHo-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/KoHo-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/KoHo-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/KoHo-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/KoHo-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/KoHo-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+
+
