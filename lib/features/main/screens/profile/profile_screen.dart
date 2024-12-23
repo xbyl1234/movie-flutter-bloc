@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../core/common/contants/routers.dart';
+import '../../../../core/common/resource/icons.dart';
 import '../../../../core/common/translations/l10n.dart';
 import '../../../../core/common/widgets/svg_widget.dart';
 import 'widgets/menu_item.dart';
@@ -39,7 +40,7 @@ class ProfileScreen extends StatelessWidget {
             const SizedBox(
               height: 4,
             ),
-            Text('andrew_ainsley@yourdomain.com',
+            Text('flutter.dev@gmail.com',
                 style: Theme.of(context).textTheme.bodyMedium),
             const SizedBox(
               height: 24,
@@ -244,7 +245,7 @@ class SubscribePremium extends StatelessWidget {
         child: Row(
           children: [
             SvgWidget(
-              ic: 'assets/icons/ic_ premium.svg',
+              ic: icPremium,
               color: Theme.of(context).colorScheme.primary,
             ),
             const SizedBox(
@@ -255,7 +256,7 @@ class SubscribePremium extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Join Premium!',
+                    S.of(context).txt_join_premium,
                     style: Theme.of(context).textTheme.titleMedium!.copyWith(
                         color: Theme.of(context).colorScheme.primary,
                         fontSize: 18),
@@ -264,7 +265,7 @@ class SubscribePremium extends StatelessWidget {
                     height: 4,
                   ),
                   Text(
-                      'Enjoy watching Full-HD movies, without restrictions and without ads',
+                      S.of(context).txt_content_join_premium,
                       style: Theme.of(context).textTheme.bodyMedium),
                 ],
               ),
@@ -273,7 +274,7 @@ class SubscribePremium extends StatelessWidget {
               width: 16,
             ),
             SvgWidget(
-              ic: 'assets/icons/ic_arrow_right.svg',
+              ic: icArrowRight,
               color: Theme.of(context).colorScheme.primary,
             )
           ],

@@ -1,6 +1,4 @@
 {
-  "app_name": "App",
-  "title_add_text": "Add task",
   "tab_home": "Home",
   "tab_explore": "Explore",
   "tab_my_list": "My List",
@@ -16,5 +14,17 @@
   "label_menu_dark_mode": "Dark Mode",
   "label_menu_language": "Language",
   "title_top_movie": "Top 10 Movies This Week",
-  "title_new_release": "New Releases"
+  "title_new_release": "New Releases",
+  "title_subscribe_to_premium": "Subscribe to Premium",
+  "content_subscribe_to_premium": "Enjoy watching Full-HD movies, without restrictions and without ads",
+  "txt_month": "month",
+  "txt_year": "year",
+  "title_payment": "Payment",
+  "txt_watch_all_you_want_ad_free": "Watch all you want. Ad-free.",
+  "txt_allows_streaming_of4k": "Allows streaming of 4K.",
+  "txt_video_audio_quality_is_better": "Video & Audio Quality is Better.",
+  "txt_join_premium": "Join Premium!",
+  "txt_content_join_premium": "Enjoy watching Full-HD movies, without restrictions and without ads",
+  "txt_select_payment_method": "Select the payment method you want to use.",
+  "btn_continue": "Continue"
 }

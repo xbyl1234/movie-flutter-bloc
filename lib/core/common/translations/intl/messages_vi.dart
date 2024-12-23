@@ -22,7 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "app_name": MessageLookupByLibrary.simpleMessage("Ung dung"),
+        "btn_continue": MessageLookupByLibrary.simpleMessage("Continue"),
+        "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
+            "Thưởng thức phim Full-HD, không giới hạn và không có quảng cáo"),
         "label_menu_dark_mode":
             MessageLookupByLibrary.simpleMessage("Chế độ tối"),
         "label_menu_download":
@@ -39,13 +41,31 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Chính sách bảo mật"),
         "label_menu_security": MessageLookupByLibrary.simpleMessage("Bảo mật"),
         "tab_download": MessageLookupByLibrary.simpleMessage("Tải xuống"),
+        "tab_explore": MessageLookupByLibrary.simpleMessage("Khám phá"),
         "tab_home": MessageLookupByLibrary.simpleMessage("Trang chủ"),
         "tab_my_list": MessageLookupByLibrary.simpleMessage("Danh sách"),
         "tab_profile": MessageLookupByLibrary.simpleMessage("Cá nhân"),
-        "title_add_text": MessageLookupByLibrary.simpleMessage("Add task"),
         "title_new_release":
             MessageLookupByLibrary.simpleMessage("Bản phát hành mới"),
+        "title_payment": MessageLookupByLibrary.simpleMessage("Thanh toán"),
+        "title_subscribe_to_premium":
+            MessageLookupByLibrary.simpleMessage("Đăng ký Premium"),
         "title_top_movie":
-            MessageLookupByLibrary.simpleMessage("Top 10 phim tuần này")
+            MessageLookupByLibrary.simpleMessage("Top 10 phim tuần này"),
+        "txt_allows_streaming_of4k": MessageLookupByLibrary.simpleMessage(
+            "Cho phép phát trực tuyến 4K."),
+        "txt_content_join_premium": MessageLookupByLibrary.simpleMessage(
+            "Thưởng thức phim Full-HD, không giới hạn và không có quảng cáo"),
+        "txt_join_premium":
+            MessageLookupByLibrary.simpleMessage("Đăng ký Premium!"),
+        "txt_month": MessageLookupByLibrary.simpleMessage("tháng"),
+        "txt_select_payment_method": MessageLookupByLibrary.simpleMessage(
+            "Chọn phương thức thanh toán bạn muốn sử dụng."),
+        "txt_video_audio_quality_is_better":
+            MessageLookupByLibrary.simpleMessage(
+                "Chất lượng video và âm thanh tốt hơn."),
+        "txt_watch_all_you_want_ad_free": MessageLookupByLibrary.simpleMessage(
+            "Xem mọi thứ bạn muốn. Không có quảng cáo."),
+        "txt_year": MessageLookupByLibrary.simpleMessage("năm")
       };
 }

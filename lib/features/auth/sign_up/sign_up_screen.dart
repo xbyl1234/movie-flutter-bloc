@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../core/common/contants/routers.dart';
-import '../../../core/common/widgets/button_widget.dart';
+import '../../../core/common/widgets/custom_button.dart';
 import '../../../core/common/widgets/svg_widget.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -70,7 +70,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             const SizedBox(
               height: 24,
             ),
-            ButtonWidget(
+            CustomButton(
                 btnText: 'Sign Up',
                 action: () => Navigator.pushNamedAndRemoveUntil(context, mainRoute, (route) => false)),
             const SizedBox(

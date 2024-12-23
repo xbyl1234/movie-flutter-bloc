@@ -2,9 +2,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:movie/core/common/widgets/custom_button.dart';
 
 import '../../../core/common/contants/routers.dart';
-import '../../../core/common/widgets/button_widget.dart';
 import '../../../core/common/widgets/svg_widget.dart';
 import '../../../core/common/widgets/text_widget.dart';
 
@@ -116,7 +116,7 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(
               height: 20,
             ),
-            ButtonWidget(
+            CustomButton(
                 btnText: 'Login',
                 action: () => Navigator.pushNamedAndRemoveUntil(context, mainRoute, (route) => false)),
             const SizedBox(

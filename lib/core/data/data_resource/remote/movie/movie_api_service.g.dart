@@ -20,8 +20,8 @@ class _MovieApiService implements MovieApiService {
 
   @override
   Future<MovieResponse> getMoviesNowPlaying(
-    lang,
-    page,
+    String lang,
+    int page,
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -29,7 +29,7 @@ class _MovieApiService implements MovieApiService {
       r'page': page,
     };
     final _headers = <String, dynamic>{};
-    const Map<String, dynamic>? _data = null;
+    final Map<String, dynamic>? _data = null;
     final _result = await _dio
         .fetch<Map<String, dynamic>>(_setStreamType<MovieResponse>(Options(
       method: 'GET',
@@ -42,15 +42,19 @@ class _MovieApiService implements MovieApiService {
               queryParameters: queryParameters,
               data: _data,
             )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = await compute(deserializeMovieResponse, _result.data!);
     return value;
   }
 
   @override
   Future<MovieResponse> getMoviesPopular(
-    lang,
-    page,
+    String lang,
+    int page,
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -58,7 +62,7 @@ class _MovieApiService implements MovieApiService {
       r'page': page,
     };
     final _headers = <String, dynamic>{};
-    const Map<String, dynamic>? _data = null;
+    final Map<String, dynamic>? _data = null;
     final _result = await _dio
         .fetch<Map<String, dynamic>>(_setStreamType<MovieResponse>(Options(
       method: 'GET',
@@ -71,17 +75,21 @@ class _MovieApiService implements MovieApiService {
               queryParameters: queryParameters,
               data: _data,
             )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = await compute(deserializeMovieResponse, _result.data!);
     return value;
   }
 
   @override
   Future<MovieResponse> searchMovies(
-    query,
-    includeAdult,
-    lang,
-    page,
+    String query,
+    bool includeAdult,
+    String lang,
+    int page,
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -91,7 +99,7 @@ class _MovieApiService implements MovieApiService {
       r'page': page,
     };
     final _headers = <String, dynamic>{};
-    const Map<String, dynamic>? _data = null;
+    final Map<String, dynamic>? _data = null;
     final _result = await _dio
         .fetch<Map<String, dynamic>>(_setStreamType<MovieResponse>(Options(
       method: 'GET',
@@ -104,15 +112,19 @@ class _MovieApiService implements MovieApiService {
               queryParameters: queryParameters,
               data: _data,
             )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = await compute(deserializeMovieResponse, _result.data!);
     return value;
   }
 
   @override
   Future<MovieResponse> getMoviesTopRate(
-    lang,
-    page,
+    String lang,
+    int page,
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -120,7 +132,7 @@ class _MovieApiService implements MovieApiService {
       r'page': page,
     };
     final _headers = <String, dynamic>{};
-    const Map<String, dynamic>? _data = null;
+    final Map<String, dynamic>? _data = null;
     final _result = await _dio
         .fetch<Map<String, dynamic>>(_setStreamType<MovieResponse>(Options(
       method: 'GET',
@@ -133,17 +145,21 @@ class _MovieApiService implements MovieApiService {
               queryParameters: queryParameters,
               data: _data,
             )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = await compute(deserializeMovieResponse, _result.data!);
     return value;
   }
 
   @override
   Future<MovieResponse> getListMovies(
-    lang,
-    page,
-    path,
-    id,
+    String lang,
+    int page,
+    String path,
+    String id,
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -151,7 +167,7 @@ class _MovieApiService implements MovieApiService {
       r'page': page,
     };
     final _headers = <String, dynamic>{};
-    const Map<String, dynamic>? _data = null;
+    final Map<String, dynamic>? _data = null;
     final _result = await _dio
         .fetch<Map<String, dynamic>>(_setStreamType<MovieResponse>(Options(
       method: 'GET',
@@ -164,17 +180,21 @@ class _MovieApiService implements MovieApiService {
               queryParameters: queryParameters,
               data: _data,
             )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = await compute(deserializeMovieResponse, _result.data!);
     return value;
   }
 
   @override
-  Future<MovieModel?> getMovieDetail(id) async {
+  Future<MovieModel?> getMovieDetail(String id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    const Map<String, dynamic>? _data = null;
+    final Map<String, dynamic>? _data = null;
     final _result = await _dio
         .fetch<Map<String, dynamic>?>(_setStreamType<MovieModel>(Options(
       method: 'GET',
@@ -187,7 +207,11 @@ class _MovieApiService implements MovieApiService {
               queryParameters: queryParameters,
               data: _data,
             )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = _result.data == null
         ? null
         : await compute(deserializeMovieModel, _result.data!);
@@ -195,11 +219,11 @@ class _MovieApiService implements MovieApiService {
   }
 
   @override
-  Future<ReviewsResponse> getReviewsMovie(id) async {
+  Future<ReviewsResponse> getReviewsMovie(String id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    const Map<String, dynamic>? _data = null;
+    final Map<String, dynamic>? _data = null;
     final _result = await _dio
         .fetch<Map<String, dynamic>>(_setStreamType<ReviewsResponse>(Options(
       method: 'GET',
@@ -212,17 +236,21 @@ class _MovieApiService implements MovieApiService {
               queryParameters: queryParameters,
               data: _data,
             )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = await compute(deserializeReviewsResponse, _result.data!);
     return value;
   }
 
   @override
-  Future<TrailerResponse> getTrailerMovie(id) async {
+  Future<TrailerResponse> getTrailerMovie(String id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    const Map<String, dynamic>? _data = null;
+    final Map<String, dynamic>? _data = null;
     final _result = await _dio
         .fetch<Map<String, dynamic>>(_setStreamType<TrailerResponse>(Options(
       method: 'GET',
@@ -235,7 +263,11 @@ class _MovieApiService implements MovieApiService {
               queryParameters: queryParameters,
               data: _data,
             )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = await compute(deserializeTrailerResponse, _result.data!);
     return value;
   }
@@ -251,5 +283,22 @@ class _MovieApiService implements MovieApiService {
       }
     }
     return requestOptions;
+  }
+
+  String _combineBaseUrls(
+    String dioBaseUrl,
+    String? baseUrl,
+  ) {
+    if (baseUrl == null || baseUrl.trim().isEmpty) {
+      return dioBaseUrl;
+    }
+
+    final url = Uri.parse(baseUrl);
+
+    if (url.isAbsolute) {
+      return url.toString();
+    }
+
+    return Uri.parse(dioBaseUrl).resolveUri(url).toString();
   }
 }

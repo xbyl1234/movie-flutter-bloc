@@ -1,6 +1,5 @@
-
 import 'package:get_it/get_it.dart';
-
+import 'package:movie/features/payments/bloc/payments_bloc.dart';
 import '../core/data/data_resource/remote/movie/movie_api_service.dart';
 import '../core/data/data_resource/remote/movie/search_movie_api_service.dart';
 import '../core/network/movie_provider.dart';
@@ -56,4 +55,6 @@ Future<void> init() async {
       () => SearchMoviesRepositoryImpl(sl.get()));
   sl.registerLazySingleton<SearchUseCase>(() => SearchUseCase(sl.get()));
   sl.registerLazySingleton<ExploreCubit>(() => ExploreCubit(sl.get()));
+
+  sl.registerFactory<PaymentsBloc>(() => PaymentsBloc());
 }

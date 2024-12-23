@@ -11,3 +11,7 @@ const kTabExplore = '${kBaseAsset}ic_tab_explore.svg';
 const kTabMyList = '${kBaseAsset}ic_tab_my_list.svg';
 const kTabDownload = '${kBaseAsset}ic_tab_download.svg';
 const kTabProfile = '${kBaseAsset}ic_tab_profile.svg';
+
+const icPremium = '${kBaseAsset}ic_ premium.svg';
+const icScannerCard = '${kBaseAsset}ic_scanner_card.svg';
+const icArrowRight = '${kBaseAsset}ic_arrow_right.svg';

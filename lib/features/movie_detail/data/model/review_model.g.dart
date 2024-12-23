@@ -8,12 +8,12 @@ part of 'review_model.dart';
 
 ReviewsResponse _$ReviewsResponseFromJson(Map<String, dynamic> json) =>
     ReviewsResponse(
-      page: json['page'] as int,
+      page: (json['page'] as num).toInt(),
       reviews: (json['results'] as List<dynamic>)
           .map((e) => ReviewModel.fromJson(e as Map<String, dynamic>))
           .toList(),
-      totalPages: json['total_pages'] as int,
-      totalResults: json['total_results'] as int,
+      totalPages: (json['total_pages'] as num).toInt(),
+      totalResults: (json['total_results'] as num).toInt(),
     );
 
 ReviewModel _$ReviewModelFromJson(Map<String, dynamic> json) => ReviewModel(

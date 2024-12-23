@@ -50,26 +50,6 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `App`
-  String get app_name {
-    return Intl.message(
-      'App',
-      name: 'app_name',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Add task`
-  String get title_add_text {
-    return Intl.message(
-      'Add task',
-      name: 'title_add_text',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Home`
   String get tab_home {
     return Intl.message(
@@ -225,6 +205,126 @@ class S {
     return Intl.message(
       'New Releases',
       name: 'title_new_release',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Subscribe to Premium`
+  String get title_subscribe_to_premium {
+    return Intl.message(
+      'Subscribe to Premium',
+      name: 'title_subscribe_to_premium',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enjoy watching Full-HD movies, without restrictions and without ads`
+  String get content_subscribe_to_premium {
+    return Intl.message(
+      'Enjoy watching Full-HD movies, without restrictions and without ads',
+      name: 'content_subscribe_to_premium',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `month`
+  String get txt_month {
+    return Intl.message(
+      'month',
+      name: 'txt_month',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `year`
+  String get txt_year {
+    return Intl.message(
+      'year',
+      name: 'txt_year',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment`
+  String get title_payment {
+    return Intl.message(
+      'Payment',
+      name: 'title_payment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Watch all you want. Ad-free.`
+  String get txt_watch_all_you_want_ad_free {
+    return Intl.message(
+      'Watch all you want. Ad-free.',
+      name: 'txt_watch_all_you_want_ad_free',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Allows streaming of 4K.`
+  String get txt_allows_streaming_of4k {
+    return Intl.message(
+      'Allows streaming of 4K.',
+      name: 'txt_allows_streaming_of4k',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Video & Audio Quality is Better.`
+  String get txt_video_audio_quality_is_better {
+    return Intl.message(
+      'Video & Audio Quality is Better.',
+      name: 'txt_video_audio_quality_is_better',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Join Premium!`
+  String get txt_join_premium {
+    return Intl.message(
+      'Join Premium!',
+      name: 'txt_join_premium',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enjoy watching Full-HD movies, without restrictions and without ads`
+  String get txt_content_join_premium {
+    return Intl.message(
+      'Enjoy watching Full-HD movies, without restrictions and without ads',
+      name: 'txt_content_join_premium',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select the payment method you want to use.`
+  String get txt_select_payment_method {
+    return Intl.message(
+      'Select the payment method you want to use.',
+      name: 'txt_select_payment_method',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue`
+  String get btn_continue {
+    return Intl.message(
+      'Continue',
+      name: 'btn_continue',
       desc: '',
       args: [],
     );

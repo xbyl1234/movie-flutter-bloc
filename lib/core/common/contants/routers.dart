@@ -13,3 +13,6 @@ const String editProfileRoute = '/edit-profile-screen';
 const String notificationRoute = '/notification-screen';
 const String subscribeRouter = '/subscribe-screen';
 const String languageRoute = '/language-screen';
+const String paymentsRoute = '/payments-screen';
+const String confirmPaymentsRoute = '/confirm-payments-screen';
+const String addCardRoute = '/add-card-screen';

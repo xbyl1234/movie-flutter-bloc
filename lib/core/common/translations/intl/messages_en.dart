@@ -22,7 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "app_name": MessageLookupByLibrary.simpleMessage("App"),
+        "btn_continue": MessageLookupByLibrary.simpleMessage("Continue"),
+        "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
+            "Enjoy watching Full-HD movies, without restrictions and without ads"),
         "label_menu_dark_mode":
             MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "label_menu_download": MessageLookupByLibrary.simpleMessage("Download"),
@@ -42,10 +44,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "tab_home": MessageLookupByLibrary.simpleMessage("Home"),
         "tab_my_list": MessageLookupByLibrary.simpleMessage("My List"),
         "tab_profile": MessageLookupByLibrary.simpleMessage("Profile"),
-        "title_add_text": MessageLookupByLibrary.simpleMessage("Add task"),
         "title_new_release":
             MessageLookupByLibrary.simpleMessage("New Releases"),
+        "title_payment": MessageLookupByLibrary.simpleMessage("Payment"),
+        "title_subscribe_to_premium":
+            MessageLookupByLibrary.simpleMessage("Subscribe to Premium"),
         "title_top_movie":
-            MessageLookupByLibrary.simpleMessage("Top 10 Movies This Week")
+            MessageLookupByLibrary.simpleMessage("Top 10 Movies This Week"),
+        "txt_allows_streaming_of4k":
+            MessageLookupByLibrary.simpleMessage("Allows streaming of 4K."),
+        "txt_content_join_premium": MessageLookupByLibrary.simpleMessage(
+            "Enjoy watching Full-HD movies, without restrictions and without ads"),
+        "txt_join_premium":
+            MessageLookupByLibrary.simpleMessage("Join Premium!"),
+        "txt_month": MessageLookupByLibrary.simpleMessage("month"),
+        "txt_select_payment_method": MessageLookupByLibrary.simpleMessage(
+            "Select the payment method you want to use."),
+        "txt_video_audio_quality_is_better":
+            MessageLookupByLibrary.simpleMessage(
+                "Video & Audio Quality is Better."),
+        "txt_watch_all_you_want_ad_free": MessageLookupByLibrary.simpleMessage(
+            "Watch all you want. Ad-free."),
+        "txt_year": MessageLookupByLibrary.simpleMessage("year")
       };
 }

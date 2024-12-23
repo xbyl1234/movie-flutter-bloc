@@ -1,8 +1,11 @@
+import 'package:movie/core/common/widgets/custom_error_widget.dart';
 import 'package:movie/di/dependency_injection.dart';
+import 'package:movie/features/add_card/add_card_screen.dart';
 import 'package:movie/features/auth/forgot_pass_word/forgot_pass_word_screen.dart';
 import 'package:movie/features/auth/login/login_screen.dart';
 import 'package:movie/features/auth/sign_up/sign_up_screen.dart';
 import 'package:movie/features/comments/post_comment_screen.dart';
+import 'package:movie/features/confirm_payment/confirm_payment_screen.dart';
 import 'package:movie/features/edit_profile/edit_profile_screen.dart';
 import 'package:movie/features/language/language_screen.dart';
 import 'package:movie/features/main/bloc/main_bloc.dart';
@@ -11,6 +14,8 @@ import 'package:movie/features/movie_detail/presentation/screens/movie_detail_sc
 import 'package:movie/features/movies/presentation/bloc/list_movie_cubit.dart';
 import 'package:movie/features/movies/presentation/screen/list_movie_screen.dart';
 import 'package:movie/features/notification/notification_screen.dart';
+import 'package:movie/features/payments/bloc/payments_bloc.dart';
+import 'package:movie/features/payments/payments_screen.dart';
 import 'package:movie/features/splash/splash_screen.dart';
 import 'package:movie/features/subscribe/subscribe_screen.dart';
 import 'package:movie/features/watch_video/watch_video_screen.dart';
@@ -27,10 +32,10 @@ class AppRouters {
   Route<dynamic> generateRoute(RouteSettings settings) {
     final args = settings.arguments;
     switch (settings.name) {
-      case splashRoute:
-        return MaterialPageRoute(
-          builder: (_) => const SplashScreen(),
-        );
+      // case splashRoute:
+      //   return MaterialPageRoute(
+      //     builder: (_) => const SplashScreen(),
+      //   );
       case welComeRoute:
         return MaterialPageRoute(
             builder: (_) => BlocProvider<WellComeBloc>.value(
@@ -38,13 +43,9 @@ class AppRouters {
                   child: const WellComeScreen(),
                 ));
       case loginRoute:
-        return MaterialPageRoute(
-          builder: (_) => const LoginScreen(),
-        );
+        return MaterialPageRoute(builder: (_) => const LoginScreen());
       case signUpRoute:
-        return MaterialPageRoute(
-          builder: (_) => const SignUpScreen(),
-        );
+        return MaterialPageRoute(builder: (_) => const SignUpScreen());
       case forgotPassRoute:
         return MaterialPageRoute(
           builder: (_) => const ForgotPassWordScreen(),
@@ -70,9 +71,7 @@ class AppRouters {
         );
       case postCommentRoute:
         return MaterialPageRoute(
-          builder: (_) => PostCommentsScreen(
-            id: args as String,
-          ),
+          builder: (_) => PostCommentsScreen(id: args as String),
         );
       case mainRoute:
         return MaterialPageRoute(
@@ -82,36 +81,32 @@ class AppRouters {
           ),
         );
       case editProfileRoute:
-        return MaterialPageRoute(
-          builder: (_) => const EditProfileScreen(),
-        );
+        return MaterialPageRoute(builder: (_) => const EditProfileScreen());
       case notificationRoute:
-        return MaterialPageRoute(
-          builder: (_) => const NotificationScreen(),
-        );
+        return MaterialPageRoute(builder: (_) => const NotificationScreen());
       case languageRoute:
         return MaterialPageRoute(
           builder: (_) => const LanguageScreen(),
         );
       case subscribeRouter:
+        return MaterialPageRoute(builder: (_) => const SubscribeScreen());
+      case paymentsRoute:
         return MaterialPageRoute(
-          builder: (_) => const SubscribeScreen(),
+          builder: (_) => PaymentsScreen(
+            price: args as String,
+          ),
+        );
+      case confirmPaymentsRoute:
+        return MaterialPageRoute(
+            builder: (_) => ConfirmPaymentScreen(
+                  price: args as String,
+                ));
+      case addCardRoute:
+        return MaterialPageRoute(
+          builder: (_) => const AddCardScreen(),
         );
       default:
-        return _errorRoute();
+        return MaterialPageRoute(builder: (_) => CustomErrorWidget());
     }
-  }
-
-  static Route<dynamic> _errorRoute() {
-    return MaterialPageRoute(builder: (_) {
-      return Scaffold(
-        appBar: AppBar(
-          title: const Text('Error'),
-        ),
-        body: const Center(
-          child: Text('ERROR'),
-        ),
-      );
-    });
   }
 }

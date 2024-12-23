@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../core/common/resource/icons.dart';
 import '../../../../../core/common/widgets/svg_widget.dart';
 
 class MenuItem extends StatelessWidget {
@@ -28,7 +29,7 @@ class MenuItem extends StatelessWidget {
             style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Colors.black, fontSize: 16),
           ),
           const Spacer(),
-          const SvgWidget(ic: 'assets/icons/ic_arrow_right.svg'),
+          SvgWidget(ic: icArrowRight),
           const SizedBox(
             width: 16,
           ),

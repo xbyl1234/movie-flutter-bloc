@@ -6,6 +6,7 @@ import 'core/common/contants/language_code.dart';
 import 'core/common/contants/routers.dart';
 import 'core/common/resource/theme.dart';
 import 'core/common/translations/l10n.dart';
+import 'core/common/widgets/custom_error_widget.dart';
 import 'core/config/app_config.dart';
 import 'core/config/app_routes.dart';
 import 'di/dependency_injection.dart';
@@ -47,11 +48,17 @@ class _AppState extends State<App> {
           BlocProvider<ExploreCubit>.value(value: sl<ExploreCubit>()),
         ],
         child: MaterialApp(
-          initialRoute: splashRoute,
+          initialRoute: mainRoute,
           onGenerateRoute: AppRouters().generateRoute,
           title: 'Movie',
           debugShowCheckedModeBanner: false,
           theme: themeData(context),
+          builder: (context, child) {
+            ErrorWidget.builder = (errorDetails) {
+              return const CustomErrorWidget();
+            };
+            return child!;
+          },
           localizationsDelegates: const [
             S.delegate,
             GlobalMaterialLocalizations.delegate,

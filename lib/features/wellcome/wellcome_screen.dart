@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movie/core/common/widgets/custom_button.dart';
 import '../../core/common/contants/routers.dart';
-import '../../core/common/widgets/button_widget.dart';
 import 'bloc/well_come_bloc.dart';
 
 class WellComeScreen extends StatelessWidget {
@@ -95,7 +95,7 @@ class WellComeScreen extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 24),
-                        child: ButtonWidget(
+                        child: CustomButton(
                             btnText: 'Get Started',
                             action: () => context.read<WellComeBloc>().add(ActionButtonEvent())),
                       ),
