@@ -390,13 +390,13 @@ class S {
     );
   }
 
-  /// `You have successfully subscribed 1 month premium. Enjoy the benefits!`
-  String get txt_content_congratulations {
+  /// `You have successfully subscribed {time} month premium. Enjoy the benefits!`
+  String txt_content_congratulations(int time) {
     return Intl.message(
-      'You have successfully subscribed 1 month premium. Enjoy the benefits!',
+      'You have successfully subscribed $time month premium. Enjoy the benefits!',
       name: 'txt_content_congratulations',
       desc: '',
-      args: [],
+      args: [time],
     );
   }
 }

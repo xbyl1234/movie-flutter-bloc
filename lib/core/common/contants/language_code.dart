@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class LanguageLocale {
-  static const Locale vn = Locale('vi', 'VN');
-  static const Locale en = Locale('en', 'US');
+  static const Locale vn = Locale('vi');
+  static const Locale en = Locale('en');
 
   static Locale getLocaleByName({required String locale}) {
     if (locale.contains(LanguageName.vn)) {

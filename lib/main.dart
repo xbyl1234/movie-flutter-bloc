@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'dart:io';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'core/common/contants/language_code.dart';
+import 'package:movie/core/cubit/app_cubit.dart';
 import 'core/common/contants/routers.dart';
 import 'core/common/resource/theme.dart';
 import 'core/common/translations/l10n.dart';
@@ -20,57 +19,44 @@ void main() async {
   runApp(const App());
 }
 
-class App extends StatefulWidget {
+class App extends StatelessWidget {
   const App({super.key});
-
-  @override
-  State<App> createState() => _AppState();
-}
-
-class _AppState extends State<App> {
-  late Locale _locale;
-
-  @override
-  void initState() {
-    super.initState();
-    if (Platform.localeName == LanguageName.vn) {
-      _locale = LanguageLocale.vn;
-    } else {
-      _locale = LanguageLocale.en;
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
         providers: [
+          BlocProvider(create: (_) => sl.get<AppCubit>()..getLocale()),
           BlocProvider<HomeCubit>.value(value: sl<HomeCubit>()),
           BlocProvider<ExploreCubit>.value(value: sl<ExploreCubit>()),
         ],
-        child: MaterialApp(
-          initialRoute: mainRoute,
-          onGenerateRoute: AppRouters().generateRoute,
-          title: 'Movie',
-          debugShowCheckedModeBanner: false,
-          theme: themeData(context),
-          builder: (context, child) {
-            ErrorWidget.builder = (errorDetails) {
-              return const CustomErrorWidget();
-            };
-            return child!;
+        child: BlocBuilder<AppCubit, AppState>(
+          builder: (context, state) {
+            return MaterialApp(
+              initialRoute: mainRoute,
+              onGenerateRoute: AppRouters().generateRoute,
+              title: 'Movie',
+              debugShowCheckedModeBanner: false,
+              theme: themeData(context),
+              builder: (context, child) {
+                ErrorWidget.builder = (errorDetails) {
+                  return const CustomErrorWidget();
+                };
+                return child!;
+              },
+              localizationsDelegates: const [
+                S.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+              ],
+              supportedLocales: const [
+                Locale("vi"),
+                Locale("en"),
+              ],
+              locale: state.locale,
+            );
           },
-          localizationsDelegates: const [
-            S.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-          ],
-          supportedLocales: const [
-            LanguageLocale.vn,
-            LanguageLocale.en,
-          ],
-          locale: _locale,
         ));
   }
 }
-
-

@@ -20,6 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'vi';
 
+  static String m0(time) =>
+      "Bạn đã đăng ký thành công gói cao cấp ${time} tháng. Hãy tận hưởng những lợi ích!";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "btn_change": MessageLookupByLibrary.simpleMessage("Change"),
@@ -59,9 +62,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Cho phép phát trực tuyến 4K."),
         "txt_amount": MessageLookupByLibrary.simpleMessage("Amount"),
         "txt_congratulations":
-            MessageLookupByLibrary.simpleMessage("Congratulations!"),
-        "txt_content_congratulations": MessageLookupByLibrary.simpleMessage(
-            "You have successfully subscribed 1 month premium. Enjoy the benefits!"),
+            MessageLookupByLibrary.simpleMessage("Xin chúc mừng!"),
+        "txt_content_congratulations": m0,
         "txt_content_join_premium": MessageLookupByLibrary.simpleMessage(
             "Thưởng thức phim Full-HD, không giới hạn và không có quảng cáo"),
         "txt_join_premium":

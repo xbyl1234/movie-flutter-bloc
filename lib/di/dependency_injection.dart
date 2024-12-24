@@ -1,6 +1,7 @@
 import 'package:get_it/get_it.dart';
 import 'package:movie/features/confirm_payment/bloc/confirm_payment_bloc.dart';
 import 'package:movie/features/payments/bloc/payments_bloc.dart';
+import '../core/cubit/app_cubit.dart';
 import '../core/data/data_resource/remote/movie/movie_api_service.dart';
 import '../core/data/data_resource/remote/movie/search_movie_api_service.dart';
 import '../core/network/movie_provider.dart';
@@ -25,6 +26,8 @@ import '../features/movies/presentation/bloc/list_movie_cubit.dart';
 final GetIt sl = GetIt.instance;
 
 Future<void> init() async {
+  sl.registerSingleton(AppCubit());
+
   sl.registerSingleton<MovieProvider>((MovieProvider()));
   sl.registerSingleton<MovieApiService>((MovieApiService(sl.get())));
 
@@ -43,13 +46,16 @@ Future<void> init() async {
   sl.registerSingleton(ReviewUseCase(sl.get()));
   sl.registerSingleton(TrailerUseCase(sl.get()));
 
-  sl.registerSingleton<HomeCubit>(
-      HomeCubit(movieDetailUseCase: sl.get(), listMovieUseCase: sl.get()));
+  sl.registerSingleton<HomeCubit>(HomeCubit(
+    movieDetailUseCase: sl.get(),
+    listMovieUseCase: sl.get(),
+  ));
   sl.registerFactory(() => MovieDetailBlocCubit(
-      detailUseCase: sl.get(),
-      listMovieUseCase: sl.get(),
-      reviewUseCase: sl.get(),
-      trailerUseCase: sl.get()));
+        detailUseCase: sl.get(),
+        listMovieUseCase: sl.get(),
+        reviewUseCase: sl.get(),
+        trailerUseCase: sl.get(),
+      ));
   sl.registerFactory<SimilarMovieBlocCubit>(
       () => SimilarMovieBlocCubit(sl.get()));
   sl.registerLazySingleton<SearchMoviesRepository>(

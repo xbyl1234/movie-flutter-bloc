@@ -6,7 +6,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../core/common/resource/icons.dart';
 import '../../../core/common/translations/l10n.dart';
 import '../../../core/common/widgets/svg_widget.dart';
-import '../../../di/dependency_injection.dart';
 import 'download/download_screen.dart';
 import 'explore/presentation/sreen/explore_screen.dart';
 import 'home/home_screen.dart';
@@ -75,8 +74,6 @@ class _MainScreenState extends State<MainScreen> {
                 activeIcon: const SvgWidget(ic: kTabSelectedProfile)),
           ],
           currentIndex: state.tabIndex,
-          selectedFontSize: 12,
-          unselectedFontSize: 12,
           onTap: (index) {
             BlocProvider.of<MainBloc>(context).add(TabChangeEvent(index));
           },

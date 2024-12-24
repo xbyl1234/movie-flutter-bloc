@@ -13,18 +13,16 @@ ThemeData themeData(BuildContext context) {
       dividerTheme: const DividerThemeData(color: Color(0xFFEEEEEE)),
       scaffoldBackgroundColor: Colors.white,
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        backgroundColor: Colors.white,
-        selectedItemColor: Theme.of(context).colorScheme.primary,
         type: BottomNavigationBarType.fixed,
-        unselectedItemColor: Colors.grey,
+        backgroundColor: Colors.white,
+        selectedItemColor: const Color(0xFFE21221),
+        unselectedItemColor: Color(0xff9E9E9E),
         unselectedLabelStyle: Theme.of(context)
             .textTheme
-            .bodyMedium!
-            .copyWith(color: Colors.grey[500]),
-        selectedLabelStyle: Theme.of(context)
-            .textTheme
-            .bodyMedium!
-            .copyWith(color: Colors.black),
+            .titleMedium!
+            .copyWith(color: Color(0xff9E9E9E), fontSize: 10),
+        selectedLabelStyle: Theme.of(context).textTheme.titleMedium!.copyWith(
+            color: const Color(0xFFE21221), fontSize: 10),
       ),
       appBarTheme: AppBarTheme(
         scrolledUnderElevation: 0,

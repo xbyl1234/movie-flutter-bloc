@@ -32,6 +32,13 @@
   "txt_tax": "Tax",
   "txt_total": "Total",
   "btn_change": "Change",
-  "txt_congratulations": "Congratulations!",
-  "txt_content_congratulations": "You have successfully subscribed 1 month premium. Enjoy the benefits!"
+  "txt_congratulations": "Xin chúc mừng!",
+  "txt_content_congratulations": "Bạn đã đăng ký thành công gói cao cấp {time} tháng. Hãy tận hưởng những lợi ích!",
+  "@txt_content_congratulations": {
+    "placeholders": {
+      "time": {
+        "type": "int"
+      }
+    }
+  }
 }

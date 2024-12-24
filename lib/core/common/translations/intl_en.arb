@@ -33,5 +33,12 @@
   "txt_total": "Total",
   "btn_change": "Change",
   "txt_congratulations": "Congratulations!",
-  "txt_content_congratulations": "You have successfully subscribed 1 month premium. Enjoy the benefits!"
+  "txt_content_congratulations": "You have successfully subscribed {time} month premium. Enjoy the benefits!",
+  "@txt_content_congratulations": {
+    "placeholders": {
+      "time": {
+        "type": "int"
+      }
+    }
+  }
 }

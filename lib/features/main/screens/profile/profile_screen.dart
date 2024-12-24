@@ -15,11 +15,6 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: const SvgWidget(ic: 'assets/icons/ic_logo.svg'),
-        title: Text('Profile',
-            style: Theme.of(context)
-                .textTheme
-                .titleMedium!
-                .copyWith(color: Colors.black, fontSize: 18)),
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
@@ -31,7 +26,7 @@ class ProfileScreen extends StatelessWidget {
               height: 16,
             ),
             Text(
-              'Andrew Ainsley',
+              'Flutter Dev',
               style: Theme.of(context)
                   .textTheme
                   .titleMedium!
