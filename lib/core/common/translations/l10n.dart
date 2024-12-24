@@ -399,6 +399,36 @@ class S {
       args: [time],
     );
   }
+
+  /// `Add New Card`
+  String get title_add_new_card {
+    return Intl.message(
+      'Add New Card',
+      name: 'title_add_new_card',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Card Name`
+  String get tf_card_name {
+    return Intl.message(
+      'Card Name',
+      name: 'tf_card_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Card Number`
+  String get tf_card_number {
+    return Intl.message(
+      'Card Number',
+      name: 'tf_card_number',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

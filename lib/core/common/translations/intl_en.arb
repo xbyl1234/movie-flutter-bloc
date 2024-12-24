@@ -40,5 +40,8 @@
         "type": "int"
       }
     }
-  }
+  },
+  "title_add_new_card": "Add New Card",
+  "tf_card_name": "Card Name",
+  "tf_card_number": "Card Number"
 }

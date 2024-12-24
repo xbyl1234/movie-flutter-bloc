@@ -48,6 +48,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "tab_home": MessageLookupByLibrary.simpleMessage("Home"),
         "tab_my_list": MessageLookupByLibrary.simpleMessage("My List"),
         "tab_profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "tf_card_name": MessageLookupByLibrary.simpleMessage("Card Name"),
+        "tf_card_number": MessageLookupByLibrary.simpleMessage("Card Number"),
+        "title_add_new_card":
+            MessageLookupByLibrary.simpleMessage("Add New Card"),
         "title_new_release":
             MessageLookupByLibrary.simpleMessage("New Releases"),
         "title_payment": MessageLookupByLibrary.simpleMessage("Payment"),

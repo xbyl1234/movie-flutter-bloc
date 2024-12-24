@@ -49,6 +49,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "tab_home": MessageLookupByLibrary.simpleMessage("Trang chủ"),
         "tab_my_list": MessageLookupByLibrary.simpleMessage("Danh sách"),
         "tab_profile": MessageLookupByLibrary.simpleMessage("Cá nhân"),
+        "tf_card_name": MessageLookupByLibrary.simpleMessage("Card Name"),
+        "tf_card_number": MessageLookupByLibrary.simpleMessage("Card Number"),
+        "title_add_new_card":
+            MessageLookupByLibrary.simpleMessage("Add New Card"),
         "title_new_release":
             MessageLookupByLibrary.simpleMessage("Bản phát hành mới"),
         "title_payment": MessageLookupByLibrary.simpleMessage("Thanh toán"),

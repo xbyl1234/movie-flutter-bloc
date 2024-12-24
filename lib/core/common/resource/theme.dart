@@ -7,6 +7,7 @@ ThemeData themeData(BuildContext context) {
       colorScheme: ColorScheme.fromSeed(
         seedColor: const Color(0xFFE21221),
         primary: const Color(0xFFE21221),
+        error: const Color(0xFFE21221).withOpacity(0.7)
       ),
       useMaterial3: true,
       textTheme: textTheme(),
@@ -34,7 +35,7 @@ ThemeData themeData(BuildContext context) {
 
 InputDecorationTheme inputDecorationTheme() {
   return InputDecorationTheme(
-      contentPadding: const EdgeInsets.symmetric(vertical: 16),
+      contentPadding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
       fillColor: Colors.grey[200],
       focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
