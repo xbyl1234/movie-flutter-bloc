@@ -14,9 +14,7 @@ import 'package:movie/features/movie_detail/presentation/screens/movie_detail_sc
 import 'package:movie/features/movies/presentation/bloc/list_movie_cubit.dart';
 import 'package:movie/features/movies/presentation/screen/list_movie_screen.dart';
 import 'package:movie/features/notification/notification_screen.dart';
-import 'package:movie/features/payments/bloc/payments_bloc.dart';
 import 'package:movie/features/payments/payments_screen.dart';
-import 'package:movie/features/splash/splash_screen.dart';
 import 'package:movie/features/subscribe/subscribe_screen.dart';
 import 'package:movie/features/watch_video/watch_video_screen.dart';
 import 'package:movie/features/wellcome/bloc/well_come_bloc.dart';
@@ -93,13 +91,13 @@ class AppRouters {
       case paymentsRoute:
         return MaterialPageRoute(
           builder: (_) => PaymentsScreen(
-            price: args as String,
+            arg: args as ConfirmPaymentArg,
           ),
         );
       case confirmPaymentsRoute:
         return MaterialPageRoute(
             builder: (_) => ConfirmPaymentScreen(
-                  price: args as String,
+                  arg: args as ConfirmPaymentArg,
                 ));
       case addCardRoute:
         return MaterialPageRoute(

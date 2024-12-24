@@ -329,6 +329,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Review Summary`
+  String get title_review_summary {
+    return Intl.message(
+      'Review Summary',
+      name: 'title_review_summary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Amount`
+  String get txt_amount {
+    return Intl.message(
+      'Amount',
+      name: 'txt_amount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tax`
+  String get txt_tax {
+    return Intl.message(
+      'Tax',
+      name: 'txt_tax',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total`
+  String get txt_total {
+    return Intl.message(
+      'Total',
+      name: 'txt_total',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change`
+  String get btn_change {
+    return Intl.message(
+      'Change',
+      name: 'btn_change',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Congratulations!`
+  String get txt_congratulations {
+    return Intl.message(
+      'Congratulations!',
+      name: 'txt_congratulations',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have successfully subscribed 1 month premium. Enjoy the benefits!`
+  String get txt_content_congratulations {
+    return Intl.message(
+      'You have successfully subscribed 1 month premium. Enjoy the benefits!',
+      name: 'txt_content_congratulations',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -491,7 +491,7 @@ abstract class _OnNavigate implements PaymentsEvent {
 /// @nodoc
 mixin _$PaymentsState {
   List<Payment> get payments => throw _privateConstructorUsedError;
-  String? get paymentMethod => throw _privateConstructorUsedError;
+  Payment? get payment => throw _privateConstructorUsedError;
   PageCommand? get pageCommand => throw _privateConstructorUsedError;
 
   /// Create a copy of PaymentsState
@@ -508,9 +508,7 @@ abstract class $PaymentsStateCopyWith<$Res> {
       _$PaymentsStateCopyWithImpl<$Res, PaymentsState>;
   @useResult
   $Res call(
-      {List<Payment> payments,
-      String? paymentMethod,
-      PageCommand? pageCommand});
+      {List<Payment> payments, Payment? payment, PageCommand? pageCommand});
 }
 
 /// @nodoc
@@ -529,7 +527,7 @@ class _$PaymentsStateCopyWithImpl<$Res, $Val extends PaymentsState>
   @override
   $Res call({
     Object? payments = null,
-    Object? paymentMethod = freezed,
+    Object? payment = freezed,
     Object? pageCommand = freezed,
   }) {
     return _then(_value.copyWith(
@@ -537,10 +535,10 @@ class _$PaymentsStateCopyWithImpl<$Res, $Val extends PaymentsState>
           ? _value.payments
           : payments // ignore: cast_nullable_to_non_nullable
               as List<Payment>,
-      paymentMethod: freezed == paymentMethod
-          ? _value.paymentMethod
-          : paymentMethod // ignore: cast_nullable_to_non_nullable
-              as String?,
+      payment: freezed == payment
+          ? _value.payment
+          : payment // ignore: cast_nullable_to_non_nullable
+              as Payment?,
       pageCommand: freezed == pageCommand
           ? _value.pageCommand
           : pageCommand // ignore: cast_nullable_to_non_nullable
@@ -558,9 +556,7 @@ abstract class _$$PaymentsStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<Payment> payments,
-      String? paymentMethod,
-      PageCommand? pageCommand});
+      {List<Payment> payments, Payment? payment, PageCommand? pageCommand});
 }
 
 /// @nodoc
@@ -577,7 +573,7 @@ class __$$PaymentsStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? payments = null,
-    Object? paymentMethod = freezed,
+    Object? payment = freezed,
     Object? pageCommand = freezed,
   }) {
     return _then(_$PaymentsStateImpl(
@@ -585,10 +581,10 @@ class __$$PaymentsStateImplCopyWithImpl<$Res>
           ? _value._payments
           : payments // ignore: cast_nullable_to_non_nullable
               as List<Payment>,
-      paymentMethod: freezed == paymentMethod
-          ? _value.paymentMethod
-          : paymentMethod // ignore: cast_nullable_to_non_nullable
-              as String?,
+      payment: freezed == payment
+          ? _value.payment
+          : payment // ignore: cast_nullable_to_non_nullable
+              as Payment?,
       pageCommand: freezed == pageCommand
           ? _value.pageCommand
           : pageCommand // ignore: cast_nullable_to_non_nullable
@@ -601,9 +597,7 @@ class __$$PaymentsStateImplCopyWithImpl<$Res>
 
 class _$PaymentsStateImpl extends _PaymentsState {
   const _$PaymentsStateImpl(
-      {final List<Payment> payments = const [],
-      this.paymentMethod,
-      this.pageCommand})
+      {final List<Payment> payments = const [], this.payment, this.pageCommand})
       : _payments = payments,
         super._();
 
@@ -617,13 +611,13 @@ class _$PaymentsStateImpl extends _PaymentsState {
   }
 
   @override
-  final String? paymentMethod;
+  final Payment? payment;
   @override
   final PageCommand? pageCommand;
 
   @override
   String toString() {
-    return 'PaymentsState(payments: $payments, paymentMethod: $paymentMethod, pageCommand: $pageCommand)';
+    return 'PaymentsState(payments: $payments, payment: $payment, pageCommand: $pageCommand)';
   }
 
   @override
@@ -632,18 +626,14 @@ class _$PaymentsStateImpl extends _PaymentsState {
         (other.runtimeType == runtimeType &&
             other is _$PaymentsStateImpl &&
             const DeepCollectionEquality().equals(other._payments, _payments) &&
-            (identical(other.paymentMethod, paymentMethod) ||
-                other.paymentMethod == paymentMethod) &&
+            (identical(other.payment, payment) || other.payment == payment) &&
             (identical(other.pageCommand, pageCommand) ||
                 other.pageCommand == pageCommand));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_payments),
-      paymentMethod,
-      pageCommand);
+  int get hashCode => Object.hash(runtimeType,
+      const DeepCollectionEquality().hash(_payments), payment, pageCommand);
 
   /// Create a copy of PaymentsState
   /// with the given fields replaced by the non-null parameter values.
@@ -657,14 +647,14 @@ class _$PaymentsStateImpl extends _PaymentsState {
 abstract class _PaymentsState extends PaymentsState {
   const factory _PaymentsState(
       {final List<Payment> payments,
-      final String? paymentMethod,
+      final Payment? payment,
       final PageCommand? pageCommand}) = _$PaymentsStateImpl;
   const _PaymentsState._() : super._();
 
   @override
   List<Payment> get payments;
   @override
-  String? get paymentMethod;
+  Payment? get payment;
   @override
   PageCommand? get pageCommand;
 

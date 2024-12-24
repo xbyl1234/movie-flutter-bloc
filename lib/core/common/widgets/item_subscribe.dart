@@ -6,19 +6,19 @@ import '../../../core/common/widgets/svg_widget.dart';
 class ItemSubscribe extends StatelessWidget {
   final String price;
   final String time;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
 
   const ItemSubscribe({
     super.key,
     required this.price,
     required this.time,
-    required this.onPressed,
+    this.onPressed,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => onPressed.call(),
+      onTap: () => onPressed?.call(),
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         padding: EdgeInsets.all(16.0),

@@ -1,4 +1,5 @@
 import 'package:get_it/get_it.dart';
+import 'package:movie/features/confirm_payment/bloc/confirm_payment_bloc.dart';
 import 'package:movie/features/payments/bloc/payments_bloc.dart';
 import '../core/data/data_resource/remote/movie/movie_api_service.dart';
 import '../core/data/data_resource/remote/movie/search_movie_api_service.dart';
@@ -57,4 +58,6 @@ Future<void> init() async {
   sl.registerLazySingleton<ExploreCubit>(() => ExploreCubit(sl.get()));
 
   sl.registerFactory<PaymentsBloc>(() => PaymentsBloc());
+
+  sl.registerFactory<ConfirmPaymentBloc>(() => ConfirmPaymentBloc());
 }

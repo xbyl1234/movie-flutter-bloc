@@ -25,11 +25,11 @@ class PaymentsBloc extends Bloc<PaymentsEvent, PaymentsState> {
   }
 
   Future<void> _onSelectedMethod(_OnSelectedMethod event, Emitter<PaymentsState> emit) async {
-    emit(state.copyWith(paymentMethod: event.payment.methodName, pageCommand: null));
+    emit(state.copyWith(payment: event.payment, pageCommand: null));
   }
 
   FutureOr _onNavigate(_OnNavigate event, Emitter<PaymentsState> emit)  {
-    emit(state.copyWith(pageCommand: PageCommandNavigatorPage(page: event.router)));
+    emit(state.copyWith(pageCommand: PageCommandNavigatorPage(page: event.router, argument: state.payment)));
   }
 
 }

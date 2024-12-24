@@ -15,3 +15,4 @@ const kTabProfile = '${kBaseAsset}ic_tab_profile.svg';
 const icPremium = '${kBaseAsset}ic_ premium.svg';
 const icScannerCard = '${kBaseAsset}ic_scanner_card.svg';
 const icArrowRight = '${kBaseAsset}ic_arrow_right.svg';
+const icCongratulation = '${kBaseAsset}ic_congratulation.svg';

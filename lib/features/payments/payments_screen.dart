@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/core/common/resource/icons.dart';
 import 'package:movie/core/common/widgets/custom_app_bar.dart';
 import 'package:movie/core/common/widgets/svg_widget.dart';
+import 'package:movie/features/confirm_payment/confirm_payment_screen.dart';
 import 'package:movie/features/payments/bloc/payments_bloc.dart';
 import 'package:movie/features/payments/view/payments_view.dart';
 import '../../core/bloc/page_command.dart';
@@ -11,9 +12,9 @@ import '../../core/common/translations/l10n.dart';
 import '../../di/dependency_injection.dart';
 
 class PaymentsScreen extends StatelessWidget {
-  final String price;
+  final ConfirmPaymentArg arg;
 
-  const PaymentsScreen({super.key, required this.price});
+  const PaymentsScreen({super.key, required this.arg});
 
   @override
   Widget build(BuildContext context) {
@@ -36,10 +37,13 @@ class PaymentsScreen extends StatelessWidget {
         body: BlocListener<PaymentsBloc, PaymentsState>(
           listener: (context, state) {
             if (state.pageCommand is PageCommandNavigatorPage) {
-              onNavigate(state.pageCommand! as PageCommandNavigatorPage, context);
+              onNavigate(
+                  state.pageCommand! as PageCommandNavigatorPage, context);
             }
           },
-          child: PaymentsView(bloc: bloc,),
+          child: PaymentsView(
+            bloc: bloc,
+          ),
         ),
       ),
     );
@@ -47,7 +51,8 @@ class PaymentsScreen extends StatelessWidget {
 
   void onNavigate(PageCommandNavigatorPage page, BuildContext context) {
     if (page.page == confirmPaymentsRoute) {
-      Navigator.pushNamed(context, page.page!, arguments: price);
+      arg.payment = page.argument;
+      Navigator.pushNamed(context, page.page!, arguments: arg);
     } else {
       Navigator.pushNamed(context, page.page!);
     }

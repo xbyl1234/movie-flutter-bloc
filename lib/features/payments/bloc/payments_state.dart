@@ -5,7 +5,7 @@ class PaymentsState with _$PaymentsState {
   const PaymentsState._();
   const factory PaymentsState({
     @Default([]) List<Payment> payments,
-    String? paymentMethod,
+    Payment? payment,
     PageCommand? pageCommand,
   }) = _PaymentsState;
 }

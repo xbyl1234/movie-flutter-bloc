@@ -26,5 +26,12 @@
   "txt_join_premium": "Đăng ký Premium!",
   "txt_content_join_premium": "Thưởng thức phim Full-HD, không giới hạn và không có quảng cáo",
   "txt_select_payment_method": "Chọn phương thức thanh toán bạn muốn sử dụng.",
-  "btn_continue": "Continue"
+  "btn_continue": "Continue",
+  "title_review_summary": "Review Summary",
+  "txt_amount": "Amount",
+  "txt_tax": "Tax",
+  "txt_total": "Total",
+  "btn_change": "Change",
+  "txt_congratulations": "Congratulations!",
+  "txt_content_congratulations": "You have successfully subscribed 1 month premium. Enjoy the benefits!"
 }

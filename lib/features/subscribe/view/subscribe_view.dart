@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:movie/core/common/contants/routers.dart';
-import 'package:movie/features/subscribe/widgets/item_subscribe.dart';
 import '../../../core/common/translations/l10n.dart';
+import '../../../core/common/widgets/item_subscribe.dart';
+import '../../confirm_payment/confirm_payment_screen.dart';
 
 class SubscribeView extends StatelessWidget {
   const SubscribeView({super.key});
@@ -35,12 +36,20 @@ class SubscribeView extends StatelessWidget {
             ItemSubscribe(
               price: '9.99',
               time: S.of(context).txt_month,
-              onPressed: () => Navigator.pushNamed(context, paymentsRoute, arguments: '9.99'),
+              onPressed: () => Navigator.pushNamed(
+                context,
+                paymentsRoute,
+                arguments: ConfirmPaymentArg(price: '9.99', time: 'month'),
+              ),
             ),
             ItemSubscribe(
               price: '99.99',
               time: S.of(context).txt_year,
-              onPressed: () => Navigator.pushNamed(context, paymentsRoute, arguments: '99.99'),
+              onPressed: () => Navigator.pushNamed(
+                context,
+                paymentsRoute,
+                arguments: ConfirmPaymentArg(price: '99.99', time: 'year'),
+              ),
             ),
           ],
         ),

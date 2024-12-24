@@ -26,5 +26,12 @@
   "txt_join_premium": "Join Premium!",
   "txt_content_join_premium": "Enjoy watching Full-HD movies, without restrictions and without ads",
   "txt_select_payment_method": "Select the payment method you want to use.",
-  "btn_continue": "Continue"
+  "btn_continue": "Continue",
+  "title_review_summary": "Review Summary",
+  "txt_amount": "Amount",
+  "txt_tax": "Tax",
+  "txt_total": "Total",
+  "btn_change": "Change",
+  "txt_congratulations": "Congratulations!",
+  "txt_content_congratulations": "You have successfully subscribed 1 month premium. Enjoy the benefits!"
 }

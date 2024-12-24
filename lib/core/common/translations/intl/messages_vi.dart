@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "btn_change": MessageLookupByLibrary.simpleMessage("Change"),
         "btn_continue": MessageLookupByLibrary.simpleMessage("Continue"),
         "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
             "Thưởng thức phim Full-HD, không giới hạn và không có quảng cáo"),
@@ -48,12 +49,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "title_new_release":
             MessageLookupByLibrary.simpleMessage("Bản phát hành mới"),
         "title_payment": MessageLookupByLibrary.simpleMessage("Thanh toán"),
+        "title_review_summary":
+            MessageLookupByLibrary.simpleMessage("Review Summary"),
         "title_subscribe_to_premium":
             MessageLookupByLibrary.simpleMessage("Đăng ký Premium"),
         "title_top_movie":
             MessageLookupByLibrary.simpleMessage("Top 10 phim tuần này"),
         "txt_allows_streaming_of4k": MessageLookupByLibrary.simpleMessage(
             "Cho phép phát trực tuyến 4K."),
+        "txt_amount": MessageLookupByLibrary.simpleMessage("Amount"),
+        "txt_congratulations":
+            MessageLookupByLibrary.simpleMessage("Congratulations!"),
+        "txt_content_congratulations": MessageLookupByLibrary.simpleMessage(
+            "You have successfully subscribed 1 month premium. Enjoy the benefits!"),
         "txt_content_join_premium": MessageLookupByLibrary.simpleMessage(
             "Thưởng thức phim Full-HD, không giới hạn và không có quảng cáo"),
         "txt_join_premium":
@@ -61,6 +69,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "txt_month": MessageLookupByLibrary.simpleMessage("tháng"),
         "txt_select_payment_method": MessageLookupByLibrary.simpleMessage(
             "Chọn phương thức thanh toán bạn muốn sử dụng."),
+        "txt_tax": MessageLookupByLibrary.simpleMessage("Tax"),
+        "txt_total": MessageLookupByLibrary.simpleMessage("Total"),
         "txt_video_audio_quality_is_better":
             MessageLookupByLibrary.simpleMessage(
                 "Chất lượng video và âm thanh tốt hơn."),

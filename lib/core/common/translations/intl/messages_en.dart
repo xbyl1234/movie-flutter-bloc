@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "btn_change": MessageLookupByLibrary.simpleMessage("Change"),
         "btn_continue": MessageLookupByLibrary.simpleMessage("Continue"),
         "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
             "Enjoy watching Full-HD movies, without restrictions and without ads"),
@@ -47,12 +48,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "title_new_release":
             MessageLookupByLibrary.simpleMessage("New Releases"),
         "title_payment": MessageLookupByLibrary.simpleMessage("Payment"),
+        "title_review_summary":
+            MessageLookupByLibrary.simpleMessage("Review Summary"),
         "title_subscribe_to_premium":
             MessageLookupByLibrary.simpleMessage("Subscribe to Premium"),
         "title_top_movie":
             MessageLookupByLibrary.simpleMessage("Top 10 Movies This Week"),
         "txt_allows_streaming_of4k":
             MessageLookupByLibrary.simpleMessage("Allows streaming of 4K."),
+        "txt_amount": MessageLookupByLibrary.simpleMessage("Amount"),
+        "txt_congratulations":
+            MessageLookupByLibrary.simpleMessage("Congratulations!"),
+        "txt_content_congratulations": MessageLookupByLibrary.simpleMessage(
+            "You have successfully subscribed 1 month premium. Enjoy the benefits!"),
         "txt_content_join_premium": MessageLookupByLibrary.simpleMessage(
             "Enjoy watching Full-HD movies, without restrictions and without ads"),
         "txt_join_premium":
@@ -60,6 +68,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "txt_month": MessageLookupByLibrary.simpleMessage("month"),
         "txt_select_payment_method": MessageLookupByLibrary.simpleMessage(
             "Select the payment method you want to use."),
+        "txt_tax": MessageLookupByLibrary.simpleMessage("Tax"),
+        "txt_total": MessageLookupByLibrary.simpleMessage("Total"),
         "txt_video_audio_quality_is_better":
             MessageLookupByLibrary.simpleMessage(
                 "Video & Audio Quality is Better."),

@@ -7,20 +7,10 @@ import 'package:movie/core/data/model/payment.dart';
 import 'package:movie/features/payments/bloc/payments_bloc.dart';
 import '../../../core/common/translations/l10n.dart';
 
-class PaymentsView extends StatefulWidget {
+class PaymentsView extends StatelessWidget {
   final PaymentsBloc bloc;
   const PaymentsView({super.key, required this.bloc});
 
-  @override
-  State<PaymentsView> createState() => _PaymentsViewState();
-}
-
-class _PaymentsViewState extends State<PaymentsView> {
-  @override
-  void initState() {
-    widget.bloc.add(PaymentsEvent.getPayments());
-    super.initState();
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,8 +24,9 @@ class _PaymentsViewState extends State<PaymentsView> {
               style: Theme.of(context).textTheme.bodyMedium,
             ),
           ),
-          Expanded(child: BlocBuilder<PaymentsBloc, PaymentsState>(
-            bloc: widget.bloc,
+          Expanded(
+              child: BlocBuilder<PaymentsBloc, PaymentsState>(
+            bloc: bloc..add(PaymentsEvent.getPayments()),
             builder: (context, state) {
               return ListView.builder(
                   padding: EdgeInsets.symmetric(vertical: 16.0),
@@ -50,8 +41,8 @@ class _PaymentsViewState extends State<PaymentsView> {
                           bg: Color(0xffFCE7E9),
                           textColor: Theme.of(context).colorScheme.primary,
                           btnText: 'Add New Card',
-                          action: () =>
-                              widget.bloc.add(PaymentsEvent.onNavigate(addCardRoute)),
+                          action: () => bloc
+                              .add(PaymentsEvent.onNavigate(addCardRoute)),
                         ),
                       );
                     }
@@ -66,10 +57,10 @@ class _PaymentsViewState extends State<PaymentsView> {
                         ],
                       ),
                       trailing: Radio(
-                        value: state.paymentMethod != null &&
-                            state.paymentMethod == item.methodName,
+                        value: state.payment != null &&
+                            state.payment!.methodName == item.methodName,
                         onChanged: (val) {
-                          widget.bloc.add(PaymentsEvent.onSelectedMethod(item));
+                          bloc.add(PaymentsEvent.onSelectedMethod(item));
                         },
                         groupValue: true,
                       ),
@@ -81,9 +72,15 @@ class _PaymentsViewState extends State<PaymentsView> {
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.only(left: 16, right: 16, bottom: 32),
-        child: CustomButton(
-          btnText: S.of(context).btn_continue,
-          action: () => widget.bloc.add(PaymentsEvent.onNavigate(confirmPaymentsRoute)),
+        child: BlocBuilder<PaymentsBloc, PaymentsState>(
+          builder: (context, state) {
+            return CustomButton(
+              btnText: S.of(context).btn_continue,
+              enable: state.payment != null,
+              action: () => bloc
+                  .add(PaymentsEvent.onNavigate(confirmPaymentsRoute)),
+            );
+          },
         ),
       ),
     );
