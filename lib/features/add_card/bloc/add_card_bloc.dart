@@ -6,9 +6,8 @@ part 'add_card_state.dart';
 part 'add_card_bloc.freezed.dart';
 
 class AddCardBloc extends Bloc<AddCardEvent, AddCardState> {
-  AddCardBloc() : super(const AddCardState.initial()) {
+  AddCardBloc() : super(const AddCardState()) {
     on<AddCardEvent>((event, emit) {
-      // TODO: implement event handler
     });
   }
 }

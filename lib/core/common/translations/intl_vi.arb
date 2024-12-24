@@ -43,5 +43,8 @@
   },
   "title_add_new_card": "Add New Card",
   "tf_card_name": "Card Name",
-  "tf_card_number": "Card Number"
+  "tf_card_number": "Card Number",
+  "tf_expiry_date": "Expiry Date",
+  "tf_cvv": "CVV",
+  "btn_add": "Add"
 }

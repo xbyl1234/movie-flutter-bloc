@@ -429,6 +429,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Expiry Date`
+  String get tf_expiry_date {
+    return Intl.message(
+      'Expiry Date',
+      name: 'tf_expiry_date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `CVV`
+  String get tf_cvv {
+    return Intl.message(
+      'CVV',
+      name: 'tf_cvv',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add`
+  String get btn_add {
+    return Intl.message(
+      'Add',
+      name: 'btn_add',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

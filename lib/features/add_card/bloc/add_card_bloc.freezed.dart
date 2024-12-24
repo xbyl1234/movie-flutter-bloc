@@ -172,37 +172,18 @@ abstract class _Started implements AddCardEvent {
 
 /// @nodoc
 mixin _$AddCardState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) =>
+  String get cardName => throw _privateConstructorUsedError;
+  String get cardNumber => throw _privateConstructorUsedError;
+  String get expDate => throw _privateConstructorUsedError;
+  String get cvv => throw _privateConstructorUsedError;
+  String? get errCardName => throw _privateConstructorUsedError;
+  String? get errCardNumber => throw _privateConstructorUsedError;
+  bool get isSaved => throw _privateConstructorUsedError;
+
+  /// Create a copy of AddCardState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $AddCardStateCopyWith<AddCardState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -211,6 +192,15 @@ abstract class $AddCardStateCopyWith<$Res> {
   factory $AddCardStateCopyWith(
           AddCardState value, $Res Function(AddCardState) then) =
       _$AddCardStateCopyWithImpl<$Res, AddCardState>;
+  @useResult
+  $Res call(
+      {String cardName,
+      String cardNumber,
+      String expDate,
+      String cvv,
+      String? errCardName,
+      String? errCardNumber,
+      bool isSaved});
 }
 
 /// @nodoc
@@ -225,103 +215,221 @@ class _$AddCardStateCopyWithImpl<$Res, $Val extends AddCardState>
 
   /// Create a copy of AddCardState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? cardName = null,
+    Object? cardNumber = null,
+    Object? expDate = null,
+    Object? cvv = null,
+    Object? errCardName = freezed,
+    Object? errCardNumber = freezed,
+    Object? isSaved = null,
+  }) {
+    return _then(_value.copyWith(
+      cardName: null == cardName
+          ? _value.cardName
+          : cardName // ignore: cast_nullable_to_non_nullable
+              as String,
+      cardNumber: null == cardNumber
+          ? _value.cardNumber
+          : cardNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+      expDate: null == expDate
+          ? _value.expDate
+          : expDate // ignore: cast_nullable_to_non_nullable
+              as String,
+      cvv: null == cvv
+          ? _value.cvv
+          : cvv // ignore: cast_nullable_to_non_nullable
+              as String,
+      errCardName: freezed == errCardName
+          ? _value.errCardName
+          : errCardName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      errCardNumber: freezed == errCardNumber
+          ? _value.errCardNumber
+          : errCardNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      isSaved: null == isSaved
+          ? _value.isSaved
+          : isSaved // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ) as $Val);
+  }
 }
 
 /// @nodoc
-abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
-      __$$InitialImplCopyWithImpl<$Res>;
+abstract class _$$AddCardStateImplCopyWith<$Res>
+    implements $AddCardStateCopyWith<$Res> {
+  factory _$$AddCardStateImplCopyWith(
+          _$AddCardStateImpl value, $Res Function(_$AddCardStateImpl) then) =
+      __$$AddCardStateImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String cardName,
+      String cardNumber,
+      String expDate,
+      String cvv,
+      String? errCardName,
+      String? errCardNumber,
+      bool isSaved});
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$AddCardStateCopyWithImpl<$Res, _$InitialImpl>
-    implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
+class __$$AddCardStateImplCopyWithImpl<$Res>
+    extends _$AddCardStateCopyWithImpl<$Res, _$AddCardStateImpl>
+    implements _$$AddCardStateImplCopyWith<$Res> {
+  __$$AddCardStateImplCopyWithImpl(
+      _$AddCardStateImpl _value, $Res Function(_$AddCardStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of AddCardState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? cardName = null,
+    Object? cardNumber = null,
+    Object? expDate = null,
+    Object? cvv = null,
+    Object? errCardName = freezed,
+    Object? errCardNumber = freezed,
+    Object? isSaved = null,
+  }) {
+    return _then(_$AddCardStateImpl(
+      cardName: null == cardName
+          ? _value.cardName
+          : cardName // ignore: cast_nullable_to_non_nullable
+              as String,
+      cardNumber: null == cardNumber
+          ? _value.cardNumber
+          : cardNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+      expDate: null == expDate
+          ? _value.expDate
+          : expDate // ignore: cast_nullable_to_non_nullable
+              as String,
+      cvv: null == cvv
+          ? _value.cvv
+          : cvv // ignore: cast_nullable_to_non_nullable
+              as String,
+      errCardName: freezed == errCardName
+          ? _value.errCardName
+          : errCardName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      errCardNumber: freezed == errCardNumber
+          ? _value.errCardNumber
+          : errCardNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      isSaved: null == isSaved
+          ? _value.isSaved
+          : isSaved // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl();
+class _$AddCardStateImpl extends _AddCardState {
+  const _$AddCardStateImpl(
+      {this.cardName = '',
+      this.cardNumber = '',
+      this.expDate = '',
+      this.cvv = '',
+      this.errCardName,
+      this.errCardNumber,
+      this.isSaved = false})
+      : super._();
+
+  @override
+  @JsonKey()
+  final String cardName;
+  @override
+  @JsonKey()
+  final String cardNumber;
+  @override
+  @JsonKey()
+  final String expDate;
+  @override
+  @JsonKey()
+  final String cvv;
+  @override
+  final String? errCardName;
+  @override
+  final String? errCardNumber;
+  @override
+  @JsonKey()
+  final bool isSaved;
 
   @override
   String toString() {
-    return 'AddCardState.initial()';
+    return 'AddCardState(cardName: $cardName, cardNumber: $cardNumber, expDate: $expDate, cvv: $cvv, errCardName: $errCardName, errCardNumber: $errCardNumber, isSaved: $isSaved)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$AddCardStateImpl &&
+            (identical(other.cardName, cardName) ||
+                other.cardName == cardName) &&
+            (identical(other.cardNumber, cardNumber) ||
+                other.cardNumber == cardNumber) &&
+            (identical(other.expDate, expDate) || other.expDate == expDate) &&
+            (identical(other.cvv, cvv) || other.cvv == cvv) &&
+            (identical(other.errCardName, errCardName) ||
+                other.errCardName == errCardName) &&
+            (identical(other.errCardNumber, errCardNumber) ||
+                other.errCardNumber == errCardNumber) &&
+            (identical(other.isSaved, isSaved) || other.isSaved == isSaved));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, cardName, cardNumber, expDate,
+      cvv, errCardName, errCardNumber, isSaved);
 
+  /// Create a copy of AddCardState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
+  @pragma('vm:prefer-inline')
+  _$$AddCardStateImplCopyWith<_$AddCardStateImpl> get copyWith =>
+      __$$AddCardStateImplCopyWithImpl<_$AddCardStateImpl>(this, _$identity);
 }
 
-abstract class _Initial implements AddCardState {
-  const factory _Initial() = _$InitialImpl;
+abstract class _AddCardState extends AddCardState {
+  const factory _AddCardState(
+      {final String cardName,
+      final String cardNumber,
+      final String expDate,
+      final String cvv,
+      final String? errCardName,
+      final String? errCardNumber,
+      final bool isSaved}) = _$AddCardStateImpl;
+  const _AddCardState._() : super._();
+
+  @override
+  String get cardName;
+  @override
+  String get cardNumber;
+  @override
+  String get expDate;
+  @override
+  String get cvv;
+  @override
+  String? get errCardName;
+  @override
+  String? get errCardNumber;
+  @override
+  bool get isSaved;
+
+  /// Create a copy of AddCardState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddCardStateImplCopyWith<_$AddCardStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

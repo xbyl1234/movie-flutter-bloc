@@ -6,9 +6,11 @@ class CustomTextField extends StatefulWidget {
   final TextCapitalization textCapitalization;
   final String? label;
   final String? error;
+  final String initValue;
   final String? icRight;
   final VoidCallback? actionRight;
   final int? maxLength;
+  final Function(String value) onChanged;
 
   const CustomTextField({
     super.key,
@@ -19,6 +21,8 @@ class CustomTextField extends StatefulWidget {
     this.icRight,
     this.actionRight,
     this.maxLength,
+    this.initValue = "",
+    required this.onChanged,
   });
 
   @override
@@ -41,6 +45,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
           ),
         ],
         TextFormField(
+          initialValue: widget.initValue,
+          onChanged: (val) => widget.onChanged!(val),
           keyboardType: widget.keyboardType,
           textCapitalization: widget.textCapitalization,
           maxLength: widget.maxLength,
