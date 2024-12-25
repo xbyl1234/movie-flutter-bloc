@@ -19,32 +19,56 @@ mixin _$AddCardEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function(String val) onChangeCardName,
+    required TResult Function(String val) onChangeCardNumber,
+    required TResult Function(String val) onChangeExpDate,
+    required TResult Function(String val) onChangeCvvCard,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
+    TResult? Function(String val)? onChangeCardName,
+    TResult? Function(String val)? onChangeCardNumber,
+    TResult? Function(String val)? onChangeExpDate,
+    TResult? Function(String val)? onChangeCvvCard,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function(String val)? onChangeCardName,
+    TResult Function(String val)? onChangeCardNumber,
+    TResult Function(String val)? onChangeExpDate,
+    TResult Function(String val)? onChangeCvvCard,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_OnChangeCardName value) onChangeCardName,
+    required TResult Function(_OnChangeCardNumber value) onChangeCardNumber,
+    required TResult Function(_OnChangeExpDate value) onChangeExpDate,
+    required TResult Function(_OnChangeCvvCard value) onChangeCvvCard,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
+    TResult? Function(_OnChangeCardName value)? onChangeCardName,
+    TResult? Function(_OnChangeCardNumber value)? onChangeCardNumber,
+    TResult? Function(_OnChangeExpDate value)? onChangeExpDate,
+    TResult? Function(_OnChangeCvvCard value)? onChangeCvvCard,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_OnChangeCardName value)? onChangeCardName,
+    TResult Function(_OnChangeCardNumber value)? onChangeCardNumber,
+    TResult Function(_OnChangeExpDate value)? onChangeExpDate,
+    TResult Function(_OnChangeCvvCard value)? onChangeCvvCard,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -113,6 +137,10 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function(String val) onChangeCardName,
+    required TResult Function(String val) onChangeCardNumber,
+    required TResult Function(String val) onChangeExpDate,
+    required TResult Function(String val) onChangeCvvCard,
   }) {
     return started();
   }
@@ -121,6 +149,10 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
+    TResult? Function(String val)? onChangeCardName,
+    TResult? Function(String val)? onChangeCardNumber,
+    TResult? Function(String val)? onChangeExpDate,
+    TResult? Function(String val)? onChangeCvvCard,
   }) {
     return started?.call();
   }
@@ -129,6 +161,10 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function(String val)? onChangeCardName,
+    TResult Function(String val)? onChangeCardNumber,
+    TResult Function(String val)? onChangeExpDate,
+    TResult Function(String val)? onChangeCvvCard,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -141,6 +177,10 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_OnChangeCardName value) onChangeCardName,
+    required TResult Function(_OnChangeCardNumber value) onChangeCardNumber,
+    required TResult Function(_OnChangeExpDate value) onChangeExpDate,
+    required TResult Function(_OnChangeCvvCard value) onChangeCvvCard,
   }) {
     return started(this);
   }
@@ -149,6 +189,10 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
+    TResult? Function(_OnChangeCardName value)? onChangeCardName,
+    TResult? Function(_OnChangeCardNumber value)? onChangeCardNumber,
+    TResult? Function(_OnChangeExpDate value)? onChangeExpDate,
+    TResult? Function(_OnChangeCvvCard value)? onChangeCvvCard,
   }) {
     return started?.call(this);
   }
@@ -157,6 +201,10 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_OnChangeCardName value)? onChangeCardName,
+    TResult Function(_OnChangeCardNumber value)? onChangeCardNumber,
+    TResult Function(_OnChangeExpDate value)? onChangeExpDate,
+    TResult Function(_OnChangeCvvCard value)? onChangeCvvCard,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -168,6 +216,643 @@ class _$StartedImpl implements _Started {
 
 abstract class _Started implements AddCardEvent {
   const factory _Started() = _$StartedImpl;
+}
+
+/// @nodoc
+abstract class _$$OnChangeCardNameImplCopyWith<$Res> {
+  factory _$$OnChangeCardNameImplCopyWith(_$OnChangeCardNameImpl value,
+          $Res Function(_$OnChangeCardNameImpl) then) =
+      __$$OnChangeCardNameImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String val});
+}
+
+/// @nodoc
+class __$$OnChangeCardNameImplCopyWithImpl<$Res>
+    extends _$AddCardEventCopyWithImpl<$Res, _$OnChangeCardNameImpl>
+    implements _$$OnChangeCardNameImplCopyWith<$Res> {
+  __$$OnChangeCardNameImplCopyWithImpl(_$OnChangeCardNameImpl _value,
+      $Res Function(_$OnChangeCardNameImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AddCardEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? val = null,
+  }) {
+    return _then(_$OnChangeCardNameImpl(
+      null == val
+          ? _value.val
+          : val // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OnChangeCardNameImpl implements _OnChangeCardName {
+  const _$OnChangeCardNameImpl(this.val);
+
+  @override
+  final String val;
+
+  @override
+  String toString() {
+    return 'AddCardEvent.onChangeCardName(val: $val)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnChangeCardNameImpl &&
+            (identical(other.val, val) || other.val == val));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, val);
+
+  /// Create a copy of AddCardEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnChangeCardNameImplCopyWith<_$OnChangeCardNameImpl> get copyWith =>
+      __$$OnChangeCardNameImplCopyWithImpl<_$OnChangeCardNameImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(String val) onChangeCardName,
+    required TResult Function(String val) onChangeCardNumber,
+    required TResult Function(String val) onChangeExpDate,
+    required TResult Function(String val) onChangeCvvCard,
+  }) {
+    return onChangeCardName(val);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(String val)? onChangeCardName,
+    TResult? Function(String val)? onChangeCardNumber,
+    TResult? Function(String val)? onChangeExpDate,
+    TResult? Function(String val)? onChangeCvvCard,
+  }) {
+    return onChangeCardName?.call(val);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String val)? onChangeCardName,
+    TResult Function(String val)? onChangeCardNumber,
+    TResult Function(String val)? onChangeExpDate,
+    TResult Function(String val)? onChangeCvvCard,
+    required TResult orElse(),
+  }) {
+    if (onChangeCardName != null) {
+      return onChangeCardName(val);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_OnChangeCardName value) onChangeCardName,
+    required TResult Function(_OnChangeCardNumber value) onChangeCardNumber,
+    required TResult Function(_OnChangeExpDate value) onChangeExpDate,
+    required TResult Function(_OnChangeCvvCard value) onChangeCvvCard,
+  }) {
+    return onChangeCardName(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_OnChangeCardName value)? onChangeCardName,
+    TResult? Function(_OnChangeCardNumber value)? onChangeCardNumber,
+    TResult? Function(_OnChangeExpDate value)? onChangeExpDate,
+    TResult? Function(_OnChangeCvvCard value)? onChangeCvvCard,
+  }) {
+    return onChangeCardName?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_OnChangeCardName value)? onChangeCardName,
+    TResult Function(_OnChangeCardNumber value)? onChangeCardNumber,
+    TResult Function(_OnChangeExpDate value)? onChangeExpDate,
+    TResult Function(_OnChangeCvvCard value)? onChangeCvvCard,
+    required TResult orElse(),
+  }) {
+    if (onChangeCardName != null) {
+      return onChangeCardName(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnChangeCardName implements AddCardEvent {
+  const factory _OnChangeCardName(final String val) = _$OnChangeCardNameImpl;
+
+  String get val;
+
+  /// Create a copy of AddCardEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$OnChangeCardNameImplCopyWith<_$OnChangeCardNameImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$OnChangeCardNumberImplCopyWith<$Res> {
+  factory _$$OnChangeCardNumberImplCopyWith(_$OnChangeCardNumberImpl value,
+          $Res Function(_$OnChangeCardNumberImpl) then) =
+      __$$OnChangeCardNumberImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String val});
+}
+
+/// @nodoc
+class __$$OnChangeCardNumberImplCopyWithImpl<$Res>
+    extends _$AddCardEventCopyWithImpl<$Res, _$OnChangeCardNumberImpl>
+    implements _$$OnChangeCardNumberImplCopyWith<$Res> {
+  __$$OnChangeCardNumberImplCopyWithImpl(_$OnChangeCardNumberImpl _value,
+      $Res Function(_$OnChangeCardNumberImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AddCardEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? val = null,
+  }) {
+    return _then(_$OnChangeCardNumberImpl(
+      null == val
+          ? _value.val
+          : val // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OnChangeCardNumberImpl implements _OnChangeCardNumber {
+  const _$OnChangeCardNumberImpl(this.val);
+
+  @override
+  final String val;
+
+  @override
+  String toString() {
+    return 'AddCardEvent.onChangeCardNumber(val: $val)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnChangeCardNumberImpl &&
+            (identical(other.val, val) || other.val == val));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, val);
+
+  /// Create a copy of AddCardEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnChangeCardNumberImplCopyWith<_$OnChangeCardNumberImpl> get copyWith =>
+      __$$OnChangeCardNumberImplCopyWithImpl<_$OnChangeCardNumberImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(String val) onChangeCardName,
+    required TResult Function(String val) onChangeCardNumber,
+    required TResult Function(String val) onChangeExpDate,
+    required TResult Function(String val) onChangeCvvCard,
+  }) {
+    return onChangeCardNumber(val);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(String val)? onChangeCardName,
+    TResult? Function(String val)? onChangeCardNumber,
+    TResult? Function(String val)? onChangeExpDate,
+    TResult? Function(String val)? onChangeCvvCard,
+  }) {
+    return onChangeCardNumber?.call(val);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String val)? onChangeCardName,
+    TResult Function(String val)? onChangeCardNumber,
+    TResult Function(String val)? onChangeExpDate,
+    TResult Function(String val)? onChangeCvvCard,
+    required TResult orElse(),
+  }) {
+    if (onChangeCardNumber != null) {
+      return onChangeCardNumber(val);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_OnChangeCardName value) onChangeCardName,
+    required TResult Function(_OnChangeCardNumber value) onChangeCardNumber,
+    required TResult Function(_OnChangeExpDate value) onChangeExpDate,
+    required TResult Function(_OnChangeCvvCard value) onChangeCvvCard,
+  }) {
+    return onChangeCardNumber(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_OnChangeCardName value)? onChangeCardName,
+    TResult? Function(_OnChangeCardNumber value)? onChangeCardNumber,
+    TResult? Function(_OnChangeExpDate value)? onChangeExpDate,
+    TResult? Function(_OnChangeCvvCard value)? onChangeCvvCard,
+  }) {
+    return onChangeCardNumber?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_OnChangeCardName value)? onChangeCardName,
+    TResult Function(_OnChangeCardNumber value)? onChangeCardNumber,
+    TResult Function(_OnChangeExpDate value)? onChangeExpDate,
+    TResult Function(_OnChangeCvvCard value)? onChangeCvvCard,
+    required TResult orElse(),
+  }) {
+    if (onChangeCardNumber != null) {
+      return onChangeCardNumber(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnChangeCardNumber implements AddCardEvent {
+  const factory _OnChangeCardNumber(final String val) =
+      _$OnChangeCardNumberImpl;
+
+  String get val;
+
+  /// Create a copy of AddCardEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$OnChangeCardNumberImplCopyWith<_$OnChangeCardNumberImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$OnChangeExpDateImplCopyWith<$Res> {
+  factory _$$OnChangeExpDateImplCopyWith(_$OnChangeExpDateImpl value,
+          $Res Function(_$OnChangeExpDateImpl) then) =
+      __$$OnChangeExpDateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String val});
+}
+
+/// @nodoc
+class __$$OnChangeExpDateImplCopyWithImpl<$Res>
+    extends _$AddCardEventCopyWithImpl<$Res, _$OnChangeExpDateImpl>
+    implements _$$OnChangeExpDateImplCopyWith<$Res> {
+  __$$OnChangeExpDateImplCopyWithImpl(
+      _$OnChangeExpDateImpl _value, $Res Function(_$OnChangeExpDateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AddCardEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? val = null,
+  }) {
+    return _then(_$OnChangeExpDateImpl(
+      null == val
+          ? _value.val
+          : val // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OnChangeExpDateImpl implements _OnChangeExpDate {
+  const _$OnChangeExpDateImpl(this.val);
+
+  @override
+  final String val;
+
+  @override
+  String toString() {
+    return 'AddCardEvent.onChangeExpDate(val: $val)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnChangeExpDateImpl &&
+            (identical(other.val, val) || other.val == val));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, val);
+
+  /// Create a copy of AddCardEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnChangeExpDateImplCopyWith<_$OnChangeExpDateImpl> get copyWith =>
+      __$$OnChangeExpDateImplCopyWithImpl<_$OnChangeExpDateImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(String val) onChangeCardName,
+    required TResult Function(String val) onChangeCardNumber,
+    required TResult Function(String val) onChangeExpDate,
+    required TResult Function(String val) onChangeCvvCard,
+  }) {
+    return onChangeExpDate(val);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(String val)? onChangeCardName,
+    TResult? Function(String val)? onChangeCardNumber,
+    TResult? Function(String val)? onChangeExpDate,
+    TResult? Function(String val)? onChangeCvvCard,
+  }) {
+    return onChangeExpDate?.call(val);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String val)? onChangeCardName,
+    TResult Function(String val)? onChangeCardNumber,
+    TResult Function(String val)? onChangeExpDate,
+    TResult Function(String val)? onChangeCvvCard,
+    required TResult orElse(),
+  }) {
+    if (onChangeExpDate != null) {
+      return onChangeExpDate(val);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_OnChangeCardName value) onChangeCardName,
+    required TResult Function(_OnChangeCardNumber value) onChangeCardNumber,
+    required TResult Function(_OnChangeExpDate value) onChangeExpDate,
+    required TResult Function(_OnChangeCvvCard value) onChangeCvvCard,
+  }) {
+    return onChangeExpDate(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_OnChangeCardName value)? onChangeCardName,
+    TResult? Function(_OnChangeCardNumber value)? onChangeCardNumber,
+    TResult? Function(_OnChangeExpDate value)? onChangeExpDate,
+    TResult? Function(_OnChangeCvvCard value)? onChangeCvvCard,
+  }) {
+    return onChangeExpDate?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_OnChangeCardName value)? onChangeCardName,
+    TResult Function(_OnChangeCardNumber value)? onChangeCardNumber,
+    TResult Function(_OnChangeExpDate value)? onChangeExpDate,
+    TResult Function(_OnChangeCvvCard value)? onChangeCvvCard,
+    required TResult orElse(),
+  }) {
+    if (onChangeExpDate != null) {
+      return onChangeExpDate(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnChangeExpDate implements AddCardEvent {
+  const factory _OnChangeExpDate(final String val) = _$OnChangeExpDateImpl;
+
+  String get val;
+
+  /// Create a copy of AddCardEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$OnChangeExpDateImplCopyWith<_$OnChangeExpDateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$OnChangeCvvCardImplCopyWith<$Res> {
+  factory _$$OnChangeCvvCardImplCopyWith(_$OnChangeCvvCardImpl value,
+          $Res Function(_$OnChangeCvvCardImpl) then) =
+      __$$OnChangeCvvCardImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String val});
+}
+
+/// @nodoc
+class __$$OnChangeCvvCardImplCopyWithImpl<$Res>
+    extends _$AddCardEventCopyWithImpl<$Res, _$OnChangeCvvCardImpl>
+    implements _$$OnChangeCvvCardImplCopyWith<$Res> {
+  __$$OnChangeCvvCardImplCopyWithImpl(
+      _$OnChangeCvvCardImpl _value, $Res Function(_$OnChangeCvvCardImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AddCardEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? val = null,
+  }) {
+    return _then(_$OnChangeCvvCardImpl(
+      null == val
+          ? _value.val
+          : val // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OnChangeCvvCardImpl implements _OnChangeCvvCard {
+  const _$OnChangeCvvCardImpl(this.val);
+
+  @override
+  final String val;
+
+  @override
+  String toString() {
+    return 'AddCardEvent.onChangeCvvCard(val: $val)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnChangeCvvCardImpl &&
+            (identical(other.val, val) || other.val == val));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, val);
+
+  /// Create a copy of AddCardEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnChangeCvvCardImplCopyWith<_$OnChangeCvvCardImpl> get copyWith =>
+      __$$OnChangeCvvCardImplCopyWithImpl<_$OnChangeCvvCardImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(String val) onChangeCardName,
+    required TResult Function(String val) onChangeCardNumber,
+    required TResult Function(String val) onChangeExpDate,
+    required TResult Function(String val) onChangeCvvCard,
+  }) {
+    return onChangeCvvCard(val);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(String val)? onChangeCardName,
+    TResult? Function(String val)? onChangeCardNumber,
+    TResult? Function(String val)? onChangeExpDate,
+    TResult? Function(String val)? onChangeCvvCard,
+  }) {
+    return onChangeCvvCard?.call(val);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String val)? onChangeCardName,
+    TResult Function(String val)? onChangeCardNumber,
+    TResult Function(String val)? onChangeExpDate,
+    TResult Function(String val)? onChangeCvvCard,
+    required TResult orElse(),
+  }) {
+    if (onChangeCvvCard != null) {
+      return onChangeCvvCard(val);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_OnChangeCardName value) onChangeCardName,
+    required TResult Function(_OnChangeCardNumber value) onChangeCardNumber,
+    required TResult Function(_OnChangeExpDate value) onChangeExpDate,
+    required TResult Function(_OnChangeCvvCard value) onChangeCvvCard,
+  }) {
+    return onChangeCvvCard(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_OnChangeCardName value)? onChangeCardName,
+    TResult? Function(_OnChangeCardNumber value)? onChangeCardNumber,
+    TResult? Function(_OnChangeExpDate value)? onChangeExpDate,
+    TResult? Function(_OnChangeCvvCard value)? onChangeCvvCard,
+  }) {
+    return onChangeCvvCard?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_OnChangeCardName value)? onChangeCardName,
+    TResult Function(_OnChangeCardNumber value)? onChangeCardNumber,
+    TResult Function(_OnChangeExpDate value)? onChangeExpDate,
+    TResult Function(_OnChangeCvvCard value)? onChangeCvvCard,
+    required TResult orElse(),
+  }) {
+    if (onChangeCvvCard != null) {
+      return onChangeCvvCard(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnChangeCvvCard implements AddCardEvent {
+  const factory _OnChangeCvvCard(final String val) = _$OnChangeCvvCardImpl;
+
+  String get val;
+
+  /// Create a copy of AddCardEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$OnChangeCvvCardImplCopyWith<_$OnChangeCvvCardImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc

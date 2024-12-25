@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:movie/core/common/widgets/svg_widget.dart';
 
 class CustomTextField extends StatefulWidget {
   final TextInputType keyboardType;
   final TextCapitalization textCapitalization;
+  final String? hintText;
   final String? label;
   final String? error;
   final String initValue;
@@ -11,6 +13,8 @@ class CustomTextField extends StatefulWidget {
   final VoidCallback? actionRight;
   final int? maxLength;
   final Function(String value) onChanged;
+  final List<TextInputFormatter>? inputFormatters;
+  final TextInputAction textInputAction;
 
   const CustomTextField({
     super.key,
@@ -22,7 +26,10 @@ class CustomTextField extends StatefulWidget {
     this.actionRight,
     this.maxLength,
     this.initValue = "",
+    this.hintText,
     required this.onChanged,
+    this.inputFormatters,
+    this.textInputAction = TextInputAction.none,
   });
 
   @override
@@ -46,11 +53,14 @@ class _CustomTextFieldState extends State<CustomTextField> {
         ],
         TextFormField(
           initialValue: widget.initValue,
-          onChanged: (val) => widget.onChanged!(val),
+          textInputAction: widget.textInputAction,
+          onChanged: (val) => widget.onChanged(val),
+          inputFormatters: widget.inputFormatters,
           keyboardType: widget.keyboardType,
           textCapitalization: widget.textCapitalization,
           maxLength: widget.maxLength,
           decoration: InputDecoration(
+              hintText: widget.hintText,
               suffixIcon: widget.icRight != null
                   ? InkWell(
                       onTap: () => widget.actionRight!.call(),

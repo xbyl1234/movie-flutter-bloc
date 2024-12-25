@@ -1,5 +1,7 @@
 import 'package:get_it/get_it.dart';
 import 'package:movie/features/confirm_payment/bloc/confirm_payment_bloc.dart';
+import 'package:movie/features/language/bloc/language_bloc.dart';
+import 'package:movie/features/main/screens/profile/bloc/profile_bloc.dart';
 import 'package:movie/features/payments/bloc/payments_bloc.dart';
 import '../core/cubit/app_cubit.dart';
 import '../core/data/data_resource/remote/movie/movie_api_service.dart';
@@ -69,4 +71,8 @@ Future<void> init() async {
   sl.registerFactory<ConfirmPaymentBloc>(() => ConfirmPaymentBloc());
 
   sl.registerFactory<AddCardBloc>(() => AddCardBloc());
+
+  sl.registerLazySingleton<ProfileBloc>(() => ProfileBloc());
+
+  sl.registerFactory<LanguageBloc>(() => LanguageBloc());
 }

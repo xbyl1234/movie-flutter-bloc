@@ -25,9 +25,11 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "btn_add": MessageLookupByLibrary.simpleMessage("Add"),
-        "btn_change": MessageLookupByLibrary.simpleMessage("Change"),
-        "btn_continue": MessageLookupByLibrary.simpleMessage("Continue"),
+        "btn_add": MessageLookupByLibrary.simpleMessage("Thêm"),
+        "btn_add_new_card":
+            MessageLookupByLibrary.simpleMessage("Thêm thẻ mới"),
+        "btn_change": MessageLookupByLibrary.simpleMessage("Thay đổi"),
+        "btn_continue": MessageLookupByLibrary.simpleMessage("Tiếp tục"),
         "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
             "Thưởng thức phim Full-HD, không giới hạn và không có quảng cáo"),
         "label_menu_dark_mode":
@@ -50,12 +52,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "tab_home": MessageLookupByLibrary.simpleMessage("Trang chủ"),
         "tab_my_list": MessageLookupByLibrary.simpleMessage("Danh sách"),
         "tab_profile": MessageLookupByLibrary.simpleMessage("Cá nhân"),
-        "tf_card_name": MessageLookupByLibrary.simpleMessage("Card Name"),
-        "tf_card_number": MessageLookupByLibrary.simpleMessage("Card Number"),
+        "tf_card_name": MessageLookupByLibrary.simpleMessage("Tên thẻ"),
+        "tf_card_number": MessageLookupByLibrary.simpleMessage("Số thẻ"),
         "tf_cvv": MessageLookupByLibrary.simpleMessage("CVV"),
-        "tf_expiry_date": MessageLookupByLibrary.simpleMessage("Expiry Date"),
+        "tf_expiry_date": MessageLookupByLibrary.simpleMessage("Ngày hết hạn"),
         "title_add_new_card":
-            MessageLookupByLibrary.simpleMessage("Add New Card"),
+            MessageLookupByLibrary.simpleMessage("Thêm thẻ mới"),
+        "title_language": MessageLookupByLibrary.simpleMessage("Language"),
         "title_new_release":
             MessageLookupByLibrary.simpleMessage("Bản phát hành mới"),
         "title_payment": MessageLookupByLibrary.simpleMessage("Thanh toán"),
@@ -67,7 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Top 10 phim tuần này"),
         "txt_allows_streaming_of4k": MessageLookupByLibrary.simpleMessage(
             "Cho phép phát trực tuyến 4K."),
-        "txt_amount": MessageLookupByLibrary.simpleMessage("Amount"),
+        "txt_amount": MessageLookupByLibrary.simpleMessage("Số lượng"),
         "txt_congratulations":
             MessageLookupByLibrary.simpleMessage("Xin chúc mừng!"),
         "txt_content_congratulations": m0,
@@ -78,8 +81,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "txt_month": MessageLookupByLibrary.simpleMessage("tháng"),
         "txt_select_payment_method": MessageLookupByLibrary.simpleMessage(
             "Chọn phương thức thanh toán bạn muốn sử dụng."),
-        "txt_tax": MessageLookupByLibrary.simpleMessage("Tax"),
-        "txt_total": MessageLookupByLibrary.simpleMessage("Total"),
+        "txt_tax": MessageLookupByLibrary.simpleMessage("Thuế"),
+        "txt_total": MessageLookupByLibrary.simpleMessage("Tổng tiền"),
         "txt_video_audio_quality_is_better":
             MessageLookupByLibrary.simpleMessage(
                 "Chất lượng video và âm thanh tốt hơn."),

@@ -1,39 +1,100 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../../../core/common/enums/menu_type.dart';
 import '../../../../../core/common/resource/icons.dart';
 import '../../../../../core/common/widgets/svg_widget.dart';
+import '../bloc/profile_bloc.dart';
 
 class MenuItem extends StatelessWidget {
   final String title;
   final String icLeft;
   final VoidCallback action;
+  final MenuType type;
+  final ProfileBloc bloc;
 
-  const MenuItem({super.key, required this.title, required this.icLeft, required this.action});
+  const MenuItem({
+    super.key,
+    required this.title,
+    required this.icLeft,
+    required this.action,
+    required this.type,
+    required this.bloc,
+  });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => action.call(),
       behavior: HitTestBehavior.translucent,
-      child: Row(
-        children: [
-          const SizedBox(
-            width: 16,
-          ),
-          SvgWidget(ic: icLeft),
-          const SizedBox(
-            width: 16,
-          ),
-          Text(
-            title,
-            style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Colors.black, fontSize: 16),
-          ),
-          const Spacer(),
-          SvgWidget(ic: icArrowRight),
-          const SizedBox(
-            width: 16,
-          ),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.only(left: 16, top: 20, right: 16),
+        child: Row(
+          children: [
+            SvgWidget(ic: icLeft),
+            const SizedBox(
+              width: 16,
+            ),
+            Text(
+              title,
+              style: Theme.of(context)
+                  .textTheme
+                  .titleMedium!
+                  .copyWith(color: Colors.black, fontSize: 16),
+            ),
+            const Spacer(),
+            if (type == MenuType.language)
+              Padding(
+                padding: const EdgeInsets.only(right: 16),
+                child: BlocBuilder<ProfileBloc, ProfileState>(
+                  bloc: bloc..add(ProfileEvent.onInit()),
+                  builder: (context, state) {
+                    return Text(state.languageName ?? "Not Found",
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleMedium!
+                            .copyWith(color: Colors.black, fontSize: 14));
+                  },
+                ),
+              )
+            else if (type == MenuType.darkMode)
+              BlocBuilder<ProfileBloc, ProfileState>(
+                bloc: bloc,
+                builder: (context, state) {
+                  return Container(
+                      width: 44,
+                      height: 24,
+                      padding: const EdgeInsets.all(2),
+                      decoration: BoxDecoration(
+                        color: state.isDarkMode
+                            ? Colors.white
+                            : Colors.grey.withOpacity(0.5),
+                        border: Border.all(
+                            color: state.isDarkMode
+                                ? Theme.of(context)
+                                    .colorScheme
+                                    .primary
+                                    .withOpacity(0.5)
+                                : Colors.grey.withOpacity(0.5),
+                            width: state.isDarkMode ? 1 : 0),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      alignment: state.isDarkMode
+                          ? Alignment.centerRight
+                          : Alignment.centerLeft,
+                      child: Container(
+                        height: 24,
+                        width: 22,
+                        decoration: BoxDecoration(
+                            color: state.isDarkMode
+                                ? Theme.of(context).colorScheme.primary
+                                : Colors.white,
+                            shape: BoxShape.circle),
+                      ));
+                },
+              ),
+            if (type != MenuType.darkMode) SvgWidget(ic: icArrowRight),
+          ],
+        ),
       ),
     );
   }

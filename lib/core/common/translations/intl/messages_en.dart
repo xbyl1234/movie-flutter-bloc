@@ -26,6 +26,8 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "btn_add": MessageLookupByLibrary.simpleMessage("Add"),
+        "btn_add_new_card":
+            MessageLookupByLibrary.simpleMessage("Add New Card"),
         "btn_change": MessageLookupByLibrary.simpleMessage("Change"),
         "btn_continue": MessageLookupByLibrary.simpleMessage("Continue"),
         "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
@@ -55,6 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "tf_expiry_date": MessageLookupByLibrary.simpleMessage("Expiry Date"),
         "title_add_new_card":
             MessageLookupByLibrary.simpleMessage("Add New Card"),
+        "title_language": MessageLookupByLibrary.simpleMessage("Language"),
         "title_new_release":
             MessageLookupByLibrary.simpleMessage("New Releases"),
         "title_payment": MessageLookupByLibrary.simpleMessage("Payment"),

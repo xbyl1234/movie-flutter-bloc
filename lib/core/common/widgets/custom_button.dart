@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
   final String btnText;
-  final VoidCallback action;
+  final VoidCallback? action;
   final Color? bg, textColor;
   final bool enable;
 
@@ -30,6 +30,6 @@ class CustomButton extends StatelessWidget {
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: textColor ?? Colors.white,
                 )),
-        onPressed: () => enable ? action.call() : null);
+        onPressed: () => enable ? action!.call() : null);
   }
 }

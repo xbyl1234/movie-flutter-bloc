@@ -26,12 +26,12 @@
   "txt_join_premium": "Đăng ký Premium!",
   "txt_content_join_premium": "Thưởng thức phim Full-HD, không giới hạn và không có quảng cáo",
   "txt_select_payment_method": "Chọn phương thức thanh toán bạn muốn sử dụng.",
-  "btn_continue": "Continue",
+  "btn_continue": "Tiếp tục",
   "title_review_summary": "Review Summary",
-  "txt_amount": "Amount",
-  "txt_tax": "Tax",
-  "txt_total": "Total",
-  "btn_change": "Change",
+  "txt_amount": "Số lượng",
+  "txt_tax": "Thuế",
+  "txt_total": "Tổng tiền",
+  "btn_change": "Thay đổi",
   "txt_congratulations": "Xin chúc mừng!",
   "txt_content_congratulations": "Bạn đã đăng ký thành công gói cao cấp {time} tháng. Hãy tận hưởng những lợi ích!",
   "@txt_content_congratulations": {
@@ -41,10 +41,12 @@
       }
     }
   },
-  "title_add_new_card": "Add New Card",
-  "tf_card_name": "Card Name",
-  "tf_card_number": "Card Number",
-  "tf_expiry_date": "Expiry Date",
+  "title_add_new_card": "Thêm thẻ mới",
+  "tf_card_name": "Tên thẻ",
+  "tf_card_number": "Số thẻ",
+  "tf_expiry_date": "Ngày hết hạn",
   "tf_cvv": "CVV",
-  "btn_add": "Add"
+  "btn_add": "Thêm",
+  "btn_add_new_card": "Thêm thẻ mới",
+  "title_language": "Language"
 }

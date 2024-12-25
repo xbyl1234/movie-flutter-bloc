@@ -40,7 +40,7 @@ class PaymentsView extends StatelessWidget {
                         child: CustomButton(
                           bg: Color(0xffFCE7E9),
                           textColor: Theme.of(context).colorScheme.primary,
-                          btnText: 'Add New Card',
+                          btnText: S.of(context).btn_add_new_card,
                           action: () => bloc
                               .add(PaymentsEvent.onNavigate(addCardRoute)),
                         ),

@@ -46,5 +46,7 @@
   "tf_card_number": "Card Number",
   "tf_expiry_date": "Expiry Date",
   "tf_cvv": "CVV",
-  "btn_add": "Add"
+  "btn_add": "Add",
+  "btn_add_new_card": "Add New Card",
+  "title_language": "Language"
 }

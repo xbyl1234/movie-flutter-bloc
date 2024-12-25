@@ -459,6 +459,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Add New Card`
+  String get btn_add_new_card {
+    return Intl.message(
+      'Add New Card',
+      name: 'btn_add_new_card',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Language`
+  String get title_language {
+    return Intl.message(
+      'Language',
+      name: 'title_language',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

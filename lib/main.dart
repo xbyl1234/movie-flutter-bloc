@@ -14,6 +14,11 @@ import 'features/main/screens/home/bloc/home_cubit.dart';
 
 const koHoFontFamily = 'koHo';
 
+const supportedLocales = [
+  Locale('en'),
+  Locale('vi'),
+];
+
 void main() async {
   await appConfig();
   runApp(const App());

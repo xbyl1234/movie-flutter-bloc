@@ -1,278 +1,92 @@
 import 'package:flutter/material.dart';
-import '../../../../core/common/contants/routers.dart';
-import '../../../../core/common/resource/icons.dart';
-import '../../../../core/common/translations/l10n.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movie/core/common/enums/menu_type.dart';
+import 'package:movie/core/common/utils/bottom_sheet_utils.dart';
+import 'package:movie/features/main/screens/profile/bloc/profile_bloc.dart';
 import '../../../../core/common/widgets/svg_widget.dart';
+import '../../../../di/dependency_injection.dart';
 import 'widgets/menu_item.dart';
-import 'widgets/menu_item_dark_mode.dart';
-import 'widgets/menu_item_language.dart';
+import 'widgets/subcribe_premium.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: const SvgWidget(ic: 'assets/icons/ic_logo.svg'),
-      ),
-      body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
-        padding: const EdgeInsets.only(bottom: 24),
-        child: Column(
-          children: [
-            const AvatarAccount(),
-            const SizedBox(
-              height: 16,
-            ),
-            Text(
-              'Flutter Dev',
-              style: Theme.of(context)
-                  .textTheme
-                  .titleMedium!
-                  .copyWith(color: Colors.black, fontSize: 18),
-            ),
-            const SizedBox(
-              height: 4,
-            ),
-            Text('flutter.dev@gmail.com',
-                style: Theme.of(context).textTheme.bodyMedium),
-            const SizedBox(
-              height: 24,
-            ),
-            const SubscribePremium(),
-            const SizedBox(
-              height: 24,
-            ),
-            MenuItem(
-              title: S.of(context).label_menu_edit_profile,
-              icLeft: 'assets/icons/ic_person.svg',
-              action: () => Navigator.pushNamed(context, editProfileRoute),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            MenuItem(
-              title: S.of(context).label_menu_notification,
-              icLeft: 'assets/icons/ic_noti.svg',
-              action: () => Navigator.pushNamed(context, notificationRoute),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            MenuItem(
-                title: S.of(context).label_menu_download,
-                icLeft: 'assets/icons/ic_download.svg',
-                action: () {}),
-            const SizedBox(
-              height: 20,
-            ),
-            MenuItem(
-                title: S.of(context).label_menu_security,
-                icLeft: 'assets/icons/ic_security.svg',
-                action: () {}),
-            const SizedBox(
-              height: 20,
-            ),
-            const MenuItemLanguage(),
-            const SizedBox(
-              height: 20,
-            ),
-            const MenuItemDarkMode(),
-            const SizedBox(
-              height: 20,
-            ),
-            MenuItem(
-                title: S.of(context).label_menu_help_center,
-                icLeft: 'assets/icons/ic_helper.svg',
-                action: () {}),
-            const SizedBox(
-              height: 20,
-            ),
-            MenuItem(
-                title: S.of(context).label_menu_privacy_policy,
-                icLeft: 'assets/icons/ic_person.svg',
-                action: () {}),
-            const SizedBox(
-              height: 20,
-            ),
-            MenuItem(
-                title: S.of(context).label_menu_log_out,
-                icLeft: 'assets/icons/ic_person.svg',
-                action: () {
-                  showModalBottomSheet(
-                      context: context,
-                      builder: (context) {
-                        return Container(
-                          height: 226,
-                          padding: const EdgeInsets.only(top: 8),
-                          width: MediaQuery.sizeOf(context).width,
-                          decoration: const BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(16),
-                                  topRight: Radius.circular(16))),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              const SvgWidget(
-                                  ic: 'assets/icons/ic_divider.svg'),
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              Text(
-                                'Logout',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .titleLarge!
-                                    .copyWith(
-                                        color: Theme.of(context).primaryColor),
-                              ),
-                              const Padding(
-                                padding: EdgeInsets.all(16),
-                                child: Divider(),
-                              ),
-                              Text('Are you sure you want to log out?',
-                                  style:
-                                      Theme.of(context).textTheme.titleMedium),
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  const SizedBox(
-                                    width: 16,
-                                  ),
-                                  TextButton(
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                    },
-                                    style: TextButton.styleFrom(
-                                        backgroundColor:
-                                            Colors.red.withOpacity(0.5),
-                                        minimumSize: Size(
-                                            (MediaQuery.sizeOf(context).width *
-                                                    0.5 -
-                                                20),
-                                            46)),
-                                    child: const Text('Cancel'),
-                                  ),
-                                  const SizedBox(
-                                    width: 8,
-                                  ),
-                                  TextButton(
-                                      onPressed: () {
-                                        Navigator.pushNamedAndRemoveUntil(
-                                            context,
-                                            loginRoute,
-                                            (route) => false);
-                                      },
-                                      style: TextButton.styleFrom(
-                                          backgroundColor:
-                                              Theme.of(context).primaryColor,
-                                          minimumSize: Size(
-                                              (MediaQuery.sizeOf(context)
-                                                          .width *
-                                                      0.5 -
-                                                  20),
-                                              46)),
-                                      child: Text(
-                                        'Yes, Logout',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .titleMedium!
-                                            .copyWith(color: Colors.white),
-                                      )),
-                                  const SizedBox(
-                                    width: 16,
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                        );
-                      });
-                }),
-          ],
+    final bloc = sl.get<ProfileBloc>();
+    return BlocProvider<ProfileBloc>(
+      create: (context) => bloc,
+      child: Scaffold(
+        appBar: AppBar(
+          leading: const SvgWidget(ic: 'assets/icons/ic_logo.svg'),
         ),
-      ),
-    );
-  }
-}
-
-class AvatarAccount extends StatelessWidget {
-  const AvatarAccount({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 120,
-      width: 120,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(60),
-          image: const DecorationImage(
-              image: NetworkImage(
-                  'https://www.elleman.vn/wp-content/uploads/2022/05/07/213899/doctor-strange-2-elleman-2022.jpg'),
-              fit: BoxFit.cover)),
-    );
-  }
-}
-
-class SubscribePremium extends StatelessWidget {
-  const SubscribePremium({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => Navigator.pushNamed(context, subscribeRouter),
-      child: Container(
-        padding: const EdgeInsets.all(16),
-        margin: const EdgeInsets.symmetric(horizontal: 16),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            border: Border.all(
-                color: Theme.of(context).colorScheme.primary, width: 1.5)),
-        child: Row(
-          children: [
-            SvgWidget(
-              ic: icPremium,
-              color: Theme.of(context).colorScheme.primary,
-            ),
-            const SizedBox(
-              width: 16,
-            ),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+        body: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          padding: const EdgeInsets.only(bottom: 24),
+          child: Column(
+            children: [
+              Stack(
                 children: [
-                  Text(
-                    S.of(context).txt_join_premium,
-                    style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                        color: Theme.of(context).colorScheme.primary,
-                        fontSize: 18),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(60),
+                    child: Image.asset(
+                      'assets/images/avatar_default.jpg',
+                      height: 120,
+                      width: 120,
+                    ),
                   ),
-                  const SizedBox(
-                    height: 4,
-                  ),
-                  Text(
-                      S.of(context).txt_content_join_premium,
-                      style: Theme.of(context).textTheme.bodyMedium),
+                  Positioned(
+                      bottom: 8,
+                      right: 0,
+                      child: SvgWidget(ic: 'assets/icons/ic_edit_avatar.svg')),
                 ],
               ),
-            ),
-            const SizedBox(
-              width: 16,
-            ),
-            SvgWidget(
-              ic: icArrowRight,
-              color: Theme.of(context).colorScheme.primary,
-            )
-          ],
+              const SizedBox(
+                height: 16,
+              ),
+              Text(
+                'Flutter Dev',
+                style: Theme.of(context)
+                    .textTheme
+                    .titleMedium!
+                    .copyWith(color: Colors.black, fontSize: 18),
+              ),
+              const SizedBox(
+                height: 4,
+              ),
+              Text('flutter.dev@gmail.com',
+                  style: Theme.of(context).textTheme.bodyMedium),
+              const SizedBox(
+                height: 24,
+              ),
+              const SubscribePremium(),
+              const SizedBox(
+                height: 4,
+              ),
+              ...MenuType.values.map(
+                (item) => MenuItem(
+                  title: item.name(context),
+                  icLeft: item.ic,
+                  action: () async {
+                    if (item == MenuType.darkMode) {
+                      bloc.add(ProfileEvent.onChangeDarkMode());
+                    } else if (item == MenuType.logout) {
+                      BottomSheetUtils.logout(context);
+                    } else if (item == MenuType.language) {
+                      final result = await Navigator.pushNamed(context, item.router);
+                      if (result != null) {
+                        bloc.add(ProfileEvent.onChangeLanguage(result as String));
+                      }
+                    } else {
+                      Navigator.pushNamed(context, item.router);
+                    }
+                  },
+                  type: item,
+                  bloc: bloc,
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
