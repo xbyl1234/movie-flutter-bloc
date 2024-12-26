@@ -17,8 +17,9 @@ class EditProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bloc = sl.get<EditProfileBloc>();
     return BlocProvider<EditProfileBloc>(
-      create: (context) => sl.get<EditProfileBloc>(),
+      create: (context) => bloc,
       child: Scaffold(
         appBar: CustomAppBar(
           title: S.of(context).title_edit_profile,
@@ -36,11 +37,11 @@ class EditProfileScreen extends StatelessWidget {
                   },
                 ),
               ),
-              FullNameInput(),
-              EmailInput(),
-              PhoneNumberInput(),
-              GenderInput(),
-              CountryInput(),
+              FullNameInput(bloc: bloc,),
+              EmailInput(bloc: bloc,),
+              PhoneNumberInput(bloc: bloc,),
+              GenderInput(bloc: bloc,),
+              CountryInput(bloc: bloc,),
             ],
           ),
         ),
@@ -51,7 +52,9 @@ class EditProfileScreen extends StatelessWidget {
               return CustomButton(
                 enable: state.enable,
                 btnText: S.of(context).btn_update,
-                action: () {},
+                action: () {
+                  Navigator.pop(context);
+                },
               );
             },
           ),

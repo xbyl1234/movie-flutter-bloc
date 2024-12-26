@@ -50,7 +50,7 @@ mixin _$EditProfileEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_OnUpdate value) onUpdate,
-    required TResult Function(OnChangeFullName value) onChangeFullName,
+    required TResult Function(_OnChangeFullName value) onChangeFullName,
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
     required TResult Function(_OnChangeGender value) onChangeGender,
@@ -60,7 +60,7 @@ mixin _$EditProfileEvent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_OnUpdate value)? onUpdate,
-    TResult? Function(OnChangeFullName value)? onChangeFullName,
+    TResult? Function(_OnChangeFullName value)? onChangeFullName,
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult? Function(_OnChangeGender value)? onChangeGender,
@@ -70,7 +70,7 @@ mixin _$EditProfileEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_OnUpdate value)? onUpdate,
-    TResult Function(OnChangeFullName value)? onChangeFullName,
+    TResult Function(_OnChangeFullName value)? onChangeFullName,
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult Function(_OnChangeGender value)? onChangeGender,
@@ -186,7 +186,7 @@ class _$OnUpdateImpl implements _OnUpdate {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_OnUpdate value) onUpdate,
-    required TResult Function(OnChangeFullName value) onChangeFullName,
+    required TResult Function(_OnChangeFullName value) onChangeFullName,
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
     required TResult Function(_OnChangeGender value) onChangeGender,
@@ -199,7 +199,7 @@ class _$OnUpdateImpl implements _OnUpdate {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_OnUpdate value)? onUpdate,
-    TResult? Function(OnChangeFullName value)? onChangeFullName,
+    TResult? Function(_OnChangeFullName value)? onChangeFullName,
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult? Function(_OnChangeGender value)? onChangeGender,
@@ -212,7 +212,7 @@ class _$OnUpdateImpl implements _OnUpdate {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_OnUpdate value)? onUpdate,
-    TResult Function(OnChangeFullName value)? onChangeFullName,
+    TResult Function(_OnChangeFullName value)? onChangeFullName,
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult Function(_OnChangeGender value)? onChangeGender,
@@ -265,7 +265,7 @@ class __$$OnChangeFullNameImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OnChangeFullNameImpl implements OnChangeFullName {
+class _$OnChangeFullNameImpl implements _OnChangeFullName {
   const _$OnChangeFullNameImpl(this.text);
 
   @override
@@ -343,7 +343,7 @@ class _$OnChangeFullNameImpl implements OnChangeFullName {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_OnUpdate value) onUpdate,
-    required TResult Function(OnChangeFullName value) onChangeFullName,
+    required TResult Function(_OnChangeFullName value) onChangeFullName,
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
     required TResult Function(_OnChangeGender value) onChangeGender,
@@ -356,7 +356,7 @@ class _$OnChangeFullNameImpl implements OnChangeFullName {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_OnUpdate value)? onUpdate,
-    TResult? Function(OnChangeFullName value)? onChangeFullName,
+    TResult? Function(_OnChangeFullName value)? onChangeFullName,
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult? Function(_OnChangeGender value)? onChangeGender,
@@ -369,7 +369,7 @@ class _$OnChangeFullNameImpl implements OnChangeFullName {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_OnUpdate value)? onUpdate,
-    TResult Function(OnChangeFullName value)? onChangeFullName,
+    TResult Function(_OnChangeFullName value)? onChangeFullName,
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult Function(_OnChangeGender value)? onChangeGender,
@@ -383,8 +383,8 @@ class _$OnChangeFullNameImpl implements OnChangeFullName {
   }
 }
 
-abstract class OnChangeFullName implements EditProfileEvent {
-  const factory OnChangeFullName(final String text) = _$OnChangeFullNameImpl;
+abstract class _OnChangeFullName implements EditProfileEvent {
+  const factory _OnChangeFullName(final String text) = _$OnChangeFullNameImpl;
 
   String get text;
 
@@ -507,7 +507,7 @@ class _$OnChangeEmailImpl implements _OnChangeEmail {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_OnUpdate value) onUpdate,
-    required TResult Function(OnChangeFullName value) onChangeFullName,
+    required TResult Function(_OnChangeFullName value) onChangeFullName,
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
     required TResult Function(_OnChangeGender value) onChangeGender,
@@ -520,7 +520,7 @@ class _$OnChangeEmailImpl implements _OnChangeEmail {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_OnUpdate value)? onUpdate,
-    TResult? Function(OnChangeFullName value)? onChangeFullName,
+    TResult? Function(_OnChangeFullName value)? onChangeFullName,
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult? Function(_OnChangeGender value)? onChangeGender,
@@ -533,7 +533,7 @@ class _$OnChangeEmailImpl implements _OnChangeEmail {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_OnUpdate value)? onUpdate,
-    TResult Function(OnChangeFullName value)? onChangeFullName,
+    TResult Function(_OnChangeFullName value)? onChangeFullName,
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult Function(_OnChangeGender value)? onChangeGender,
@@ -672,7 +672,7 @@ class _$OnChangePhoneNumberImpl implements _OnChangePhoneNumber {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_OnUpdate value) onUpdate,
-    required TResult Function(OnChangeFullName value) onChangeFullName,
+    required TResult Function(_OnChangeFullName value) onChangeFullName,
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
     required TResult Function(_OnChangeGender value) onChangeGender,
@@ -685,7 +685,7 @@ class _$OnChangePhoneNumberImpl implements _OnChangePhoneNumber {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_OnUpdate value)? onUpdate,
-    TResult? Function(OnChangeFullName value)? onChangeFullName,
+    TResult? Function(_OnChangeFullName value)? onChangeFullName,
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult? Function(_OnChangeGender value)? onChangeGender,
@@ -698,7 +698,7 @@ class _$OnChangePhoneNumberImpl implements _OnChangePhoneNumber {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_OnUpdate value)? onUpdate,
-    TResult Function(OnChangeFullName value)? onChangeFullName,
+    TResult Function(_OnChangeFullName value)? onChangeFullName,
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult Function(_OnChangeGender value)? onChangeGender,
@@ -838,7 +838,7 @@ class _$OnChangeGenderImpl implements _OnChangeGender {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_OnUpdate value) onUpdate,
-    required TResult Function(OnChangeFullName value) onChangeFullName,
+    required TResult Function(_OnChangeFullName value) onChangeFullName,
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
     required TResult Function(_OnChangeGender value) onChangeGender,
@@ -851,7 +851,7 @@ class _$OnChangeGenderImpl implements _OnChangeGender {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_OnUpdate value)? onUpdate,
-    TResult? Function(OnChangeFullName value)? onChangeFullName,
+    TResult? Function(_OnChangeFullName value)? onChangeFullName,
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult? Function(_OnChangeGender value)? onChangeGender,
@@ -864,7 +864,7 @@ class _$OnChangeGenderImpl implements _OnChangeGender {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_OnUpdate value)? onUpdate,
-    TResult Function(OnChangeFullName value)? onChangeFullName,
+    TResult Function(_OnChangeFullName value)? onChangeFullName,
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult Function(_OnChangeGender value)? onChangeGender,
@@ -1003,7 +1003,7 @@ class _$OnChangeCountryImpl implements _OnChangeCountry {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_OnUpdate value) onUpdate,
-    required TResult Function(OnChangeFullName value) onChangeFullName,
+    required TResult Function(_OnChangeFullName value) onChangeFullName,
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
     required TResult Function(_OnChangeGender value) onChangeGender,
@@ -1016,7 +1016,7 @@ class _$OnChangeCountryImpl implements _OnChangeCountry {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_OnUpdate value)? onUpdate,
-    TResult? Function(OnChangeFullName value)? onChangeFullName,
+    TResult? Function(_OnChangeFullName value)? onChangeFullName,
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult? Function(_OnChangeGender value)? onChangeGender,
@@ -1029,7 +1029,7 @@ class _$OnChangeCountryImpl implements _OnChangeCountry {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_OnUpdate value)? onUpdate,
-    TResult Function(OnChangeFullName value)? onChangeFullName,
+    TResult Function(_OnChangeFullName value)? onChangeFullName,
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult Function(_OnChangeGender value)? onChangeGender,

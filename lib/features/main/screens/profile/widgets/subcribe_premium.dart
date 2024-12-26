@@ -15,7 +15,7 @@ class SubscribePremium extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         margin: const EdgeInsets.symmetric(horizontal: 16),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(24),
             border: Border.all(
                 color: Theme.of(context).colorScheme.primary, width: 1.5)),
         child: Row(

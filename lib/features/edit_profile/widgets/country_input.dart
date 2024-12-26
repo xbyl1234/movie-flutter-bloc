@@ -3,10 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/core/common/widgets/custom_text_field.dart';
 import 'package:movie/features/edit_profile/bloc/edit_profile_bloc.dart';
 import '../../../core/common/translations/l10n.dart';
-import '../../../di/dependency_injection.dart';
 
 class CountryInput extends StatelessWidget {
-  const CountryInput({super.key});
+  final EditProfileBloc bloc;
+  const CountryInput({super.key, required this.bloc});
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +19,7 @@ class CountryInput extends StatelessWidget {
           actionRight: () {
             FocusManager.instance.primaryFocus?.unfocus();
           },
-          onChanged: (val) => sl
-              .get<EditProfileBloc>()
-              .add(EditProfileEvent.onChangeCountry(val)),
+          onChanged: (val) => bloc.add(EditProfileEvent.onChangeCountry(val)),
         );
       },
     );

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/core/common/widgets/custom_text_field.dart';
 import '../../../core/common/translations/l10n.dart';
-import '../../../di/dependency_injection.dart';
 import '../bloc/edit_profile_bloc.dart';
 
 class FullNameInput extends StatelessWidget {
-  const FullNameInput({super.key});
+  final EditProfileBloc bloc;
+  const FullNameInput({super.key, required this.bloc});
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +15,9 @@ class FullNameInput extends StatelessWidget {
         return CustomTextField(
           hintText: S.of(context).hint_full_name,
           textCapitalization: TextCapitalization.words,
+          error: state.errFullName,
           maxLength: 55,
-          onChanged: (val) => sl
-              .get<EditProfileBloc>()
-              .add(EditProfileEvent.onChangeFullName(val)),
+          onChanged: (val) => bloc.add(EditProfileEvent.onChangeFullName(val)),
         );
       },
     );

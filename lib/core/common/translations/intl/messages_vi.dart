@@ -30,15 +30,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Thêm thẻ mới"),
         "btn_change": MessageLookupByLibrary.simpleMessage("Thay đổi"),
         "btn_continue": MessageLookupByLibrary.simpleMessage("Tiếp tục"),
-        "btn_update": MessageLookupByLibrary.simpleMessage("Update"),
+        "btn_update": MessageLookupByLibrary.simpleMessage("Cập nhật"),
         "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
             "Thưởng thức phim Full-HD, không giới hạn và không có quảng cáo"),
-        "hint_full_name": MessageLookupByLibrary.simpleMessage("Full name"),
-        "hint_text_country": MessageLookupByLibrary.simpleMessage("Country"),
+        "hint_full_name": MessageLookupByLibrary.simpleMessage("Họ tên"),
+        "hint_text_country": MessageLookupByLibrary.simpleMessage("Quốc gia"),
         "hint_text_email": MessageLookupByLibrary.simpleMessage("Email"),
-        "hint_text_gender": MessageLookupByLibrary.simpleMessage("Gender"),
+        "hint_text_gender": MessageLookupByLibrary.simpleMessage("Giới tính"),
         "hint_text_phone_number":
-            MessageLookupByLibrary.simpleMessage("Phone number"),
+            MessageLookupByLibrary.simpleMessage("Số điện thoại"),
         "label_menu_dark_mode":
             MessageLookupByLibrary.simpleMessage("Chế độ tối"),
         "label_menu_download":
@@ -66,7 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "title_add_new_card":
             MessageLookupByLibrary.simpleMessage("Thêm thẻ mới"),
         "title_edit_profile":
-            MessageLookupByLibrary.simpleMessage("Edit Profile"),
+            MessageLookupByLibrary.simpleMessage("Cập nhật thông tin"),
         "title_language": MessageLookupByLibrary.simpleMessage("Ngôn ngữ"),
         "title_new_release":
             MessageLookupByLibrary.simpleMessage("Bản phát hành mới"),

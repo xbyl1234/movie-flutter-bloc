@@ -49,11 +49,11 @@
   "btn_add": "Thêm",
   "btn_add_new_card": "Thêm thẻ mới",
   "title_language": "Ngôn ngữ",
-  "title_edit_profile": "Edit Profile",
-  "btn_update": "Update",
-  "hint_text_country": "Country",
+  "title_edit_profile": "Cập nhật thông tin",
+  "btn_update": "Cập nhật",
+  "hint_text_country": "Quốc gia",
   "hint_text_email": "Email",
-  "hint_full_name": "Full name",
-  "hint_text_gender": "Gender",
-  "hint_text_phone_number": "Phone number"
+  "hint_full_name": "Họ tên",
+  "hint_text_gender": "Giới tính",
+  "hint_text_phone_number": "Số điện thoại"
 }
