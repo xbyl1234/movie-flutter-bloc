@@ -8,13 +8,14 @@ class CustomTextField extends StatefulWidget {
   final String? hintText;
   final String? label;
   final String? error;
-  final String initValue;
+  final String? initValue;
   final String? icRight;
   final VoidCallback? actionRight;
   final int? maxLength;
   final Function(String value) onChanged;
   final List<TextInputFormatter>? inputFormatters;
   final TextInputAction textInputAction;
+  final Widget? prefixWidget;
 
   const CustomTextField({
     super.key,
@@ -25,11 +26,12 @@ class CustomTextField extends StatefulWidget {
     this.icRight,
     this.actionRight,
     this.maxLength,
-    this.initValue = "",
+    this.initValue,
     this.hintText,
     required this.onChanged,
     this.inputFormatters,
     this.textInputAction = TextInputAction.none,
+    this.prefixWidget,
   });
 
   @override
@@ -61,6 +63,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           maxLength: widget.maxLength,
           decoration: InputDecoration(
               hintText: widget.hintText,
+              prefixIcon: widget.prefixWidget,
               suffixIcon: widget.icRight != null
                   ? InkWell(
                       onTap: () => widget.actionRight!.call(),

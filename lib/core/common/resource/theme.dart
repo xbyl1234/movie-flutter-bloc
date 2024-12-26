@@ -4,10 +4,9 @@ ThemeData themeData(BuildContext context) {
   return ThemeData(
       fontFamily: 'koHo',
       colorScheme: ColorScheme.fromSeed(
-        seedColor: const Color(0xFFE21221),
-        primary: const Color(0xFFE21221),
-        error: const Color(0xFFE21221).withOpacity(0.7)
-      ),
+          seedColor: const Color(0xFFE21221),
+          primary: const Color(0xFFE21221),
+          error: const Color(0xFFE21221).withOpacity(0.7)),
       useMaterial3: true,
       textTheme: textTheme(),
       dividerTheme: const DividerThemeData(color: Color(0xFFEEEEEE)),
@@ -21,8 +20,10 @@ ThemeData themeData(BuildContext context) {
             .textTheme
             .titleMedium!
             .copyWith(color: Color(0xff9E9E9E), fontSize: 10),
-        selectedLabelStyle: Theme.of(context).textTheme.titleMedium!.copyWith(
-            color: const Color(0xFFE21221), fontSize: 10),
+        selectedLabelStyle: Theme.of(context)
+            .textTheme
+            .titleMedium!
+            .copyWith(color: const Color(0xFFE21221), fontSize: 10),
       ),
       appBarTheme: AppBarTheme(
         scrolledUnderElevation: 0,
@@ -35,28 +36,29 @@ ThemeData themeData(BuildContext context) {
 InputDecorationTheme inputDecorationTheme() {
   return InputDecorationTheme(
       contentPadding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-      fillColor: Colors.grey[200],
+      fillColor: Color(0xffFAFAFA),
       focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
-          borderSide: const BorderSide(width: 0, color: Colors.grey),
+          borderSide: const BorderSide(width: 0, color: Color(0xffFAFAFA)),
           gapPadding: 0),
       disabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
-          borderSide: const BorderSide(width: 0, color: Colors.grey),
+          borderSide: const BorderSide(width: 0, color: Color(0xffFAFAFA)),
           gapPadding: 0),
       enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
-          borderSide: const BorderSide(width: 0, color: Colors.grey),
+          borderSide: const BorderSide(width: 0, color: Color(0xffFAFAFA)),
           gapPadding: 0),
       errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
-          borderSide: const BorderSide(width: 0, color: Colors.grey),
+          borderSide: const BorderSide(width: 0, color: Color(0xffFAFAFA)),
           gapPadding: 0),
       filled: true,
       hintStyle: const TextStyle(
-          fontSize: 14,
-          color: Color(0xFF424242),
-          fontWeight: FontWeight.normal));
+        fontSize: 14,
+        color: Color(0xFF9E9E9E),
+        fontWeight: FontWeight.normal,
+      ));
 }
 
 TextTheme textTheme() {

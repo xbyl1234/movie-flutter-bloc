@@ -2,21 +2,32 @@ import 'package:flutter/material.dart';
 import '../../../../../core/common/widgets/svg_widget.dart';
 
 class AvatarProfile extends StatelessWidget {
-  const AvatarProfile({super.key});
+  final String url;
+  final VoidCallback? onChangeAvatar;
+
+  const AvatarProfile({super.key, required this.url, this.onChangeAvatar});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () => onChangeAvatar?.call(),
       child: Stack(
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(60),
-            child: Image.asset(
-              'assets/images/avatar_default.jpg',
-              height: 120,
-              width: 120,
-            ),
+            child: url.contains('https') || url.contains('http')
+                ? Image.network(
+                    url,
+                    height: 120,
+                    width: 120,
+                    fit: BoxFit.cover,
+                  )
+                : Image.asset(
+                    'assets/images/avatar_default.jpg',
+                    height: 120,
+                    width: 120,
+                    fit: BoxFit.cover,
+                  ),
           ),
           Positioned(
               bottom: 8,

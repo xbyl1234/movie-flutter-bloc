@@ -48,5 +48,12 @@
   "tf_cvv": "CVV",
   "btn_add": "Add",
   "btn_add_new_card": "Add New Card",
-  "title_language": "Language"
+  "title_language": "Language",
+  "title_edit_profile": "Edit Profile",
+  "btn_update": "Update",
+  "hint_text_country": "Country",
+  "hint_text_email": "Email",
+  "hint_full_name": "Full name",
+  "hint_text_gender": "Gender",
+  "hint_text_phone_number": "Phone number"
 }

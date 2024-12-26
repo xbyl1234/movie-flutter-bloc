@@ -53,6 +53,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+    - assets/country/
 
   fonts:
     - family: koHo_regular

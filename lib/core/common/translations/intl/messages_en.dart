@@ -30,8 +30,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Add New Card"),
         "btn_change": MessageLookupByLibrary.simpleMessage("Change"),
         "btn_continue": MessageLookupByLibrary.simpleMessage("Continue"),
+        "btn_update": MessageLookupByLibrary.simpleMessage("Update"),
         "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
             "Enjoy watching Full-HD movies, without restrictions and without ads"),
+        "hint_full_name": MessageLookupByLibrary.simpleMessage("Full name"),
+        "hint_text_country": MessageLookupByLibrary.simpleMessage("Country"),
+        "hint_text_email": MessageLookupByLibrary.simpleMessage("Email"),
+        "hint_text_gender": MessageLookupByLibrary.simpleMessage("Gender"),
+        "hint_text_phone_number":
+            MessageLookupByLibrary.simpleMessage("Phone number"),
         "label_menu_dark_mode":
             MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "label_menu_download": MessageLookupByLibrary.simpleMessage("Download"),
@@ -57,6 +64,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "tf_expiry_date": MessageLookupByLibrary.simpleMessage("Expiry Date"),
         "title_add_new_card":
             MessageLookupByLibrary.simpleMessage("Add New Card"),
+        "title_edit_profile":
+            MessageLookupByLibrary.simpleMessage("Edit Profile"),
         "title_language": MessageLookupByLibrary.simpleMessage("Language"),
         "title_new_release":
             MessageLookupByLibrary.simpleMessage("New Releases"),

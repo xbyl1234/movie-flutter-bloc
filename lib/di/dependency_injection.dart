@@ -9,6 +9,7 @@ import '../core/data/data_resource/remote/movie/search_movie_api_service.dart';
 import '../core/network/movie_provider.dart';
 import '../core/network/search_movie_provider.dart';
 import '../features/add_card/bloc/add_card_bloc.dart';
+import '../features/edit_profile/bloc/edit_profile_bloc.dart';
 import '../features/main/screens/explore/data/repository/search_movies_repository_impld.dart';
 import '../features/main/screens/explore/domain/repository/search_movies_repository.dart';
 import '../features/main/screens/explore/domain/use_case/search_use_case.dart';
@@ -75,4 +76,6 @@ Future<void> init() async {
   sl.registerLazySingleton<ProfileBloc>(() => ProfileBloc());
 
   sl.registerFactory<LanguageBloc>(() => LanguageBloc());
+
+  sl.registerFactory<EditProfileBloc>(() => EditProfileBloc());
 }

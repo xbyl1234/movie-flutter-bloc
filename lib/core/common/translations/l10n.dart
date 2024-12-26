@@ -479,6 +479,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Edit Profile`
+  String get title_edit_profile {
+    return Intl.message(
+      'Edit Profile',
+      name: 'title_edit_profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Update`
+  String get btn_update {
+    return Intl.message(
+      'Update',
+      name: 'btn_update',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Country`
+  String get hint_text_country {
+    return Intl.message(
+      'Country',
+      name: 'hint_text_country',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get hint_text_email {
+    return Intl.message(
+      'Email',
+      name: 'hint_text_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Full name`
+  String get hint_full_name {
+    return Intl.message(
+      'Full name',
+      name: 'hint_full_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gender`
+  String get hint_text_gender {
+    return Intl.message(
+      'Gender',
+      name: 'hint_text_gender',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone number`
+  String get hint_text_phone_number {
+    return Intl.message(
+      'Phone number',
+      name: 'hint_text_phone_number',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

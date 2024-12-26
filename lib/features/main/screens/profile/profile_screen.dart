@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/core/common/enums/menu_type.dart';
 import 'package:movie/core/common/utils/bottom_sheet_utils.dart';
 import 'package:movie/features/main/screens/profile/bloc/profile_bloc.dart';
+import 'package:movie/features/main/screens/profile/widgets/avatar_profile.dart';
 import '../../../../core/common/widgets/svg_widget.dart';
 import '../../../../di/dependency_injection.dart';
 import 'widgets/menu_item.dart';
@@ -25,22 +26,7 @@ class ProfileScreen extends StatelessWidget {
           padding: const EdgeInsets.only(bottom: 24),
           child: Column(
             children: [
-              Stack(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(60),
-                    child: Image.asset(
-                      'assets/images/avatar_default.jpg',
-                      height: 120,
-                      width: 120,
-                    ),
-                  ),
-                  Positioned(
-                      bottom: 8,
-                      right: 0,
-                      child: SvgWidget(ic: 'assets/icons/ic_edit_avatar.svg')),
-                ],
-              ),
+              AvatarProfile(url: ""),
               const SizedBox(
                 height: 16,
               ),
