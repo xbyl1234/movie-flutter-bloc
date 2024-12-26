@@ -1,9 +1,9 @@
 class Language {
-  final String langCode;
-  final String langName;
+  final String code;
+  final String name;
 
   Language({
-    required this.langCode,
-    required this.langName,
+    required this.code,
+    required this.name,
   });
 }

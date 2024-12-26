@@ -7,6 +7,7 @@ class LanguageState with _$LanguageState {
   const factory LanguageState({
     PageCommand? pageCommand,
     @Default([]) List<Language> languages,
-    @Default('en_US') String langCode,
+    @Default('en_US') String locale,
+    @Default('en_US')String selectedLocale,
   }) = _LanguageState;
 }

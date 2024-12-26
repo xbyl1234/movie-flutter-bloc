@@ -30,7 +30,7 @@ final GetIt sl = GetIt.instance;
 
 Future<void> init() async {
   sl.registerSingleton(AppCubit());
-
+  //  sl.registerFactory(() => AppCubit());
   sl.registerSingleton<MovieProvider>((MovieProvider()));
   sl.registerSingleton<MovieApiService>((MovieApiService(sl.get())));
 

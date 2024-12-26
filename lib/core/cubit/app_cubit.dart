@@ -10,20 +10,24 @@ part 'app_state.dart';
 part 'app_cubit.freezed.dart';
 
 class AppCubit extends Cubit<AppState> {
+
   AppCubit() : super(const AppState());
 
   Future<void> getLocale() async {
-
     try {
       SharedPreferences prefs = await SharedPreferences.getInstance();
-      String localeName = prefs.getString('locale_name') ?? Platform.localeName;
-      prefs.setString('locale_name', localeName);
-      emit(state.copyWith(locale: Locale(localeName)));
-    } catch (_) {
-    }
+      String? localeName = prefs.getString('locale');
+      if (localeName == null) {
+        localeName = Platform.localeName;
+        prefs.setString('locale', localeName);
+      }
+      List<String> locale = localeName.split('_');
+      emit(state.copyWith(locale: Locale(locale[0], locale[1])));
+    } catch (_) {}
   }
 
   FutureOr changeLocale(Locale locale) {
     emit(state.copyWith(locale: locale));
   }
+
 }

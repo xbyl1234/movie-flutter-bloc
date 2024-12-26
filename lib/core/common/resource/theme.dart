@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../../main.dart';
 
 ThemeData themeData(BuildContext context) {
   return ThemeData(
-      fontFamily: koHoFontFamily,
+      fontFamily: 'koHo',
       colorScheme: ColorScheme.fromSeed(
         seedColor: const Color(0xFFE21221),
         primary: const Color(0xFFE21221),

@@ -12,13 +12,6 @@ import 'di/dependency_injection.dart';
 import 'features/main/screens/explore/presentation/bloc/explore_cubit.dart';
 import 'features/main/screens/home/bloc/home_cubit.dart';
 
-const koHoFontFamily = 'koHo';
-
-const supportedLocales = [
-  Locale('en'),
-  Locale('vi'),
-];
-
 void main() async {
   await appConfig();
   runApp(const App());
@@ -36,6 +29,7 @@ class App extends StatelessWidget {
           BlocProvider<ExploreCubit>.value(value: sl<ExploreCubit>()),
         ],
         child: BlocBuilder<AppCubit, AppState>(
+          buildWhen: (previous, current) => previous != current,
           builder: (context, state) {
             return MaterialApp(
               initialRoute: mainRoute,
@@ -55,11 +49,11 @@ class App extends StatelessWidget {
                 GlobalWidgetsLocalizations.delegate,
                 GlobalCupertinoLocalizations.delegate,
               ],
+              locale: state.locale,
               supportedLocales: const [
                 Locale("vi"),
                 Locale("en"),
               ],
-              locale: state.locale,
             );
           },
         ));

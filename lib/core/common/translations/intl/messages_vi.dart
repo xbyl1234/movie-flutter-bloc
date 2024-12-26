@@ -58,7 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "tf_expiry_date": MessageLookupByLibrary.simpleMessage("Ngày hết hạn"),
         "title_add_new_card":
             MessageLookupByLibrary.simpleMessage("Thêm thẻ mới"),
-        "title_language": MessageLookupByLibrary.simpleMessage("Language"),
+        "title_language": MessageLookupByLibrary.simpleMessage("Ngôn ngữ"),
         "title_new_release":
             MessageLookupByLibrary.simpleMessage("Bản phát hành mới"),
         "title_payment": MessageLookupByLibrary.simpleMessage("Thanh toán"),

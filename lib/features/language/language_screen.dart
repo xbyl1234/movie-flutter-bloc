@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movie/core/bloc/page_command.dart';
 import 'package:movie/features/language/bloc/language_bloc.dart';
 import '../../core/common/translations/l10n.dart';
 import '../../core/common/widgets/custom_app_bar.dart';
@@ -21,9 +20,6 @@ class LanguageScreen extends StatelessWidget {
         ),
         body: BlocListener<LanguageBloc, LanguageState>(
           listener: (context, state) {
-            if (state.pageCommand is PageCommandNavigatorPage) {
-              Navigator.pop(context, state.langCode);
-            }
           },
           child: BlocBuilder<LanguageBloc, LanguageState>(
             builder: (context, state) {
@@ -33,15 +29,12 @@ class LanguageScreen extends StatelessWidget {
                     children: state.languages
                         .map((item) => ListTile(
                               title: Text(
-                                item.langName,
+                                item.name,
                                 style: Theme.of(context).textTheme.titleSmall,
                               ),
                               trailing: Radio(
-                                value: item.langName == state.langCode,
-                                onChanged: (val) {
-                                  bloc.add(LanguageEvent.onChangeLanguage(
-                                      item.langName));
-                                },
+                                value: item.code == state.selectedLocale,
+                                onChanged: (val) => bloc.add(LanguageEvent.onChangeLanguage(item.code)),
                                 groupValue: true,
                               ),
                             ))
@@ -57,7 +50,7 @@ class LanguageScreen extends StatelessWidget {
                       ),
                       child: CustomButton(
                         btnText: S.of(context).btn_change,
-                        enable: true,
+                        enable: state.locale != state.selectedLocale,
                         action: () {
                           bloc.add(LanguageEvent.onSavedLanguage());
                         },

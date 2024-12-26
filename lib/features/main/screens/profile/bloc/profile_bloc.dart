@@ -20,8 +20,8 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
   Future _onInit(_OnInit event, Emitter<ProfileState> emit) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
 
-    String localeCode = prefs.getString('locale_name') ?? "";
-    String langName = languages.firstWhere((item) => item.langCode == localeCode).langName;
+    String localeCode = prefs.getString('locale') ?? "";
+    String langName = languages.firstWhere((item) => item.code == localeCode).name;
 
     emit(
       state.copyWith(

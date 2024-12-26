@@ -19,21 +19,21 @@ mixin _$LanguageEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getLanguages,
-    required TResult Function(String code) onChangeLanguage,
+    required TResult Function(String locale) onChangeLanguage,
     required TResult Function() onSavedLanguage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getLanguages,
-    TResult? Function(String code)? onChangeLanguage,
+    TResult? Function(String locale)? onChangeLanguage,
     TResult? Function()? onSavedLanguage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getLanguages,
-    TResult Function(String code)? onChangeLanguage,
+    TResult Function(String locale)? onChangeLanguage,
     TResult Function()? onSavedLanguage,
     required TResult orElse(),
   }) =>
@@ -125,7 +125,7 @@ class _$GetLanguagesImpl implements _GetLanguages {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getLanguages,
-    required TResult Function(String code) onChangeLanguage,
+    required TResult Function(String locale) onChangeLanguage,
     required TResult Function() onSavedLanguage,
   }) {
     return getLanguages();
@@ -135,7 +135,7 @@ class _$GetLanguagesImpl implements _GetLanguages {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getLanguages,
-    TResult? Function(String code)? onChangeLanguage,
+    TResult? Function(String locale)? onChangeLanguage,
     TResult? Function()? onSavedLanguage,
   }) {
     return getLanguages?.call();
@@ -145,7 +145,7 @@ class _$GetLanguagesImpl implements _GetLanguages {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getLanguages,
-    TResult Function(String code)? onChangeLanguage,
+    TResult Function(String locale)? onChangeLanguage,
     TResult Function()? onSavedLanguage,
     required TResult orElse(),
   }) {
@@ -200,7 +200,7 @@ abstract class _$$OnChangeLanguageImplCopyWith<$Res> {
           $Res Function(_$OnChangeLanguageImpl) then) =
       __$$OnChangeLanguageImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String code});
+  $Res call({String locale});
 }
 
 /// @nodoc
@@ -216,12 +216,12 @@ class __$$OnChangeLanguageImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? code = null,
+    Object? locale = null,
   }) {
     return _then(_$OnChangeLanguageImpl(
-      null == code
-          ? _value.code
-          : code // ignore: cast_nullable_to_non_nullable
+      null == locale
+          ? _value.locale
+          : locale // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -230,14 +230,14 @@ class __$$OnChangeLanguageImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$OnChangeLanguageImpl implements _OnChangeLanguage {
-  const _$OnChangeLanguageImpl(this.code);
+  const _$OnChangeLanguageImpl(this.locale);
 
   @override
-  final String code;
+  final String locale;
 
   @override
   String toString() {
-    return 'LanguageEvent.onChangeLanguage(code: $code)';
+    return 'LanguageEvent.onChangeLanguage(locale: $locale)';
   }
 
   @override
@@ -245,11 +245,11 @@ class _$OnChangeLanguageImpl implements _OnChangeLanguage {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OnChangeLanguageImpl &&
-            (identical(other.code, code) || other.code == code));
+            (identical(other.locale, locale) || other.locale == locale));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, code);
+  int get hashCode => Object.hash(runtimeType, locale);
 
   /// Create a copy of LanguageEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -264,32 +264,32 @@ class _$OnChangeLanguageImpl implements _OnChangeLanguage {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getLanguages,
-    required TResult Function(String code) onChangeLanguage,
+    required TResult Function(String locale) onChangeLanguage,
     required TResult Function() onSavedLanguage,
   }) {
-    return onChangeLanguage(code);
+    return onChangeLanguage(locale);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getLanguages,
-    TResult? Function(String code)? onChangeLanguage,
+    TResult? Function(String locale)? onChangeLanguage,
     TResult? Function()? onSavedLanguage,
   }) {
-    return onChangeLanguage?.call(code);
+    return onChangeLanguage?.call(locale);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getLanguages,
-    TResult Function(String code)? onChangeLanguage,
+    TResult Function(String locale)? onChangeLanguage,
     TResult Function()? onSavedLanguage,
     required TResult orElse(),
   }) {
     if (onChangeLanguage != null) {
-      return onChangeLanguage(code);
+      return onChangeLanguage(locale);
     }
     return orElse();
   }
@@ -330,9 +330,9 @@ class _$OnChangeLanguageImpl implements _OnChangeLanguage {
 }
 
 abstract class _OnChangeLanguage implements LanguageEvent {
-  const factory _OnChangeLanguage(final String code) = _$OnChangeLanguageImpl;
+  const factory _OnChangeLanguage(final String locale) = _$OnChangeLanguageImpl;
 
-  String get code;
+  String get locale;
 
   /// Create a copy of LanguageEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -383,7 +383,7 @@ class _$OnSavedLanguageImpl implements _OnSavedLanguage {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getLanguages,
-    required TResult Function(String code) onChangeLanguage,
+    required TResult Function(String locale) onChangeLanguage,
     required TResult Function() onSavedLanguage,
   }) {
     return onSavedLanguage();
@@ -393,7 +393,7 @@ class _$OnSavedLanguageImpl implements _OnSavedLanguage {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getLanguages,
-    TResult? Function(String code)? onChangeLanguage,
+    TResult? Function(String locale)? onChangeLanguage,
     TResult? Function()? onSavedLanguage,
   }) {
     return onSavedLanguage?.call();
@@ -403,7 +403,7 @@ class _$OnSavedLanguageImpl implements _OnSavedLanguage {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getLanguages,
-    TResult Function(String code)? onChangeLanguage,
+    TResult Function(String locale)? onChangeLanguage,
     TResult Function()? onSavedLanguage,
     required TResult orElse(),
   }) {
@@ -456,7 +456,8 @@ abstract class _OnSavedLanguage implements LanguageEvent {
 mixin _$LanguageState {
   PageCommand? get pageCommand => throw _privateConstructorUsedError;
   List<Language> get languages => throw _privateConstructorUsedError;
-  String get langCode => throw _privateConstructorUsedError;
+  String get locale => throw _privateConstructorUsedError;
+  String get selectedLocale => throw _privateConstructorUsedError;
 
   /// Create a copy of LanguageState
   /// with the given fields replaced by the non-null parameter values.
@@ -472,7 +473,10 @@ abstract class $LanguageStateCopyWith<$Res> {
       _$LanguageStateCopyWithImpl<$Res, LanguageState>;
   @useResult
   $Res call(
-      {PageCommand? pageCommand, List<Language> languages, String langCode});
+      {PageCommand? pageCommand,
+      List<Language> languages,
+      String locale,
+      String selectedLocale});
 }
 
 /// @nodoc
@@ -492,7 +496,8 @@ class _$LanguageStateCopyWithImpl<$Res, $Val extends LanguageState>
   $Res call({
     Object? pageCommand = freezed,
     Object? languages = null,
-    Object? langCode = null,
+    Object? locale = null,
+    Object? selectedLocale = null,
   }) {
     return _then(_value.copyWith(
       pageCommand: freezed == pageCommand
@@ -503,9 +508,13 @@ class _$LanguageStateCopyWithImpl<$Res, $Val extends LanguageState>
           ? _value.languages
           : languages // ignore: cast_nullable_to_non_nullable
               as List<Language>,
-      langCode: null == langCode
-          ? _value.langCode
-          : langCode // ignore: cast_nullable_to_non_nullable
+      locale: null == locale
+          ? _value.locale
+          : locale // ignore: cast_nullable_to_non_nullable
+              as String,
+      selectedLocale: null == selectedLocale
+          ? _value.selectedLocale
+          : selectedLocale // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -520,7 +529,10 @@ abstract class _$$LanguageStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {PageCommand? pageCommand, List<Language> languages, String langCode});
+      {PageCommand? pageCommand,
+      List<Language> languages,
+      String locale,
+      String selectedLocale});
 }
 
 /// @nodoc
@@ -538,7 +550,8 @@ class __$$LanguageStateImplCopyWithImpl<$Res>
   $Res call({
     Object? pageCommand = freezed,
     Object? languages = null,
-    Object? langCode = null,
+    Object? locale = null,
+    Object? selectedLocale = null,
   }) {
     return _then(_$LanguageStateImpl(
       pageCommand: freezed == pageCommand
@@ -549,9 +562,13 @@ class __$$LanguageStateImplCopyWithImpl<$Res>
           ? _value._languages
           : languages // ignore: cast_nullable_to_non_nullable
               as List<Language>,
-      langCode: null == langCode
-          ? _value.langCode
-          : langCode // ignore: cast_nullable_to_non_nullable
+      locale: null == locale
+          ? _value.locale
+          : locale // ignore: cast_nullable_to_non_nullable
+              as String,
+      selectedLocale: null == selectedLocale
+          ? _value.selectedLocale
+          : selectedLocale // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -563,7 +580,8 @@ class _$LanguageStateImpl extends _LanguageState {
   const _$LanguageStateImpl(
       {this.pageCommand,
       final List<Language> languages = const [],
-      this.langCode = 'en_US'})
+      this.locale = 'en_US',
+      this.selectedLocale = 'en_US'})
       : _languages = languages,
         super._();
 
@@ -580,11 +598,14 @@ class _$LanguageStateImpl extends _LanguageState {
 
   @override
   @JsonKey()
-  final String langCode;
+  final String locale;
+  @override
+  @JsonKey()
+  final String selectedLocale;
 
   @override
   String toString() {
-    return 'LanguageState(pageCommand: $pageCommand, languages: $languages, langCode: $langCode)';
+    return 'LanguageState(pageCommand: $pageCommand, languages: $languages, locale: $locale, selectedLocale: $selectedLocale)';
   }
 
   @override
@@ -596,13 +617,14 @@ class _$LanguageStateImpl extends _LanguageState {
                 other.pageCommand == pageCommand) &&
             const DeepCollectionEquality()
                 .equals(other._languages, _languages) &&
-            (identical(other.langCode, langCode) ||
-                other.langCode == langCode));
+            (identical(other.locale, locale) || other.locale == locale) &&
+            (identical(other.selectedLocale, selectedLocale) ||
+                other.selectedLocale == selectedLocale));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, pageCommand,
-      const DeepCollectionEquality().hash(_languages), langCode);
+      const DeepCollectionEquality().hash(_languages), locale, selectedLocale);
 
   /// Create a copy of LanguageState
   /// with the given fields replaced by the non-null parameter values.
@@ -617,7 +639,8 @@ abstract class _LanguageState extends LanguageState {
   const factory _LanguageState(
       {final PageCommand? pageCommand,
       final List<Language> languages,
-      final String langCode}) = _$LanguageStateImpl;
+      final String locale,
+      final String selectedLocale}) = _$LanguageStateImpl;
   const _LanguageState._() : super._();
 
   @override
@@ -625,7 +648,9 @@ abstract class _LanguageState extends LanguageState {
   @override
   List<Language> get languages;
   @override
-  String get langCode;
+  String get locale;
+  @override
+  String get selectedLocale;
 
   /// Create a copy of LanguageState
   /// with the given fields replaced by the non-null parameter values.
