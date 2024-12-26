@@ -13,5 +13,6 @@ class EditProfileState with _$EditProfileState {
     String? errFullName,
     String? errPhoneNumber,
     @Default(false) bool enable,
+    Gender? selectedGender,
   }) = _EditProfileState;
 }

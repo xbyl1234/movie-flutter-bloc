@@ -22,8 +22,9 @@ mixin _$EditProfileEvent {
     required TResult Function(String text) onChangeFullName,
     required TResult Function(String text) onChangeEmail,
     required TResult Function(String text) onChangePhoneNumber,
-    required TResult Function(String text) onChangeGender,
     required TResult Function(String text) onChangeCountry,
+    required TResult Function(Gender gender) onChangeGender,
+    required TResult Function(BuildContext context) onSelectedGender,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -32,8 +33,9 @@ mixin _$EditProfileEvent {
     TResult? Function(String text)? onChangeFullName,
     TResult? Function(String text)? onChangeEmail,
     TResult? Function(String text)? onChangePhoneNumber,
-    TResult? Function(String text)? onChangeGender,
     TResult? Function(String text)? onChangeCountry,
+    TResult? Function(Gender gender)? onChangeGender,
+    TResult? Function(BuildContext context)? onSelectedGender,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,8 +44,9 @@ mixin _$EditProfileEvent {
     TResult Function(String text)? onChangeFullName,
     TResult Function(String text)? onChangeEmail,
     TResult Function(String text)? onChangePhoneNumber,
-    TResult Function(String text)? onChangeGender,
     TResult Function(String text)? onChangeCountry,
+    TResult Function(Gender gender)? onChangeGender,
+    TResult Function(BuildContext context)? onSelectedGender,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -53,8 +56,9 @@ mixin _$EditProfileEvent {
     required TResult Function(_OnChangeFullName value) onChangeFullName,
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
-    required TResult Function(_OnChangeGender value) onChangeGender,
     required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeGender value) onChangeGender,
+    required TResult Function(_OnSelectedGender value) onSelectedGender,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,8 +67,9 @@ mixin _$EditProfileEvent {
     TResult? Function(_OnChangeFullName value)? onChangeFullName,
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
-    TResult? Function(_OnChangeGender value)? onChangeGender,
     TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeGender value)? onChangeGender,
+    TResult? Function(_OnSelectedGender value)? onSelectedGender,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -73,8 +78,9 @@ mixin _$EditProfileEvent {
     TResult Function(_OnChangeFullName value)? onChangeFullName,
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
-    TResult Function(_OnChangeGender value)? onChangeGender,
     TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeGender value)? onChangeGender,
+    TResult Function(_OnSelectedGender value)? onSelectedGender,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -146,8 +152,9 @@ class _$OnUpdateImpl implements _OnUpdate {
     required TResult Function(String text) onChangeFullName,
     required TResult Function(String text) onChangeEmail,
     required TResult Function(String text) onChangePhoneNumber,
-    required TResult Function(String text) onChangeGender,
     required TResult Function(String text) onChangeCountry,
+    required TResult Function(Gender gender) onChangeGender,
+    required TResult Function(BuildContext context) onSelectedGender,
   }) {
     return onUpdate();
   }
@@ -159,8 +166,9 @@ class _$OnUpdateImpl implements _OnUpdate {
     TResult? Function(String text)? onChangeFullName,
     TResult? Function(String text)? onChangeEmail,
     TResult? Function(String text)? onChangePhoneNumber,
-    TResult? Function(String text)? onChangeGender,
     TResult? Function(String text)? onChangeCountry,
+    TResult? Function(Gender gender)? onChangeGender,
+    TResult? Function(BuildContext context)? onSelectedGender,
   }) {
     return onUpdate?.call();
   }
@@ -172,8 +180,9 @@ class _$OnUpdateImpl implements _OnUpdate {
     TResult Function(String text)? onChangeFullName,
     TResult Function(String text)? onChangeEmail,
     TResult Function(String text)? onChangePhoneNumber,
-    TResult Function(String text)? onChangeGender,
     TResult Function(String text)? onChangeCountry,
+    TResult Function(Gender gender)? onChangeGender,
+    TResult Function(BuildContext context)? onSelectedGender,
     required TResult orElse(),
   }) {
     if (onUpdate != null) {
@@ -189,8 +198,9 @@ class _$OnUpdateImpl implements _OnUpdate {
     required TResult Function(_OnChangeFullName value) onChangeFullName,
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
-    required TResult Function(_OnChangeGender value) onChangeGender,
     required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeGender value) onChangeGender,
+    required TResult Function(_OnSelectedGender value) onSelectedGender,
   }) {
     return onUpdate(this);
   }
@@ -202,8 +212,9 @@ class _$OnUpdateImpl implements _OnUpdate {
     TResult? Function(_OnChangeFullName value)? onChangeFullName,
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
-    TResult? Function(_OnChangeGender value)? onChangeGender,
     TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeGender value)? onChangeGender,
+    TResult? Function(_OnSelectedGender value)? onSelectedGender,
   }) {
     return onUpdate?.call(this);
   }
@@ -215,8 +226,9 @@ class _$OnUpdateImpl implements _OnUpdate {
     TResult Function(_OnChangeFullName value)? onChangeFullName,
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
-    TResult Function(_OnChangeGender value)? onChangeGender,
     TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeGender value)? onChangeGender,
+    TResult Function(_OnSelectedGender value)? onSelectedGender,
     required TResult orElse(),
   }) {
     if (onUpdate != null) {
@@ -303,8 +315,9 @@ class _$OnChangeFullNameImpl implements _OnChangeFullName {
     required TResult Function(String text) onChangeFullName,
     required TResult Function(String text) onChangeEmail,
     required TResult Function(String text) onChangePhoneNumber,
-    required TResult Function(String text) onChangeGender,
     required TResult Function(String text) onChangeCountry,
+    required TResult Function(Gender gender) onChangeGender,
+    required TResult Function(BuildContext context) onSelectedGender,
   }) {
     return onChangeFullName(text);
   }
@@ -316,8 +329,9 @@ class _$OnChangeFullNameImpl implements _OnChangeFullName {
     TResult? Function(String text)? onChangeFullName,
     TResult? Function(String text)? onChangeEmail,
     TResult? Function(String text)? onChangePhoneNumber,
-    TResult? Function(String text)? onChangeGender,
     TResult? Function(String text)? onChangeCountry,
+    TResult? Function(Gender gender)? onChangeGender,
+    TResult? Function(BuildContext context)? onSelectedGender,
   }) {
     return onChangeFullName?.call(text);
   }
@@ -329,8 +343,9 @@ class _$OnChangeFullNameImpl implements _OnChangeFullName {
     TResult Function(String text)? onChangeFullName,
     TResult Function(String text)? onChangeEmail,
     TResult Function(String text)? onChangePhoneNumber,
-    TResult Function(String text)? onChangeGender,
     TResult Function(String text)? onChangeCountry,
+    TResult Function(Gender gender)? onChangeGender,
+    TResult Function(BuildContext context)? onSelectedGender,
     required TResult orElse(),
   }) {
     if (onChangeFullName != null) {
@@ -346,8 +361,9 @@ class _$OnChangeFullNameImpl implements _OnChangeFullName {
     required TResult Function(_OnChangeFullName value) onChangeFullName,
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
-    required TResult Function(_OnChangeGender value) onChangeGender,
     required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeGender value) onChangeGender,
+    required TResult Function(_OnSelectedGender value) onSelectedGender,
   }) {
     return onChangeFullName(this);
   }
@@ -359,8 +375,9 @@ class _$OnChangeFullNameImpl implements _OnChangeFullName {
     TResult? Function(_OnChangeFullName value)? onChangeFullName,
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
-    TResult? Function(_OnChangeGender value)? onChangeGender,
     TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeGender value)? onChangeGender,
+    TResult? Function(_OnSelectedGender value)? onSelectedGender,
   }) {
     return onChangeFullName?.call(this);
   }
@@ -372,8 +389,9 @@ class _$OnChangeFullNameImpl implements _OnChangeFullName {
     TResult Function(_OnChangeFullName value)? onChangeFullName,
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
-    TResult Function(_OnChangeGender value)? onChangeGender,
     TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeGender value)? onChangeGender,
+    TResult Function(_OnSelectedGender value)? onSelectedGender,
     required TResult orElse(),
   }) {
     if (onChangeFullName != null) {
@@ -467,8 +485,9 @@ class _$OnChangeEmailImpl implements _OnChangeEmail {
     required TResult Function(String text) onChangeFullName,
     required TResult Function(String text) onChangeEmail,
     required TResult Function(String text) onChangePhoneNumber,
-    required TResult Function(String text) onChangeGender,
     required TResult Function(String text) onChangeCountry,
+    required TResult Function(Gender gender) onChangeGender,
+    required TResult Function(BuildContext context) onSelectedGender,
   }) {
     return onChangeEmail(text);
   }
@@ -480,8 +499,9 @@ class _$OnChangeEmailImpl implements _OnChangeEmail {
     TResult? Function(String text)? onChangeFullName,
     TResult? Function(String text)? onChangeEmail,
     TResult? Function(String text)? onChangePhoneNumber,
-    TResult? Function(String text)? onChangeGender,
     TResult? Function(String text)? onChangeCountry,
+    TResult? Function(Gender gender)? onChangeGender,
+    TResult? Function(BuildContext context)? onSelectedGender,
   }) {
     return onChangeEmail?.call(text);
   }
@@ -493,8 +513,9 @@ class _$OnChangeEmailImpl implements _OnChangeEmail {
     TResult Function(String text)? onChangeFullName,
     TResult Function(String text)? onChangeEmail,
     TResult Function(String text)? onChangePhoneNumber,
-    TResult Function(String text)? onChangeGender,
     TResult Function(String text)? onChangeCountry,
+    TResult Function(Gender gender)? onChangeGender,
+    TResult Function(BuildContext context)? onSelectedGender,
     required TResult orElse(),
   }) {
     if (onChangeEmail != null) {
@@ -510,8 +531,9 @@ class _$OnChangeEmailImpl implements _OnChangeEmail {
     required TResult Function(_OnChangeFullName value) onChangeFullName,
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
-    required TResult Function(_OnChangeGender value) onChangeGender,
     required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeGender value) onChangeGender,
+    required TResult Function(_OnSelectedGender value) onSelectedGender,
   }) {
     return onChangeEmail(this);
   }
@@ -523,8 +545,9 @@ class _$OnChangeEmailImpl implements _OnChangeEmail {
     TResult? Function(_OnChangeFullName value)? onChangeFullName,
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
-    TResult? Function(_OnChangeGender value)? onChangeGender,
     TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeGender value)? onChangeGender,
+    TResult? Function(_OnSelectedGender value)? onSelectedGender,
   }) {
     return onChangeEmail?.call(this);
   }
@@ -536,8 +559,9 @@ class _$OnChangeEmailImpl implements _OnChangeEmail {
     TResult Function(_OnChangeFullName value)? onChangeFullName,
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
-    TResult Function(_OnChangeGender value)? onChangeGender,
     TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeGender value)? onChangeGender,
+    TResult Function(_OnSelectedGender value)? onSelectedGender,
     required TResult orElse(),
   }) {
     if (onChangeEmail != null) {
@@ -632,8 +656,9 @@ class _$OnChangePhoneNumberImpl implements _OnChangePhoneNumber {
     required TResult Function(String text) onChangeFullName,
     required TResult Function(String text) onChangeEmail,
     required TResult Function(String text) onChangePhoneNumber,
-    required TResult Function(String text) onChangeGender,
     required TResult Function(String text) onChangeCountry,
+    required TResult Function(Gender gender) onChangeGender,
+    required TResult Function(BuildContext context) onSelectedGender,
   }) {
     return onChangePhoneNumber(text);
   }
@@ -645,8 +670,9 @@ class _$OnChangePhoneNumberImpl implements _OnChangePhoneNumber {
     TResult? Function(String text)? onChangeFullName,
     TResult? Function(String text)? onChangeEmail,
     TResult? Function(String text)? onChangePhoneNumber,
-    TResult? Function(String text)? onChangeGender,
     TResult? Function(String text)? onChangeCountry,
+    TResult? Function(Gender gender)? onChangeGender,
+    TResult? Function(BuildContext context)? onSelectedGender,
   }) {
     return onChangePhoneNumber?.call(text);
   }
@@ -658,8 +684,9 @@ class _$OnChangePhoneNumberImpl implements _OnChangePhoneNumber {
     TResult Function(String text)? onChangeFullName,
     TResult Function(String text)? onChangeEmail,
     TResult Function(String text)? onChangePhoneNumber,
-    TResult Function(String text)? onChangeGender,
     TResult Function(String text)? onChangeCountry,
+    TResult Function(Gender gender)? onChangeGender,
+    TResult Function(BuildContext context)? onSelectedGender,
     required TResult orElse(),
   }) {
     if (onChangePhoneNumber != null) {
@@ -675,8 +702,9 @@ class _$OnChangePhoneNumberImpl implements _OnChangePhoneNumber {
     required TResult Function(_OnChangeFullName value) onChangeFullName,
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
-    required TResult Function(_OnChangeGender value) onChangeGender,
     required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeGender value) onChangeGender,
+    required TResult Function(_OnSelectedGender value) onSelectedGender,
   }) {
     return onChangePhoneNumber(this);
   }
@@ -688,8 +716,9 @@ class _$OnChangePhoneNumberImpl implements _OnChangePhoneNumber {
     TResult? Function(_OnChangeFullName value)? onChangeFullName,
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
-    TResult? Function(_OnChangeGender value)? onChangeGender,
     TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeGender value)? onChangeGender,
+    TResult? Function(_OnSelectedGender value)? onSelectedGender,
   }) {
     return onChangePhoneNumber?.call(this);
   }
@@ -701,8 +730,9 @@ class _$OnChangePhoneNumberImpl implements _OnChangePhoneNumber {
     TResult Function(_OnChangeFullName value)? onChangeFullName,
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
-    TResult Function(_OnChangeGender value)? onChangeGender,
     TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeGender value)? onChangeGender,
+    TResult Function(_OnSelectedGender value)? onSelectedGender,
     required TResult orElse(),
   }) {
     if (onChangePhoneNumber != null) {
@@ -722,171 +752,6 @@ abstract class _OnChangePhoneNumber implements EditProfileEvent {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OnChangePhoneNumberImplCopyWith<_$OnChangePhoneNumberImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$OnChangeGenderImplCopyWith<$Res> {
-  factory _$$OnChangeGenderImplCopyWith(_$OnChangeGenderImpl value,
-          $Res Function(_$OnChangeGenderImpl) then) =
-      __$$OnChangeGenderImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String text});
-}
-
-/// @nodoc
-class __$$OnChangeGenderImplCopyWithImpl<$Res>
-    extends _$EditProfileEventCopyWithImpl<$Res, _$OnChangeGenderImpl>
-    implements _$$OnChangeGenderImplCopyWith<$Res> {
-  __$$OnChangeGenderImplCopyWithImpl(
-      _$OnChangeGenderImpl _value, $Res Function(_$OnChangeGenderImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of EditProfileEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? text = null,
-  }) {
-    return _then(_$OnChangeGenderImpl(
-      null == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$OnChangeGenderImpl implements _OnChangeGender {
-  const _$OnChangeGenderImpl(this.text);
-
-  @override
-  final String text;
-
-  @override
-  String toString() {
-    return 'EditProfileEvent.onChangeGender(text: $text)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$OnChangeGenderImpl &&
-            (identical(other.text, text) || other.text == text));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, text);
-
-  /// Create a copy of EditProfileEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$OnChangeGenderImplCopyWith<_$OnChangeGenderImpl> get copyWith =>
-      __$$OnChangeGenderImplCopyWithImpl<_$OnChangeGenderImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() onUpdate,
-    required TResult Function(String text) onChangeFullName,
-    required TResult Function(String text) onChangeEmail,
-    required TResult Function(String text) onChangePhoneNumber,
-    required TResult Function(String text) onChangeGender,
-    required TResult Function(String text) onChangeCountry,
-  }) {
-    return onChangeGender(text);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? onUpdate,
-    TResult? Function(String text)? onChangeFullName,
-    TResult? Function(String text)? onChangeEmail,
-    TResult? Function(String text)? onChangePhoneNumber,
-    TResult? Function(String text)? onChangeGender,
-    TResult? Function(String text)? onChangeCountry,
-  }) {
-    return onChangeGender?.call(text);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? onUpdate,
-    TResult Function(String text)? onChangeFullName,
-    TResult Function(String text)? onChangeEmail,
-    TResult Function(String text)? onChangePhoneNumber,
-    TResult Function(String text)? onChangeGender,
-    TResult Function(String text)? onChangeCountry,
-    required TResult orElse(),
-  }) {
-    if (onChangeGender != null) {
-      return onChangeGender(text);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_OnUpdate value) onUpdate,
-    required TResult Function(_OnChangeFullName value) onChangeFullName,
-    required TResult Function(_OnChangeEmail value) onChangeEmail,
-    required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
-    required TResult Function(_OnChangeGender value) onChangeGender,
-    required TResult Function(_OnChangeCountry value) onChangeCountry,
-  }) {
-    return onChangeGender(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_OnUpdate value)? onUpdate,
-    TResult? Function(_OnChangeFullName value)? onChangeFullName,
-    TResult? Function(_OnChangeEmail value)? onChangeEmail,
-    TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
-    TResult? Function(_OnChangeGender value)? onChangeGender,
-    TResult? Function(_OnChangeCountry value)? onChangeCountry,
-  }) {
-    return onChangeGender?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_OnUpdate value)? onUpdate,
-    TResult Function(_OnChangeFullName value)? onChangeFullName,
-    TResult Function(_OnChangeEmail value)? onChangeEmail,
-    TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
-    TResult Function(_OnChangeGender value)? onChangeGender,
-    TResult Function(_OnChangeCountry value)? onChangeCountry,
-    required TResult orElse(),
-  }) {
-    if (onChangeGender != null) {
-      return onChangeGender(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _OnChangeGender implements EditProfileEvent {
-  const factory _OnChangeGender(final String text) = _$OnChangeGenderImpl;
-
-  String get text;
-
-  /// Create a copy of EditProfileEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$OnChangeGenderImplCopyWith<_$OnChangeGenderImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -963,8 +828,9 @@ class _$OnChangeCountryImpl implements _OnChangeCountry {
     required TResult Function(String text) onChangeFullName,
     required TResult Function(String text) onChangeEmail,
     required TResult Function(String text) onChangePhoneNumber,
-    required TResult Function(String text) onChangeGender,
     required TResult Function(String text) onChangeCountry,
+    required TResult Function(Gender gender) onChangeGender,
+    required TResult Function(BuildContext context) onSelectedGender,
   }) {
     return onChangeCountry(text);
   }
@@ -976,8 +842,9 @@ class _$OnChangeCountryImpl implements _OnChangeCountry {
     TResult? Function(String text)? onChangeFullName,
     TResult? Function(String text)? onChangeEmail,
     TResult? Function(String text)? onChangePhoneNumber,
-    TResult? Function(String text)? onChangeGender,
     TResult? Function(String text)? onChangeCountry,
+    TResult? Function(Gender gender)? onChangeGender,
+    TResult? Function(BuildContext context)? onSelectedGender,
   }) {
     return onChangeCountry?.call(text);
   }
@@ -989,8 +856,9 @@ class _$OnChangeCountryImpl implements _OnChangeCountry {
     TResult Function(String text)? onChangeFullName,
     TResult Function(String text)? onChangeEmail,
     TResult Function(String text)? onChangePhoneNumber,
-    TResult Function(String text)? onChangeGender,
     TResult Function(String text)? onChangeCountry,
+    TResult Function(Gender gender)? onChangeGender,
+    TResult Function(BuildContext context)? onSelectedGender,
     required TResult orElse(),
   }) {
     if (onChangeCountry != null) {
@@ -1006,8 +874,9 @@ class _$OnChangeCountryImpl implements _OnChangeCountry {
     required TResult Function(_OnChangeFullName value) onChangeFullName,
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
-    required TResult Function(_OnChangeGender value) onChangeGender,
     required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeGender value) onChangeGender,
+    required TResult Function(_OnSelectedGender value) onSelectedGender,
   }) {
     return onChangeCountry(this);
   }
@@ -1019,8 +888,9 @@ class _$OnChangeCountryImpl implements _OnChangeCountry {
     TResult? Function(_OnChangeFullName value)? onChangeFullName,
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
-    TResult? Function(_OnChangeGender value)? onChangeGender,
     TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeGender value)? onChangeGender,
+    TResult? Function(_OnSelectedGender value)? onSelectedGender,
   }) {
     return onChangeCountry?.call(this);
   }
@@ -1032,8 +902,9 @@ class _$OnChangeCountryImpl implements _OnChangeCountry {
     TResult Function(_OnChangeFullName value)? onChangeFullName,
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
-    TResult Function(_OnChangeGender value)? onChangeGender,
     TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeGender value)? onChangeGender,
+    TResult Function(_OnSelectedGender value)? onSelectedGender,
     required TResult orElse(),
   }) {
     if (onChangeCountry != null) {
@@ -1056,6 +927,349 @@ abstract class _OnChangeCountry implements EditProfileEvent {
 }
 
 /// @nodoc
+abstract class _$$OnChangeGenderImplCopyWith<$Res> {
+  factory _$$OnChangeGenderImplCopyWith(_$OnChangeGenderImpl value,
+          $Res Function(_$OnChangeGenderImpl) then) =
+      __$$OnChangeGenderImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Gender gender});
+}
+
+/// @nodoc
+class __$$OnChangeGenderImplCopyWithImpl<$Res>
+    extends _$EditProfileEventCopyWithImpl<$Res, _$OnChangeGenderImpl>
+    implements _$$OnChangeGenderImplCopyWith<$Res> {
+  __$$OnChangeGenderImplCopyWithImpl(
+      _$OnChangeGenderImpl _value, $Res Function(_$OnChangeGenderImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of EditProfileEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? gender = null,
+  }) {
+    return _then(_$OnChangeGenderImpl(
+      null == gender
+          ? _value.gender
+          : gender // ignore: cast_nullable_to_non_nullable
+              as Gender,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OnChangeGenderImpl implements _OnChangeGender {
+  const _$OnChangeGenderImpl(this.gender);
+
+  @override
+  final Gender gender;
+
+  @override
+  String toString() {
+    return 'EditProfileEvent.onChangeGender(gender: $gender)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnChangeGenderImpl &&
+            (identical(other.gender, gender) || other.gender == gender));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, gender);
+
+  /// Create a copy of EditProfileEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnChangeGenderImplCopyWith<_$OnChangeGenderImpl> get copyWith =>
+      __$$OnChangeGenderImplCopyWithImpl<_$OnChangeGenderImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() onUpdate,
+    required TResult Function(String text) onChangeFullName,
+    required TResult Function(String text) onChangeEmail,
+    required TResult Function(String text) onChangePhoneNumber,
+    required TResult Function(String text) onChangeCountry,
+    required TResult Function(Gender gender) onChangeGender,
+    required TResult Function(BuildContext context) onSelectedGender,
+  }) {
+    return onChangeGender(gender);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? onUpdate,
+    TResult? Function(String text)? onChangeFullName,
+    TResult? Function(String text)? onChangeEmail,
+    TResult? Function(String text)? onChangePhoneNumber,
+    TResult? Function(String text)? onChangeCountry,
+    TResult? Function(Gender gender)? onChangeGender,
+    TResult? Function(BuildContext context)? onSelectedGender,
+  }) {
+    return onChangeGender?.call(gender);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? onUpdate,
+    TResult Function(String text)? onChangeFullName,
+    TResult Function(String text)? onChangeEmail,
+    TResult Function(String text)? onChangePhoneNumber,
+    TResult Function(String text)? onChangeCountry,
+    TResult Function(Gender gender)? onChangeGender,
+    TResult Function(BuildContext context)? onSelectedGender,
+    required TResult orElse(),
+  }) {
+    if (onChangeGender != null) {
+      return onChangeGender(gender);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_OnUpdate value) onUpdate,
+    required TResult Function(_OnChangeFullName value) onChangeFullName,
+    required TResult Function(_OnChangeEmail value) onChangeEmail,
+    required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
+    required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeGender value) onChangeGender,
+    required TResult Function(_OnSelectedGender value) onSelectedGender,
+  }) {
+    return onChangeGender(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnUpdate value)? onUpdate,
+    TResult? Function(_OnChangeFullName value)? onChangeFullName,
+    TResult? Function(_OnChangeEmail value)? onChangeEmail,
+    TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
+    TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeGender value)? onChangeGender,
+    TResult? Function(_OnSelectedGender value)? onSelectedGender,
+  }) {
+    return onChangeGender?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnUpdate value)? onUpdate,
+    TResult Function(_OnChangeFullName value)? onChangeFullName,
+    TResult Function(_OnChangeEmail value)? onChangeEmail,
+    TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
+    TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeGender value)? onChangeGender,
+    TResult Function(_OnSelectedGender value)? onSelectedGender,
+    required TResult orElse(),
+  }) {
+    if (onChangeGender != null) {
+      return onChangeGender(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnChangeGender implements EditProfileEvent {
+  const factory _OnChangeGender(final Gender gender) = _$OnChangeGenderImpl;
+
+  Gender get gender;
+
+  /// Create a copy of EditProfileEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$OnChangeGenderImplCopyWith<_$OnChangeGenderImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$OnSelectedGenderImplCopyWith<$Res> {
+  factory _$$OnSelectedGenderImplCopyWith(_$OnSelectedGenderImpl value,
+          $Res Function(_$OnSelectedGenderImpl) then) =
+      __$$OnSelectedGenderImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({BuildContext context});
+}
+
+/// @nodoc
+class __$$OnSelectedGenderImplCopyWithImpl<$Res>
+    extends _$EditProfileEventCopyWithImpl<$Res, _$OnSelectedGenderImpl>
+    implements _$$OnSelectedGenderImplCopyWith<$Res> {
+  __$$OnSelectedGenderImplCopyWithImpl(_$OnSelectedGenderImpl _value,
+      $Res Function(_$OnSelectedGenderImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of EditProfileEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? context = null,
+  }) {
+    return _then(_$OnSelectedGenderImpl(
+      null == context
+          ? _value.context
+          : context // ignore: cast_nullable_to_non_nullable
+              as BuildContext,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OnSelectedGenderImpl implements _OnSelectedGender {
+  const _$OnSelectedGenderImpl(this.context);
+
+  @override
+  final BuildContext context;
+
+  @override
+  String toString() {
+    return 'EditProfileEvent.onSelectedGender(context: $context)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnSelectedGenderImpl &&
+            (identical(other.context, context) || other.context == context));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, context);
+
+  /// Create a copy of EditProfileEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnSelectedGenderImplCopyWith<_$OnSelectedGenderImpl> get copyWith =>
+      __$$OnSelectedGenderImplCopyWithImpl<_$OnSelectedGenderImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() onUpdate,
+    required TResult Function(String text) onChangeFullName,
+    required TResult Function(String text) onChangeEmail,
+    required TResult Function(String text) onChangePhoneNumber,
+    required TResult Function(String text) onChangeCountry,
+    required TResult Function(Gender gender) onChangeGender,
+    required TResult Function(BuildContext context) onSelectedGender,
+  }) {
+    return onSelectedGender(context);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? onUpdate,
+    TResult? Function(String text)? onChangeFullName,
+    TResult? Function(String text)? onChangeEmail,
+    TResult? Function(String text)? onChangePhoneNumber,
+    TResult? Function(String text)? onChangeCountry,
+    TResult? Function(Gender gender)? onChangeGender,
+    TResult? Function(BuildContext context)? onSelectedGender,
+  }) {
+    return onSelectedGender?.call(context);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? onUpdate,
+    TResult Function(String text)? onChangeFullName,
+    TResult Function(String text)? onChangeEmail,
+    TResult Function(String text)? onChangePhoneNumber,
+    TResult Function(String text)? onChangeCountry,
+    TResult Function(Gender gender)? onChangeGender,
+    TResult Function(BuildContext context)? onSelectedGender,
+    required TResult orElse(),
+  }) {
+    if (onSelectedGender != null) {
+      return onSelectedGender(context);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_OnUpdate value) onUpdate,
+    required TResult Function(_OnChangeFullName value) onChangeFullName,
+    required TResult Function(_OnChangeEmail value) onChangeEmail,
+    required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
+    required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeGender value) onChangeGender,
+    required TResult Function(_OnSelectedGender value) onSelectedGender,
+  }) {
+    return onSelectedGender(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnUpdate value)? onUpdate,
+    TResult? Function(_OnChangeFullName value)? onChangeFullName,
+    TResult? Function(_OnChangeEmail value)? onChangeEmail,
+    TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
+    TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeGender value)? onChangeGender,
+    TResult? Function(_OnSelectedGender value)? onSelectedGender,
+  }) {
+    return onSelectedGender?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnUpdate value)? onUpdate,
+    TResult Function(_OnChangeFullName value)? onChangeFullName,
+    TResult Function(_OnChangeEmail value)? onChangeEmail,
+    TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
+    TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeGender value)? onChangeGender,
+    TResult Function(_OnSelectedGender value)? onSelectedGender,
+    required TResult orElse(),
+  }) {
+    if (onSelectedGender != null) {
+      return onSelectedGender(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnSelectedGender implements EditProfileEvent {
+  const factory _OnSelectedGender(final BuildContext context) =
+      _$OnSelectedGenderImpl;
+
+  BuildContext get context;
+
+  /// Create a copy of EditProfileEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$OnSelectedGenderImplCopyWith<_$OnSelectedGenderImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$EditProfileState {
   String get avatar => throw _privateConstructorUsedError;
   String? get fullName => throw _privateConstructorUsedError;
@@ -1066,6 +1280,7 @@ mixin _$EditProfileState {
   String? get errFullName => throw _privateConstructorUsedError;
   String? get errPhoneNumber => throw _privateConstructorUsedError;
   bool get enable => throw _privateConstructorUsedError;
+  Gender? get selectedGender => throw _privateConstructorUsedError;
 
   /// Create a copy of EditProfileState
   /// with the given fields replaced by the non-null parameter values.
@@ -1089,7 +1304,8 @@ abstract class $EditProfileStateCopyWith<$Res> {
       String? country,
       String? errFullName,
       String? errPhoneNumber,
-      bool enable});
+      bool enable,
+      Gender? selectedGender});
 }
 
 /// @nodoc
@@ -1116,6 +1332,7 @@ class _$EditProfileStateCopyWithImpl<$Res, $Val extends EditProfileState>
     Object? errFullName = freezed,
     Object? errPhoneNumber = freezed,
     Object? enable = null,
+    Object? selectedGender = freezed,
   }) {
     return _then(_value.copyWith(
       avatar: null == avatar
@@ -1154,6 +1371,10 @@ class _$EditProfileStateCopyWithImpl<$Res, $Val extends EditProfileState>
           ? _value.enable
           : enable // ignore: cast_nullable_to_non_nullable
               as bool,
+      selectedGender: freezed == selectedGender
+          ? _value.selectedGender
+          : selectedGender // ignore: cast_nullable_to_non_nullable
+              as Gender?,
     ) as $Val);
   }
 }
@@ -1175,7 +1396,8 @@ abstract class _$$EditProfileStateImplCopyWith<$Res>
       String? country,
       String? errFullName,
       String? errPhoneNumber,
-      bool enable});
+      bool enable,
+      Gender? selectedGender});
 }
 
 /// @nodoc
@@ -1200,6 +1422,7 @@ class __$$EditProfileStateImplCopyWithImpl<$Res>
     Object? errFullName = freezed,
     Object? errPhoneNumber = freezed,
     Object? enable = null,
+    Object? selectedGender = freezed,
   }) {
     return _then(_$EditProfileStateImpl(
       avatar: null == avatar
@@ -1238,6 +1461,10 @@ class __$$EditProfileStateImplCopyWithImpl<$Res>
           ? _value.enable
           : enable // ignore: cast_nullable_to_non_nullable
               as bool,
+      selectedGender: freezed == selectedGender
+          ? _value.selectedGender
+          : selectedGender // ignore: cast_nullable_to_non_nullable
+              as Gender?,
     ));
   }
 }
@@ -1254,7 +1481,8 @@ class _$EditProfileStateImpl extends _EditProfileState {
       this.country,
       this.errFullName,
       this.errPhoneNumber,
-      this.enable = false})
+      this.enable = false,
+      this.selectedGender})
       : super._();
 
   @override
@@ -1277,10 +1505,12 @@ class _$EditProfileStateImpl extends _EditProfileState {
   @override
   @JsonKey()
   final bool enable;
+  @override
+  final Gender? selectedGender;
 
   @override
   String toString() {
-    return 'EditProfileState(avatar: $avatar, fullName: $fullName, email: $email, phoneNumber: $phoneNumber, gender: $gender, country: $country, errFullName: $errFullName, errPhoneNumber: $errPhoneNumber, enable: $enable)';
+    return 'EditProfileState(avatar: $avatar, fullName: $fullName, email: $email, phoneNumber: $phoneNumber, gender: $gender, country: $country, errFullName: $errFullName, errPhoneNumber: $errPhoneNumber, enable: $enable, selectedGender: $selectedGender)';
   }
 
   @override
@@ -1300,12 +1530,24 @@ class _$EditProfileStateImpl extends _EditProfileState {
                 other.errFullName == errFullName) &&
             (identical(other.errPhoneNumber, errPhoneNumber) ||
                 other.errPhoneNumber == errPhoneNumber) &&
-            (identical(other.enable, enable) || other.enable == enable));
+            (identical(other.enable, enable) || other.enable == enable) &&
+            (identical(other.selectedGender, selectedGender) ||
+                other.selectedGender == selectedGender));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, avatar, fullName, email,
-      phoneNumber, gender, country, errFullName, errPhoneNumber, enable);
+  int get hashCode => Object.hash(
+      runtimeType,
+      avatar,
+      fullName,
+      email,
+      phoneNumber,
+      gender,
+      country,
+      errFullName,
+      errPhoneNumber,
+      enable,
+      selectedGender);
 
   /// Create a copy of EditProfileState
   /// with the given fields replaced by the non-null parameter values.
@@ -1327,7 +1569,8 @@ abstract class _EditProfileState extends EditProfileState {
       final String? country,
       final String? errFullName,
       final String? errPhoneNumber,
-      final bool enable}) = _$EditProfileStateImpl;
+      final bool enable,
+      final Gender? selectedGender}) = _$EditProfileStateImpl;
   const _EditProfileState._() : super._();
 
   @override
@@ -1348,6 +1591,8 @@ abstract class _EditProfileState extends EditProfileState {
   String? get errPhoneNumber;
   @override
   bool get enable;
+  @override
+  Gender? get selectedGender;
 
   /// Create a copy of EditProfileState
   /// with the given fields replaced by the non-null parameter values.

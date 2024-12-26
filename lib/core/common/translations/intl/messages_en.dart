@@ -33,6 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "btn_update": MessageLookupByLibrary.simpleMessage("Update"),
         "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
             "Enjoy watching Full-HD movies, without restrictions and without ads"),
+        "female": MessageLookupByLibrary.simpleMessage("Female"),
         "hint_full_name": MessageLookupByLibrary.simpleMessage("Full name"),
         "hint_text_country": MessageLookupByLibrary.simpleMessage("Country"),
         "hint_text_email": MessageLookupByLibrary.simpleMessage("Email"),
@@ -53,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "label_menu_privacy_policy":
             MessageLookupByLibrary.simpleMessage("Privacy Policy"),
         "label_menu_security": MessageLookupByLibrary.simpleMessage("Security"),
+        "male": MessageLookupByLibrary.simpleMessage("Male"),
         "tab_download": MessageLookupByLibrary.simpleMessage("Download"),
         "tab_explore": MessageLookupByLibrary.simpleMessage("Explore"),
         "tab_home": MessageLookupByLibrary.simpleMessage("Home"),
@@ -66,6 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Add New Card"),
         "title_edit_profile":
             MessageLookupByLibrary.simpleMessage("Edit Profile"),
+        "title_gender": MessageLookupByLibrary.simpleMessage("Gender"),
         "title_language": MessageLookupByLibrary.simpleMessage("Language"),
         "title_new_release":
             MessageLookupByLibrary.simpleMessage("New Releases"),

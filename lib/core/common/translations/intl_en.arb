@@ -55,5 +55,8 @@
   "hint_text_email": "Email",
   "hint_full_name": "Full name",
   "hint_text_gender": "Gender",
-  "hint_text_phone_number": "Phone number"
+  "hint_text_phone_number": "Phone number",
+  "male": "Male",
+  "female": "Female",
+  "title_gender": "Gender"
 }

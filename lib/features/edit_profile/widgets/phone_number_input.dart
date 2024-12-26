@@ -13,6 +13,7 @@ class PhoneNumberInput extends StatelessWidget {
     return BlocBuilder<EditProfileBloc, EditProfileState>(
       builder: (context, state) {
         return CustomPhoneNumber(
+          initValue: state.phoneNumber,
           hintText: S.of(context).hint_text_phone_number,
           error: state.errPhoneNumber,
           onChanged: (val) =>

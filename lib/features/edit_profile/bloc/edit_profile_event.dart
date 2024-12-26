@@ -6,6 +6,7 @@ class EditProfileEvent with _$EditProfileEvent {
   const factory EditProfileEvent.onChangeFullName(String text) = _OnChangeFullName;
   const factory EditProfileEvent.onChangeEmail(String text) = _OnChangeEmail;
   const factory EditProfileEvent.onChangePhoneNumber(String text) = _OnChangePhoneNumber;
-  const factory EditProfileEvent.onChangeGender(String text) = _OnChangeGender;
   const factory EditProfileEvent.onChangeCountry(String text) = _OnChangeCountry;
+  const factory EditProfileEvent.onChangeGender(Gender gender) = _OnChangeGender;
+  const factory EditProfileEvent.onSelectedGender(BuildContext context) = _OnSelectedGender;
 }

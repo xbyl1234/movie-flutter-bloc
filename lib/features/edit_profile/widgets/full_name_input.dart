@@ -13,6 +13,7 @@ class FullNameInput extends StatelessWidget {
     return BlocBuilder<EditProfileBloc, EditProfileState>(
       builder: (context, state) {
         return CustomTextField(
+          initValue: state.fullName,
           hintText: S.of(context).hint_full_name,
           textCapitalization: TextCapitalization.words,
           error: state.errFullName,

@@ -33,6 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "btn_update": MessageLookupByLibrary.simpleMessage("Cập nhật"),
         "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
             "Thưởng thức phim Full-HD, không giới hạn và không có quảng cáo"),
+        "female": MessageLookupByLibrary.simpleMessage("Female"),
         "hint_full_name": MessageLookupByLibrary.simpleMessage("Họ tên"),
         "hint_text_country": MessageLookupByLibrary.simpleMessage("Quốc gia"),
         "hint_text_email": MessageLookupByLibrary.simpleMessage("Email"),
@@ -54,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "label_menu_privacy_policy":
             MessageLookupByLibrary.simpleMessage("Chính sách bảo mật"),
         "label_menu_security": MessageLookupByLibrary.simpleMessage("Bảo mật"),
+        "male": MessageLookupByLibrary.simpleMessage("Male"),
         "tab_download": MessageLookupByLibrary.simpleMessage("Tải xuống"),
         "tab_explore": MessageLookupByLibrary.simpleMessage("Khám phá"),
         "tab_home": MessageLookupByLibrary.simpleMessage("Trang chủ"),
@@ -67,6 +69,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Thêm thẻ mới"),
         "title_edit_profile":
             MessageLookupByLibrary.simpleMessage("Cập nhật thông tin"),
+        "title_gender": MessageLookupByLibrary.simpleMessage("Giới tính"),
         "title_language": MessageLookupByLibrary.simpleMessage("Ngôn ngữ"),
         "title_new_release":
             MessageLookupByLibrary.simpleMessage("Bản phát hành mới"),

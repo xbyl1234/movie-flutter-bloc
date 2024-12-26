@@ -12,7 +12,7 @@ class CustomTextField extends StatefulWidget {
   final String? icRight;
   final VoidCallback? actionRight;
   final int? maxLength;
-  final Function(String value) onChanged;
+  final Function(String value)? onChanged;
   final List<TextInputFormatter>? inputFormatters;
   final TextInputAction textInputAction;
   final Widget? prefixWidget;
@@ -28,7 +28,7 @@ class CustomTextField extends StatefulWidget {
     this.maxLength,
     this.initValue,
     this.hintText,
-    required this.onChanged,
+    this.onChanged,
     this.inputFormatters,
     this.textInputAction = TextInputAction.none,
     this.prefixWidget,
@@ -39,6 +39,20 @@ class CustomTextField extends StatefulWidget {
 }
 
 class _CustomTextFieldState extends State<CustomTextField> {
+  late TextEditingController controller;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = TextEditingController(text: widget.initValue);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    controller.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -54,9 +68,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
           ),
         ],
         TextFormField(
-          initialValue: widget.initValue,
+          controller: controller,
           textInputAction: widget.textInputAction,
-          onChanged: (val) => widget.onChanged(val),
+          onChanged: (val) => widget.onChanged!(val),
           inputFormatters: widget.inputFormatters,
           keyboardType: widget.keyboardType,
           textCapitalization: widget.textCapitalization,

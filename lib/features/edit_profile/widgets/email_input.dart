@@ -13,6 +13,7 @@ class EmailInput extends StatelessWidget {
     return BlocBuilder<EditProfileBloc, EditProfileState>(
       builder: (context, state) {
         return CustomTextField(
+          initValue: state.email,
           hintText: S.of(context).hint_text_email,
           keyboardType: TextInputType.emailAddress,
           icRight: 'assets/icons/ic_email.svg',

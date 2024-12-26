@@ -55,5 +55,8 @@
   "hint_text_email": "Email",
   "hint_full_name": "Họ tên",
   "hint_text_gender": "Giới tính",
-  "hint_text_phone_number": "Số điện thoại"
+  "hint_text_phone_number": "Số điện thoại",
+  "male": "Male",
+  "female": "Female",
+  "title_gender": "Giới tính"
 }
