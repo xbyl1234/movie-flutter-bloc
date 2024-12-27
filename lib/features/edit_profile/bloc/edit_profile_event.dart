@@ -7,9 +7,12 @@ class EditProfileEvent with _$EditProfileEvent {
   const factory EditProfileEvent.onChangeEmail(String text) = _OnChangeEmail;
   const factory EditProfileEvent.onChangePhoneNumber(String text) = _OnChangePhoneNumber;
   const factory EditProfileEvent.onChangeCountry(CountryModel item) = _OnChangeCountry;
+  const factory EditProfileEvent.onChangeCountryCode(CountryModel item) = _OnChangeCountryCode;
   const factory EditProfileEvent.onChangeGender(Gender gender) = _OnChangeGender;
   const factory EditProfileEvent.onSelectedGender(String genderName) = _OnSelectedGender;
+  const factory EditProfileEvent.onLoadCountryCode() = _OnLoadCountryCode;
   const factory EditProfileEvent.onLoadCountry() = _OnLoadCountry;
   const factory EditProfileEvent.onLoadGender() = _OnLoadGender;
-  const factory EditProfileEvent.onSelectedCountry(String countryName) = _OnSelectedCountry;
+  const factory EditProfileEvent.onSelectedCountry() = _OnSelectedCountry;
+  const factory EditProfileEvent.onSelectedCountryCode() = _OnSelectedCountryCode;
 }

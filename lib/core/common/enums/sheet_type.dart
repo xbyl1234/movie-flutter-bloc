@@ -1,5 +1,6 @@
 enum SheetType {
   confirmPaymentSuccess,
   getListGender,
-  getListCountry,
+  country,
+  countryCode,
 }

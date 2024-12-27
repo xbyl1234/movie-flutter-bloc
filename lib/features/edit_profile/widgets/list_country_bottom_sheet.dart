@@ -27,7 +27,7 @@ class ListCountryBottomSheet extends StatelessWidget {
               children: [
                 Spacer(),
                 Text(
-                  S.of(context).hint_text_country,
+                  S.of(context).title_selected_country,
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 Spacer(),
@@ -100,9 +100,9 @@ class ListCountryBottomSheet extends StatelessWidget {
                   btnText: 'Ok',
                   enable: state.selectedCountry != null,
                   action: () {
+                    FocusManager.instance.primaryFocus?.unfocus();
                     Navigator.pop(context);
-                    bloc.add(EditProfileEvent.onSelectedCountry(
-                        state.selectedCountry!.name));
+                    bloc.add(EditProfileEvent.onSelectedCountry());
                   },
                 );
               },

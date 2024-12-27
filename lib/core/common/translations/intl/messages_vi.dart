@@ -33,7 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "btn_update": MessageLookupByLibrary.simpleMessage("Cập nhật"),
         "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
             "Thưởng thức phim Full-HD, không giới hạn và không có quảng cáo"),
-        "female": MessageLookupByLibrary.simpleMessage("Female"),
+        "female": MessageLookupByLibrary.simpleMessage("Nữ"),
         "hint_full_name": MessageLookupByLibrary.simpleMessage("Họ tên"),
         "hint_text_country": MessageLookupByLibrary.simpleMessage("Quốc gia"),
         "hint_text_email": MessageLookupByLibrary.simpleMessage("Email"),
@@ -41,7 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hint_text_phone_number":
             MessageLookupByLibrary.simpleMessage("Số điện thoại"),
         "hint_text_search_country":
-            MessageLookupByLibrary.simpleMessage("Search country..."),
+            MessageLookupByLibrary.simpleMessage("Tìm kiếm..."),
         "label_menu_dark_mode":
             MessageLookupByLibrary.simpleMessage("Chế độ tối"),
         "label_menu_download":
@@ -57,7 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "label_menu_privacy_policy":
             MessageLookupByLibrary.simpleMessage("Chính sách bảo mật"),
         "label_menu_security": MessageLookupByLibrary.simpleMessage("Bảo mật"),
-        "male": MessageLookupByLibrary.simpleMessage("Male"),
+        "male": MessageLookupByLibrary.simpleMessage("Nam"),
         "tab_download": MessageLookupByLibrary.simpleMessage("Tải xuống"),
         "tab_explore": MessageLookupByLibrary.simpleMessage("Khám phá"),
         "tab_home": MessageLookupByLibrary.simpleMessage("Trang chủ"),
@@ -78,6 +78,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "title_payment": MessageLookupByLibrary.simpleMessage("Thanh toán"),
         "title_review_summary":
             MessageLookupByLibrary.simpleMessage("Review Summary"),
+        "title_selected_country":
+            MessageLookupByLibrary.simpleMessage("Danh sách quốc gia"),
         "title_subscribe_to_premium":
             MessageLookupByLibrary.simpleMessage("Đăng ký Premium"),
         "title_top_movie":

@@ -59,5 +59,6 @@
   "male": "Male",
   "female": "Female",
   "title_gender": "Gender",
-  "hint_text_search_country": "Search country..."
+  "hint_text_search_country": "Search...",
+  "title_selected_country": "Countries"
 }

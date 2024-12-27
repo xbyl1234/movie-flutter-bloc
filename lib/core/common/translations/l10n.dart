@@ -580,11 +580,21 @@ class S {
     );
   }
 
-  /// `Search country...`
+  /// `Search...`
   String get hint_text_search_country {
     return Intl.message(
-      'Search country...',
+      'Search...',
       name: 'hint_text_search_country',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Countries`
+  String get title_selected_country {
+    return Intl.message(
+      'Countries',
+      name: 'title_selected_country',
       desc: '',
       args: [],
     );

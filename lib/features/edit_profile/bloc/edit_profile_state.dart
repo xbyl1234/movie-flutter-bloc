@@ -11,11 +11,14 @@ class EditProfileState with _$EditProfileState {
     String? phoneNumber,
     String? gender,
     String? country,
+    String? flag,
     String? errFullName,
     String? errPhoneNumber,
     @Default(false) bool enable,
     Gender? selectedGender,
     CountryModel? selectedCountry,
     @Default([]) List<CountryModel> countries,
+    CountryModel? selectedCountryCode,
+    @Default([]) List<CountryModel> listCountryCode,
   }) = _EditProfileState;
 }

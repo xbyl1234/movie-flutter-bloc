@@ -23,11 +23,14 @@ mixin _$EditProfileEvent {
     required TResult Function(String text) onChangeEmail,
     required TResult Function(String text) onChangePhoneNumber,
     required TResult Function(CountryModel item) onChangeCountry,
+    required TResult Function(CountryModel item) onChangeCountryCode,
     required TResult Function(Gender gender) onChangeGender,
     required TResult Function(String genderName) onSelectedGender,
+    required TResult Function() onLoadCountryCode,
     required TResult Function() onLoadCountry,
     required TResult Function() onLoadGender,
-    required TResult Function(String countryName) onSelectedCountry,
+    required TResult Function() onSelectedCountry,
+    required TResult Function() onSelectedCountryCode,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -37,11 +40,14 @@ mixin _$EditProfileEvent {
     TResult? Function(String text)? onChangeEmail,
     TResult? Function(String text)? onChangePhoneNumber,
     TResult? Function(CountryModel item)? onChangeCountry,
+    TResult? Function(CountryModel item)? onChangeCountryCode,
     TResult? Function(Gender gender)? onChangeGender,
     TResult? Function(String genderName)? onSelectedGender,
+    TResult? Function()? onLoadCountryCode,
     TResult? Function()? onLoadCountry,
     TResult? Function()? onLoadGender,
-    TResult? Function(String countryName)? onSelectedCountry,
+    TResult? Function()? onSelectedCountry,
+    TResult? Function()? onSelectedCountryCode,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -51,11 +57,14 @@ mixin _$EditProfileEvent {
     TResult Function(String text)? onChangeEmail,
     TResult Function(String text)? onChangePhoneNumber,
     TResult Function(CountryModel item)? onChangeCountry,
+    TResult Function(CountryModel item)? onChangeCountryCode,
     TResult Function(Gender gender)? onChangeGender,
     TResult Function(String genderName)? onSelectedGender,
+    TResult Function()? onLoadCountryCode,
     TResult Function()? onLoadCountry,
     TResult Function()? onLoadGender,
-    TResult Function(String countryName)? onSelectedCountry,
+    TResult Function()? onSelectedCountry,
+    TResult Function()? onSelectedCountryCode,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -66,11 +75,15 @@ mixin _$EditProfileEvent {
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
     required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeCountryCode value) onChangeCountryCode,
     required TResult Function(_OnChangeGender value) onChangeGender,
     required TResult Function(_OnSelectedGender value) onSelectedGender,
+    required TResult Function(_OnLoadCountryCode value) onLoadCountryCode,
     required TResult Function(_OnLoadCountry value) onLoadCountry,
     required TResult Function(_OnLoadGender value) onLoadGender,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedCountryCode value)
+        onSelectedCountryCode,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -80,11 +93,14 @@ mixin _$EditProfileEvent {
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult? Function(_OnChangeGender value)? onChangeGender,
     TResult? Function(_OnSelectedGender value)? onSelectedGender,
+    TResult? Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult? Function(_OnLoadCountry value)? onLoadCountry,
     TResult? Function(_OnLoadGender value)? onLoadGender,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -94,11 +110,14 @@ mixin _$EditProfileEvent {
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult Function(_OnChangeGender value)? onChangeGender,
     TResult Function(_OnSelectedGender value)? onSelectedGender,
+    TResult Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult Function(_OnLoadCountry value)? onLoadCountry,
     TResult Function(_OnLoadGender value)? onLoadGender,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -171,11 +190,14 @@ class _$OnUpdateImpl implements _OnUpdate {
     required TResult Function(String text) onChangeEmail,
     required TResult Function(String text) onChangePhoneNumber,
     required TResult Function(CountryModel item) onChangeCountry,
+    required TResult Function(CountryModel item) onChangeCountryCode,
     required TResult Function(Gender gender) onChangeGender,
     required TResult Function(String genderName) onSelectedGender,
+    required TResult Function() onLoadCountryCode,
     required TResult Function() onLoadCountry,
     required TResult Function() onLoadGender,
-    required TResult Function(String countryName) onSelectedCountry,
+    required TResult Function() onSelectedCountry,
+    required TResult Function() onSelectedCountryCode,
   }) {
     return onUpdate();
   }
@@ -188,11 +210,14 @@ class _$OnUpdateImpl implements _OnUpdate {
     TResult? Function(String text)? onChangeEmail,
     TResult? Function(String text)? onChangePhoneNumber,
     TResult? Function(CountryModel item)? onChangeCountry,
+    TResult? Function(CountryModel item)? onChangeCountryCode,
     TResult? Function(Gender gender)? onChangeGender,
     TResult? Function(String genderName)? onSelectedGender,
+    TResult? Function()? onLoadCountryCode,
     TResult? Function()? onLoadCountry,
     TResult? Function()? onLoadGender,
-    TResult? Function(String countryName)? onSelectedCountry,
+    TResult? Function()? onSelectedCountry,
+    TResult? Function()? onSelectedCountryCode,
   }) {
     return onUpdate?.call();
   }
@@ -205,11 +230,14 @@ class _$OnUpdateImpl implements _OnUpdate {
     TResult Function(String text)? onChangeEmail,
     TResult Function(String text)? onChangePhoneNumber,
     TResult Function(CountryModel item)? onChangeCountry,
+    TResult Function(CountryModel item)? onChangeCountryCode,
     TResult Function(Gender gender)? onChangeGender,
     TResult Function(String genderName)? onSelectedGender,
+    TResult Function()? onLoadCountryCode,
     TResult Function()? onLoadCountry,
     TResult Function()? onLoadGender,
-    TResult Function(String countryName)? onSelectedCountry,
+    TResult Function()? onSelectedCountry,
+    TResult Function()? onSelectedCountryCode,
     required TResult orElse(),
   }) {
     if (onUpdate != null) {
@@ -226,11 +254,15 @@ class _$OnUpdateImpl implements _OnUpdate {
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
     required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeCountryCode value) onChangeCountryCode,
     required TResult Function(_OnChangeGender value) onChangeGender,
     required TResult Function(_OnSelectedGender value) onSelectedGender,
+    required TResult Function(_OnLoadCountryCode value) onLoadCountryCode,
     required TResult Function(_OnLoadCountry value) onLoadCountry,
     required TResult Function(_OnLoadGender value) onLoadGender,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedCountryCode value)
+        onSelectedCountryCode,
   }) {
     return onUpdate(this);
   }
@@ -243,11 +275,14 @@ class _$OnUpdateImpl implements _OnUpdate {
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult? Function(_OnChangeGender value)? onChangeGender,
     TResult? Function(_OnSelectedGender value)? onSelectedGender,
+    TResult? Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult? Function(_OnLoadCountry value)? onLoadCountry,
     TResult? Function(_OnLoadGender value)? onLoadGender,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
   }) {
     return onUpdate?.call(this);
   }
@@ -260,11 +295,14 @@ class _$OnUpdateImpl implements _OnUpdate {
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult Function(_OnChangeGender value)? onChangeGender,
     TResult Function(_OnSelectedGender value)? onSelectedGender,
+    TResult Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult Function(_OnLoadCountry value)? onLoadCountry,
     TResult Function(_OnLoadGender value)? onLoadGender,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
     required TResult orElse(),
   }) {
     if (onUpdate != null) {
@@ -352,11 +390,14 @@ class _$OnChangeFullNameImpl implements _OnChangeFullName {
     required TResult Function(String text) onChangeEmail,
     required TResult Function(String text) onChangePhoneNumber,
     required TResult Function(CountryModel item) onChangeCountry,
+    required TResult Function(CountryModel item) onChangeCountryCode,
     required TResult Function(Gender gender) onChangeGender,
     required TResult Function(String genderName) onSelectedGender,
+    required TResult Function() onLoadCountryCode,
     required TResult Function() onLoadCountry,
     required TResult Function() onLoadGender,
-    required TResult Function(String countryName) onSelectedCountry,
+    required TResult Function() onSelectedCountry,
+    required TResult Function() onSelectedCountryCode,
   }) {
     return onChangeFullName(text);
   }
@@ -369,11 +410,14 @@ class _$OnChangeFullNameImpl implements _OnChangeFullName {
     TResult? Function(String text)? onChangeEmail,
     TResult? Function(String text)? onChangePhoneNumber,
     TResult? Function(CountryModel item)? onChangeCountry,
+    TResult? Function(CountryModel item)? onChangeCountryCode,
     TResult? Function(Gender gender)? onChangeGender,
     TResult? Function(String genderName)? onSelectedGender,
+    TResult? Function()? onLoadCountryCode,
     TResult? Function()? onLoadCountry,
     TResult? Function()? onLoadGender,
-    TResult? Function(String countryName)? onSelectedCountry,
+    TResult? Function()? onSelectedCountry,
+    TResult? Function()? onSelectedCountryCode,
   }) {
     return onChangeFullName?.call(text);
   }
@@ -386,11 +430,14 @@ class _$OnChangeFullNameImpl implements _OnChangeFullName {
     TResult Function(String text)? onChangeEmail,
     TResult Function(String text)? onChangePhoneNumber,
     TResult Function(CountryModel item)? onChangeCountry,
+    TResult Function(CountryModel item)? onChangeCountryCode,
     TResult Function(Gender gender)? onChangeGender,
     TResult Function(String genderName)? onSelectedGender,
+    TResult Function()? onLoadCountryCode,
     TResult Function()? onLoadCountry,
     TResult Function()? onLoadGender,
-    TResult Function(String countryName)? onSelectedCountry,
+    TResult Function()? onSelectedCountry,
+    TResult Function()? onSelectedCountryCode,
     required TResult orElse(),
   }) {
     if (onChangeFullName != null) {
@@ -407,11 +454,15 @@ class _$OnChangeFullNameImpl implements _OnChangeFullName {
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
     required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeCountryCode value) onChangeCountryCode,
     required TResult Function(_OnChangeGender value) onChangeGender,
     required TResult Function(_OnSelectedGender value) onSelectedGender,
+    required TResult Function(_OnLoadCountryCode value) onLoadCountryCode,
     required TResult Function(_OnLoadCountry value) onLoadCountry,
     required TResult Function(_OnLoadGender value) onLoadGender,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedCountryCode value)
+        onSelectedCountryCode,
   }) {
     return onChangeFullName(this);
   }
@@ -424,11 +475,14 @@ class _$OnChangeFullNameImpl implements _OnChangeFullName {
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult? Function(_OnChangeGender value)? onChangeGender,
     TResult? Function(_OnSelectedGender value)? onSelectedGender,
+    TResult? Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult? Function(_OnLoadCountry value)? onLoadCountry,
     TResult? Function(_OnLoadGender value)? onLoadGender,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
   }) {
     return onChangeFullName?.call(this);
   }
@@ -441,11 +495,14 @@ class _$OnChangeFullNameImpl implements _OnChangeFullName {
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult Function(_OnChangeGender value)? onChangeGender,
     TResult Function(_OnSelectedGender value)? onSelectedGender,
+    TResult Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult Function(_OnLoadCountry value)? onLoadCountry,
     TResult Function(_OnLoadGender value)? onLoadGender,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
     required TResult orElse(),
   }) {
     if (onChangeFullName != null) {
@@ -540,11 +597,14 @@ class _$OnChangeEmailImpl implements _OnChangeEmail {
     required TResult Function(String text) onChangeEmail,
     required TResult Function(String text) onChangePhoneNumber,
     required TResult Function(CountryModel item) onChangeCountry,
+    required TResult Function(CountryModel item) onChangeCountryCode,
     required TResult Function(Gender gender) onChangeGender,
     required TResult Function(String genderName) onSelectedGender,
+    required TResult Function() onLoadCountryCode,
     required TResult Function() onLoadCountry,
     required TResult Function() onLoadGender,
-    required TResult Function(String countryName) onSelectedCountry,
+    required TResult Function() onSelectedCountry,
+    required TResult Function() onSelectedCountryCode,
   }) {
     return onChangeEmail(text);
   }
@@ -557,11 +617,14 @@ class _$OnChangeEmailImpl implements _OnChangeEmail {
     TResult? Function(String text)? onChangeEmail,
     TResult? Function(String text)? onChangePhoneNumber,
     TResult? Function(CountryModel item)? onChangeCountry,
+    TResult? Function(CountryModel item)? onChangeCountryCode,
     TResult? Function(Gender gender)? onChangeGender,
     TResult? Function(String genderName)? onSelectedGender,
+    TResult? Function()? onLoadCountryCode,
     TResult? Function()? onLoadCountry,
     TResult? Function()? onLoadGender,
-    TResult? Function(String countryName)? onSelectedCountry,
+    TResult? Function()? onSelectedCountry,
+    TResult? Function()? onSelectedCountryCode,
   }) {
     return onChangeEmail?.call(text);
   }
@@ -574,11 +637,14 @@ class _$OnChangeEmailImpl implements _OnChangeEmail {
     TResult Function(String text)? onChangeEmail,
     TResult Function(String text)? onChangePhoneNumber,
     TResult Function(CountryModel item)? onChangeCountry,
+    TResult Function(CountryModel item)? onChangeCountryCode,
     TResult Function(Gender gender)? onChangeGender,
     TResult Function(String genderName)? onSelectedGender,
+    TResult Function()? onLoadCountryCode,
     TResult Function()? onLoadCountry,
     TResult Function()? onLoadGender,
-    TResult Function(String countryName)? onSelectedCountry,
+    TResult Function()? onSelectedCountry,
+    TResult Function()? onSelectedCountryCode,
     required TResult orElse(),
   }) {
     if (onChangeEmail != null) {
@@ -595,11 +661,15 @@ class _$OnChangeEmailImpl implements _OnChangeEmail {
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
     required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeCountryCode value) onChangeCountryCode,
     required TResult Function(_OnChangeGender value) onChangeGender,
     required TResult Function(_OnSelectedGender value) onSelectedGender,
+    required TResult Function(_OnLoadCountryCode value) onLoadCountryCode,
     required TResult Function(_OnLoadCountry value) onLoadCountry,
     required TResult Function(_OnLoadGender value) onLoadGender,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedCountryCode value)
+        onSelectedCountryCode,
   }) {
     return onChangeEmail(this);
   }
@@ -612,11 +682,14 @@ class _$OnChangeEmailImpl implements _OnChangeEmail {
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult? Function(_OnChangeGender value)? onChangeGender,
     TResult? Function(_OnSelectedGender value)? onSelectedGender,
+    TResult? Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult? Function(_OnLoadCountry value)? onLoadCountry,
     TResult? Function(_OnLoadGender value)? onLoadGender,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
   }) {
     return onChangeEmail?.call(this);
   }
@@ -629,11 +702,14 @@ class _$OnChangeEmailImpl implements _OnChangeEmail {
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult Function(_OnChangeGender value)? onChangeGender,
     TResult Function(_OnSelectedGender value)? onSelectedGender,
+    TResult Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult Function(_OnLoadCountry value)? onLoadCountry,
     TResult Function(_OnLoadGender value)? onLoadGender,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
     required TResult orElse(),
   }) {
     if (onChangeEmail != null) {
@@ -729,11 +805,14 @@ class _$OnChangePhoneNumberImpl implements _OnChangePhoneNumber {
     required TResult Function(String text) onChangeEmail,
     required TResult Function(String text) onChangePhoneNumber,
     required TResult Function(CountryModel item) onChangeCountry,
+    required TResult Function(CountryModel item) onChangeCountryCode,
     required TResult Function(Gender gender) onChangeGender,
     required TResult Function(String genderName) onSelectedGender,
+    required TResult Function() onLoadCountryCode,
     required TResult Function() onLoadCountry,
     required TResult Function() onLoadGender,
-    required TResult Function(String countryName) onSelectedCountry,
+    required TResult Function() onSelectedCountry,
+    required TResult Function() onSelectedCountryCode,
   }) {
     return onChangePhoneNumber(text);
   }
@@ -746,11 +825,14 @@ class _$OnChangePhoneNumberImpl implements _OnChangePhoneNumber {
     TResult? Function(String text)? onChangeEmail,
     TResult? Function(String text)? onChangePhoneNumber,
     TResult? Function(CountryModel item)? onChangeCountry,
+    TResult? Function(CountryModel item)? onChangeCountryCode,
     TResult? Function(Gender gender)? onChangeGender,
     TResult? Function(String genderName)? onSelectedGender,
+    TResult? Function()? onLoadCountryCode,
     TResult? Function()? onLoadCountry,
     TResult? Function()? onLoadGender,
-    TResult? Function(String countryName)? onSelectedCountry,
+    TResult? Function()? onSelectedCountry,
+    TResult? Function()? onSelectedCountryCode,
   }) {
     return onChangePhoneNumber?.call(text);
   }
@@ -763,11 +845,14 @@ class _$OnChangePhoneNumberImpl implements _OnChangePhoneNumber {
     TResult Function(String text)? onChangeEmail,
     TResult Function(String text)? onChangePhoneNumber,
     TResult Function(CountryModel item)? onChangeCountry,
+    TResult Function(CountryModel item)? onChangeCountryCode,
     TResult Function(Gender gender)? onChangeGender,
     TResult Function(String genderName)? onSelectedGender,
+    TResult Function()? onLoadCountryCode,
     TResult Function()? onLoadCountry,
     TResult Function()? onLoadGender,
-    TResult Function(String countryName)? onSelectedCountry,
+    TResult Function()? onSelectedCountry,
+    TResult Function()? onSelectedCountryCode,
     required TResult orElse(),
   }) {
     if (onChangePhoneNumber != null) {
@@ -784,11 +869,15 @@ class _$OnChangePhoneNumberImpl implements _OnChangePhoneNumber {
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
     required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeCountryCode value) onChangeCountryCode,
     required TResult Function(_OnChangeGender value) onChangeGender,
     required TResult Function(_OnSelectedGender value) onSelectedGender,
+    required TResult Function(_OnLoadCountryCode value) onLoadCountryCode,
     required TResult Function(_OnLoadCountry value) onLoadCountry,
     required TResult Function(_OnLoadGender value) onLoadGender,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedCountryCode value)
+        onSelectedCountryCode,
   }) {
     return onChangePhoneNumber(this);
   }
@@ -801,11 +890,14 @@ class _$OnChangePhoneNumberImpl implements _OnChangePhoneNumber {
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult? Function(_OnChangeGender value)? onChangeGender,
     TResult? Function(_OnSelectedGender value)? onSelectedGender,
+    TResult? Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult? Function(_OnLoadCountry value)? onLoadCountry,
     TResult? Function(_OnLoadGender value)? onLoadGender,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
   }) {
     return onChangePhoneNumber?.call(this);
   }
@@ -818,11 +910,14 @@ class _$OnChangePhoneNumberImpl implements _OnChangePhoneNumber {
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult Function(_OnChangeGender value)? onChangeGender,
     TResult Function(_OnSelectedGender value)? onSelectedGender,
+    TResult Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult Function(_OnLoadCountry value)? onLoadCountry,
     TResult Function(_OnLoadGender value)? onLoadGender,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
     required TResult orElse(),
   }) {
     if (onChangePhoneNumber != null) {
@@ -919,11 +1014,14 @@ class _$OnChangeCountryImpl implements _OnChangeCountry {
     required TResult Function(String text) onChangeEmail,
     required TResult Function(String text) onChangePhoneNumber,
     required TResult Function(CountryModel item) onChangeCountry,
+    required TResult Function(CountryModel item) onChangeCountryCode,
     required TResult Function(Gender gender) onChangeGender,
     required TResult Function(String genderName) onSelectedGender,
+    required TResult Function() onLoadCountryCode,
     required TResult Function() onLoadCountry,
     required TResult Function() onLoadGender,
-    required TResult Function(String countryName) onSelectedCountry,
+    required TResult Function() onSelectedCountry,
+    required TResult Function() onSelectedCountryCode,
   }) {
     return onChangeCountry(item);
   }
@@ -936,11 +1034,14 @@ class _$OnChangeCountryImpl implements _OnChangeCountry {
     TResult? Function(String text)? onChangeEmail,
     TResult? Function(String text)? onChangePhoneNumber,
     TResult? Function(CountryModel item)? onChangeCountry,
+    TResult? Function(CountryModel item)? onChangeCountryCode,
     TResult? Function(Gender gender)? onChangeGender,
     TResult? Function(String genderName)? onSelectedGender,
+    TResult? Function()? onLoadCountryCode,
     TResult? Function()? onLoadCountry,
     TResult? Function()? onLoadGender,
-    TResult? Function(String countryName)? onSelectedCountry,
+    TResult? Function()? onSelectedCountry,
+    TResult? Function()? onSelectedCountryCode,
   }) {
     return onChangeCountry?.call(item);
   }
@@ -953,11 +1054,14 @@ class _$OnChangeCountryImpl implements _OnChangeCountry {
     TResult Function(String text)? onChangeEmail,
     TResult Function(String text)? onChangePhoneNumber,
     TResult Function(CountryModel item)? onChangeCountry,
+    TResult Function(CountryModel item)? onChangeCountryCode,
     TResult Function(Gender gender)? onChangeGender,
     TResult Function(String genderName)? onSelectedGender,
+    TResult Function()? onLoadCountryCode,
     TResult Function()? onLoadCountry,
     TResult Function()? onLoadGender,
-    TResult Function(String countryName)? onSelectedCountry,
+    TResult Function()? onSelectedCountry,
+    TResult Function()? onSelectedCountryCode,
     required TResult orElse(),
   }) {
     if (onChangeCountry != null) {
@@ -974,11 +1078,15 @@ class _$OnChangeCountryImpl implements _OnChangeCountry {
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
     required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeCountryCode value) onChangeCountryCode,
     required TResult Function(_OnChangeGender value) onChangeGender,
     required TResult Function(_OnSelectedGender value) onSelectedGender,
+    required TResult Function(_OnLoadCountryCode value) onLoadCountryCode,
     required TResult Function(_OnLoadCountry value) onLoadCountry,
     required TResult Function(_OnLoadGender value) onLoadGender,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedCountryCode value)
+        onSelectedCountryCode,
   }) {
     return onChangeCountry(this);
   }
@@ -991,11 +1099,14 @@ class _$OnChangeCountryImpl implements _OnChangeCountry {
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult? Function(_OnChangeGender value)? onChangeGender,
     TResult? Function(_OnSelectedGender value)? onSelectedGender,
+    TResult? Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult? Function(_OnLoadCountry value)? onLoadCountry,
     TResult? Function(_OnLoadGender value)? onLoadGender,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
   }) {
     return onChangeCountry?.call(this);
   }
@@ -1008,11 +1119,14 @@ class _$OnChangeCountryImpl implements _OnChangeCountry {
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult Function(_OnChangeGender value)? onChangeGender,
     TResult Function(_OnSelectedGender value)? onSelectedGender,
+    TResult Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult Function(_OnLoadCountry value)? onLoadCountry,
     TResult Function(_OnLoadGender value)? onLoadGender,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
     required TResult orElse(),
   }) {
     if (onChangeCountry != null) {
@@ -1032,6 +1146,215 @@ abstract class _OnChangeCountry implements EditProfileEvent {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OnChangeCountryImplCopyWith<_$OnChangeCountryImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$OnChangeCountryCodeImplCopyWith<$Res> {
+  factory _$$OnChangeCountryCodeImplCopyWith(_$OnChangeCountryCodeImpl value,
+          $Res Function(_$OnChangeCountryCodeImpl) then) =
+      __$$OnChangeCountryCodeImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({CountryModel item});
+}
+
+/// @nodoc
+class __$$OnChangeCountryCodeImplCopyWithImpl<$Res>
+    extends _$EditProfileEventCopyWithImpl<$Res, _$OnChangeCountryCodeImpl>
+    implements _$$OnChangeCountryCodeImplCopyWith<$Res> {
+  __$$OnChangeCountryCodeImplCopyWithImpl(_$OnChangeCountryCodeImpl _value,
+      $Res Function(_$OnChangeCountryCodeImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of EditProfileEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? item = null,
+  }) {
+    return _then(_$OnChangeCountryCodeImpl(
+      null == item
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as CountryModel,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OnChangeCountryCodeImpl implements _OnChangeCountryCode {
+  const _$OnChangeCountryCodeImpl(this.item);
+
+  @override
+  final CountryModel item;
+
+  @override
+  String toString() {
+    return 'EditProfileEvent.onChangeCountryCode(item: $item)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnChangeCountryCodeImpl &&
+            (identical(other.item, item) || other.item == item));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, item);
+
+  /// Create a copy of EditProfileEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnChangeCountryCodeImplCopyWith<_$OnChangeCountryCodeImpl> get copyWith =>
+      __$$OnChangeCountryCodeImplCopyWithImpl<_$OnChangeCountryCodeImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() onUpdate,
+    required TResult Function(String text) onChangeFullName,
+    required TResult Function(String text) onChangeEmail,
+    required TResult Function(String text) onChangePhoneNumber,
+    required TResult Function(CountryModel item) onChangeCountry,
+    required TResult Function(CountryModel item) onChangeCountryCode,
+    required TResult Function(Gender gender) onChangeGender,
+    required TResult Function(String genderName) onSelectedGender,
+    required TResult Function() onLoadCountryCode,
+    required TResult Function() onLoadCountry,
+    required TResult Function() onLoadGender,
+    required TResult Function() onSelectedCountry,
+    required TResult Function() onSelectedCountryCode,
+  }) {
+    return onChangeCountryCode(item);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? onUpdate,
+    TResult? Function(String text)? onChangeFullName,
+    TResult? Function(String text)? onChangeEmail,
+    TResult? Function(String text)? onChangePhoneNumber,
+    TResult? Function(CountryModel item)? onChangeCountry,
+    TResult? Function(CountryModel item)? onChangeCountryCode,
+    TResult? Function(Gender gender)? onChangeGender,
+    TResult? Function(String genderName)? onSelectedGender,
+    TResult? Function()? onLoadCountryCode,
+    TResult? Function()? onLoadCountry,
+    TResult? Function()? onLoadGender,
+    TResult? Function()? onSelectedCountry,
+    TResult? Function()? onSelectedCountryCode,
+  }) {
+    return onChangeCountryCode?.call(item);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? onUpdate,
+    TResult Function(String text)? onChangeFullName,
+    TResult Function(String text)? onChangeEmail,
+    TResult Function(String text)? onChangePhoneNumber,
+    TResult Function(CountryModel item)? onChangeCountry,
+    TResult Function(CountryModel item)? onChangeCountryCode,
+    TResult Function(Gender gender)? onChangeGender,
+    TResult Function(String genderName)? onSelectedGender,
+    TResult Function()? onLoadCountryCode,
+    TResult Function()? onLoadCountry,
+    TResult Function()? onLoadGender,
+    TResult Function()? onSelectedCountry,
+    TResult Function()? onSelectedCountryCode,
+    required TResult orElse(),
+  }) {
+    if (onChangeCountryCode != null) {
+      return onChangeCountryCode(item);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_OnUpdate value) onUpdate,
+    required TResult Function(_OnChangeFullName value) onChangeFullName,
+    required TResult Function(_OnChangeEmail value) onChangeEmail,
+    required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
+    required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeCountryCode value) onChangeCountryCode,
+    required TResult Function(_OnChangeGender value) onChangeGender,
+    required TResult Function(_OnSelectedGender value) onSelectedGender,
+    required TResult Function(_OnLoadCountryCode value) onLoadCountryCode,
+    required TResult Function(_OnLoadCountry value) onLoadCountry,
+    required TResult Function(_OnLoadGender value) onLoadGender,
+    required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedCountryCode value)
+        onSelectedCountryCode,
+  }) {
+    return onChangeCountryCode(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnUpdate value)? onUpdate,
+    TResult? Function(_OnChangeFullName value)? onChangeFullName,
+    TResult? Function(_OnChangeEmail value)? onChangeEmail,
+    TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
+    TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeCountryCode value)? onChangeCountryCode,
+    TResult? Function(_OnChangeGender value)? onChangeGender,
+    TResult? Function(_OnSelectedGender value)? onSelectedGender,
+    TResult? Function(_OnLoadCountryCode value)? onLoadCountryCode,
+    TResult? Function(_OnLoadCountry value)? onLoadCountry,
+    TResult? Function(_OnLoadGender value)? onLoadGender,
+    TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
+  }) {
+    return onChangeCountryCode?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnUpdate value)? onUpdate,
+    TResult Function(_OnChangeFullName value)? onChangeFullName,
+    TResult Function(_OnChangeEmail value)? onChangeEmail,
+    TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
+    TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeCountryCode value)? onChangeCountryCode,
+    TResult Function(_OnChangeGender value)? onChangeGender,
+    TResult Function(_OnSelectedGender value)? onSelectedGender,
+    TResult Function(_OnLoadCountryCode value)? onLoadCountryCode,
+    TResult Function(_OnLoadCountry value)? onLoadCountry,
+    TResult Function(_OnLoadGender value)? onLoadGender,
+    TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
+    required TResult orElse(),
+  }) {
+    if (onChangeCountryCode != null) {
+      return onChangeCountryCode(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnChangeCountryCode implements EditProfileEvent {
+  const factory _OnChangeCountryCode(final CountryModel item) =
+      _$OnChangeCountryCodeImpl;
+
+  CountryModel get item;
+
+  /// Create a copy of EditProfileEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$OnChangeCountryCodeImplCopyWith<_$OnChangeCountryCodeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1109,11 +1432,14 @@ class _$OnChangeGenderImpl implements _OnChangeGender {
     required TResult Function(String text) onChangeEmail,
     required TResult Function(String text) onChangePhoneNumber,
     required TResult Function(CountryModel item) onChangeCountry,
+    required TResult Function(CountryModel item) onChangeCountryCode,
     required TResult Function(Gender gender) onChangeGender,
     required TResult Function(String genderName) onSelectedGender,
+    required TResult Function() onLoadCountryCode,
     required TResult Function() onLoadCountry,
     required TResult Function() onLoadGender,
-    required TResult Function(String countryName) onSelectedCountry,
+    required TResult Function() onSelectedCountry,
+    required TResult Function() onSelectedCountryCode,
   }) {
     return onChangeGender(gender);
   }
@@ -1126,11 +1452,14 @@ class _$OnChangeGenderImpl implements _OnChangeGender {
     TResult? Function(String text)? onChangeEmail,
     TResult? Function(String text)? onChangePhoneNumber,
     TResult? Function(CountryModel item)? onChangeCountry,
+    TResult? Function(CountryModel item)? onChangeCountryCode,
     TResult? Function(Gender gender)? onChangeGender,
     TResult? Function(String genderName)? onSelectedGender,
+    TResult? Function()? onLoadCountryCode,
     TResult? Function()? onLoadCountry,
     TResult? Function()? onLoadGender,
-    TResult? Function(String countryName)? onSelectedCountry,
+    TResult? Function()? onSelectedCountry,
+    TResult? Function()? onSelectedCountryCode,
   }) {
     return onChangeGender?.call(gender);
   }
@@ -1143,11 +1472,14 @@ class _$OnChangeGenderImpl implements _OnChangeGender {
     TResult Function(String text)? onChangeEmail,
     TResult Function(String text)? onChangePhoneNumber,
     TResult Function(CountryModel item)? onChangeCountry,
+    TResult Function(CountryModel item)? onChangeCountryCode,
     TResult Function(Gender gender)? onChangeGender,
     TResult Function(String genderName)? onSelectedGender,
+    TResult Function()? onLoadCountryCode,
     TResult Function()? onLoadCountry,
     TResult Function()? onLoadGender,
-    TResult Function(String countryName)? onSelectedCountry,
+    TResult Function()? onSelectedCountry,
+    TResult Function()? onSelectedCountryCode,
     required TResult orElse(),
   }) {
     if (onChangeGender != null) {
@@ -1164,11 +1496,15 @@ class _$OnChangeGenderImpl implements _OnChangeGender {
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
     required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeCountryCode value) onChangeCountryCode,
     required TResult Function(_OnChangeGender value) onChangeGender,
     required TResult Function(_OnSelectedGender value) onSelectedGender,
+    required TResult Function(_OnLoadCountryCode value) onLoadCountryCode,
     required TResult Function(_OnLoadCountry value) onLoadCountry,
     required TResult Function(_OnLoadGender value) onLoadGender,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedCountryCode value)
+        onSelectedCountryCode,
   }) {
     return onChangeGender(this);
   }
@@ -1181,11 +1517,14 @@ class _$OnChangeGenderImpl implements _OnChangeGender {
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult? Function(_OnChangeGender value)? onChangeGender,
     TResult? Function(_OnSelectedGender value)? onSelectedGender,
+    TResult? Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult? Function(_OnLoadCountry value)? onLoadCountry,
     TResult? Function(_OnLoadGender value)? onLoadGender,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
   }) {
     return onChangeGender?.call(this);
   }
@@ -1198,11 +1537,14 @@ class _$OnChangeGenderImpl implements _OnChangeGender {
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult Function(_OnChangeGender value)? onChangeGender,
     TResult Function(_OnSelectedGender value)? onSelectedGender,
+    TResult Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult Function(_OnLoadCountry value)? onLoadCountry,
     TResult Function(_OnLoadGender value)? onLoadGender,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
     required TResult orElse(),
   }) {
     if (onChangeGender != null) {
@@ -1299,11 +1641,14 @@ class _$OnSelectedGenderImpl implements _OnSelectedGender {
     required TResult Function(String text) onChangeEmail,
     required TResult Function(String text) onChangePhoneNumber,
     required TResult Function(CountryModel item) onChangeCountry,
+    required TResult Function(CountryModel item) onChangeCountryCode,
     required TResult Function(Gender gender) onChangeGender,
     required TResult Function(String genderName) onSelectedGender,
+    required TResult Function() onLoadCountryCode,
     required TResult Function() onLoadCountry,
     required TResult Function() onLoadGender,
-    required TResult Function(String countryName) onSelectedCountry,
+    required TResult Function() onSelectedCountry,
+    required TResult Function() onSelectedCountryCode,
   }) {
     return onSelectedGender(genderName);
   }
@@ -1316,11 +1661,14 @@ class _$OnSelectedGenderImpl implements _OnSelectedGender {
     TResult? Function(String text)? onChangeEmail,
     TResult? Function(String text)? onChangePhoneNumber,
     TResult? Function(CountryModel item)? onChangeCountry,
+    TResult? Function(CountryModel item)? onChangeCountryCode,
     TResult? Function(Gender gender)? onChangeGender,
     TResult? Function(String genderName)? onSelectedGender,
+    TResult? Function()? onLoadCountryCode,
     TResult? Function()? onLoadCountry,
     TResult? Function()? onLoadGender,
-    TResult? Function(String countryName)? onSelectedCountry,
+    TResult? Function()? onSelectedCountry,
+    TResult? Function()? onSelectedCountryCode,
   }) {
     return onSelectedGender?.call(genderName);
   }
@@ -1333,11 +1681,14 @@ class _$OnSelectedGenderImpl implements _OnSelectedGender {
     TResult Function(String text)? onChangeEmail,
     TResult Function(String text)? onChangePhoneNumber,
     TResult Function(CountryModel item)? onChangeCountry,
+    TResult Function(CountryModel item)? onChangeCountryCode,
     TResult Function(Gender gender)? onChangeGender,
     TResult Function(String genderName)? onSelectedGender,
+    TResult Function()? onLoadCountryCode,
     TResult Function()? onLoadCountry,
     TResult Function()? onLoadGender,
-    TResult Function(String countryName)? onSelectedCountry,
+    TResult Function()? onSelectedCountry,
+    TResult Function()? onSelectedCountryCode,
     required TResult orElse(),
   }) {
     if (onSelectedGender != null) {
@@ -1354,11 +1705,15 @@ class _$OnSelectedGenderImpl implements _OnSelectedGender {
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
     required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeCountryCode value) onChangeCountryCode,
     required TResult Function(_OnChangeGender value) onChangeGender,
     required TResult Function(_OnSelectedGender value) onSelectedGender,
+    required TResult Function(_OnLoadCountryCode value) onLoadCountryCode,
     required TResult Function(_OnLoadCountry value) onLoadCountry,
     required TResult Function(_OnLoadGender value) onLoadGender,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedCountryCode value)
+        onSelectedCountryCode,
   }) {
     return onSelectedGender(this);
   }
@@ -1371,11 +1726,14 @@ class _$OnSelectedGenderImpl implements _OnSelectedGender {
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult? Function(_OnChangeGender value)? onChangeGender,
     TResult? Function(_OnSelectedGender value)? onSelectedGender,
+    TResult? Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult? Function(_OnLoadCountry value)? onLoadCountry,
     TResult? Function(_OnLoadGender value)? onLoadGender,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
   }) {
     return onSelectedGender?.call(this);
   }
@@ -1388,11 +1746,14 @@ class _$OnSelectedGenderImpl implements _OnSelectedGender {
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult Function(_OnChangeGender value)? onChangeGender,
     TResult Function(_OnSelectedGender value)? onSelectedGender,
+    TResult Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult Function(_OnLoadCountry value)? onLoadCountry,
     TResult Function(_OnLoadGender value)? onLoadGender,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
     required TResult orElse(),
   }) {
     if (onSelectedGender != null) {
@@ -1413,6 +1774,178 @@ abstract class _OnSelectedGender implements EditProfileEvent {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OnSelectedGenderImplCopyWith<_$OnSelectedGenderImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$OnLoadCountryCodeImplCopyWith<$Res> {
+  factory _$$OnLoadCountryCodeImplCopyWith(_$OnLoadCountryCodeImpl value,
+          $Res Function(_$OnLoadCountryCodeImpl) then) =
+      __$$OnLoadCountryCodeImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$OnLoadCountryCodeImplCopyWithImpl<$Res>
+    extends _$EditProfileEventCopyWithImpl<$Res, _$OnLoadCountryCodeImpl>
+    implements _$$OnLoadCountryCodeImplCopyWith<$Res> {
+  __$$OnLoadCountryCodeImplCopyWithImpl(_$OnLoadCountryCodeImpl _value,
+      $Res Function(_$OnLoadCountryCodeImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of EditProfileEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$OnLoadCountryCodeImpl implements _OnLoadCountryCode {
+  const _$OnLoadCountryCodeImpl();
+
+  @override
+  String toString() {
+    return 'EditProfileEvent.onLoadCountryCode()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$OnLoadCountryCodeImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() onUpdate,
+    required TResult Function(String text) onChangeFullName,
+    required TResult Function(String text) onChangeEmail,
+    required TResult Function(String text) onChangePhoneNumber,
+    required TResult Function(CountryModel item) onChangeCountry,
+    required TResult Function(CountryModel item) onChangeCountryCode,
+    required TResult Function(Gender gender) onChangeGender,
+    required TResult Function(String genderName) onSelectedGender,
+    required TResult Function() onLoadCountryCode,
+    required TResult Function() onLoadCountry,
+    required TResult Function() onLoadGender,
+    required TResult Function() onSelectedCountry,
+    required TResult Function() onSelectedCountryCode,
+  }) {
+    return onLoadCountryCode();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? onUpdate,
+    TResult? Function(String text)? onChangeFullName,
+    TResult? Function(String text)? onChangeEmail,
+    TResult? Function(String text)? onChangePhoneNumber,
+    TResult? Function(CountryModel item)? onChangeCountry,
+    TResult? Function(CountryModel item)? onChangeCountryCode,
+    TResult? Function(Gender gender)? onChangeGender,
+    TResult? Function(String genderName)? onSelectedGender,
+    TResult? Function()? onLoadCountryCode,
+    TResult? Function()? onLoadCountry,
+    TResult? Function()? onLoadGender,
+    TResult? Function()? onSelectedCountry,
+    TResult? Function()? onSelectedCountryCode,
+  }) {
+    return onLoadCountryCode?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? onUpdate,
+    TResult Function(String text)? onChangeFullName,
+    TResult Function(String text)? onChangeEmail,
+    TResult Function(String text)? onChangePhoneNumber,
+    TResult Function(CountryModel item)? onChangeCountry,
+    TResult Function(CountryModel item)? onChangeCountryCode,
+    TResult Function(Gender gender)? onChangeGender,
+    TResult Function(String genderName)? onSelectedGender,
+    TResult Function()? onLoadCountryCode,
+    TResult Function()? onLoadCountry,
+    TResult Function()? onLoadGender,
+    TResult Function()? onSelectedCountry,
+    TResult Function()? onSelectedCountryCode,
+    required TResult orElse(),
+  }) {
+    if (onLoadCountryCode != null) {
+      return onLoadCountryCode();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_OnUpdate value) onUpdate,
+    required TResult Function(_OnChangeFullName value) onChangeFullName,
+    required TResult Function(_OnChangeEmail value) onChangeEmail,
+    required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
+    required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeCountryCode value) onChangeCountryCode,
+    required TResult Function(_OnChangeGender value) onChangeGender,
+    required TResult Function(_OnSelectedGender value) onSelectedGender,
+    required TResult Function(_OnLoadCountryCode value) onLoadCountryCode,
+    required TResult Function(_OnLoadCountry value) onLoadCountry,
+    required TResult Function(_OnLoadGender value) onLoadGender,
+    required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedCountryCode value)
+        onSelectedCountryCode,
+  }) {
+    return onLoadCountryCode(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnUpdate value)? onUpdate,
+    TResult? Function(_OnChangeFullName value)? onChangeFullName,
+    TResult? Function(_OnChangeEmail value)? onChangeEmail,
+    TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
+    TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeCountryCode value)? onChangeCountryCode,
+    TResult? Function(_OnChangeGender value)? onChangeGender,
+    TResult? Function(_OnSelectedGender value)? onSelectedGender,
+    TResult? Function(_OnLoadCountryCode value)? onLoadCountryCode,
+    TResult? Function(_OnLoadCountry value)? onLoadCountry,
+    TResult? Function(_OnLoadGender value)? onLoadGender,
+    TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
+  }) {
+    return onLoadCountryCode?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnUpdate value)? onUpdate,
+    TResult Function(_OnChangeFullName value)? onChangeFullName,
+    TResult Function(_OnChangeEmail value)? onChangeEmail,
+    TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
+    TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeCountryCode value)? onChangeCountryCode,
+    TResult Function(_OnChangeGender value)? onChangeGender,
+    TResult Function(_OnSelectedGender value)? onSelectedGender,
+    TResult Function(_OnLoadCountryCode value)? onLoadCountryCode,
+    TResult Function(_OnLoadCountry value)? onLoadCountry,
+    TResult Function(_OnLoadGender value)? onLoadGender,
+    TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
+    required TResult orElse(),
+  }) {
+    if (onLoadCountryCode != null) {
+      return onLoadCountryCode(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnLoadCountryCode implements EditProfileEvent {
+  const factory _OnLoadCountryCode() = _$OnLoadCountryCodeImpl;
 }
 
 /// @nodoc
@@ -1461,11 +1994,14 @@ class _$OnLoadCountryImpl implements _OnLoadCountry {
     required TResult Function(String text) onChangeEmail,
     required TResult Function(String text) onChangePhoneNumber,
     required TResult Function(CountryModel item) onChangeCountry,
+    required TResult Function(CountryModel item) onChangeCountryCode,
     required TResult Function(Gender gender) onChangeGender,
     required TResult Function(String genderName) onSelectedGender,
+    required TResult Function() onLoadCountryCode,
     required TResult Function() onLoadCountry,
     required TResult Function() onLoadGender,
-    required TResult Function(String countryName) onSelectedCountry,
+    required TResult Function() onSelectedCountry,
+    required TResult Function() onSelectedCountryCode,
   }) {
     return onLoadCountry();
   }
@@ -1478,11 +2014,14 @@ class _$OnLoadCountryImpl implements _OnLoadCountry {
     TResult? Function(String text)? onChangeEmail,
     TResult? Function(String text)? onChangePhoneNumber,
     TResult? Function(CountryModel item)? onChangeCountry,
+    TResult? Function(CountryModel item)? onChangeCountryCode,
     TResult? Function(Gender gender)? onChangeGender,
     TResult? Function(String genderName)? onSelectedGender,
+    TResult? Function()? onLoadCountryCode,
     TResult? Function()? onLoadCountry,
     TResult? Function()? onLoadGender,
-    TResult? Function(String countryName)? onSelectedCountry,
+    TResult? Function()? onSelectedCountry,
+    TResult? Function()? onSelectedCountryCode,
   }) {
     return onLoadCountry?.call();
   }
@@ -1495,11 +2034,14 @@ class _$OnLoadCountryImpl implements _OnLoadCountry {
     TResult Function(String text)? onChangeEmail,
     TResult Function(String text)? onChangePhoneNumber,
     TResult Function(CountryModel item)? onChangeCountry,
+    TResult Function(CountryModel item)? onChangeCountryCode,
     TResult Function(Gender gender)? onChangeGender,
     TResult Function(String genderName)? onSelectedGender,
+    TResult Function()? onLoadCountryCode,
     TResult Function()? onLoadCountry,
     TResult Function()? onLoadGender,
-    TResult Function(String countryName)? onSelectedCountry,
+    TResult Function()? onSelectedCountry,
+    TResult Function()? onSelectedCountryCode,
     required TResult orElse(),
   }) {
     if (onLoadCountry != null) {
@@ -1516,11 +2058,15 @@ class _$OnLoadCountryImpl implements _OnLoadCountry {
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
     required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeCountryCode value) onChangeCountryCode,
     required TResult Function(_OnChangeGender value) onChangeGender,
     required TResult Function(_OnSelectedGender value) onSelectedGender,
+    required TResult Function(_OnLoadCountryCode value) onLoadCountryCode,
     required TResult Function(_OnLoadCountry value) onLoadCountry,
     required TResult Function(_OnLoadGender value) onLoadGender,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedCountryCode value)
+        onSelectedCountryCode,
   }) {
     return onLoadCountry(this);
   }
@@ -1533,11 +2079,14 @@ class _$OnLoadCountryImpl implements _OnLoadCountry {
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult? Function(_OnChangeGender value)? onChangeGender,
     TResult? Function(_OnSelectedGender value)? onSelectedGender,
+    TResult? Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult? Function(_OnLoadCountry value)? onLoadCountry,
     TResult? Function(_OnLoadGender value)? onLoadGender,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
   }) {
     return onLoadCountry?.call(this);
   }
@@ -1550,11 +2099,14 @@ class _$OnLoadCountryImpl implements _OnLoadCountry {
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult Function(_OnChangeGender value)? onChangeGender,
     TResult Function(_OnSelectedGender value)? onSelectedGender,
+    TResult Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult Function(_OnLoadCountry value)? onLoadCountry,
     TResult Function(_OnLoadGender value)? onLoadGender,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
     required TResult orElse(),
   }) {
     if (onLoadCountry != null) {
@@ -1614,11 +2166,14 @@ class _$OnLoadGenderImpl implements _OnLoadGender {
     required TResult Function(String text) onChangeEmail,
     required TResult Function(String text) onChangePhoneNumber,
     required TResult Function(CountryModel item) onChangeCountry,
+    required TResult Function(CountryModel item) onChangeCountryCode,
     required TResult Function(Gender gender) onChangeGender,
     required TResult Function(String genderName) onSelectedGender,
+    required TResult Function() onLoadCountryCode,
     required TResult Function() onLoadCountry,
     required TResult Function() onLoadGender,
-    required TResult Function(String countryName) onSelectedCountry,
+    required TResult Function() onSelectedCountry,
+    required TResult Function() onSelectedCountryCode,
   }) {
     return onLoadGender();
   }
@@ -1631,11 +2186,14 @@ class _$OnLoadGenderImpl implements _OnLoadGender {
     TResult? Function(String text)? onChangeEmail,
     TResult? Function(String text)? onChangePhoneNumber,
     TResult? Function(CountryModel item)? onChangeCountry,
+    TResult? Function(CountryModel item)? onChangeCountryCode,
     TResult? Function(Gender gender)? onChangeGender,
     TResult? Function(String genderName)? onSelectedGender,
+    TResult? Function()? onLoadCountryCode,
     TResult? Function()? onLoadCountry,
     TResult? Function()? onLoadGender,
-    TResult? Function(String countryName)? onSelectedCountry,
+    TResult? Function()? onSelectedCountry,
+    TResult? Function()? onSelectedCountryCode,
   }) {
     return onLoadGender?.call();
   }
@@ -1648,11 +2206,14 @@ class _$OnLoadGenderImpl implements _OnLoadGender {
     TResult Function(String text)? onChangeEmail,
     TResult Function(String text)? onChangePhoneNumber,
     TResult Function(CountryModel item)? onChangeCountry,
+    TResult Function(CountryModel item)? onChangeCountryCode,
     TResult Function(Gender gender)? onChangeGender,
     TResult Function(String genderName)? onSelectedGender,
+    TResult Function()? onLoadCountryCode,
     TResult Function()? onLoadCountry,
     TResult Function()? onLoadGender,
-    TResult Function(String countryName)? onSelectedCountry,
+    TResult Function()? onSelectedCountry,
+    TResult Function()? onSelectedCountryCode,
     required TResult orElse(),
   }) {
     if (onLoadGender != null) {
@@ -1669,11 +2230,15 @@ class _$OnLoadGenderImpl implements _OnLoadGender {
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
     required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeCountryCode value) onChangeCountryCode,
     required TResult Function(_OnChangeGender value) onChangeGender,
     required TResult Function(_OnSelectedGender value) onSelectedGender,
+    required TResult Function(_OnLoadCountryCode value) onLoadCountryCode,
     required TResult Function(_OnLoadCountry value) onLoadCountry,
     required TResult Function(_OnLoadGender value) onLoadGender,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedCountryCode value)
+        onSelectedCountryCode,
   }) {
     return onLoadGender(this);
   }
@@ -1686,11 +2251,14 @@ class _$OnLoadGenderImpl implements _OnLoadGender {
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult? Function(_OnChangeGender value)? onChangeGender,
     TResult? Function(_OnSelectedGender value)? onSelectedGender,
+    TResult? Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult? Function(_OnLoadCountry value)? onLoadCountry,
     TResult? Function(_OnLoadGender value)? onLoadGender,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
   }) {
     return onLoadGender?.call(this);
   }
@@ -1703,11 +2271,14 @@ class _$OnLoadGenderImpl implements _OnLoadGender {
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult Function(_OnChangeGender value)? onChangeGender,
     TResult Function(_OnSelectedGender value)? onSelectedGender,
+    TResult Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult Function(_OnLoadCountry value)? onLoadCountry,
     TResult Function(_OnLoadGender value)? onLoadGender,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
     required TResult orElse(),
   }) {
     if (onLoadGender != null) {
@@ -1726,8 +2297,6 @@ abstract class _$$OnSelectedCountryImplCopyWith<$Res> {
   factory _$$OnSelectedCountryImplCopyWith(_$OnSelectedCountryImpl value,
           $Res Function(_$OnSelectedCountryImpl) then) =
       __$$OnSelectedCountryImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String countryName});
 }
 
 /// @nodoc
@@ -1740,53 +2309,26 @@ class __$$OnSelectedCountryImplCopyWithImpl<$Res>
 
   /// Create a copy of EditProfileEvent
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? countryName = null,
-  }) {
-    return _then(_$OnSelectedCountryImpl(
-      null == countryName
-          ? _value.countryName
-          : countryName // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$OnSelectedCountryImpl implements _OnSelectedCountry {
-  const _$OnSelectedCountryImpl(this.countryName);
-
-  @override
-  final String countryName;
+  const _$OnSelectedCountryImpl();
 
   @override
   String toString() {
-    return 'EditProfileEvent.onSelectedCountry(countryName: $countryName)';
+    return 'EditProfileEvent.onSelectedCountry()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$OnSelectedCountryImpl &&
-            (identical(other.countryName, countryName) ||
-                other.countryName == countryName));
+        (other.runtimeType == runtimeType && other is _$OnSelectedCountryImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, countryName);
-
-  /// Create a copy of EditProfileEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$OnSelectedCountryImplCopyWith<_$OnSelectedCountryImpl> get copyWith =>
-      __$$OnSelectedCountryImplCopyWithImpl<_$OnSelectedCountryImpl>(
-          this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -1796,13 +2338,16 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
     required TResult Function(String text) onChangeEmail,
     required TResult Function(String text) onChangePhoneNumber,
     required TResult Function(CountryModel item) onChangeCountry,
+    required TResult Function(CountryModel item) onChangeCountryCode,
     required TResult Function(Gender gender) onChangeGender,
     required TResult Function(String genderName) onSelectedGender,
+    required TResult Function() onLoadCountryCode,
     required TResult Function() onLoadCountry,
     required TResult Function() onLoadGender,
-    required TResult Function(String countryName) onSelectedCountry,
+    required TResult Function() onSelectedCountry,
+    required TResult Function() onSelectedCountryCode,
   }) {
-    return onSelectedCountry(countryName);
+    return onSelectedCountry();
   }
 
   @override
@@ -1813,13 +2358,16 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
     TResult? Function(String text)? onChangeEmail,
     TResult? Function(String text)? onChangePhoneNumber,
     TResult? Function(CountryModel item)? onChangeCountry,
+    TResult? Function(CountryModel item)? onChangeCountryCode,
     TResult? Function(Gender gender)? onChangeGender,
     TResult? Function(String genderName)? onSelectedGender,
+    TResult? Function()? onLoadCountryCode,
     TResult? Function()? onLoadCountry,
     TResult? Function()? onLoadGender,
-    TResult? Function(String countryName)? onSelectedCountry,
+    TResult? Function()? onSelectedCountry,
+    TResult? Function()? onSelectedCountryCode,
   }) {
-    return onSelectedCountry?.call(countryName);
+    return onSelectedCountry?.call();
   }
 
   @override
@@ -1830,15 +2378,18 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
     TResult Function(String text)? onChangeEmail,
     TResult Function(String text)? onChangePhoneNumber,
     TResult Function(CountryModel item)? onChangeCountry,
+    TResult Function(CountryModel item)? onChangeCountryCode,
     TResult Function(Gender gender)? onChangeGender,
     TResult Function(String genderName)? onSelectedGender,
+    TResult Function()? onLoadCountryCode,
     TResult Function()? onLoadCountry,
     TResult Function()? onLoadGender,
-    TResult Function(String countryName)? onSelectedCountry,
+    TResult Function()? onSelectedCountry,
+    TResult Function()? onSelectedCountryCode,
     required TResult orElse(),
   }) {
     if (onSelectedCountry != null) {
-      return onSelectedCountry(countryName);
+      return onSelectedCountry();
     }
     return orElse();
   }
@@ -1851,11 +2402,15 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
     required TResult Function(_OnChangeEmail value) onChangeEmail,
     required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
     required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeCountryCode value) onChangeCountryCode,
     required TResult Function(_OnChangeGender value) onChangeGender,
     required TResult Function(_OnSelectedGender value) onSelectedGender,
+    required TResult Function(_OnLoadCountryCode value) onLoadCountryCode,
     required TResult Function(_OnLoadCountry value) onLoadCountry,
     required TResult Function(_OnLoadGender value) onLoadGender,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedCountryCode value)
+        onSelectedCountryCode,
   }) {
     return onSelectedCountry(this);
   }
@@ -1868,11 +2423,14 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
     TResult? Function(_OnChangeEmail value)? onChangeEmail,
     TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult? Function(_OnChangeGender value)? onChangeGender,
     TResult? Function(_OnSelectedGender value)? onSelectedGender,
+    TResult? Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult? Function(_OnLoadCountry value)? onLoadCountry,
     TResult? Function(_OnLoadGender value)? onLoadGender,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
   }) {
     return onSelectedCountry?.call(this);
   }
@@ -1885,11 +2443,14 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
     TResult Function(_OnChangeEmail value)? onChangeEmail,
     TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
     TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeCountryCode value)? onChangeCountryCode,
     TResult Function(_OnChangeGender value)? onChangeGender,
     TResult Function(_OnSelectedGender value)? onSelectedGender,
+    TResult Function(_OnLoadCountryCode value)? onLoadCountryCode,
     TResult Function(_OnLoadCountry value)? onLoadCountry,
     TResult Function(_OnLoadGender value)? onLoadGender,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
     required TResult orElse(),
   }) {
     if (onSelectedCountry != null) {
@@ -1900,16 +2461,181 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
 }
 
 abstract class _OnSelectedCountry implements EditProfileEvent {
-  const factory _OnSelectedCountry(final String countryName) =
-      _$OnSelectedCountryImpl;
+  const factory _OnSelectedCountry() = _$OnSelectedCountryImpl;
+}
 
-  String get countryName;
+/// @nodoc
+abstract class _$$OnSelectedCountryCodeImplCopyWith<$Res> {
+  factory _$$OnSelectedCountryCodeImplCopyWith(
+          _$OnSelectedCountryCodeImpl value,
+          $Res Function(_$OnSelectedCountryCodeImpl) then) =
+      __$$OnSelectedCountryCodeImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$OnSelectedCountryCodeImplCopyWithImpl<$Res>
+    extends _$EditProfileEventCopyWithImpl<$Res, _$OnSelectedCountryCodeImpl>
+    implements _$$OnSelectedCountryCodeImplCopyWith<$Res> {
+  __$$OnSelectedCountryCodeImplCopyWithImpl(_$OnSelectedCountryCodeImpl _value,
+      $Res Function(_$OnSelectedCountryCodeImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of EditProfileEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$OnSelectedCountryImplCopyWith<_$OnSelectedCountryImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+
+class _$OnSelectedCountryCodeImpl implements _OnSelectedCountryCode {
+  const _$OnSelectedCountryCodeImpl();
+
+  @override
+  String toString() {
+    return 'EditProfileEvent.onSelectedCountryCode()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnSelectedCountryCodeImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() onUpdate,
+    required TResult Function(String text) onChangeFullName,
+    required TResult Function(String text) onChangeEmail,
+    required TResult Function(String text) onChangePhoneNumber,
+    required TResult Function(CountryModel item) onChangeCountry,
+    required TResult Function(CountryModel item) onChangeCountryCode,
+    required TResult Function(Gender gender) onChangeGender,
+    required TResult Function(String genderName) onSelectedGender,
+    required TResult Function() onLoadCountryCode,
+    required TResult Function() onLoadCountry,
+    required TResult Function() onLoadGender,
+    required TResult Function() onSelectedCountry,
+    required TResult Function() onSelectedCountryCode,
+  }) {
+    return onSelectedCountryCode();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? onUpdate,
+    TResult? Function(String text)? onChangeFullName,
+    TResult? Function(String text)? onChangeEmail,
+    TResult? Function(String text)? onChangePhoneNumber,
+    TResult? Function(CountryModel item)? onChangeCountry,
+    TResult? Function(CountryModel item)? onChangeCountryCode,
+    TResult? Function(Gender gender)? onChangeGender,
+    TResult? Function(String genderName)? onSelectedGender,
+    TResult? Function()? onLoadCountryCode,
+    TResult? Function()? onLoadCountry,
+    TResult? Function()? onLoadGender,
+    TResult? Function()? onSelectedCountry,
+    TResult? Function()? onSelectedCountryCode,
+  }) {
+    return onSelectedCountryCode?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? onUpdate,
+    TResult Function(String text)? onChangeFullName,
+    TResult Function(String text)? onChangeEmail,
+    TResult Function(String text)? onChangePhoneNumber,
+    TResult Function(CountryModel item)? onChangeCountry,
+    TResult Function(CountryModel item)? onChangeCountryCode,
+    TResult Function(Gender gender)? onChangeGender,
+    TResult Function(String genderName)? onSelectedGender,
+    TResult Function()? onLoadCountryCode,
+    TResult Function()? onLoadCountry,
+    TResult Function()? onLoadGender,
+    TResult Function()? onSelectedCountry,
+    TResult Function()? onSelectedCountryCode,
+    required TResult orElse(),
+  }) {
+    if (onSelectedCountryCode != null) {
+      return onSelectedCountryCode();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_OnUpdate value) onUpdate,
+    required TResult Function(_OnChangeFullName value) onChangeFullName,
+    required TResult Function(_OnChangeEmail value) onChangeEmail,
+    required TResult Function(_OnChangePhoneNumber value) onChangePhoneNumber,
+    required TResult Function(_OnChangeCountry value) onChangeCountry,
+    required TResult Function(_OnChangeCountryCode value) onChangeCountryCode,
+    required TResult Function(_OnChangeGender value) onChangeGender,
+    required TResult Function(_OnSelectedGender value) onSelectedGender,
+    required TResult Function(_OnLoadCountryCode value) onLoadCountryCode,
+    required TResult Function(_OnLoadCountry value) onLoadCountry,
+    required TResult Function(_OnLoadGender value) onLoadGender,
+    required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedCountryCode value)
+        onSelectedCountryCode,
+  }) {
+    return onSelectedCountryCode(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnUpdate value)? onUpdate,
+    TResult? Function(_OnChangeFullName value)? onChangeFullName,
+    TResult? Function(_OnChangeEmail value)? onChangeEmail,
+    TResult? Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
+    TResult? Function(_OnChangeCountry value)? onChangeCountry,
+    TResult? Function(_OnChangeCountryCode value)? onChangeCountryCode,
+    TResult? Function(_OnChangeGender value)? onChangeGender,
+    TResult? Function(_OnSelectedGender value)? onSelectedGender,
+    TResult? Function(_OnLoadCountryCode value)? onLoadCountryCode,
+    TResult? Function(_OnLoadCountry value)? onLoadCountry,
+    TResult? Function(_OnLoadGender value)? onLoadGender,
+    TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
+  }) {
+    return onSelectedCountryCode?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnUpdate value)? onUpdate,
+    TResult Function(_OnChangeFullName value)? onChangeFullName,
+    TResult Function(_OnChangeEmail value)? onChangeEmail,
+    TResult Function(_OnChangePhoneNumber value)? onChangePhoneNumber,
+    TResult Function(_OnChangeCountry value)? onChangeCountry,
+    TResult Function(_OnChangeCountryCode value)? onChangeCountryCode,
+    TResult Function(_OnChangeGender value)? onChangeGender,
+    TResult Function(_OnSelectedGender value)? onSelectedGender,
+    TResult Function(_OnLoadCountryCode value)? onLoadCountryCode,
+    TResult Function(_OnLoadCountry value)? onLoadCountry,
+    TResult Function(_OnLoadGender value)? onLoadGender,
+    TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedCountryCode value)? onSelectedCountryCode,
+    required TResult orElse(),
+  }) {
+    if (onSelectedCountryCode != null) {
+      return onSelectedCountryCode(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnSelectedCountryCode implements EditProfileEvent {
+  const factory _OnSelectedCountryCode() = _$OnSelectedCountryCodeImpl;
 }
 
 /// @nodoc
@@ -1921,12 +2647,15 @@ mixin _$EditProfileState {
   String? get phoneNumber => throw _privateConstructorUsedError;
   String? get gender => throw _privateConstructorUsedError;
   String? get country => throw _privateConstructorUsedError;
+  String? get flag => throw _privateConstructorUsedError;
   String? get errFullName => throw _privateConstructorUsedError;
   String? get errPhoneNumber => throw _privateConstructorUsedError;
   bool get enable => throw _privateConstructorUsedError;
   Gender? get selectedGender => throw _privateConstructorUsedError;
   CountryModel? get selectedCountry => throw _privateConstructorUsedError;
   List<CountryModel> get countries => throw _privateConstructorUsedError;
+  CountryModel? get selectedCountryCode => throw _privateConstructorUsedError;
+  List<CountryModel> get listCountryCode => throw _privateConstructorUsedError;
 
   /// Create a copy of EditProfileState
   /// with the given fields replaced by the non-null parameter values.
@@ -1949,12 +2678,15 @@ abstract class $EditProfileStateCopyWith<$Res> {
       String? phoneNumber,
       String? gender,
       String? country,
+      String? flag,
       String? errFullName,
       String? errPhoneNumber,
       bool enable,
       Gender? selectedGender,
       CountryModel? selectedCountry,
-      List<CountryModel> countries});
+      List<CountryModel> countries,
+      CountryModel? selectedCountryCode,
+      List<CountryModel> listCountryCode});
 }
 
 /// @nodoc
@@ -1979,12 +2711,15 @@ class _$EditProfileStateCopyWithImpl<$Res, $Val extends EditProfileState>
     Object? phoneNumber = freezed,
     Object? gender = freezed,
     Object? country = freezed,
+    Object? flag = freezed,
     Object? errFullName = freezed,
     Object? errPhoneNumber = freezed,
     Object? enable = null,
     Object? selectedGender = freezed,
     Object? selectedCountry = freezed,
     Object? countries = null,
+    Object? selectedCountryCode = freezed,
+    Object? listCountryCode = null,
   }) {
     return _then(_value.copyWith(
       page: freezed == page
@@ -2015,6 +2750,10 @@ class _$EditProfileStateCopyWithImpl<$Res, $Val extends EditProfileState>
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
               as String?,
+      flag: freezed == flag
+          ? _value.flag
+          : flag // ignore: cast_nullable_to_non_nullable
+              as String?,
       errFullName: freezed == errFullName
           ? _value.errFullName
           : errFullName // ignore: cast_nullable_to_non_nullable
@@ -2039,6 +2778,14 @@ class _$EditProfileStateCopyWithImpl<$Res, $Val extends EditProfileState>
           ? _value.countries
           : countries // ignore: cast_nullable_to_non_nullable
               as List<CountryModel>,
+      selectedCountryCode: freezed == selectedCountryCode
+          ? _value.selectedCountryCode
+          : selectedCountryCode // ignore: cast_nullable_to_non_nullable
+              as CountryModel?,
+      listCountryCode: null == listCountryCode
+          ? _value.listCountryCode
+          : listCountryCode // ignore: cast_nullable_to_non_nullable
+              as List<CountryModel>,
     ) as $Val);
   }
 }
@@ -2059,12 +2806,15 @@ abstract class _$$EditProfileStateImplCopyWith<$Res>
       String? phoneNumber,
       String? gender,
       String? country,
+      String? flag,
       String? errFullName,
       String? errPhoneNumber,
       bool enable,
       Gender? selectedGender,
       CountryModel? selectedCountry,
-      List<CountryModel> countries});
+      List<CountryModel> countries,
+      CountryModel? selectedCountryCode,
+      List<CountryModel> listCountryCode});
 }
 
 /// @nodoc
@@ -2087,12 +2837,15 @@ class __$$EditProfileStateImplCopyWithImpl<$Res>
     Object? phoneNumber = freezed,
     Object? gender = freezed,
     Object? country = freezed,
+    Object? flag = freezed,
     Object? errFullName = freezed,
     Object? errPhoneNumber = freezed,
     Object? enable = null,
     Object? selectedGender = freezed,
     Object? selectedCountry = freezed,
     Object? countries = null,
+    Object? selectedCountryCode = freezed,
+    Object? listCountryCode = null,
   }) {
     return _then(_$EditProfileStateImpl(
       page: freezed == page
@@ -2123,6 +2876,10 @@ class __$$EditProfileStateImplCopyWithImpl<$Res>
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
               as String?,
+      flag: freezed == flag
+          ? _value.flag
+          : flag // ignore: cast_nullable_to_non_nullable
+              as String?,
       errFullName: freezed == errFullName
           ? _value.errFullName
           : errFullName // ignore: cast_nullable_to_non_nullable
@@ -2147,6 +2904,14 @@ class __$$EditProfileStateImplCopyWithImpl<$Res>
           ? _value._countries
           : countries // ignore: cast_nullable_to_non_nullable
               as List<CountryModel>,
+      selectedCountryCode: freezed == selectedCountryCode
+          ? _value.selectedCountryCode
+          : selectedCountryCode // ignore: cast_nullable_to_non_nullable
+              as CountryModel?,
+      listCountryCode: null == listCountryCode
+          ? _value._listCountryCode
+          : listCountryCode // ignore: cast_nullable_to_non_nullable
+              as List<CountryModel>,
     ));
   }
 }
@@ -2162,13 +2927,17 @@ class _$EditProfileStateImpl extends _EditProfileState {
       this.phoneNumber,
       this.gender,
       this.country,
+      this.flag,
       this.errFullName,
       this.errPhoneNumber,
       this.enable = false,
       this.selectedGender,
       this.selectedCountry,
-      final List<CountryModel> countries = const []})
+      final List<CountryModel> countries = const [],
+      this.selectedCountryCode,
+      final List<CountryModel> listCountryCode = const []})
       : _countries = countries,
+        _listCountryCode = listCountryCode,
         super._();
 
   @override
@@ -2186,6 +2955,8 @@ class _$EditProfileStateImpl extends _EditProfileState {
   final String? gender;
   @override
   final String? country;
+  @override
+  final String? flag;
   @override
   final String? errFullName;
   @override
@@ -2207,8 +2978,19 @@ class _$EditProfileStateImpl extends _EditProfileState {
   }
 
   @override
+  final CountryModel? selectedCountryCode;
+  final List<CountryModel> _listCountryCode;
+  @override
+  @JsonKey()
+  List<CountryModel> get listCountryCode {
+    if (_listCountryCode is EqualUnmodifiableListView) return _listCountryCode;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_listCountryCode);
+  }
+
+  @override
   String toString() {
-    return 'EditProfileState(page: $page, avatar: $avatar, fullName: $fullName, email: $email, phoneNumber: $phoneNumber, gender: $gender, country: $country, errFullName: $errFullName, errPhoneNumber: $errPhoneNumber, enable: $enable, selectedGender: $selectedGender, selectedCountry: $selectedCountry, countries: $countries)';
+    return 'EditProfileState(page: $page, avatar: $avatar, fullName: $fullName, email: $email, phoneNumber: $phoneNumber, gender: $gender, country: $country, flag: $flag, errFullName: $errFullName, errPhoneNumber: $errPhoneNumber, enable: $enable, selectedGender: $selectedGender, selectedCountry: $selectedCountry, countries: $countries, selectedCountryCode: $selectedCountryCode, listCountryCode: $listCountryCode)';
   }
 
   @override
@@ -2225,6 +3007,7 @@ class _$EditProfileStateImpl extends _EditProfileState {
                 other.phoneNumber == phoneNumber) &&
             (identical(other.gender, gender) || other.gender == gender) &&
             (identical(other.country, country) || other.country == country) &&
+            (identical(other.flag, flag) || other.flag == flag) &&
             (identical(other.errFullName, errFullName) ||
                 other.errFullName == errFullName) &&
             (identical(other.errPhoneNumber, errPhoneNumber) ||
@@ -2235,7 +3018,11 @@ class _$EditProfileStateImpl extends _EditProfileState {
             (identical(other.selectedCountry, selectedCountry) ||
                 other.selectedCountry == selectedCountry) &&
             const DeepCollectionEquality()
-                .equals(other._countries, _countries));
+                .equals(other._countries, _countries) &&
+            (identical(other.selectedCountryCode, selectedCountryCode) ||
+                other.selectedCountryCode == selectedCountryCode) &&
+            const DeepCollectionEquality()
+                .equals(other._listCountryCode, _listCountryCode));
   }
 
   @override
@@ -2248,12 +3035,15 @@ class _$EditProfileStateImpl extends _EditProfileState {
       phoneNumber,
       gender,
       country,
+      flag,
       errFullName,
       errPhoneNumber,
       enable,
       selectedGender,
       selectedCountry,
-      const DeepCollectionEquality().hash(_countries));
+      const DeepCollectionEquality().hash(_countries),
+      selectedCountryCode,
+      const DeepCollectionEquality().hash(_listCountryCode));
 
   /// Create a copy of EditProfileState
   /// with the given fields replaced by the non-null parameter values.
@@ -2274,12 +3064,15 @@ abstract class _EditProfileState extends EditProfileState {
       final String? phoneNumber,
       final String? gender,
       final String? country,
+      final String? flag,
       final String? errFullName,
       final String? errPhoneNumber,
       final bool enable,
       final Gender? selectedGender,
       final CountryModel? selectedCountry,
-      final List<CountryModel> countries}) = _$EditProfileStateImpl;
+      final List<CountryModel> countries,
+      final CountryModel? selectedCountryCode,
+      final List<CountryModel> listCountryCode}) = _$EditProfileStateImpl;
   const _EditProfileState._() : super._();
 
   @override
@@ -2297,6 +3090,8 @@ abstract class _EditProfileState extends EditProfileState {
   @override
   String? get country;
   @override
+  String? get flag;
+  @override
   String? get errFullName;
   @override
   String? get errPhoneNumber;
@@ -2308,6 +3103,10 @@ abstract class _EditProfileState extends EditProfileState {
   CountryModel? get selectedCountry;
   @override
   List<CountryModel> get countries;
+  @override
+  CountryModel? get selectedCountryCode;
+  @override
+  List<CountryModel> get listCountryCode;
 
   /// Create a copy of EditProfileState
   /// with the given fields replaced by the non-null parameter values.

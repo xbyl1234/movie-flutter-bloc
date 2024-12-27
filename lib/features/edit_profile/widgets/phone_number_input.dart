@@ -16,9 +16,11 @@ class PhoneNumberInput extends StatelessWidget {
           initValue: state.phoneNumber,
           hintText: S.of(context).hint_text_phone_number,
           error: state.errPhoneNumber,
+          flag: state.flag ?? "https://flagcdn.com/vn.svg",
           onChanged: (val) =>
               bloc.add(EditProfileEvent.onChangePhoneNumber(val)),
-          onSelectedCountry: () {},
+          onSelectedCountry: () =>
+              bloc.add(EditProfileEvent.onLoadCountryCode()),
         );
       },
     );

@@ -13,6 +13,7 @@ import 'widgets/country_input.dart';
 import 'widgets/email_input.dart';
 import 'widgets/full_name_input.dart';
 import 'widgets/gender_input.dart';
+import 'widgets/list_country_code_bottom_sheet.dart';
 import 'widgets/list_gender_bottom_sheet.dart';
 import 'widgets/phone_number_input.dart';
 
@@ -91,16 +92,21 @@ class EditProfileScreen extends StatelessWidget {
     BuildContext context,
     EditProfileBloc bloc,
   ) {
+
     late Widget child;
     if (page.sheetType == SheetType.getListGender) {
       child = ListGenderBottomSheet(bloc: bloc);
-    } else if (page.sheetType == SheetType.getListCountry) {
+    } else if (page.sheetType == SheetType.country) {
       child = ListCountryBottomSheet(bloc: bloc);
+    } else if (page.sheetType == SheetType.countryCode) {
+      child = ListCountryCodeBottomSheet(bloc: bloc);
     }
+
     showModalBottomSheet(
         backgroundColor: Color(0xffffffff),
         context: context,
-        isScrollControlled: page.sheetType == SheetType.getListCountry,
+        isScrollControlled: page.sheetType == SheetType.country ||
+            page.sheetType == SheetType.countryCode,
         builder: (context) {
           return child;
         });

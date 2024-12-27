@@ -16,15 +16,16 @@ part 'edit_profile_bloc.freezed.dart';
 class EditProfileBloc extends Bloc<EditProfileEvent, EditProfileState> {
   EditProfileBloc() : super(const EditProfileState()) {
     on<_OnChangeFullName>((event, emit) {
-      emit(state.copyWith(fullName: event.text, enable: isSaved));
+      emit(state.copyWith(fullName: event.text, enable: isSaved, page: null));
     });
 
     on<_OnChangeEmail>((event, emit) {
-      emit(state.copyWith(email: event.text, enable: isSaved));
+      emit(state.copyWith(email: event.text, enable: isSaved, page: null));
     });
 
     on<_OnChangePhoneNumber>((event, emit) {
-      emit(state.copyWith(phoneNumber: event.text, enable: isSaved));
+      emit(
+          state.copyWith(phoneNumber: event.text, enable: isSaved, page: null));
     });
 
     on<_OnLoadGender>((event, emit) {
@@ -34,16 +35,18 @@ class EditProfileBloc extends Bloc<EditProfileEvent, EditProfileState> {
     });
 
     on<_OnLoadCountry>((event, emit) async {
-      String data =
-          await rootBundle.loadString("assets/country/countries.json");
-      final json = jsonDecode(data)["countries"] as List;
-
-      List<CountryModel> countries = json.map((item) => CountryModel.fromJson(item)).toList();
-
+      List<CountryModel> countries = await getCountries();
       emit(state.copyWith(
-        page: PageCommandShowBottomSheet(sheetType: SheetType.getListCountry),
+        page: PageCommandShowBottomSheet(sheetType: SheetType.country),
         countries: countries,
       ));
+    });
+
+    on<_OnLoadCountryCode>((event, emit) async {
+      List<CountryModel> countries = await getCountries();
+      emit(state.copyWith(
+          page: PageCommandShowBottomSheet(sheetType: SheetType.countryCode),
+          listCountryCode: countries));
     });
 
     on<_OnChangeGender>((event, emit) {
@@ -51,7 +54,7 @@ class EditProfileBloc extends Bloc<EditProfileEvent, EditProfileState> {
     });
 
     on<_OnChangeCountry>((event, emit) {
-      emit(state.copyWith(selectedCountry: event.item, enable: isSaved, page: null));
+      emit(state.copyWith(selectedCountry: event.item, page: null));
     });
 
     on<_OnSelectedGender>((event, emit) {
@@ -59,10 +62,43 @@ class EditProfileBloc extends Bloc<EditProfileEvent, EditProfileState> {
     });
 
     on<_OnSelectedCountry>((event, emit) {
-       emit(state.copyWith(country: event.countryName));
+      emit(state.copyWith(country: state.selectedCountry!.name));
+    });
+
+    on<_OnChangeCountryCode>((event, emit) {
+      emit(state.copyWith(selectedCountryCode: event.item, page: null));
+    });
+
+    on<_OnSelectedCountryCode>((event, emit) {
+      emit(state.copyWith(flag: state.selectedCountryCode!.flag));
     });
 
     on<_OnUpdate>((event, emit) {});
+  }
+
+  Future<void> emitCountry(
+      Emitter<EditProfileState> emit, SheetType type) async {
+    if (state.countries.isNotEmpty) {
+      emit(state.copyWith(
+        page: PageCommandShowBottomSheet(sheetType: type),
+        countries: state.countries,
+      ));
+    }
+
+    List<CountryModel> countries = await getCountries();
+
+    emit(state.copyWith(
+      page: PageCommandShowBottomSheet(sheetType: type),
+      countries: countries,
+    ));
+  }
+
+  Future<List<CountryModel>> getCountries() async {
+    String data = await rootBundle.loadString("assets/country/countries.json");
+    final json = jsonDecode(data)["countries"] as List;
+    List<CountryModel> countries =
+        json.map((item) => CountryModel.fromJson(item)).toList();
+    return countries;
   }
 
   bool get isSaved {

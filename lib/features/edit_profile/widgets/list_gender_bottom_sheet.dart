@@ -80,6 +80,7 @@ class ListGenderBottomSheet extends StatelessWidget {
                     btnText: 'Ok',
                     enable: state.selectedGender != null,
                     action: () {
+                      FocusManager.instance.primaryFocus?.unfocus();
                       Navigator.pop(context);
                       bloc.add(EditProfileEvent.onSelectedGender(
                         state.selectedGender!.name(context),

@@ -41,7 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hint_text_phone_number":
             MessageLookupByLibrary.simpleMessage("Phone number"),
         "hint_text_search_country":
-            MessageLookupByLibrary.simpleMessage("Search country..."),
+            MessageLookupByLibrary.simpleMessage("Search..."),
         "label_menu_dark_mode":
             MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "label_menu_download": MessageLookupByLibrary.simpleMessage("Download"),
@@ -77,6 +77,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "title_payment": MessageLookupByLibrary.simpleMessage("Payment"),
         "title_review_summary":
             MessageLookupByLibrary.simpleMessage("Review Summary"),
+        "title_selected_country":
+            MessageLookupByLibrary.simpleMessage("Countries"),
         "title_subscribe_to_premium":
             MessageLookupByLibrary.simpleMessage("Subscribe to Premium"),
         "title_top_movie":

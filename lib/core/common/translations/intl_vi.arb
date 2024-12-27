@@ -56,8 +56,9 @@
   "hint_full_name": "Họ tên",
   "hint_text_gender": "Giới tính",
   "hint_text_phone_number": "Số điện thoại",
-  "male": "Male",
-  "female": "Female",
+  "male": "Nam",
+  "female": "Nữ",
   "title_gender": "Giới tính",
-  "hint_text_search_country": "Search country..."
+  "hint_text_search_country": "Tìm kiếm...",
+  "title_selected_country": "Danh sách quốc gia"
 }
