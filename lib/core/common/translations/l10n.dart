@@ -579,6 +579,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Search country...`
+  String get hint_text_search_country {
+    return Intl.message(
+      'Search country...',
+      name: 'hint_text_search_country',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -1,3 +1,5 @@
-enum SheetType{
+enum SheetType {
   confirmPaymentSuccess,
+  getListGender,
+  getListCountry,
 }

@@ -4,6 +4,7 @@ part of 'edit_profile_bloc.dart';
 class EditProfileState with _$EditProfileState {
   const EditProfileState._();
   const factory EditProfileState({
+    PageCommand? page,
     @Default('') String avatar,
     String? fullName,
     String? email,
@@ -14,5 +15,7 @@ class EditProfileState with _$EditProfileState {
     String? errPhoneNumber,
     @Default(false) bool enable,
     Gender? selectedGender,
+    CountryModel? selectedCountry,
+    @Default([]) List<CountryModel> countries,
   }) = _EditProfileState;
 }

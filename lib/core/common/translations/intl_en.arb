@@ -58,5 +58,6 @@
   "hint_text_phone_number": "Phone number",
   "male": "Male",
   "female": "Female",
-  "title_gender": "Gender"
+  "title_gender": "Gender",
+  "hint_text_search_country": "Search country..."
 }

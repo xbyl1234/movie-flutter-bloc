@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:movie/core/common/widgets/svg_widget.dart';
 
-class CustomTextFieldDisable extends StatefulWidget {
-
-  final TextInputType keyboardType;
-  final TextCapitalization textCapitalization;
+class CustomTextFieldDisable extends StatelessWidget {
   final String? hintText;
   final String? label;
   final String? error;
@@ -13,7 +10,6 @@ class CustomTextFieldDisable extends StatefulWidget {
   final String? icRight;
   final VoidCallback? actionRight;
   final int? maxLength;
-  final Function(String value)? onChanged;
   final List<TextInputFormatter>? inputFormatters;
   final TextInputAction textInputAction;
   final Widget? prefixWidget;
@@ -21,8 +17,6 @@ class CustomTextFieldDisable extends StatefulWidget {
 
   const CustomTextFieldDisable({
     super.key,
-    this.keyboardType = TextInputType.text,
-    this.textCapitalization = TextCapitalization.none,
     this.label,
     this.error,
     this.icRight,
@@ -30,7 +24,6 @@ class CustomTextFieldDisable extends StatefulWidget {
     this.maxLength,
     this.initValue,
     this.hintText,
-     this.onChanged,
     this.inputFormatters,
     this.textInputAction = TextInputAction.none,
     this.prefixWidget,
@@ -38,64 +31,43 @@ class CustomTextFieldDisable extends StatefulWidget {
   });
 
   @override
-  State<CustomTextFieldDisable> createState() => _CustomTextFieldDisableState();
-}
-
-class _CustomTextFieldDisableState extends State<CustomTextFieldDisable> {
-
-  late TextEditingController controller;
-
-  @override
-  void initState() {
-    super.initState();
-    controller = TextEditingController(text: widget.initValue);
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    controller.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => widget.onPressed?.call(),
+    return InkWell(
+      onTap: () => onPressed?.call(),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          if (widget.label != null) ...[
+          if (label != null) ...[
             Padding(
               padding: const EdgeInsets.only(bottom: 8),
               child: Text(
-                widget.label!,
+                label!,
                 style: Theme.of(context).textTheme.titleMedium,
               ),
             ),
           ],
           TextFormField(
-            controller: controller,
-            textInputAction: widget.textInputAction,
-            inputFormatters: widget.inputFormatters,
             enabled: false,
-            keyboardType: widget.keyboardType,
-            textCapitalization: widget.textCapitalization,
-            maxLength: widget.maxLength,
+            maxLength: maxLength,
             decoration: InputDecoration(
-                hintText: widget.hintText,
-                prefixIcon: widget.prefixWidget,
-                suffixIcon: widget.icRight != null
+                hintText: initValue ?? hintText,
+                prefixIcon: prefixWidget,
+                hintStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      color:
+                          initValue == null ? Color(0xFF9E9E9E) : Colors.black,
+                    ),
+                suffixIcon: icRight != null
                     ? InkWell(
-                        onTap: () => widget.actionRight!.call(),
-                        child: SvgWidget(ic: widget.icRight!))
+                        onTap: () => actionRight!.call(),
+                        child: SvgWidget(ic: icRight!))
                     : null,
                 counterText: ''),
           ),
-          if (widget.error != null) ...[
+          if (error != null) ...[
             Padding(
               padding: const EdgeInsets.only(top: 4),
               child: Text(
-                widget.error!,
+                error!,
                 style: Theme.of(context).textTheme.labelSmall!.copyWith(
                       color: Theme.of(context).colorScheme.error,
                       fontSize: 12,

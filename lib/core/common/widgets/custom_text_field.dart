@@ -70,7 +70,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
         TextFormField(
           controller: controller,
           textInputAction: widget.textInputAction,
-          onChanged: (val) => widget.onChanged!(val),
+          onChanged: (val) =>
+              widget.onChanged != null ? widget.onChanged!(val) : null,
           inputFormatters: widget.inputFormatters,
           keyboardType: widget.keyboardType,
           textCapitalization: widget.textCapitalization,

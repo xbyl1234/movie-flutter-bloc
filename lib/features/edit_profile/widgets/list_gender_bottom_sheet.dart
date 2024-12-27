@@ -6,10 +6,10 @@ import '../../../core/common/translations/l10n.dart';
 import '../../../core/common/widgets/custom_button.dart';
 import '../bloc/edit_profile_bloc.dart';
 
-class SelectedGenderBottomSheet extends StatelessWidget {
+class ListGenderBottomSheet extends StatelessWidget {
   final EditProfileBloc bloc;
 
-  const SelectedGenderBottomSheet({
+  const ListGenderBottomSheet({
     super.key,
     required this.bloc,
   });
@@ -77,12 +77,14 @@ class SelectedGenderBottomSheet extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 16, right: 16, bottom: 24),
                 child: CustomButton(
-                  btnText: 'Ok',
-                  enable: state.selectedGender != null,
-                  action: () => state.selectedGender != null
-                      ? bloc.add(EditProfileEvent.onSelectedGender(context))
-                      : null,
-                ),
+                    btnText: 'Ok',
+                    enable: state.selectedGender != null,
+                    action: () {
+                      Navigator.pop(context);
+                      bloc.add(EditProfileEvent.onSelectedGender(
+                        state.selectedGender!.name(context),
+                      ));
+                    }),
               )
             ],
           ),

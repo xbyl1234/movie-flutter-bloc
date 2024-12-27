@@ -15,11 +15,8 @@ class CountryInput extends StatelessWidget {
         return CustomTextFieldDisable(
           hintText: S.of(context).hint_text_country,
           initValue: state.country,
-          maxLength: 55,
           icRight: 'assets/icons/ic_arrow_dropdown.svg',
-          onPressed: () {
-
-          },
+          onPressed: () => bloc.add(EditProfileEvent.onLoadCountry()),
         );
       },
     );

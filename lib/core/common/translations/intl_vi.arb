@@ -58,5 +58,6 @@
   "hint_text_phone_number": "Số điện thoại",
   "male": "Male",
   "female": "Female",
-  "title_gender": "Giới tính"
+  "title_gender": "Giới tính",
+  "hint_text_search_country": "Search country..."
 }

@@ -40,6 +40,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "hint_text_gender": MessageLookupByLibrary.simpleMessage("Giới tính"),
         "hint_text_phone_number":
             MessageLookupByLibrary.simpleMessage("Số điện thoại"),
+        "hint_text_search_country":
+            MessageLookupByLibrary.simpleMessage("Search country..."),
         "label_menu_dark_mode":
             MessageLookupByLibrary.simpleMessage("Chế độ tối"),
         "label_menu_download":
