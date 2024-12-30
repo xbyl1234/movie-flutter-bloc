@@ -25,12 +25,12 @@ class _ListMovieScreenState extends State<ListMovieScreen> {
     super.initState();
     _controller = ScrollController()..addListener(_onLoadMore);
     _controller.addListener(_onLoadMore);
-    sl.get<ListMovieCubit>().onGetListMovie(widget.path);
+    getIt.get<ListMovieCubit>().onGetListMovie(widget.path);
   }
 
   void _onLoadMore() {
     if (_controller.position.extentAfter < 200) {
-      sl.get<ListMovieCubit>().onGetListMovieLoadMore(widget.path);
+      getIt.get<ListMovieCubit>().onGetListMovieLoadMore(widget.path);
     }
   }
 
@@ -46,7 +46,7 @@ class _ListMovieScreenState extends State<ListMovieScreen> {
       appBar: AppBar(),
       body: BlocConsumer<ListMovieCubit, ListMovieState>(
         listener: (context, state) {},
-        bloc: sl.get<ListMovieCubit>(),
+        bloc: getIt.get<ListMovieCubit>(),
         builder: (context, state) {
           if (state.status == BaseMovieStatus.loading) {
             return const Center(child: CircularProgressIndicator());

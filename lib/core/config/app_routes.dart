@@ -57,7 +57,7 @@ class AppRouters {
       case listMovieRoute:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
-            create: (context) => sl.get<ListMovieCubit>(),
+            create: (context) => getIt.get<ListMovieCubit>(),
             child: ListMovieScreen(path: args as String),
           ),
         );

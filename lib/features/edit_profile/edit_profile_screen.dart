@@ -22,7 +22,7 @@ class EditProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bloc = sl.get<EditProfileBloc>();
+    final bloc = getIt.get<EditProfileBloc>();
     return BlocProvider<EditProfileBloc>(
       create: (context) => bloc,
       child: Scaffold(

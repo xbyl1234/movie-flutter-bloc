@@ -19,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMi
   @override
   void initState() {
     super.initState();
-    sl.get<HomeCubit>()
+    getIt.get<HomeCubit>()
       ..getMovieDetail('696374')
       ..getTopRateMovies()
       ..getNewReleaseMovies();

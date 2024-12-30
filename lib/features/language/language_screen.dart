@@ -11,7 +11,7 @@ class LanguageScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bloc = sl.get<LanguageBloc>();
+    final bloc = getIt.get<LanguageBloc>();
     return BlocProvider(
       create: (context) => bloc..add(LanguageEvent.getLanguages()),
       child: Scaffold(

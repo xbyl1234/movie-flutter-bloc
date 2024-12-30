@@ -27,55 +27,55 @@ import '../features/movies/domain/list_movie_use_case/list_movie.dart';
 import '../features/movies/domain/repository/movies_repository.dart';
 import '../features/movies/presentation/bloc/list_movie_cubit.dart';
 
-final GetIt sl = GetIt.instance;
+final GetIt getIt = GetIt.instance;
 
 Future<void> init() async {
-  sl.registerSingleton(AppCubit());
+  getIt.registerSingleton(AppCubit());
   //  sl.registerFactory(() => AppCubit());
-  sl.registerSingleton<MovieProvider>((MovieProvider()));
-  sl.registerSingleton<MovieApiService>((MovieApiService(sl.get())));
+  getIt.registerSingleton<MovieProvider>((MovieProvider()));
+  getIt.registerSingleton<MovieApiService>((MovieApiService(getIt.get())));
 
-  sl.registerLazySingleton<SearchMovieProvider>(() => SearchMovieProvider());
-  sl.registerLazySingleton<SearchMovieApiService>(
-      () => SearchMovieApiService(sl.get()));
+  getIt.registerLazySingleton<SearchMovieProvider>(() => SearchMovieProvider());
+  getIt.registerLazySingleton<SearchMovieApiService>(
+      () => SearchMovieApiService(getIt.get()));
 
-  sl.registerSingleton<MovieDetailRepository>(
-      MovieDetailRepositoryImpl(sl.get()));
-  sl.registerSingleton<MovieDetailUseCase>(MovieDetailUseCase(sl.get()));
+  getIt.registerSingleton<MovieDetailRepository>(
+      MovieDetailRepositoryImpl(getIt.get()));
+  getIt.registerSingleton<MovieDetailUseCase>(MovieDetailUseCase(getIt.get()));
 
-  sl.registerSingleton<ListMovieRepository>(ListMovieRepositoryImpl(sl.get()));
-  sl.registerSingleton<ListMovieUseCase>(ListMovieUseCase(sl.get()));
+  getIt.registerSingleton<ListMovieRepository>(ListMovieRepositoryImpl(getIt.get()));
+  getIt.registerSingleton<ListMovieUseCase>(ListMovieUseCase(getIt.get()));
 
-  sl.registerSingleton(ListMovieCubit(sl.get()));
-  sl.registerSingleton(ReviewUseCase(sl.get()));
-  sl.registerSingleton(TrailerUseCase(sl.get()));
+  getIt.registerSingleton(ListMovieCubit(getIt.get()));
+  getIt.registerSingleton(ReviewUseCase(getIt.get()));
+  getIt.registerSingleton(TrailerUseCase(getIt.get()));
 
-  sl.registerSingleton<HomeCubit>(HomeCubit(
-    movieDetailUseCase: sl.get(),
-    listMovieUseCase: sl.get(),
+  getIt.registerSingleton<HomeCubit>(HomeCubit(
+    movieDetailUseCase: getIt.get(),
+    listMovieUseCase: getIt.get(),
   ));
-  sl.registerFactory(() => MovieDetailBlocCubit(
-        detailUseCase: sl.get(),
-        listMovieUseCase: sl.get(),
-        reviewUseCase: sl.get(),
-        trailerUseCase: sl.get(),
+  getIt.registerFactory(() => MovieDetailBlocCubit(
+        detailUseCase: getIt.get(),
+        listMovieUseCase: getIt.get(),
+        reviewUseCase: getIt.get(),
+        trailerUseCase: getIt.get(),
       ));
-  sl.registerFactory<SimilarMovieBlocCubit>(
-      () => SimilarMovieBlocCubit(sl.get()));
-  sl.registerLazySingleton<SearchMoviesRepository>(
-      () => SearchMoviesRepositoryImpl(sl.get()));
-  sl.registerLazySingleton<SearchUseCase>(() => SearchUseCase(sl.get()));
-  sl.registerLazySingleton<ExploreCubit>(() => ExploreCubit(sl.get()));
+  getIt.registerFactory<SimilarMovieBlocCubit>(
+      () => SimilarMovieBlocCubit(getIt.get()));
+  getIt.registerLazySingleton<SearchMoviesRepository>(
+      () => SearchMoviesRepositoryImpl(getIt.get()));
+  getIt.registerLazySingleton<SearchUseCase>(() => SearchUseCase(getIt.get()));
+  getIt.registerLazySingleton<ExploreCubit>(() => ExploreCubit(getIt.get()));
 
-  sl.registerFactory<PaymentsBloc>(() => PaymentsBloc());
+  getIt.registerFactory<PaymentsBloc>(() => PaymentsBloc());
 
-  sl.registerFactory<ConfirmPaymentBloc>(() => ConfirmPaymentBloc());
+  getIt.registerFactory<ConfirmPaymentBloc>(() => ConfirmPaymentBloc());
 
-  sl.registerFactory<AddCardBloc>(() => AddCardBloc());
+  getIt.registerFactory<AddCardBloc>(() => AddCardBloc());
 
-  sl.registerLazySingleton<ProfileBloc>(() => ProfileBloc());
+  getIt.registerLazySingleton<ProfileBloc>(() => ProfileBloc());
 
-  sl.registerFactory<LanguageBloc>(() => LanguageBloc());
+  getIt.registerFactory<LanguageBloc>(() => LanguageBloc());
 
-  sl.registerFactory<EditProfileBloc>(() => EditProfileBloc());
+  getIt.registerFactory<EditProfileBloc>(() => EditProfileBloc());
 }

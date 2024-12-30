@@ -34,7 +34,7 @@ class LanguageBloc extends Bloc<LanguageEvent, LanguageState> {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       prefs.setString('locale', state.selectedLocale);
       List<String> locale = state.selectedLocale.split('_');
-      sl.get<AppCubit>().changeLocale(Locale(locale[0], locale[1]));
+      getIt.get<AppCubit>().changeLocale(Locale(locale[0], locale[1]));
     });
 
   }

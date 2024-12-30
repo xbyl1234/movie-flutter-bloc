@@ -43,7 +43,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen>
         length: 3,
         vsync: this,
         animationDuration: const Duration(milliseconds: 50));
-    cubit = sl.get<MovieDetailBlocCubit>();
+    cubit = getIt.get<MovieDetailBlocCubit>();
     cubit
       ..getDetailMovie(id)
       ..getTrailers(id);
@@ -138,7 +138,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen>
                                   onTap: (index) {
                                     switch (index) {
                                       case 0:
-                                        sl
+                                        getIt
                                             .get<MovieDetailBlocCubit>()
                                             .getTrailers(id);
                                         break;

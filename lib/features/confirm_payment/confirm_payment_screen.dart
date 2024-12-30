@@ -26,7 +26,7 @@ class ConfirmPaymentScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bloc = sl.get<ConfirmPaymentBloc>();
+    final bloc = getIt.get<ConfirmPaymentBloc>();
     return BlocProvider<ConfirmPaymentBloc>(
       create: (context) => bloc,
       child: BlocListener<ConfirmPaymentBloc, ConfirmPaymentState>(

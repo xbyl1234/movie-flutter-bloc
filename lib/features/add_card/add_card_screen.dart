@@ -18,7 +18,7 @@ class AddCardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bloc = sl.get<AddCardBloc>();
+    final bloc = getIt.get<AddCardBloc>();
 
     return BlocProvider<AddCardBloc>(
       create: (context) => bloc,

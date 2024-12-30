@@ -27,7 +27,7 @@ class _CommentsViewState extends State<CommentsView> {
   @override
   void initState() {
     super.initState();
-    cubit = CommentBlocCubit(sl.get());
+    cubit = CommentBlocCubit(getIt.get());
     cubit.getReviews(widget.id);
   }
 

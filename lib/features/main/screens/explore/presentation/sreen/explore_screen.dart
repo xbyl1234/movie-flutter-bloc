@@ -22,7 +22,7 @@ class _ExploreScreenState extends State<ExploreScreen>
   @override
   bool get wantKeepAlive => true;
 
-  final bloc = sl.get<ExploreCubit>();
+  final bloc = getIt.get<ExploreCubit>();
 
   @override
   Widget build(BuildContext context) {

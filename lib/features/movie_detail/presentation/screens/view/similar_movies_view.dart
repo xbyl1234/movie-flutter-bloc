@@ -16,7 +16,7 @@ class SimilarMoviesView extends StatefulWidget {
 }
 
 class _SimilarMoviesViewState extends State<SimilarMoviesView> {
-  SimilarMovieBlocCubit cubit = sl.get<SimilarMovieBlocCubit>();
+  SimilarMovieBlocCubit cubit = getIt.get<SimilarMovieBlocCubit>();
   @override
   void initState() {
     super.initState();

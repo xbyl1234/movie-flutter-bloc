@@ -23,7 +23,7 @@ class _PostCommentsScreenState extends State<PostCommentsScreen> {
   @override
   void initState() {
     super.initState();
-    cubit = CommentBlocCubit(sl.get());
+    cubit = CommentBlocCubit(getIt.get());
     cubit.getReviews(widget.id);
   }
 
