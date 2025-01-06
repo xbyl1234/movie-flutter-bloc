@@ -60,5 +60,6 @@
   "female": "Female",
   "title_gender": "Gender",
   "hint_text_search_country": "Search...",
-  "title_selected_country": "Countries"
+  "title_selected_country": "Countries",
+  "title_top_rate": "Top rate"
 }

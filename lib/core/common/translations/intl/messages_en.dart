@@ -83,6 +83,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Subscribe to Premium"),
         "title_top_movie":
             MessageLookupByLibrary.simpleMessage("Top 10 Movies This Week"),
+        "title_top_rate": MessageLookupByLibrary.simpleMessage("Top rate"),
         "txt_allows_streaming_of4k":
             MessageLookupByLibrary.simpleMessage("Allows streaming of 4K."),
         "txt_amount": MessageLookupByLibrary.simpleMessage("Amount"),

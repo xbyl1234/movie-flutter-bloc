@@ -1,5 +1,6 @@
 import 'package:movie/core/data/model/movie_model.dart';
 import 'package:flutter/material.dart';
+import 'package:movie/features/movies/presentation/screen/list_movie_screen.dart';
 import '../../../../../core/common/contants/routers.dart';
 import '../../../../../core/common/translations/l10n.dart';
 import '../../../../../core/config/network_constants.dart';
@@ -26,7 +27,10 @@ class MainView extends StatelessWidget {
             title: S.of(context).title_top_movie,
             action: () {
               Navigator.pushNamed(context, listMovieRoute,
-                  arguments: apiTopRate);
+                  arguments: ListMovieArg(
+                    S.of(context).title_top_movie,
+                    apiTopRate,
+                  ));
             },
           ),
           const SizedBox(height: 16),
@@ -35,18 +39,30 @@ class MainView extends StatelessWidget {
           TitleWidget(
             title: S.of(context).title_new_release,
             action: () {
-              Navigator.pushNamed(context, listMovieRoute,
-                  arguments: apiNowPlaying);
+              Navigator.pushNamed(
+                context,
+                listMovieRoute,
+                arguments: ListMovieArg(
+                  S.of(context).title_new_release,
+                  apiNowPlaying,
+                ),
+              );
             },
           ),
           const SizedBox(height: 16),
           MoviesWidget(items: movies),
           const SizedBox(height: 20),
           TitleWidget(
-            title: 'Top rate',
+            title: S.of(context).title_top_rate,
             action: () {
-              Navigator.pushNamed(context, listMovieRoute,
-                  arguments: apiTopRate);
+              Navigator.pushNamed(
+                context,
+                listMovieRoute,
+                arguments: ListMovieArg(
+                  S.of(context).title_top_rate,
+                  apiTopRate,
+                ),
+              );
             },
           ),
           const SizedBox(height: 16),

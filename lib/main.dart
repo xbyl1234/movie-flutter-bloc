@@ -32,7 +32,7 @@ class App extends StatelessWidget {
           buildWhen: (previous, current) => previous != current,
           builder: (context, state) {
             return MaterialApp(
-              initialRoute: mainRoute,
+              initialRoute: splashRoute,
               onGenerateRoute: AppRouters().generateRoute,
               title: 'Movie',
               debugShowCheckedModeBanner: false,

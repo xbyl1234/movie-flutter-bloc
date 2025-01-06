@@ -84,6 +84,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Đăng ký Premium"),
         "title_top_movie":
             MessageLookupByLibrary.simpleMessage("Top 10 phim tuần này"),
+        "title_top_rate": MessageLookupByLibrary.simpleMessage("Top rate"),
         "txt_allows_streaming_of4k": MessageLookupByLibrary.simpleMessage(
             "Cho phép phát trực tuyến 4K."),
         "txt_amount": MessageLookupByLibrary.simpleMessage("Số lượng"),

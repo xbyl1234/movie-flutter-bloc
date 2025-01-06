@@ -60,5 +60,6 @@
   "female": "Nữ",
   "title_gender": "Giới tính",
   "hint_text_search_country": "Tìm kiếm...",
-  "title_selected_country": "Danh sách quốc gia"
+  "title_selected_country": "Danh sách quốc gia",
+  "title_top_rate": "Top rate"
 }

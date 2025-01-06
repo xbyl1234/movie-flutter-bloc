@@ -21,6 +21,7 @@ import 'package:movie/features/wellcome/bloc/well_come_bloc.dart';
 import 'package:movie/features/wellcome/wellcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../features/splash/splash_screen.dart';
 import '../common/contants/routers.dart';
 
 class AppRouters {
@@ -30,10 +31,10 @@ class AppRouters {
   Route<dynamic> generateRoute(RouteSettings settings) {
     final args = settings.arguments;
     switch (settings.name) {
-      // case splashRoute:
-      //   return MaterialPageRoute(
-      //     builder: (_) => const SplashScreen(),
-      //   );
+      case splashRoute:
+        return MaterialPageRoute(
+          builder: (_) => const SplashScreen(),
+        );
       case welComeRoute:
         return MaterialPageRoute(
             builder: (_) => BlocProvider<WellComeBloc>.value(
@@ -58,7 +59,7 @@ class AppRouters {
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
             create: (context) => getIt.get<ListMovieCubit>(),
-            child: ListMovieScreen(path: args as String),
+            child: ListMovieScreen(arg: args as ListMovieArg),
           ),
         );
       case watchVideoRoute:

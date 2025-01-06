@@ -599,6 +599,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Top rate`
+  String get title_top_rate {
+    return Intl.message(
+      'Top rate',
+      name: 'title_top_rate',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

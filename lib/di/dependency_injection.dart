@@ -46,7 +46,7 @@ Future<void> init() async {
   getIt.registerSingleton<ListMovieRepository>(ListMovieRepositoryImpl(getIt.get()));
   getIt.registerSingleton<ListMovieUseCase>(ListMovieUseCase(getIt.get()));
 
-  getIt.registerSingleton(ListMovieCubit(getIt.get()));
+  getIt.registerFactory(() => ListMovieCubit(getIt.get()));
   getIt.registerSingleton(ReviewUseCase(getIt.get()));
   getIt.registerSingleton(TrailerUseCase(getIt.get()));
 
