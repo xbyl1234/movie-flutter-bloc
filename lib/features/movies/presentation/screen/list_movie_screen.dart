@@ -1,11 +1,10 @@
 import 'package:movie/core/bloc/base_movie_status.dart';
 import 'package:movie/core/common/widgets/custom_app_bar.dart';
+import 'package:movie/core/common/widgets/item_movie.dart';
 import 'package:movie/di/dependency_injection.dart';
 import 'package:movie/features/movies/presentation/bloc/list_movie_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../../core/common/widgets/item_card.dart';
 
 class ListMovieArg {
   final String title;
@@ -27,7 +26,7 @@ class ListMovieScreen extends StatelessWidget {
       ),
       body: BlocConsumer<ListMovieCubit, ListMovieState>(
         listener: (context, state) {},
-        bloc: cubit..onGetListMovie(arg.path),
+        bloc: cubit..onGetListMovie(arg.path, BaseMovieStatus.loading),
         builder: (context, state) {
           if (state.status == BaseMovieStatus.loading) {
             return const Center(child: CircularProgressIndicator());
@@ -36,7 +35,7 @@ class ListMovieScreen extends StatelessWidget {
               onNotification: (ScrollNotification scrollInfo) {
                 var metrics = scrollInfo.metrics;
                 if (metrics.pixels == metrics.maxScrollExtent) {
-                  cubit.onGetListMovieLoadMore(arg.path);
+                  cubit.onGetListMovie(arg.path, BaseMovieStatus.loadMore);
                 }
                 return true;
               },
@@ -47,7 +46,7 @@ class ListMovieScreen extends StatelessWidget {
                     mainAxisSpacing: 16,
                     crossAxisSpacing: 16),
                 itemBuilder: (context, index) {
-                  return ItemCard(item: state.movies[index]);
+                  return ItemMovie(item: state.movies[index]);
                 },
                 itemCount: state.movies.length,
               ),

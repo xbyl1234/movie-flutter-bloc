@@ -1,4 +1,5 @@
 import 'package:movie/core/bloc/base_movie_status.dart';
+import 'package:movie/core/common/widgets/item_movie.dart';
 import 'package:movie/di/dependency_injection.dart';
 import 'package:movie/features/main/screens/explore/presentation/bloc/explore_cubit.dart';
 import 'package:movie/features/main/screens/explore/presentation/widgets/filter_search_movie.dart';
@@ -6,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../../../../core/common/widgets/item_card.dart';
 import '../../../../../../core/common/widgets/loading.dart';
 import '../../../../../../core/common/widgets/svg_widget.dart';
 
@@ -56,7 +56,7 @@ class _ExploreScreenState extends State<ExploreScreen>
                             crossAxisSpacing: 8,
                             mainAxisSpacing: 8),
                     itemBuilder: (context, index) {
-                      return ItemCard(item: state.data.movies[index]);
+                      return ItemMovie(item: state.data.movies[index]);
                     },
                     itemCount: state.data.movies.length,
                   ),

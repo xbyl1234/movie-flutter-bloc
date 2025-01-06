@@ -1,32 +1,20 @@
 import 'package:movie/core/bloc/base_movie_status.dart';
+import 'package:movie/core/common/widgets/item_movie.dart';
 import 'package:movie/core/data/model/movie_model.dart';
 import 'package:movie/di/dependency_injection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../../core/common/widgets/item_card.dart';
 import '../../../../../core/common/widgets/loading.dart';
 import 'bloc/similar_movie_bloc_cubit.dart';
 
-class SimilarMoviesView extends StatefulWidget {
+class SimilarMoviesView extends StatelessWidget {
   final String id;
   const SimilarMoviesView({super.key, required this.id});
 
   @override
-  State<SimilarMoviesView> createState() => _SimilarMoviesViewState();
-}
-
-class _SimilarMoviesViewState extends State<SimilarMoviesView> {
-  SimilarMovieBlocCubit cubit = getIt.get<SimilarMovieBlocCubit>();
-  @override
-  void initState() {
-    super.initState();
-    cubit.getListMovieSimilar(widget.id);
-  }
-
-  @override
   Widget build(BuildContext context) {
     return BlocBuilder<SimilarMovieBlocCubit, SimilarBlocState>(
-      bloc: cubit,
+      bloc: getIt.get<SimilarMovieBlocCubit>()..getListMovieSimilar(id),
       builder: (context, state) {
         if (state.status == BaseMovieStatus.loading) {
           return const Loading();
@@ -40,7 +28,7 @@ class _SimilarMoviesViewState extends State<SimilarMoviesView> {
             itemBuilder: (context, index) {
               return Stack(
                 children: [
-                  ItemCard(item: data[index]),
+                  ItemMovie(item: data[index]),
                   if (data[index].voteAverage != null)
                     Container(
                       decoration: BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(8)),

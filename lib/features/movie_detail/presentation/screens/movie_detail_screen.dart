@@ -28,8 +28,7 @@ class MovieDetailScreen extends StatefulWidget {
   State<MovieDetailScreen> createState() => _MovieDetailScreenState();
 }
 
-class _MovieDetailScreenState extends State<MovieDetailScreen>
-    with TickerProviderStateMixin {
+class _MovieDetailScreenState extends State<MovieDetailScreen> with TickerProviderStateMixin {
   late TabController _tabController;
   late String id;
   late SimilarMovieBlocCubit similarMovieBlocCubit;

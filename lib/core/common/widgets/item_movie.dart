@@ -4,10 +4,10 @@ import '../../data/model/movie_model.dart';
 import '../contants/routers.dart';
 import 'image_widget.dart';
 
-class ItemCard extends StatelessWidget {
+class ItemMovie extends StatelessWidget {
   final MovieModel item;
   
-  const ItemCard({super.key, required this.item});
+  const ItemMovie({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {

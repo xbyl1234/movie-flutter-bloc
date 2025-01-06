@@ -11,37 +11,25 @@ class ListMovieCubit extends Cubit<ListMovieState> {
   final ListMovieUseCase movieUseCase;
   ListMovieCubit(this.movieUseCase) : super(ListMovieState());
   List<MovieModel> listMovie = List.empty(growable: true);
-  void onGetListMovie(String path) async {
-    try {
-      emit(state.copyWith(status: BaseMovieStatus.loading));
-      final response = await movieUseCase(QueryRequest("en_US", 1, path));
-      if (response.movies.isNotEmpty) {
-        listMovie.addAll(response.movies);
-        emit(state.copyWith(
-          status: BaseMovieStatus.success,
-          movies: listMovie,
-          page: response.page,
-          totalPages: response.totalPages,
-        ));
-      } else {
-        emit(state.copyWith(status: BaseMovieStatus.empty));
-      }
-    } catch (_) {
-      emit(state.copyWith(status: BaseMovieStatus.success));
-    }
-  }
 
-  void onGetListMovieLoadMore(String path) async {
+  void onGetListMovie(String path, BaseMovieStatus status) async {
     try {
+
       if (state.status == BaseMovieStatus.loadMore) {
         return;
       }
-      emit(state.copyWith(status: BaseMovieStatus.loadMore));
-      int page = state.page;
-      page++;
-      if (page > state.totalPages) {
-        return;
+
+      emit(state.copyWith(status: status));
+      int page = 1;
+
+      if (state.status == BaseMovieStatus.loadMore) {
+        page = state.page;
+        page++;
+        if (page > state.totalPages) {
+          return;
+        }
       }
+
       final response = await movieUseCase(QueryRequest("en_US", page, path));
       if (response.movies.isNotEmpty) {
         listMovie.addAll(response.movies);
@@ -58,5 +46,4 @@ class ListMovieCubit extends Cubit<ListMovieState> {
       emit(state.copyWith(status: BaseMovieStatus.success));
     }
   }
-
 }
