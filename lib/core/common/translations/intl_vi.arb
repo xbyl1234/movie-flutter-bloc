@@ -61,5 +61,14 @@
   "title_gender": "Giới tính",
   "hint_text_search_country": "Tìm kiếm...",
   "title_selected_country": "Danh sách quốc gia",
-  "title_top_rate": "Top rate"
+  "title_top_rate": "Đánh giá cao",
+  "tab_trailers": "Trailer",
+  "tab_similar_movies": "Phim tương tự",
+  "tab_comments": "Bình luận",
+  "btn_download": "Tải về",
+  "btn_play": "Chơi",
+  "title_now_playing": "Đang chiếu",
+  "title_upcoming": "Sắp tới",
+  "title_popular": "Phổ biến",
+  "see_all": "Xem thêm"
 }

@@ -21,7 +21,6 @@ import '../features/movie_detail/domain/use_case/movie_detai_use_case.dart';
 import '../features/movie_detail/domain/use_case/review_use_case.dart';
 import '../features/movie_detail/domain/use_case/trailer_use_case.dart';
 import '../features/movie_detail/presentation/bloc/movie_detail_bloc_cubit.dart';
-import '../features/movie_detail/presentation/screens/view/bloc/similar_movie_bloc_cubit.dart';
 import '../features/movies/data/repository/movies_repository_impl.dart';
 import '../features/movies/domain/list_movie_use_case/list_movie.dart';
 import '../features/movies/domain/repository/movies_repository.dart';
@@ -60,8 +59,7 @@ Future<void> init() async {
         reviewUseCase: getIt.get(),
         trailerUseCase: getIt.get(),
       ));
-  getIt.registerFactory<SimilarMovieBlocCubit>(
-      () => SimilarMovieBlocCubit(getIt.get()));
+
   getIt.registerLazySingleton<SearchMoviesRepository>(
       () => SearchMoviesRepositoryImpl(getIt.get()));
   getIt.registerLazySingleton<SearchUseCase>(() => SearchUseCase(getIt.get()));

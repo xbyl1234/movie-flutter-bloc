@@ -10,7 +10,7 @@ import 'package:movie/features/edit_profile/edit_profile_screen.dart';
 import 'package:movie/features/language/language_screen.dart';
 import 'package:movie/features/main/bloc/main_bloc.dart';
 import 'package:movie/features/main/screens/main_screen.dart';
-import 'package:movie/features/movie_detail/presentation/screens/movie_detail_screen.dart';
+import 'package:movie/features/movie_detail/presentation/movie_detail_screen.dart';
 import 'package:movie/features/movies/presentation/bloc/list_movie_cubit.dart';
 import 'package:movie/features/movies/presentation/screen/list_movie_screen.dart';
 import 'package:movie/features/notification/notification_screen.dart';

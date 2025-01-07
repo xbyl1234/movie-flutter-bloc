@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Thêm thẻ mới"),
         "btn_change": MessageLookupByLibrary.simpleMessage("Thay đổi"),
         "btn_continue": MessageLookupByLibrary.simpleMessage("Tiếp tục"),
+        "btn_download": MessageLookupByLibrary.simpleMessage("Tải về"),
+        "btn_play": MessageLookupByLibrary.simpleMessage("Chơi"),
         "btn_update": MessageLookupByLibrary.simpleMessage("Cập nhật"),
         "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
             "Thưởng thức phim Full-HD, không giới hạn và không có quảng cáo"),
@@ -58,11 +60,16 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Chính sách bảo mật"),
         "label_menu_security": MessageLookupByLibrary.simpleMessage("Bảo mật"),
         "male": MessageLookupByLibrary.simpleMessage("Nam"),
+        "see_all": MessageLookupByLibrary.simpleMessage("Xem thêm"),
+        "tab_comments": MessageLookupByLibrary.simpleMessage("Bình luận"),
         "tab_download": MessageLookupByLibrary.simpleMessage("Tải xuống"),
         "tab_explore": MessageLookupByLibrary.simpleMessage("Khám phá"),
         "tab_home": MessageLookupByLibrary.simpleMessage("Trang chủ"),
         "tab_my_list": MessageLookupByLibrary.simpleMessage("Danh sách"),
         "tab_profile": MessageLookupByLibrary.simpleMessage("Cá nhân"),
+        "tab_similar_movies":
+            MessageLookupByLibrary.simpleMessage("Phim tương tự"),
+        "tab_trailers": MessageLookupByLibrary.simpleMessage("Trailer"),
         "tf_card_name": MessageLookupByLibrary.simpleMessage("Tên thẻ"),
         "tf_card_number": MessageLookupByLibrary.simpleMessage("Số thẻ"),
         "tf_cvv": MessageLookupByLibrary.simpleMessage("CVV"),
@@ -75,7 +82,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "title_language": MessageLookupByLibrary.simpleMessage("Ngôn ngữ"),
         "title_new_release":
             MessageLookupByLibrary.simpleMessage("Bản phát hành mới"),
+        "title_now_playing": MessageLookupByLibrary.simpleMessage("Đang chiếu"),
         "title_payment": MessageLookupByLibrary.simpleMessage("Thanh toán"),
+        "title_popular": MessageLookupByLibrary.simpleMessage("Phổ biến"),
         "title_review_summary":
             MessageLookupByLibrary.simpleMessage("Review Summary"),
         "title_selected_country":
@@ -84,7 +93,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Đăng ký Premium"),
         "title_top_movie":
             MessageLookupByLibrary.simpleMessage("Top 10 phim tuần này"),
-        "title_top_rate": MessageLookupByLibrary.simpleMessage("Top rate"),
+        "title_top_rate": MessageLookupByLibrary.simpleMessage("Đánh giá cao"),
+        "title_upcoming": MessageLookupByLibrary.simpleMessage("Sắp tới"),
         "txt_allows_streaming_of4k": MessageLookupByLibrary.simpleMessage(
             "Cho phép phát trực tuyến 4K."),
         "txt_amount": MessageLookupByLibrary.simpleMessage("Số lượng"),

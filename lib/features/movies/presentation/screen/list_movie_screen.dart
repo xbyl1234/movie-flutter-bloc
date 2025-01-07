@@ -1,10 +1,12 @@
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:movie/core/bloc/base_movie_status.dart';
 import 'package:movie/core/common/widgets/custom_app_bar.dart';
 import 'package:movie/core/common/widgets/item_movie.dart';
+import 'package:movie/core/common/widgets/loading.dart';
 import 'package:movie/di/dependency_injection.dart';
-import 'package:movie/features/movies/presentation/bloc/list_movie_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../bloc/list_movie_cubit.dart';
 
 class ListMovieArg {
   final String title;
@@ -21,31 +23,38 @@ class ListMovieScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final cubit = getIt.get<ListMovieCubit>();
     return Scaffold(
-      appBar: CustomAppBar(
-        title: arg.title,
-      ),
-      body: BlocConsumer<ListMovieCubit, ListMovieState>(
-        listener: (context, state) {},
+      appBar: CustomAppBar(title: arg.title),
+      body: BlocBuilder<ListMovieCubit, ListMovieState>(
         bloc: cubit..onGetListMovie(arg.path, BaseMovieStatus.loading),
         builder: (context, state) {
           if (state.status == BaseMovieStatus.loading) {
-            return const Center(child: CircularProgressIndicator());
-          } else if (state.status == BaseMovieStatus.success || state.status == BaseMovieStatus.loadMore) {
+            return Loading();
+          } else if (state.status == BaseMovieStatus.success ||
+              state.status == BaseMovieStatus.loadMore) {
             return NotificationListener(
               onNotification: (ScrollNotification scrollInfo) {
-                var metrics = scrollInfo.metrics;
-                if (metrics.pixels == metrics.maxScrollExtent) {
-                  cubit.onGetListMovie(arg.path, BaseMovieStatus.loadMore);
-                }
+                final metrics = scrollInfo.metrics;
+                if (!metrics.atEdge) return true;
+                if (metrics.pixels == 0) return true;
+                cubit.onGetListMovie(arg.path, BaseMovieStatus.loadMore);
                 return true;
               },
               child: GridView.builder(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    mainAxisSpacing: 16,
-                    crossAxisSpacing: 16),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 16,
+                  crossAxisSpacing: 16,
+                  childAspectRatio:
+                      MediaQuery.sizeOf(context).width < 600 ? 1.0 : 16 / 9,
+                ),
                 itemBuilder: (context, index) {
+                  if (index == state.movies.length - 1) {
+                    return LoadingAnimationWidget.hexagonDots(
+                      color: Theme.of(context).primaryColor,
+                      size: 34,
+                    );
+                  }
                   return ItemMovie(item: state.movies[index]);
                 },
                 itemCount: state.movies.length,

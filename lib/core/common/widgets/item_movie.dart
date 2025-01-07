@@ -12,10 +12,7 @@ class ItemMovie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.pushNamed(context, movieDetailRoute,
-            arguments: item.id.toString());
-      },
+      onTap: () => Navigator.pushNamed(context, movieDetailRoute, arguments: item.id.toString()),
       child: Stack(
         children: [
           CacheImageWidget(

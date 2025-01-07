@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie/core/common/widgets/loading.dart';
 
 import '../../core/common/contants/routers.dart';
 import '../../core/common/widgets/svg_widget.dart';
@@ -30,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Spacer(),
             SvgWidget(ic: 'assets/icons/ic_logo.svg',),
             Spacer(),
-            CircularProgressIndicator(),
+            Loading(),
             SizedBox(
               height: 54,
             ),

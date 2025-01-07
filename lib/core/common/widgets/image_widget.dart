@@ -1,4 +1,6 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:movie/core/common/widgets/loading.dart';
 
 class CacheImageWidget extends StatelessWidget {
   final String imageUrl;
@@ -20,21 +22,19 @@ class CacheImageWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(radius),
-      child: Image.network(
-        imageUrl,
+      child: CachedNetworkImage(
+        imageUrl: imageUrl,
         width: width,
         height: height,
         fit: fit,
-        errorBuilder: (_, error, stackTrace) {
-          return Image.asset(
-            'assets/images/empty.jpg',
-            width: width,
-            height: height,
-            fit: BoxFit.fill,
-          );
-        },
+        placeholder: (context, url) => Loading(size: 18,),
+        errorWidget: (context, url, error) => Image.asset(
+          'assets/images/empty.jpg',
+          width: width,
+          height: height,
+          fit: BoxFit.fill,
+        ),
       ),
     );
   }
 }
-

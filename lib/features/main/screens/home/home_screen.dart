@@ -1,4 +1,5 @@
 import 'package:movie/core/bloc/base_movie_status.dart';
+import 'package:movie/core/config/network_constants.dart';
 import 'package:movie/di/dependency_injection.dart';
 import 'package:movie/features/main/screens/home/view/banner_view.dart';
 import 'package:movie/features/main/screens/home/view/main_view.dart';
@@ -15,14 +16,17 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMixin {
+class _HomeScreenState extends State<HomeScreen>
+    with AutomaticKeepAliveClientMixin {
   @override
   void initState() {
     super.initState();
     getIt.get<HomeCubit>()
       ..getMovieDetail('696374')
-      ..getTopRateMovies()
-      ..getNewReleaseMovies();
+      ..getMovies(apiNowPlaying)
+      ..getMovies(apiTopRate)
+      ..getMovies(apiUpcoming)
+      ..getMovies(apiPopular);
   }
 
   @override
@@ -42,14 +46,16 @@ class _HomeScreenState extends State<HomeScreen> with AutomaticKeepAliveClientMi
               padding: const EdgeInsets.only(bottom: 24),
               child: Column(
                 children: [
-                  (state.data?.movie != null)
+                  (state.movie != null)
                       ? BannerView(
-                          movie: state.data!.movie!,
+                          movie: state.movie!,
                         )
                       : const SizedBox(),
                   MainView(
-                    movies: state.data!.newReleaseMovies,
-                    topMovies: state.data!.topRateMovies,
+                    nowPlayMovies: state.nowPlayMovies,
+                    topMovies: state.topRateMovies,
+                    upcomingMovies: state.upComingMovies,
+                    popularMovies: state.popularMovies,
                   ),
                 ],
               ),

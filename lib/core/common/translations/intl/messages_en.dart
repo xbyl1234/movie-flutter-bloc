@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Add New Card"),
         "btn_change": MessageLookupByLibrary.simpleMessage("Change"),
         "btn_continue": MessageLookupByLibrary.simpleMessage("Continue"),
+        "btn_download": MessageLookupByLibrary.simpleMessage("Download"),
+        "btn_play": MessageLookupByLibrary.simpleMessage("Play"),
         "btn_update": MessageLookupByLibrary.simpleMessage("Update"),
         "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
             "Enjoy watching Full-HD movies, without restrictions and without ads"),
@@ -57,11 +59,16 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Privacy Policy"),
         "label_menu_security": MessageLookupByLibrary.simpleMessage("Security"),
         "male": MessageLookupByLibrary.simpleMessage("Male"),
+        "see_all": MessageLookupByLibrary.simpleMessage("See all"),
+        "tab_comments": MessageLookupByLibrary.simpleMessage("Comments"),
         "tab_download": MessageLookupByLibrary.simpleMessage("Download"),
         "tab_explore": MessageLookupByLibrary.simpleMessage("Explore"),
         "tab_home": MessageLookupByLibrary.simpleMessage("Home"),
         "tab_my_list": MessageLookupByLibrary.simpleMessage("My List"),
         "tab_profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "tab_similar_movies":
+            MessageLookupByLibrary.simpleMessage("Similar movies"),
+        "tab_trailers": MessageLookupByLibrary.simpleMessage("Trailer"),
         "tf_card_name": MessageLookupByLibrary.simpleMessage("Card Name"),
         "tf_card_number": MessageLookupByLibrary.simpleMessage("Card Number"),
         "tf_cvv": MessageLookupByLibrary.simpleMessage("CVV"),
@@ -74,7 +81,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "title_language": MessageLookupByLibrary.simpleMessage("Language"),
         "title_new_release":
             MessageLookupByLibrary.simpleMessage("New Releases"),
+        "title_now_playing":
+            MessageLookupByLibrary.simpleMessage("Now playing"),
         "title_payment": MessageLookupByLibrary.simpleMessage("Payment"),
+        "title_popular": MessageLookupByLibrary.simpleMessage("Popular"),
         "title_review_summary":
             MessageLookupByLibrary.simpleMessage("Review Summary"),
         "title_selected_country":
@@ -84,6 +94,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "title_top_movie":
             MessageLookupByLibrary.simpleMessage("Top 10 Movies This Week"),
         "title_top_rate": MessageLookupByLibrary.simpleMessage("Top rate"),
+        "title_upcoming": MessageLookupByLibrary.simpleMessage("Upcoming"),
         "txt_allows_streaming_of4k":
             MessageLookupByLibrary.simpleMessage("Allows streaming of 4K."),
         "txt_amount": MessageLookupByLibrary.simpleMessage("Amount"),

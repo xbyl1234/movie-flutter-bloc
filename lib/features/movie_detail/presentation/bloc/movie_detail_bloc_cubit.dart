@@ -1,3 +1,4 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:movie/core/bloc/base_movie_status.dart';
 import 'package:movie/core/data/model/movie_model.dart';
 import 'package:movie/features/movie_detail/data/model/review_model.dart';
@@ -6,46 +7,82 @@ import 'package:movie/features/movie_detail/domain/use_case/movie_detai_use_case
 import 'package:movie/features/movie_detail/domain/use_case/review_use_case.dart';
 import 'package:movie/features/movie_detail/domain/use_case/trailer_use_case.dart';
 import 'package:movie/features/movies/domain/list_movie_use_case/list_movie.dart';
-import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../../core/config/network_constants.dart';
+import '../../../../core/data/model/request/query_request.dart';
+part 'movie_detail_bloc_cubit.freezed.dart';
 part 'movie_detail_bloc_state.dart';
 
-class MovieDetailBlocCubit extends Cubit<MovieDetailBlocState> {
+class MovieDetailBlocCubit extends Cubit<MovieDetailState> {
+  MovieDetailBlocCubit({
+    required MovieDetailUseCase detailUseCase,
+    required ListMovieUseCase listMovieUseCase,
+    required ReviewUseCase reviewUseCase,
+    required TrailerUseCase trailerUseCase,
+  })  : _trailerUseCase = trailerUseCase,
+        _reviewUseCase = reviewUseCase,
+        _listMovieUseCase = listMovieUseCase,
+        _detailUseCase = detailUseCase,
+        super(MovieDetailState());
 
-  MovieDetailBlocCubit(
-      {required this.detailUseCase,
-      required this.listMovieUseCase,
-      required this.reviewUseCase,
-      required this.trailerUseCase})
-      : super(MovieDetailBlocState.init());
-
-  final MovieDetailUseCase detailUseCase;
-  final ListMovieUseCase listMovieUseCase;
-  final ReviewUseCase reviewUseCase;
-  final TrailerUseCase trailerUseCase;
+  final MovieDetailUseCase _detailUseCase;
+  final ListMovieUseCase _listMovieUseCase;
+  final ReviewUseCase _reviewUseCase;
+  final TrailerUseCase _trailerUseCase;
 
   void getDetailMovie(String id) async {
     try {
       emit(state.copyWith(status: BaseMovieStatus.loading));
-      MovieModel? movie = await detailUseCase(id);
-      if (movie != null) {
-        emit(state.copyWith(status: BaseMovieStatus.success, data: state.data.copyWith(movie: movie)));
+      MovieModel? movie = await _detailUseCase(id);
+      emit(
+        state.copyWith(
+            status:
+                movie != null ? BaseMovieStatus.success : BaseMovieStatus.empty,
+            movie: movie),
+      );
+    } catch (_) {
+      emit(state.copyWith(status: BaseMovieStatus.success));
+    }
+  }
+
+  void getListMovieSimilar(String id) async {
+    try {
+      final response = await _listMovieUseCase(QueryRequest("en_US", 1, apiSimilar, id));
+      if (response.movies.isNotEmpty) {
+        emit(state.copyWith(
+            status: BaseMovieStatus.success, similarMovies: response.movies));
       } else {
         emit(state.copyWith(status: BaseMovieStatus.empty));
       }
-    } catch (_) {
+    } catch (e) {
       emit(state.copyWith(status: BaseMovieStatus.success));
     }
   }
 
   void getTrailers(String id) async {
     try {
-      TrailerResponse response = await trailerUseCase(id);
+      TrailerResponse response = await _trailerUseCase(id);
       if (response.trailers.isNotEmpty) {
-        emit(state.copyWith(
-            status: BaseMovieStatus.success, data: state.data.copyWith(trailersMovie: response.trailers)));
+        emit(
+          state.copyWith(
+              status: BaseMovieStatus.success,
+              trailersMovie: response.trailers),
+        );
       }
     } catch (_) {
+      emit(state.copyWith(status: BaseMovieStatus.success));
+    }
+  }
+
+  void getReviews(String id) async {
+    try {
+      ReviewsResponse result = await _reviewUseCase(id);
+      if (result.reviews.isNotEmpty) {
+        emit(state.copyWith(status: BaseMovieStatus.success, reviews: result));
+      } else {
+        emit(state.copyWith(status: BaseMovieStatus.empty));
+      }
+    } catch (e) {
       emit(state.copyWith(status: BaseMovieStatus.success));
     }
   }

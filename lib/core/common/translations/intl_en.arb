@@ -61,5 +61,14 @@
   "title_gender": "Gender",
   "hint_text_search_country": "Search...",
   "title_selected_country": "Countries",
-  "title_top_rate": "Top rate"
+  "title_top_rate": "Top rate",
+  "tab_trailers": "Trailer",
+  "tab_similar_movies": "Similar movies",
+  "tab_comments": "Comments",
+  "btn_download": "Download",
+  "btn_play": "Play",
+  "title_now_playing": "Now playing",
+  "title_upcoming": "Upcoming",
+  "title_popular": "Popular",
+  "see_all": "See all"
 }

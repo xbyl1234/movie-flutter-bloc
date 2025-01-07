@@ -609,6 +609,96 @@ class S {
       args: [],
     );
   }
+
+  /// `Trailer`
+  String get tab_trailers {
+    return Intl.message(
+      'Trailer',
+      name: 'tab_trailers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Similar movies`
+  String get tab_similar_movies {
+    return Intl.message(
+      'Similar movies',
+      name: 'tab_similar_movies',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Comments`
+  String get tab_comments {
+    return Intl.message(
+      'Comments',
+      name: 'tab_comments',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Download`
+  String get btn_download {
+    return Intl.message(
+      'Download',
+      name: 'btn_download',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Play`
+  String get btn_play {
+    return Intl.message(
+      'Play',
+      name: 'btn_play',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Now playing`
+  String get title_now_playing {
+    return Intl.message(
+      'Now playing',
+      name: 'title_now_playing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upcoming`
+  String get title_upcoming {
+    return Intl.message(
+      'Upcoming',
+      name: 'title_upcoming',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Popular`
+  String get title_popular {
+    return Intl.message(
+      'Popular',
+      name: 'title_popular',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `See all`
+  String get see_all {
+    return Intl.message(
+      'See all',
+      name: 'see_all',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
