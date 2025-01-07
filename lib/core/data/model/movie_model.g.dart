@@ -19,4 +19,10 @@ MovieModel _$MovieModelFromJson(Map<String, dynamic> json) => MovieModel(
       voteAverage: (json['vote_average'] as num?)?.toDouble(),
       voteCount: (json['vote_count'] as num?)?.toInt(),
       releaseDate: json['release_date'] as String?,
+      originCountry: (json['origin_country'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      genres: (json['genres'] as List<dynamic>?)
+          ?.map((e) => GenreModel.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );

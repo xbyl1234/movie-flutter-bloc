@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../core/common/contants/routers.dart';
 import '../../../../core/common/translations/l10n.dart';
 import '../../../../core/common/utils/times_utils.dart';
 import '../../../../core/common/widgets/svg_widget.dart';
 import '../../../../core/data/model/movie_model.dart';
+import '../../../watch_video/watch_video_screen.dart';
+import '../bloc/movie_detail_bloc_cubit.dart';
 
 class ContentView extends StatelessWidget {
+  final MovieDetailBlocCubit cubit;
   final MovieModel? movie;
 
-  const ContentView({super.key, this.movie});
+  const ContentView({super.key, this.movie, required this.cubit});
 
   @override
   Widget build(BuildContext context) {
@@ -97,18 +101,28 @@ class ContentView extends StatelessWidget {
                       fontSize: 14, color: Theme.of(context).primaryColor),
                 ),
               ),
-              Container(
-                margin: const EdgeInsets.only(left: 8),
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(4),
-                    border: Border.all(
-                        color: Theme.of(context).primaryColor, width: 1)),
-                child: Text(
-                  'United States',
-                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      fontSize: 14, color: Theme.of(context).primaryColor),
-                ),
+              Row(
+                children: movie!.originCountry!
+                    .map((item) => Container(
+                          margin: const EdgeInsets.only(left: 8),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 8, vertical: 2),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(4),
+                              border: Border.all(
+                                  color: Theme.of(context).primaryColor,
+                                  width: 1)),
+                          child: Text(
+                            item,
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyMedium!
+                                .copyWith(
+                                    fontSize: 14,
+                                    color: Theme.of(context).primaryColor),
+                          ),
+                        ))
+                    .toList(),
               ),
             ],
           ),
@@ -126,8 +140,18 @@ class ContentView extends StatelessWidget {
                     elevation: 0,
                     backgroundColor: Colors.red,
                     minimumSize:
-                    Size(MediaQuery.sizeOf(context).width * 0.5 - 24, 36)),
-                onPressed: () {},
+                        Size(MediaQuery.sizeOf(context).width * 0.5 - 24, 36)),
+                onPressed: () {
+                  Navigator.pushNamed(
+                    context,
+                    watchVideoRoute,
+                    arguments: WatchVideoArguments(
+                        index: 0,
+                        data: cubit.state.trailersMovie,
+                        isPlay: true
+                    ),
+                  );
+                },
                 icon: SvgPicture.asset('assets/icons/ic_play.svg'),
                 label: Text(
                   S.of(context).btn_play,
@@ -144,13 +168,13 @@ class ContentView extends StatelessWidget {
                     elevation: 0,
                     backgroundColor: Colors.white,
                     minimumSize:
-                    Size(MediaQuery.sizeOf(context).width * 0.5 - 24, 36),
+                        Size(MediaQuery.sizeOf(context).width * 0.5 - 24, 36),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(18),
                         side: const BorderSide(color: Colors.red, width: 2))),
                 onPressed: () {},
                 icon: const SvgWidget(
-                  ic: 'assets/icons/ic_tab_download.svg',
+                  ic: 'assets/icons/ic_red_download.svg',
                   color: Colors.red,
                 ),
                 label: Text(
@@ -171,11 +195,8 @@ class ContentView extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Text(
-            'Genre: Action, Superhero, Science Fiction, Romance, Thriller',
-            style: Theme.of(context)
-                .textTheme
-                .bodyMedium!
-          ),
+              'Genre: ${movie?.genres?.map((it) => it.name).join(", ")}',
+              style: Theme.of(context).textTheme.bodyMedium!),
         ),
         const SizedBox(
           height: 8,

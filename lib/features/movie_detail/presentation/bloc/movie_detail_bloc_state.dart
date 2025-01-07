@@ -6,6 +6,7 @@ class MovieDetailState with _$MovieDetailState {
 
   const factory MovieDetailState({
     @Default(BaseMovieStatus.init) BaseMovieStatus status,
+    PageCommand? pageCommand,
     MovieModel? movie,
     ReviewsResponse? reviews,
     @Default([]) List<TrailerModel> trailersMovie,

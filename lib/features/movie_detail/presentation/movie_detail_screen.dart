@@ -106,7 +106,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> with TickerProvid
                         })
                       ]),
                       SliverToBoxAdapter(
-                        child: ContentView(movie: movie),
+                        child: ContentView(movie: movie, cubit: cubit,),
                       ),
                       SliverPinnedHeader(
                           child: Material(

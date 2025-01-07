@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$MovieDetailState {
   BaseMovieStatus get status => throw _privateConstructorUsedError;
+  PageCommand? get pageCommand => throw _privateConstructorUsedError;
   MovieModel? get movie => throw _privateConstructorUsedError;
   ReviewsResponse? get reviews => throw _privateConstructorUsedError;
   List<TrailerModel> get trailersMovie => throw _privateConstructorUsedError;
@@ -37,6 +38,7 @@ abstract class $MovieDetailStateCopyWith<$Res> {
   @useResult
   $Res call(
       {BaseMovieStatus status,
+      PageCommand? pageCommand,
       MovieModel? movie,
       ReviewsResponse? reviews,
       List<TrailerModel> trailersMovie,
@@ -59,6 +61,7 @@ class _$MovieDetailStateCopyWithImpl<$Res, $Val extends MovieDetailState>
   @override
   $Res call({
     Object? status = null,
+    Object? pageCommand = freezed,
     Object? movie = freezed,
     Object? reviews = freezed,
     Object? trailersMovie = null,
@@ -69,6 +72,10 @@ class _$MovieDetailStateCopyWithImpl<$Res, $Val extends MovieDetailState>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as BaseMovieStatus,
+      pageCommand: freezed == pageCommand
+          ? _value.pageCommand
+          : pageCommand // ignore: cast_nullable_to_non_nullable
+              as PageCommand?,
       movie: freezed == movie
           ? _value.movie
           : movie // ignore: cast_nullable_to_non_nullable
@@ -99,6 +106,7 @@ abstract class _$$MovieDetailStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {BaseMovieStatus status,
+      PageCommand? pageCommand,
       MovieModel? movie,
       ReviewsResponse? reviews,
       List<TrailerModel> trailersMovie,
@@ -119,6 +127,7 @@ class __$$MovieDetailStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? status = null,
+    Object? pageCommand = freezed,
     Object? movie = freezed,
     Object? reviews = freezed,
     Object? trailersMovie = null,
@@ -129,6 +138,10 @@ class __$$MovieDetailStateImplCopyWithImpl<$Res>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as BaseMovieStatus,
+      pageCommand: freezed == pageCommand
+          ? _value.pageCommand
+          : pageCommand // ignore: cast_nullable_to_non_nullable
+              as PageCommand?,
       movie: freezed == movie
           ? _value.movie
           : movie // ignore: cast_nullable_to_non_nullable
@@ -154,6 +167,7 @@ class __$$MovieDetailStateImplCopyWithImpl<$Res>
 class _$MovieDetailStateImpl extends _MovieDetailState {
   const _$MovieDetailStateImpl(
       {this.status = BaseMovieStatus.init,
+      this.pageCommand,
       this.movie,
       this.reviews,
       final List<TrailerModel> trailersMovie = const [],
@@ -165,6 +179,8 @@ class _$MovieDetailStateImpl extends _MovieDetailState {
   @override
   @JsonKey()
   final BaseMovieStatus status;
+  @override
+  final PageCommand? pageCommand;
   @override
   final MovieModel? movie;
   @override
@@ -189,7 +205,7 @@ class _$MovieDetailStateImpl extends _MovieDetailState {
 
   @override
   String toString() {
-    return 'MovieDetailState(status: $status, movie: $movie, reviews: $reviews, trailersMovie: $trailersMovie, similarMovies: $similarMovies)';
+    return 'MovieDetailState(status: $status, pageCommand: $pageCommand, movie: $movie, reviews: $reviews, trailersMovie: $trailersMovie, similarMovies: $similarMovies)';
   }
 
   @override
@@ -198,6 +214,8 @@ class _$MovieDetailStateImpl extends _MovieDetailState {
         (other.runtimeType == runtimeType &&
             other is _$MovieDetailStateImpl &&
             (identical(other.status, status) || other.status == status) &&
+            (identical(other.pageCommand, pageCommand) ||
+                other.pageCommand == pageCommand) &&
             (identical(other.movie, movie) || other.movie == movie) &&
             (identical(other.reviews, reviews) || other.reviews == reviews) &&
             const DeepCollectionEquality()
@@ -210,6 +228,7 @@ class _$MovieDetailStateImpl extends _MovieDetailState {
   int get hashCode => Object.hash(
       runtimeType,
       status,
+      pageCommand,
       movie,
       reviews,
       const DeepCollectionEquality().hash(_trailersMovie),
@@ -228,6 +247,7 @@ class _$MovieDetailStateImpl extends _MovieDetailState {
 abstract class _MovieDetailState extends MovieDetailState {
   const factory _MovieDetailState(
       {final BaseMovieStatus status,
+      final PageCommand? pageCommand,
       final MovieModel? movie,
       final ReviewsResponse? reviews,
       final List<TrailerModel> trailersMovie,
@@ -236,6 +256,8 @@ abstract class _MovieDetailState extends MovieDetailState {
 
   @override
   BaseMovieStatus get status;
+  @override
+  PageCommand? get pageCommand;
   @override
   MovieModel? get movie;
   @override

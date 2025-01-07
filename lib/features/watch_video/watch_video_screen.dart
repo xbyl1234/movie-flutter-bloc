@@ -7,9 +7,14 @@ import '../../core/common/widgets/image_widget.dart';
 
 class WatchVideoArguments {
   final int index;
+  final bool isPlay;
   final List<TrailerModel> data;
 
-  WatchVideoArguments({required this.index, required this.data});
+  WatchVideoArguments({
+    required this.index,
+    required this.data,
+    this.isPlay = false,
+  });
 }
 
 class WatchVideoScreen extends StatefulWidget {
@@ -31,12 +36,23 @@ class _WatchVideoScreenState extends State<WatchVideoScreen> {
     arguments = widget.arguments;
     listVideo = arguments.data;
     title.value = listVideo[arguments.index].name;
-    _controller = YoutubePlayerController(
-        initialVideoId: listVideo[arguments.index].key,
-        flags: const YoutubePlayerFlags(
-          autoPlay: true,
-          mute: false,
-        ));
+    if (widget.arguments.isPlay) {
+      _controller = YoutubePlayerController(
+          initialVideoId: listVideo.first.key,
+          flags: const YoutubePlayerFlags(
+            autoPlay: true,
+            mute: false,
+          ));
+      _controller.load(listVideo.first.key);
+      _controller.play();
+    } else {
+      _controller = YoutubePlayerController(
+          initialVideoId: listVideo[arguments.index].key,
+          flags: const YoutubePlayerFlags(
+            autoPlay: true,
+            mute: false,
+          ));
+    }
   }
 
   @override
@@ -52,12 +68,14 @@ class _WatchVideoScreenState extends State<WatchVideoScreen> {
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Colors.white),
         backgroundColor: Colors.black,
-        title: ValueListenableBuilder<String>(valueListenable: title, builder: (context, title, child) {
-          return Text(
-            title,
-            style: context.titleLarge.copyWith(color: Colors.white),
-          );
-        }),
+        title: ValueListenableBuilder<String>(
+            valueListenable: title,
+            builder: (context, title, child) {
+              return Text(
+                title,
+                style: context.titleLarge.copyWith(color: Colors.white),
+              );
+            }),
       ),
       body: YoutubePlayerBuilder(
           player: YoutubePlayer(
@@ -71,6 +89,9 @@ class _WatchVideoScreenState extends State<WatchVideoScreen> {
             ),
           ),
           builder: (context, player) {
+            if (widget.arguments.isPlay) {
+              return player;
+            }
             return Column(
               children: [
                 player,
@@ -102,10 +123,13 @@ class _WatchVideoScreenState extends State<WatchVideoScreen> {
                                 ),
                                 Expanded(
                                   child: Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8),
                                     child: Text(
                                       listVideo[i].name,
-                                      style: Theme.of(context).textTheme.labelMedium,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .labelMedium,
                                     ),
                                   ),
                                 ),
