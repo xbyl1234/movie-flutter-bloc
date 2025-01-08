@@ -30,7 +30,6 @@ final GetIt getIt = GetIt.instance;
 
 Future<void> init() async {
   getIt.registerSingleton(AppCubit());
-  //  sl.registerFactory(() => AppCubit());
   getIt.registerSingleton<MovieProvider>((MovieProvider()));
   getIt.registerSingleton<MovieApiService>((MovieApiService(getIt.get())));
 
@@ -63,7 +62,8 @@ Future<void> init() async {
       ));
 
   getIt.registerLazySingleton<SearchMoviesRepository>(
-      () => SearchMoviesRepositoryImpl(getIt.get()));
+    () => SearchMoviesRepositoryImpl(getIt.get()),
+  );
   getIt.registerLazySingleton<SearchUseCase>(() => SearchUseCase(getIt.get()));
   getIt.registerLazySingleton<ExploreCubit>(() => ExploreCubit(getIt.get()));
 

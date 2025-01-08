@@ -7,5 +7,8 @@ class PaymentsState with _$PaymentsState {
     @Default([]) List<Payment> payments,
     Payment? payment,
     PageCommand? pageCommand,
+    ConfirmPaymentArg? arg,
   }) = _PaymentsState;
+
+
 }

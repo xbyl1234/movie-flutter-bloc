@@ -18,45 +18,52 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$PaymentsEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() getPayments,
+    required TResult Function(ConfirmPaymentArg arg) initData,
     required TResult Function(Payment payment) onSelectedMethod,
-    required TResult Function(String router) onNavigate,
+    required TResult Function(BuildContext ctx, PageCommand pageCommand)
+        onNavigate,
+    required TResult Function() onClearCommand,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? getPayments,
+    TResult? Function(ConfirmPaymentArg arg)? initData,
     TResult? Function(Payment payment)? onSelectedMethod,
-    TResult? Function(String router)? onNavigate,
+    TResult? Function(BuildContext ctx, PageCommand pageCommand)? onNavigate,
+    TResult? Function()? onClearCommand,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? getPayments,
+    TResult Function(ConfirmPaymentArg arg)? initData,
     TResult Function(Payment payment)? onSelectedMethod,
-    TResult Function(String router)? onNavigate,
+    TResult Function(BuildContext ctx, PageCommand pageCommand)? onNavigate,
+    TResult Function()? onClearCommand,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GetPayments value) getPayments,
+    required TResult Function(_InitData value) initData,
     required TResult Function(_OnSelectedMethod value) onSelectedMethod,
     required TResult Function(_OnNavigate value) onNavigate,
+    required TResult Function(_OnClearCommand value) onClearCommand,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetPayments value)? getPayments,
+    TResult? Function(_InitData value)? initData,
     TResult? Function(_OnSelectedMethod value)? onSelectedMethod,
     TResult? Function(_OnNavigate value)? onNavigate,
+    TResult? Function(_OnClearCommand value)? onClearCommand,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetPayments value)? getPayments,
+    TResult Function(_InitData value)? initData,
     TResult Function(_OnSelectedMethod value)? onSelectedMethod,
     TResult Function(_OnNavigate value)? onNavigate,
+    TResult Function(_OnClearCommand value)? onClearCommand,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -84,73 +91,104 @@ class _$PaymentsEventCopyWithImpl<$Res, $Val extends PaymentsEvent>
 }
 
 /// @nodoc
-abstract class _$$GetPaymentsImplCopyWith<$Res> {
-  factory _$$GetPaymentsImplCopyWith(
-          _$GetPaymentsImpl value, $Res Function(_$GetPaymentsImpl) then) =
-      __$$GetPaymentsImplCopyWithImpl<$Res>;
+abstract class _$$InitDataImplCopyWith<$Res> {
+  factory _$$InitDataImplCopyWith(
+          _$InitDataImpl value, $Res Function(_$InitDataImpl) then) =
+      __$$InitDataImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({ConfirmPaymentArg arg});
 }
 
 /// @nodoc
-class __$$GetPaymentsImplCopyWithImpl<$Res>
-    extends _$PaymentsEventCopyWithImpl<$Res, _$GetPaymentsImpl>
-    implements _$$GetPaymentsImplCopyWith<$Res> {
-  __$$GetPaymentsImplCopyWithImpl(
-      _$GetPaymentsImpl _value, $Res Function(_$GetPaymentsImpl) _then)
+class __$$InitDataImplCopyWithImpl<$Res>
+    extends _$PaymentsEventCopyWithImpl<$Res, _$InitDataImpl>
+    implements _$$InitDataImplCopyWith<$Res> {
+  __$$InitDataImplCopyWithImpl(
+      _$InitDataImpl _value, $Res Function(_$InitDataImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of PaymentsEvent
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? arg = null,
+  }) {
+    return _then(_$InitDataImpl(
+      null == arg
+          ? _value.arg
+          : arg // ignore: cast_nullable_to_non_nullable
+              as ConfirmPaymentArg,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$GetPaymentsImpl implements _GetPayments {
-  const _$GetPaymentsImpl();
+class _$InitDataImpl implements _InitData {
+  const _$InitDataImpl(this.arg);
+
+  @override
+  final ConfirmPaymentArg arg;
 
   @override
   String toString() {
-    return 'PaymentsEvent.getPayments()';
+    return 'PaymentsEvent.initData(arg: $arg)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$GetPaymentsImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$InitDataImpl &&
+            (identical(other.arg, arg) || other.arg == arg));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, arg);
+
+  /// Create a copy of PaymentsEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$InitDataImplCopyWith<_$InitDataImpl> get copyWith =>
+      __$$InitDataImplCopyWithImpl<_$InitDataImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() getPayments,
+    required TResult Function(ConfirmPaymentArg arg) initData,
     required TResult Function(Payment payment) onSelectedMethod,
-    required TResult Function(String router) onNavigate,
+    required TResult Function(BuildContext ctx, PageCommand pageCommand)
+        onNavigate,
+    required TResult Function() onClearCommand,
   }) {
-    return getPayments();
+    return initData(arg);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? getPayments,
+    TResult? Function(ConfirmPaymentArg arg)? initData,
     TResult? Function(Payment payment)? onSelectedMethod,
-    TResult? Function(String router)? onNavigate,
+    TResult? Function(BuildContext ctx, PageCommand pageCommand)? onNavigate,
+    TResult? Function()? onClearCommand,
   }) {
-    return getPayments?.call();
+    return initData?.call(arg);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? getPayments,
+    TResult Function(ConfirmPaymentArg arg)? initData,
     TResult Function(Payment payment)? onSelectedMethod,
-    TResult Function(String router)? onNavigate,
+    TResult Function(BuildContext ctx, PageCommand pageCommand)? onNavigate,
+    TResult Function()? onClearCommand,
     required TResult orElse(),
   }) {
-    if (getPayments != null) {
-      return getPayments();
+    if (initData != null) {
+      return initData(arg);
     }
     return orElse();
   }
@@ -158,40 +196,51 @@ class _$GetPaymentsImpl implements _GetPayments {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GetPayments value) getPayments,
+    required TResult Function(_InitData value) initData,
     required TResult Function(_OnSelectedMethod value) onSelectedMethod,
     required TResult Function(_OnNavigate value) onNavigate,
+    required TResult Function(_OnClearCommand value) onClearCommand,
   }) {
-    return getPayments(this);
+    return initData(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetPayments value)? getPayments,
+    TResult? Function(_InitData value)? initData,
     TResult? Function(_OnSelectedMethod value)? onSelectedMethod,
     TResult? Function(_OnNavigate value)? onNavigate,
+    TResult? Function(_OnClearCommand value)? onClearCommand,
   }) {
-    return getPayments?.call(this);
+    return initData?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetPayments value)? getPayments,
+    TResult Function(_InitData value)? initData,
     TResult Function(_OnSelectedMethod value)? onSelectedMethod,
     TResult Function(_OnNavigate value)? onNavigate,
+    TResult Function(_OnClearCommand value)? onClearCommand,
     required TResult orElse(),
   }) {
-    if (getPayments != null) {
-      return getPayments(this);
+    if (initData != null) {
+      return initData(this);
     }
     return orElse();
   }
 }
 
-abstract class _GetPayments implements PaymentsEvent {
-  const factory _GetPayments() = _$GetPaymentsImpl;
+abstract class _InitData implements PaymentsEvent {
+  const factory _InitData(final ConfirmPaymentArg arg) = _$InitDataImpl;
+
+  ConfirmPaymentArg get arg;
+
+  /// Create a copy of PaymentsEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$InitDataImplCopyWith<_$InitDataImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -263,9 +312,11 @@ class _$OnSelectedMethodImpl implements _OnSelectedMethod {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() getPayments,
+    required TResult Function(ConfirmPaymentArg arg) initData,
     required TResult Function(Payment payment) onSelectedMethod,
-    required TResult Function(String router) onNavigate,
+    required TResult Function(BuildContext ctx, PageCommand pageCommand)
+        onNavigate,
+    required TResult Function() onClearCommand,
   }) {
     return onSelectedMethod(payment);
   }
@@ -273,9 +324,10 @@ class _$OnSelectedMethodImpl implements _OnSelectedMethod {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? getPayments,
+    TResult? Function(ConfirmPaymentArg arg)? initData,
     TResult? Function(Payment payment)? onSelectedMethod,
-    TResult? Function(String router)? onNavigate,
+    TResult? Function(BuildContext ctx, PageCommand pageCommand)? onNavigate,
+    TResult? Function()? onClearCommand,
   }) {
     return onSelectedMethod?.call(payment);
   }
@@ -283,9 +335,10 @@ class _$OnSelectedMethodImpl implements _OnSelectedMethod {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? getPayments,
+    TResult Function(ConfirmPaymentArg arg)? initData,
     TResult Function(Payment payment)? onSelectedMethod,
-    TResult Function(String router)? onNavigate,
+    TResult Function(BuildContext ctx, PageCommand pageCommand)? onNavigate,
+    TResult Function()? onClearCommand,
     required TResult orElse(),
   }) {
     if (onSelectedMethod != null) {
@@ -297,9 +350,10 @@ class _$OnSelectedMethodImpl implements _OnSelectedMethod {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GetPayments value) getPayments,
+    required TResult Function(_InitData value) initData,
     required TResult Function(_OnSelectedMethod value) onSelectedMethod,
     required TResult Function(_OnNavigate value) onNavigate,
+    required TResult Function(_OnClearCommand value) onClearCommand,
   }) {
     return onSelectedMethod(this);
   }
@@ -307,9 +361,10 @@ class _$OnSelectedMethodImpl implements _OnSelectedMethod {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetPayments value)? getPayments,
+    TResult? Function(_InitData value)? initData,
     TResult? Function(_OnSelectedMethod value)? onSelectedMethod,
     TResult? Function(_OnNavigate value)? onNavigate,
+    TResult? Function(_OnClearCommand value)? onClearCommand,
   }) {
     return onSelectedMethod?.call(this);
   }
@@ -317,9 +372,10 @@ class _$OnSelectedMethodImpl implements _OnSelectedMethod {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetPayments value)? getPayments,
+    TResult Function(_InitData value)? initData,
     TResult Function(_OnSelectedMethod value)? onSelectedMethod,
     TResult Function(_OnNavigate value)? onNavigate,
+    TResult Function(_OnClearCommand value)? onClearCommand,
     required TResult orElse(),
   }) {
     if (onSelectedMethod != null) {
@@ -348,7 +404,7 @@ abstract class _$$OnNavigateImplCopyWith<$Res> {
           _$OnNavigateImpl value, $Res Function(_$OnNavigateImpl) then) =
       __$$OnNavigateImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String router});
+  $Res call({BuildContext ctx, PageCommand pageCommand});
 }
 
 /// @nodoc
@@ -364,13 +420,18 @@ class __$$OnNavigateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? router = null,
+    Object? ctx = null,
+    Object? pageCommand = null,
   }) {
     return _then(_$OnNavigateImpl(
-      null == router
-          ? _value.router
-          : router // ignore: cast_nullable_to_non_nullable
-              as String,
+      null == ctx
+          ? _value.ctx
+          : ctx // ignore: cast_nullable_to_non_nullable
+              as BuildContext,
+      null == pageCommand
+          ? _value.pageCommand
+          : pageCommand // ignore: cast_nullable_to_non_nullable
+              as PageCommand,
     ));
   }
 }
@@ -378,14 +439,16 @@ class __$$OnNavigateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$OnNavigateImpl implements _OnNavigate {
-  const _$OnNavigateImpl(this.router);
+  const _$OnNavigateImpl(this.ctx, this.pageCommand);
 
   @override
-  final String router;
+  final BuildContext ctx;
+  @override
+  final PageCommand pageCommand;
 
   @override
   String toString() {
-    return 'PaymentsEvent.onNavigate(router: $router)';
+    return 'PaymentsEvent.onNavigate(ctx: $ctx, pageCommand: $pageCommand)';
   }
 
   @override
@@ -393,11 +456,13 @@ class _$OnNavigateImpl implements _OnNavigate {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OnNavigateImpl &&
-            (identical(other.router, router) || other.router == router));
+            (identical(other.ctx, ctx) || other.ctx == ctx) &&
+            (identical(other.pageCommand, pageCommand) ||
+                other.pageCommand == pageCommand));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, router);
+  int get hashCode => Object.hash(runtimeType, ctx, pageCommand);
 
   /// Create a copy of PaymentsEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -410,33 +475,37 @@ class _$OnNavigateImpl implements _OnNavigate {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() getPayments,
+    required TResult Function(ConfirmPaymentArg arg) initData,
     required TResult Function(Payment payment) onSelectedMethod,
-    required TResult Function(String router) onNavigate,
+    required TResult Function(BuildContext ctx, PageCommand pageCommand)
+        onNavigate,
+    required TResult Function() onClearCommand,
   }) {
-    return onNavigate(router);
+    return onNavigate(ctx, pageCommand);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? getPayments,
+    TResult? Function(ConfirmPaymentArg arg)? initData,
     TResult? Function(Payment payment)? onSelectedMethod,
-    TResult? Function(String router)? onNavigate,
+    TResult? Function(BuildContext ctx, PageCommand pageCommand)? onNavigate,
+    TResult? Function()? onClearCommand,
   }) {
-    return onNavigate?.call(router);
+    return onNavigate?.call(ctx, pageCommand);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? getPayments,
+    TResult Function(ConfirmPaymentArg arg)? initData,
     TResult Function(Payment payment)? onSelectedMethod,
-    TResult Function(String router)? onNavigate,
+    TResult Function(BuildContext ctx, PageCommand pageCommand)? onNavigate,
+    TResult Function()? onClearCommand,
     required TResult orElse(),
   }) {
     if (onNavigate != null) {
-      return onNavigate(router);
+      return onNavigate(ctx, pageCommand);
     }
     return orElse();
   }
@@ -444,9 +513,10 @@ class _$OnNavigateImpl implements _OnNavigate {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GetPayments value) getPayments,
+    required TResult Function(_InitData value) initData,
     required TResult Function(_OnSelectedMethod value) onSelectedMethod,
     required TResult Function(_OnNavigate value) onNavigate,
+    required TResult Function(_OnClearCommand value) onClearCommand,
   }) {
     return onNavigate(this);
   }
@@ -454,9 +524,10 @@ class _$OnNavigateImpl implements _OnNavigate {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetPayments value)? getPayments,
+    TResult? Function(_InitData value)? initData,
     TResult? Function(_OnSelectedMethod value)? onSelectedMethod,
     TResult? Function(_OnNavigate value)? onNavigate,
+    TResult? Function(_OnClearCommand value)? onClearCommand,
   }) {
     return onNavigate?.call(this);
   }
@@ -464,9 +535,10 @@ class _$OnNavigateImpl implements _OnNavigate {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetPayments value)? getPayments,
+    TResult Function(_InitData value)? initData,
     TResult Function(_OnSelectedMethod value)? onSelectedMethod,
     TResult Function(_OnNavigate value)? onNavigate,
+    TResult Function(_OnClearCommand value)? onClearCommand,
     required TResult orElse(),
   }) {
     if (onNavigate != null) {
@@ -477,9 +549,11 @@ class _$OnNavigateImpl implements _OnNavigate {
 }
 
 abstract class _OnNavigate implements PaymentsEvent {
-  const factory _OnNavigate(final String router) = _$OnNavigateImpl;
+  const factory _OnNavigate(
+      final BuildContext ctx, final PageCommand pageCommand) = _$OnNavigateImpl;
 
-  String get router;
+  BuildContext get ctx;
+  PageCommand get pageCommand;
 
   /// Create a copy of PaymentsEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -489,10 +563,129 @@ abstract class _OnNavigate implements PaymentsEvent {
 }
 
 /// @nodoc
+abstract class _$$OnClearCommandImplCopyWith<$Res> {
+  factory _$$OnClearCommandImplCopyWith(_$OnClearCommandImpl value,
+          $Res Function(_$OnClearCommandImpl) then) =
+      __$$OnClearCommandImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$OnClearCommandImplCopyWithImpl<$Res>
+    extends _$PaymentsEventCopyWithImpl<$Res, _$OnClearCommandImpl>
+    implements _$$OnClearCommandImplCopyWith<$Res> {
+  __$$OnClearCommandImplCopyWithImpl(
+      _$OnClearCommandImpl _value, $Res Function(_$OnClearCommandImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PaymentsEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$OnClearCommandImpl implements _OnClearCommand {
+  const _$OnClearCommandImpl();
+
+  @override
+  String toString() {
+    return 'PaymentsEvent.onClearCommand()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$OnClearCommandImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(ConfirmPaymentArg arg) initData,
+    required TResult Function(Payment payment) onSelectedMethod,
+    required TResult Function(BuildContext ctx, PageCommand pageCommand)
+        onNavigate,
+    required TResult Function() onClearCommand,
+  }) {
+    return onClearCommand();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(ConfirmPaymentArg arg)? initData,
+    TResult? Function(Payment payment)? onSelectedMethod,
+    TResult? Function(BuildContext ctx, PageCommand pageCommand)? onNavigate,
+    TResult? Function()? onClearCommand,
+  }) {
+    return onClearCommand?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(ConfirmPaymentArg arg)? initData,
+    TResult Function(Payment payment)? onSelectedMethod,
+    TResult Function(BuildContext ctx, PageCommand pageCommand)? onNavigate,
+    TResult Function()? onClearCommand,
+    required TResult orElse(),
+  }) {
+    if (onClearCommand != null) {
+      return onClearCommand();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitData value) initData,
+    required TResult Function(_OnSelectedMethod value) onSelectedMethod,
+    required TResult Function(_OnNavigate value) onNavigate,
+    required TResult Function(_OnClearCommand value) onClearCommand,
+  }) {
+    return onClearCommand(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitData value)? initData,
+    TResult? Function(_OnSelectedMethod value)? onSelectedMethod,
+    TResult? Function(_OnNavigate value)? onNavigate,
+    TResult? Function(_OnClearCommand value)? onClearCommand,
+  }) {
+    return onClearCommand?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitData value)? initData,
+    TResult Function(_OnSelectedMethod value)? onSelectedMethod,
+    TResult Function(_OnNavigate value)? onNavigate,
+    TResult Function(_OnClearCommand value)? onClearCommand,
+    required TResult orElse(),
+  }) {
+    if (onClearCommand != null) {
+      return onClearCommand(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnClearCommand implements PaymentsEvent {
+  const factory _OnClearCommand() = _$OnClearCommandImpl;
+}
+
+/// @nodoc
 mixin _$PaymentsState {
   List<Payment> get payments => throw _privateConstructorUsedError;
   Payment? get payment => throw _privateConstructorUsedError;
   PageCommand? get pageCommand => throw _privateConstructorUsedError;
+  ConfirmPaymentArg? get arg => throw _privateConstructorUsedError;
 
   /// Create a copy of PaymentsState
   /// with the given fields replaced by the non-null parameter values.
@@ -508,7 +701,10 @@ abstract class $PaymentsStateCopyWith<$Res> {
       _$PaymentsStateCopyWithImpl<$Res, PaymentsState>;
   @useResult
   $Res call(
-      {List<Payment> payments, Payment? payment, PageCommand? pageCommand});
+      {List<Payment> payments,
+      Payment? payment,
+      PageCommand? pageCommand,
+      ConfirmPaymentArg? arg});
 }
 
 /// @nodoc
@@ -529,6 +725,7 @@ class _$PaymentsStateCopyWithImpl<$Res, $Val extends PaymentsState>
     Object? payments = null,
     Object? payment = freezed,
     Object? pageCommand = freezed,
+    Object? arg = freezed,
   }) {
     return _then(_value.copyWith(
       payments: null == payments
@@ -543,6 +740,10 @@ class _$PaymentsStateCopyWithImpl<$Res, $Val extends PaymentsState>
           ? _value.pageCommand
           : pageCommand // ignore: cast_nullable_to_non_nullable
               as PageCommand?,
+      arg: freezed == arg
+          ? _value.arg
+          : arg // ignore: cast_nullable_to_non_nullable
+              as ConfirmPaymentArg?,
     ) as $Val);
   }
 }
@@ -556,7 +757,10 @@ abstract class _$$PaymentsStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<Payment> payments, Payment? payment, PageCommand? pageCommand});
+      {List<Payment> payments,
+      Payment? payment,
+      PageCommand? pageCommand,
+      ConfirmPaymentArg? arg});
 }
 
 /// @nodoc
@@ -575,6 +779,7 @@ class __$$PaymentsStateImplCopyWithImpl<$Res>
     Object? payments = null,
     Object? payment = freezed,
     Object? pageCommand = freezed,
+    Object? arg = freezed,
   }) {
     return _then(_$PaymentsStateImpl(
       payments: null == payments
@@ -589,6 +794,10 @@ class __$$PaymentsStateImplCopyWithImpl<$Res>
           ? _value.pageCommand
           : pageCommand // ignore: cast_nullable_to_non_nullable
               as PageCommand?,
+      arg: freezed == arg
+          ? _value.arg
+          : arg // ignore: cast_nullable_to_non_nullable
+              as ConfirmPaymentArg?,
     ));
   }
 }
@@ -597,7 +806,10 @@ class __$$PaymentsStateImplCopyWithImpl<$Res>
 
 class _$PaymentsStateImpl extends _PaymentsState {
   const _$PaymentsStateImpl(
-      {final List<Payment> payments = const [], this.payment, this.pageCommand})
+      {final List<Payment> payments = const [],
+      this.payment,
+      this.pageCommand,
+      this.arg})
       : _payments = payments,
         super._();
 
@@ -614,10 +826,12 @@ class _$PaymentsStateImpl extends _PaymentsState {
   final Payment? payment;
   @override
   final PageCommand? pageCommand;
+  @override
+  final ConfirmPaymentArg? arg;
 
   @override
   String toString() {
-    return 'PaymentsState(payments: $payments, payment: $payment, pageCommand: $pageCommand)';
+    return 'PaymentsState(payments: $payments, payment: $payment, pageCommand: $pageCommand, arg: $arg)';
   }
 
   @override
@@ -628,12 +842,17 @@ class _$PaymentsStateImpl extends _PaymentsState {
             const DeepCollectionEquality().equals(other._payments, _payments) &&
             (identical(other.payment, payment) || other.payment == payment) &&
             (identical(other.pageCommand, pageCommand) ||
-                other.pageCommand == pageCommand));
+                other.pageCommand == pageCommand) &&
+            (identical(other.arg, arg) || other.arg == arg));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(_payments), payment, pageCommand);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_payments),
+      payment,
+      pageCommand,
+      arg);
 
   /// Create a copy of PaymentsState
   /// with the given fields replaced by the non-null parameter values.
@@ -648,7 +867,8 @@ abstract class _PaymentsState extends PaymentsState {
   const factory _PaymentsState(
       {final List<Payment> payments,
       final Payment? payment,
-      final PageCommand? pageCommand}) = _$PaymentsStateImpl;
+      final PageCommand? pageCommand,
+      final ConfirmPaymentArg? arg}) = _$PaymentsStateImpl;
   const _PaymentsState._() : super._();
 
   @override
@@ -657,6 +877,8 @@ abstract class _PaymentsState extends PaymentsState {
   Payment? get payment;
   @override
   PageCommand? get pageCommand;
+  @override
+  ConfirmPaymentArg? get arg;
 
   /// Create a copy of PaymentsState
   /// with the given fields replaced by the non-null parameter values.

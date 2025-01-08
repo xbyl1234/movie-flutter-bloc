@@ -40,7 +40,7 @@ class ProfileScreen extends StatelessWidget {
               const SizedBox(
                 height: 4,
               ),
-              Text('flutter.dev@gmail.com',
+              Text('flutter@gmail.com',
                   style: Theme.of(context).textTheme.bodyMedium),
               const SizedBox(
                 height: 24,

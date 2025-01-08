@@ -6,8 +6,6 @@ import 'package:movie/core/common/widgets/svg_widget.dart';
 import 'package:movie/features/confirm_payment/confirm_payment_screen.dart';
 import 'package:movie/features/payments/bloc/payments_bloc.dart';
 import 'package:movie/features/payments/view/payments_view.dart';
-import '../../core/bloc/page_command.dart';
-import '../../core/common/contants/routers.dart';
 import '../../core/common/translations/l10n.dart';
 import '../../di/dependency_injection.dart';
 
@@ -34,27 +32,8 @@ class PaymentsScreen extends StatelessWidget {
                 ))
           ],
         ),
-        body: BlocListener<PaymentsBloc, PaymentsState>(
-          listener: (context, state) {
-            if (state.pageCommand is PageCommandNavigatorPage) {
-              onNavigate(
-                  state.pageCommand! as PageCommandNavigatorPage, context);
-            }
-          },
-          child: PaymentsView(
-            bloc: bloc,
-          ),
-        ),
+        body: PaymentsView(arg: arg,),
       ),
     );
-  }
-
-  void onNavigate(PageCommandNavigatorPage page, BuildContext context) {
-    if (page.page == confirmPaymentsRoute) {
-      arg.payment = page.argument;
-      Navigator.pushNamed(context, page.page!, arguments: arg);
-    } else {
-      Navigator.pushNamed(context, page.page!);
-    }
   }
 }
