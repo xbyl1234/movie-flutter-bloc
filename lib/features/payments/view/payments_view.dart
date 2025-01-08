@@ -7,9 +7,9 @@ import 'package:movie/core/common/widgets/custom_button.dart';
 import 'package:movie/core/common/widgets/svg_widget.dart';
 import 'package:movie/core/data/model/payment.dart';
 import 'package:movie/features/payments/bloc/payments_bloc.dart';
+import 'package:movie/features/payments/widgets/button_continue.dart';
 import '../../../core/common/translations/l10n.dart';
 import '../../confirm_payment/confirm_payment_screen.dart';
-import '../widgets/button_continue.dart';
 
 class PaymentsView extends StatelessWidget {
   final ConfirmPaymentArg arg;
@@ -73,7 +73,8 @@ class PaymentsView extends StatelessWidget {
                         bloc: bloc,
                         builder: (context, state) {
                           return Radio(
-                            value: state.payment != null && state.payment!.methodName == item.methodName,
+                            value: state.payment != null &&
+                                state.payment!.methodName == item.methodName,
                             onChanged: (val) {
                               bloc.add(PaymentsEvent.onSelectedMethod(item));
                             },
@@ -87,7 +88,7 @@ class PaymentsView extends StatelessWidget {
           ))
         ],
       ),
-      bottomNavigationBar: ButtonContinue(),
+      bottomNavigationBar: ButtonContinue(bloc: bloc),
     );
   }
 }
