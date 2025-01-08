@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$HomeState {
   BaseMovieStatus get status => throw _privateConstructorUsedError;
+  PageCommand? get pageCommand => throw _privateConstructorUsedError;
   MovieModel? get movie => throw _privateConstructorUsedError;
   List<MovieModel> get nowPlayMovies => throw _privateConstructorUsedError;
   List<MovieModel> get topRateMovies => throw _privateConstructorUsedError;
@@ -37,6 +38,7 @@ abstract class $HomeStateCopyWith<$Res> {
   @useResult
   $Res call(
       {BaseMovieStatus status,
+      PageCommand? pageCommand,
       MovieModel? movie,
       List<MovieModel> nowPlayMovies,
       List<MovieModel> topRateMovies,
@@ -60,6 +62,7 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
   @override
   $Res call({
     Object? status = null,
+    Object? pageCommand = freezed,
     Object? movie = freezed,
     Object? nowPlayMovies = null,
     Object? topRateMovies = null,
@@ -71,6 +74,10 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as BaseMovieStatus,
+      pageCommand: freezed == pageCommand
+          ? _value.pageCommand
+          : pageCommand // ignore: cast_nullable_to_non_nullable
+              as PageCommand?,
       movie: freezed == movie
           ? _value.movie
           : movie // ignore: cast_nullable_to_non_nullable
@@ -105,6 +112,7 @@ abstract class _$$HomeStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {BaseMovieStatus status,
+      PageCommand? pageCommand,
       MovieModel? movie,
       List<MovieModel> nowPlayMovies,
       List<MovieModel> topRateMovies,
@@ -126,6 +134,7 @@ class __$$HomeStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? status = null,
+    Object? pageCommand = freezed,
     Object? movie = freezed,
     Object? nowPlayMovies = null,
     Object? topRateMovies = null,
@@ -137,6 +146,10 @@ class __$$HomeStateImplCopyWithImpl<$Res>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as BaseMovieStatus,
+      pageCommand: freezed == pageCommand
+          ? _value.pageCommand
+          : pageCommand // ignore: cast_nullable_to_non_nullable
+              as PageCommand?,
       movie: freezed == movie
           ? _value.movie
           : movie // ignore: cast_nullable_to_non_nullable
@@ -166,6 +179,7 @@ class __$$HomeStateImplCopyWithImpl<$Res>
 class _$HomeStateImpl extends _HomeState {
   const _$HomeStateImpl(
       {this.status = BaseMovieStatus.init,
+      this.pageCommand,
       this.movie,
       final List<MovieModel> nowPlayMovies = const [],
       final List<MovieModel> topRateMovies = const [],
@@ -180,6 +194,8 @@ class _$HomeStateImpl extends _HomeState {
   @override
   @JsonKey()
   final BaseMovieStatus status;
+  @override
+  final PageCommand? pageCommand;
   @override
   final MovieModel? movie;
   final List<MovieModel> _nowPlayMovies;
@@ -220,7 +236,7 @@ class _$HomeStateImpl extends _HomeState {
 
   @override
   String toString() {
-    return 'HomeState(status: $status, movie: $movie, nowPlayMovies: $nowPlayMovies, topRateMovies: $topRateMovies, upComingMovies: $upComingMovies, popularMovies: $popularMovies)';
+    return 'HomeState(status: $status, pageCommand: $pageCommand, movie: $movie, nowPlayMovies: $nowPlayMovies, topRateMovies: $topRateMovies, upComingMovies: $upComingMovies, popularMovies: $popularMovies)';
   }
 
   @override
@@ -229,6 +245,8 @@ class _$HomeStateImpl extends _HomeState {
         (other.runtimeType == runtimeType &&
             other is _$HomeStateImpl &&
             (identical(other.status, status) || other.status == status) &&
+            (identical(other.pageCommand, pageCommand) ||
+                other.pageCommand == pageCommand) &&
             (identical(other.movie, movie) || other.movie == movie) &&
             const DeepCollectionEquality()
                 .equals(other._nowPlayMovies, _nowPlayMovies) &&
@@ -244,6 +262,7 @@ class _$HomeStateImpl extends _HomeState {
   int get hashCode => Object.hash(
       runtimeType,
       status,
+      pageCommand,
       movie,
       const DeepCollectionEquality().hash(_nowPlayMovies),
       const DeepCollectionEquality().hash(_topRateMovies),
@@ -262,6 +281,7 @@ class _$HomeStateImpl extends _HomeState {
 abstract class _HomeState extends HomeState {
   const factory _HomeState(
       {final BaseMovieStatus status,
+      final PageCommand? pageCommand,
       final MovieModel? movie,
       final List<MovieModel> nowPlayMovies,
       final List<MovieModel> topRateMovies,
@@ -271,6 +291,8 @@ abstract class _HomeState extends HomeState {
 
   @override
   BaseMovieStatus get status;
+  @override
+  PageCommand? get pageCommand;
   @override
   MovieModel? get movie;
   @override

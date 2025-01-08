@@ -42,7 +42,8 @@ Future<void> init() async {
       MovieDetailRepositoryImpl(getIt.get()));
   getIt.registerSingleton<MovieDetailUseCase>(MovieDetailUseCase(getIt.get()));
 
-  getIt.registerSingleton<ListMovieRepository>(ListMovieRepositoryImpl(getIt.get()));
+  getIt.registerSingleton<ListMovieRepository>(
+      ListMovieRepositoryImpl(getIt.get()));
   getIt.registerSingleton<ListMovieUseCase>(ListMovieUseCase(getIt.get()));
 
   getIt.registerFactory(() => ListMovieCubit(getIt.get()));
@@ -52,6 +53,7 @@ Future<void> init() async {
   getIt.registerSingleton<HomeCubit>(HomeCubit(
     movieDetailUseCase: getIt.get(),
     listMovieUseCase: getIt.get(),
+    trailerUseCase: getIt.get(),
   ));
   getIt.registerFactory(() => MovieDetailBlocCubit(
         detailUseCase: getIt.get(),

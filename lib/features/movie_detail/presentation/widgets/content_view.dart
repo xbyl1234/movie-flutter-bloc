@@ -148,7 +148,7 @@ class ContentView extends StatelessWidget {
                     arguments: WatchVideoArguments(
                         index: 0,
                         data: cubit.state.trailersMovie,
-                        isPlay: true
+                        isFirstPlay: true
                     ),
                   );
                 },

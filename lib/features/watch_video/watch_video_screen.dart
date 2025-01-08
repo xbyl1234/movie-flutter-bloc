@@ -7,13 +7,13 @@ import '../../core/common/widgets/image_widget.dart';
 
 class WatchVideoArguments {
   final int index;
-  final bool isPlay;
+  final bool isFirstPlay;
   final List<TrailerModel> data;
 
   WatchVideoArguments({
     required this.index,
     required this.data,
-    this.isPlay = false,
+    this.isFirstPlay = false,
   });
 }
 
@@ -30,28 +30,23 @@ class _WatchVideoScreenState extends State<WatchVideoScreen> {
   late WatchVideoArguments arguments;
   ValueNotifier<String> title = ValueNotifier('');
   List<TrailerModel> listVideo = List.empty();
+  bool isLandscape = false;
   @override
   void initState() {
     super.initState();
     arguments = widget.arguments;
     listVideo = arguments.data;
     title.value = listVideo[arguments.index].name;
-    if (widget.arguments.isPlay) {
+    if (widget.arguments.isFirstPlay) {
       _controller = YoutubePlayerController(
           initialVideoId: listVideo.first.key,
           flags: const YoutubePlayerFlags(
-            autoPlay: true,
-            mute: false,
-          ));
-      _controller.load(listVideo.first.key);
-      _controller.play();
+              autoPlay: true, mute: false, forceHD: true));
     } else {
       _controller = YoutubePlayerController(
           initialVideoId: listVideo[arguments.index].key,
           flags: const YoutubePlayerFlags(
-            autoPlay: true,
-            mute: false,
-          ));
+              autoPlay: true, mute: false, forceHD: true));
     }
   }
 
@@ -76,6 +71,19 @@ class _WatchVideoScreenState extends State<WatchVideoScreen> {
                 style: context.titleLarge.copyWith(color: Colors.white),
               );
             }),
+        actions: [
+          IconButton(
+              onPressed: () {
+                _controller.toggleFullScreenMode();
+                setState(() {
+                  isLandscape = !isLandscape;
+                });
+              },
+              icon: Icon(
+                isLandscape ? Icons.crop_portrait : Icons.crop_landscape,
+                color: Colors.white,
+              ))
+        ],
       ),
       body: YoutubePlayerBuilder(
           player: YoutubePlayer(
@@ -89,7 +97,8 @@ class _WatchVideoScreenState extends State<WatchVideoScreen> {
             ),
           ),
           builder: (context, player) {
-            if (widget.arguments.isPlay) {
+            if (widget.arguments.isFirstPlay ||
+                widget.arguments.data.length == 1) {
               return player;
             }
             return Column(

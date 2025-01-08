@@ -1,15 +1,16 @@
 import 'package:movie/core/data/model/movie_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import '../../../../../core/common/widgets/image_widget.dart';
 
 class BannerView extends StatelessWidget {
   final MovieModel movie;
+  final VoidCallback onPlayMovie;
 
   const BannerView({
     super.key,
     required this.movie,
+    required this.onPlayMovie,
   });
 
   @override
@@ -50,48 +51,67 @@ class BannerView extends StatelessWidget {
         Positioned(
             bottom: 24,
             left: 16,
+            right: 16,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   movie.title ?? "",
-                  style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Colors.white),
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleMedium!
+                      .copyWith(color: Colors.white),
                 ),
                 Text(
-                  movie.originalTitle ?? "",
-                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.white),
+                  '${movie.genres?.map((it) => it.name).join(", ")}',
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        color: Colors.white,
+                      ),
                 ),
                 const SizedBox(
                   height: 8,
                 ),
                 Row(
                   children: [
-                    Container(
-                      decoration: BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(24)),
-                      height: 32,
-                      width: 83,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          SvgPicture.asset('assets/icons/ic_play.svg'),
-                          const SizedBox(
-                            width: 8,
-                          ),
-                          Text('Play',
-                              style:
-                                  Theme.of(context).textTheme.titleMedium!.copyWith(color: Colors.white, fontSize: 12))
-                        ],
+                    GestureDetector(
+                      onTap: () => onPlayMovie.call(),
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.circular(24)),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            SvgPicture.asset(
+                              'assets/icons/ic_play.svg',
+                              height: 16,
+                              width: 16,
+                            ),
+                            const SizedBox(
+                              width: 8,
+                            ),
+                            Text('Play',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleMedium!
+                                    .copyWith(
+                                        color: Colors.white, fontSize: 14))
+                          ],
+                        ),
                       ),
                     ),
                     const SizedBox(
                       width: 16,
                     ),
                     Container(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 16, vertical: 6),
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(24), border: Border.all(color: Colors.white, width: 2)),
-                      height: 32,
-                      width: 83,
+                          borderRadius: BorderRadius.circular(24),
+                          border: Border.all(color: Colors.white, width: 2)),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         mainAxisSize: MainAxisSize.min,
@@ -104,7 +124,11 @@ class BannerView extends StatelessWidget {
                           const SizedBox(
                             width: 8,
                           ),
-                          Text('My List', style: Theme.of(context).textTheme.titleSmall!.copyWith(color: Colors.white))
+                          Text('My List',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleSmall!
+                                  .copyWith(color: Colors.white, fontSize: 14))
                         ],
                       ),
                     )
