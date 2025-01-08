@@ -1,3 +1,4 @@
+import 'dart:io';
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -20,16 +21,26 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.only(left: 16, right: 16, top: 20, bottom: 24),
+        padding: const EdgeInsets.only(
+          left: 16,
+          right: 16,
+          top: 20,
+          bottom: 24,
+        ),
         child: Column(
           children: [
-            const SvgWidget(ic: 'assets/icons/ic_logo.svg', ),
+            const SvgWidget(
+              ic: 'assets/icons/ic_logo.svg',
+            ),
             const SizedBox(
               height: 32,
             ),
             Text(
               'Create Your Account',
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(fontSize: 22),
+              style: Theme.of(context)
+                  .textTheme
+                  .titleMedium
+                  ?.copyWith(fontSize: 22),
             ),
             const SizedBox(
               height: 32,
@@ -43,7 +54,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       'assets/icons/ic_email.svg',
                     ),
                   ),
-                  prefixIconConstraints: const BoxConstraints(maxHeight: 16, maxWidth: 32)),
+                  prefixIconConstraints:
+                      const BoxConstraints(maxHeight: 16, maxWidth: 32)),
             ),
             const SizedBox(
               height: 16,
@@ -57,7 +69,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       'assets/icons/ic_password.svg',
                     ),
                   ),
-                  prefixIconConstraints: const BoxConstraints(maxHeight: 16, maxWidth: 32),
+                  prefixIconConstraints:
+                      const BoxConstraints(maxHeight: 16, maxWidth: 32),
                   suffixIcon: GestureDetector(
                     onTap: () {},
                     child: const Padding(
@@ -72,7 +85,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
             ),
             CustomButton(
                 btnText: 'Sign Up',
-                action: () => Navigator.pushNamedAndRemoveUntil(context, mainRoute, (route) => false)),
+                action: () => Navigator.pushNamedAndRemoveUntil(
+                    context, mainRoute, (route) => false)),
             const SizedBox(
               height: 24,
             ),
@@ -103,6 +117,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             ),
             Row(
               mainAxisSize: MainAxisSize.min,
+              spacing: 24,
               children: [
                 OutlinedButton(
                   onPressed: () {},
@@ -114,9 +129,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           ))),
                   child: SvgPicture.asset('assets/icons/facebook.svg'),
                 ),
-                const SizedBox(
-                  width: 24,
-                ),
                 OutlinedButton(
                   onPressed: () {},
                   style: OutlinedButton.styleFrom(
@@ -127,21 +139,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           ))),
                   child: SvgPicture.asset('assets/icons/google.svg'),
                 ),
-                const SizedBox(
-                  width: 24,
-                ),
-                OutlinedButton(
-                  onPressed: () {
-                    Navigator.pushNamedAndRemoveUntil(context, '', (route) => false);
-                  },
-                  style: OutlinedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                          side: const BorderSide(
-                            color: Colors.grey,
-                          ))),
-                  child: SvgPicture.asset('assets/icons/apple.svg'),
-                ),
+                if (Platform.isIOS)
+                  OutlinedButton(
+                    onPressed: () {},
+                    style: OutlinedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                            side: const BorderSide(
+                              color: Colors.grey,
+                            ))),
+                    child: SvgPicture.asset('assets/icons/apple.svg'),
+                  ),
               ],
             ),
             const SizedBox(
@@ -154,7 +162,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     children: [
                   TextSpan(
                     text: 'Sign in',
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Theme.of(context).primaryColor),
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodySmall
+                        ?.copyWith(color: Theme.of(context).primaryColor),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () => Navigator.pop(context),
                   ),
