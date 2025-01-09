@@ -809,6 +809,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Email is invalid`
+  String get err_email_invalid {
+    return Intl.message(
+      'Email is invalid',
+      name: 'err_email_invalid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must contain at least one uppercase letter, one lowercase letter, and one number.`
+  String get err_invalid_password {
+    return Intl.message(
+      'Password must contain at least one uppercase letter, one lowercase letter, and one number.',
+      name: 'err_invalid_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must contain at least 5 characters including uppercase, lowercase and numbers`
+  String get err_invalid_pass {
+    return Intl.message(
+      'Password must contain at least 5 characters including uppercase, lowercase and numbers',
+      name: 'err_invalid_pass',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

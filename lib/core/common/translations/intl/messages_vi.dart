@@ -39,6 +39,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "btn_update": MessageLookupByLibrary.simpleMessage("Cập nhật"),
         "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
             "Thưởng thức phim Full-HD, không giới hạn và không có quảng cáo"),
+        "err_email_invalid":
+            MessageLookupByLibrary.simpleMessage("Email is invalid"),
+        "err_invalid_pass": MessageLookupByLibrary.simpleMessage(
+            "Password must contain at least 5 characters including uppercase, lowercase and numbers"),
+        "err_invalid_password": MessageLookupByLibrary.simpleMessage(
+            "Password must contain at least one uppercase letter, one lowercase letter, and one number."),
         "female": MessageLookupByLibrary.simpleMessage("Nữ"),
         "hint_full_name": MessageLookupByLibrary.simpleMessage("Họ tên"),
         "hint_text_country": MessageLookupByLibrary.simpleMessage("Quốc gia"),

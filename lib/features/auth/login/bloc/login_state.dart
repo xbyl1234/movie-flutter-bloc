@@ -10,5 +10,7 @@ class LoginState with _$LoginState {
     @Default(true) bool visibilityOffPassword,
     String? email,
     String? password,
+    String? errEmail,
+    String? errPassword,
   }) = _LoginState;
 }

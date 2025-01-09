@@ -24,7 +24,7 @@ mixin _$LoginEvent {
     required TResult Function(bool value) onSelectedRemember,
     required TResult Function(bool value) onVisibilityPassword,
     required TResult Function(PageCommand pageCommand) onNavigate,
-    required TResult Function() onLogin,
+    required TResult Function(BuildContext ctx) onLogin,
     required TResult Function() onSignInGoogle,
     required TResult Function() onSignInFacebook,
     required TResult Function() onSignInApple,
@@ -40,7 +40,7 @@ mixin _$LoginEvent {
     TResult? Function(bool value)? onSelectedRemember,
     TResult? Function(bool value)? onVisibilityPassword,
     TResult? Function(PageCommand pageCommand)? onNavigate,
-    TResult? Function()? onLogin,
+    TResult? Function(BuildContext ctx)? onLogin,
     TResult? Function()? onSignInGoogle,
     TResult? Function()? onSignInFacebook,
     TResult? Function()? onSignInApple,
@@ -56,7 +56,7 @@ mixin _$LoginEvent {
     TResult Function(bool value)? onSelectedRemember,
     TResult Function(bool value)? onVisibilityPassword,
     TResult Function(PageCommand pageCommand)? onNavigate,
-    TResult Function()? onLogin,
+    TResult Function(BuildContext ctx)? onLogin,
     TResult Function()? onSignInGoogle,
     TResult Function()? onSignInFacebook,
     TResult Function()? onSignInApple,
@@ -184,7 +184,7 @@ class _$OnInitDataImpl implements OnInitData {
     required TResult Function(bool value) onSelectedRemember,
     required TResult Function(bool value) onVisibilityPassword,
     required TResult Function(PageCommand pageCommand) onNavigate,
-    required TResult Function() onLogin,
+    required TResult Function(BuildContext ctx) onLogin,
     required TResult Function() onSignInGoogle,
     required TResult Function() onSignInFacebook,
     required TResult Function() onSignInApple,
@@ -203,7 +203,7 @@ class _$OnInitDataImpl implements OnInitData {
     TResult? Function(bool value)? onSelectedRemember,
     TResult? Function(bool value)? onVisibilityPassword,
     TResult? Function(PageCommand pageCommand)? onNavigate,
-    TResult? Function()? onLogin,
+    TResult? Function(BuildContext ctx)? onLogin,
     TResult? Function()? onSignInGoogle,
     TResult? Function()? onSignInFacebook,
     TResult? Function()? onSignInApple,
@@ -222,7 +222,7 @@ class _$OnInitDataImpl implements OnInitData {
     TResult Function(bool value)? onSelectedRemember,
     TResult Function(bool value)? onVisibilityPassword,
     TResult Function(PageCommand pageCommand)? onNavigate,
-    TResult Function()? onLogin,
+    TResult Function(BuildContext ctx)? onLogin,
     TResult Function()? onSignInGoogle,
     TResult Function()? onSignInFacebook,
     TResult Function()? onSignInApple,
@@ -377,7 +377,7 @@ class _$OnChangePasswordImpl implements OnChangePassword {
     required TResult Function(bool value) onSelectedRemember,
     required TResult Function(bool value) onVisibilityPassword,
     required TResult Function(PageCommand pageCommand) onNavigate,
-    required TResult Function() onLogin,
+    required TResult Function(BuildContext ctx) onLogin,
     required TResult Function() onSignInGoogle,
     required TResult Function() onSignInFacebook,
     required TResult Function() onSignInApple,
@@ -396,7 +396,7 @@ class _$OnChangePasswordImpl implements OnChangePassword {
     TResult? Function(bool value)? onSelectedRemember,
     TResult? Function(bool value)? onVisibilityPassword,
     TResult? Function(PageCommand pageCommand)? onNavigate,
-    TResult? Function()? onLogin,
+    TResult? Function(BuildContext ctx)? onLogin,
     TResult? Function()? onSignInGoogle,
     TResult? Function()? onSignInFacebook,
     TResult? Function()? onSignInApple,
@@ -415,7 +415,7 @@ class _$OnChangePasswordImpl implements OnChangePassword {
     TResult Function(bool value)? onSelectedRemember,
     TResult Function(bool value)? onVisibilityPassword,
     TResult Function(PageCommand pageCommand)? onNavigate,
-    TResult Function()? onLogin,
+    TResult Function(BuildContext ctx)? onLogin,
     TResult Function()? onSignInGoogle,
     TResult Function()? onSignInFacebook,
     TResult Function()? onSignInApple,
@@ -577,7 +577,7 @@ class _$OnChangeEmailImpl implements OnChangeEmail {
     required TResult Function(bool value) onSelectedRemember,
     required TResult Function(bool value) onVisibilityPassword,
     required TResult Function(PageCommand pageCommand) onNavigate,
-    required TResult Function() onLogin,
+    required TResult Function(BuildContext ctx) onLogin,
     required TResult Function() onSignInGoogle,
     required TResult Function() onSignInFacebook,
     required TResult Function() onSignInApple,
@@ -596,7 +596,7 @@ class _$OnChangeEmailImpl implements OnChangeEmail {
     TResult? Function(bool value)? onSelectedRemember,
     TResult? Function(bool value)? onVisibilityPassword,
     TResult? Function(PageCommand pageCommand)? onNavigate,
-    TResult? Function()? onLogin,
+    TResult? Function(BuildContext ctx)? onLogin,
     TResult? Function()? onSignInGoogle,
     TResult? Function()? onSignInFacebook,
     TResult? Function()? onSignInApple,
@@ -615,7 +615,7 @@ class _$OnChangeEmailImpl implements OnChangeEmail {
     TResult Function(bool value)? onSelectedRemember,
     TResult Function(bool value)? onVisibilityPassword,
     TResult Function(PageCommand pageCommand)? onNavigate,
-    TResult Function()? onLogin,
+    TResult Function(BuildContext ctx)? onLogin,
     TResult Function()? onSignInGoogle,
     TResult Function()? onSignInFacebook,
     TResult Function()? onSignInApple,
@@ -778,7 +778,7 @@ class _$OnSelectedRememberImpl implements OnSelectedRemember {
     required TResult Function(bool value) onSelectedRemember,
     required TResult Function(bool value) onVisibilityPassword,
     required TResult Function(PageCommand pageCommand) onNavigate,
-    required TResult Function() onLogin,
+    required TResult Function(BuildContext ctx) onLogin,
     required TResult Function() onSignInGoogle,
     required TResult Function() onSignInFacebook,
     required TResult Function() onSignInApple,
@@ -797,7 +797,7 @@ class _$OnSelectedRememberImpl implements OnSelectedRemember {
     TResult? Function(bool value)? onSelectedRemember,
     TResult? Function(bool value)? onVisibilityPassword,
     TResult? Function(PageCommand pageCommand)? onNavigate,
-    TResult? Function()? onLogin,
+    TResult? Function(BuildContext ctx)? onLogin,
     TResult? Function()? onSignInGoogle,
     TResult? Function()? onSignInFacebook,
     TResult? Function()? onSignInApple,
@@ -816,7 +816,7 @@ class _$OnSelectedRememberImpl implements OnSelectedRemember {
     TResult Function(bool value)? onSelectedRemember,
     TResult Function(bool value)? onVisibilityPassword,
     TResult Function(PageCommand pageCommand)? onNavigate,
-    TResult Function()? onLogin,
+    TResult Function(BuildContext ctx)? onLogin,
     TResult Function()? onSignInGoogle,
     TResult Function()? onSignInFacebook,
     TResult Function()? onSignInApple,
@@ -980,7 +980,7 @@ class _$OnVisibilityPasswordImpl implements OnVisibilityPassword {
     required TResult Function(bool value) onSelectedRemember,
     required TResult Function(bool value) onVisibilityPassword,
     required TResult Function(PageCommand pageCommand) onNavigate,
-    required TResult Function() onLogin,
+    required TResult Function(BuildContext ctx) onLogin,
     required TResult Function() onSignInGoogle,
     required TResult Function() onSignInFacebook,
     required TResult Function() onSignInApple,
@@ -999,7 +999,7 @@ class _$OnVisibilityPasswordImpl implements OnVisibilityPassword {
     TResult? Function(bool value)? onSelectedRemember,
     TResult? Function(bool value)? onVisibilityPassword,
     TResult? Function(PageCommand pageCommand)? onNavigate,
-    TResult? Function()? onLogin,
+    TResult? Function(BuildContext ctx)? onLogin,
     TResult? Function()? onSignInGoogle,
     TResult? Function()? onSignInFacebook,
     TResult? Function()? onSignInApple,
@@ -1018,7 +1018,7 @@ class _$OnVisibilityPasswordImpl implements OnVisibilityPassword {
     TResult Function(bool value)? onSelectedRemember,
     TResult Function(bool value)? onVisibilityPassword,
     TResult Function(PageCommand pageCommand)? onNavigate,
-    TResult Function()? onLogin,
+    TResult Function(BuildContext ctx)? onLogin,
     TResult Function()? onSignInGoogle,
     TResult Function()? onSignInFacebook,
     TResult Function()? onSignInApple,
@@ -1182,7 +1182,7 @@ class _$OnNavigateImpl implements OnNavigate {
     required TResult Function(bool value) onSelectedRemember,
     required TResult Function(bool value) onVisibilityPassword,
     required TResult Function(PageCommand pageCommand) onNavigate,
-    required TResult Function() onLogin,
+    required TResult Function(BuildContext ctx) onLogin,
     required TResult Function() onSignInGoogle,
     required TResult Function() onSignInFacebook,
     required TResult Function() onSignInApple,
@@ -1201,7 +1201,7 @@ class _$OnNavigateImpl implements OnNavigate {
     TResult? Function(bool value)? onSelectedRemember,
     TResult? Function(bool value)? onVisibilityPassword,
     TResult? Function(PageCommand pageCommand)? onNavigate,
-    TResult? Function()? onLogin,
+    TResult? Function(BuildContext ctx)? onLogin,
     TResult? Function()? onSignInGoogle,
     TResult? Function()? onSignInFacebook,
     TResult? Function()? onSignInApple,
@@ -1220,7 +1220,7 @@ class _$OnNavigateImpl implements OnNavigate {
     TResult Function(bool value)? onSelectedRemember,
     TResult Function(bool value)? onVisibilityPassword,
     TResult Function(PageCommand pageCommand)? onNavigate,
-    TResult Function()? onLogin,
+    TResult Function(BuildContext ctx)? onLogin,
     TResult Function()? onSignInGoogle,
     TResult Function()? onSignInFacebook,
     TResult Function()? onSignInApple,
@@ -1313,6 +1313,8 @@ abstract class _$$OnLoginImplCopyWith<$Res> {
   factory _$$OnLoginImplCopyWith(
           _$OnLoginImpl value, $Res Function(_$OnLoginImpl) then) =
       __$$OnLoginImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({BuildContext ctx});
 }
 
 /// @nodoc
@@ -1325,26 +1327,51 @@ class __$$OnLoginImplCopyWithImpl<$Res>
 
   /// Create a copy of LoginEvent
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? ctx = null,
+  }) {
+    return _then(_$OnLoginImpl(
+      null == ctx
+          ? _value.ctx
+          : ctx // ignore: cast_nullable_to_non_nullable
+              as BuildContext,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$OnLoginImpl implements OnLogin {
-  const _$OnLoginImpl();
+  const _$OnLoginImpl(this.ctx);
+
+  @override
+  final BuildContext ctx;
 
   @override
   String toString() {
-    return 'LoginEvent.onLogin()';
+    return 'LoginEvent.onLogin(ctx: $ctx)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$OnLoginImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$OnLoginImpl &&
+            (identical(other.ctx, ctx) || other.ctx == ctx));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, ctx);
+
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnLoginImplCopyWith<_$OnLoginImpl> get copyWith =>
+      __$$OnLoginImplCopyWithImpl<_$OnLoginImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1355,14 +1382,14 @@ class _$OnLoginImpl implements OnLogin {
     required TResult Function(bool value) onSelectedRemember,
     required TResult Function(bool value) onVisibilityPassword,
     required TResult Function(PageCommand pageCommand) onNavigate,
-    required TResult Function() onLogin,
+    required TResult Function(BuildContext ctx) onLogin,
     required TResult Function() onSignInGoogle,
     required TResult Function() onSignInFacebook,
     required TResult Function() onSignInApple,
     required TResult Function() onForgotPassword,
     required TResult Function() onClearPage,
   }) {
-    return onLogin();
+    return onLogin(ctx);
   }
 
   @override
@@ -1374,14 +1401,14 @@ class _$OnLoginImpl implements OnLogin {
     TResult? Function(bool value)? onSelectedRemember,
     TResult? Function(bool value)? onVisibilityPassword,
     TResult? Function(PageCommand pageCommand)? onNavigate,
-    TResult? Function()? onLogin,
+    TResult? Function(BuildContext ctx)? onLogin,
     TResult? Function()? onSignInGoogle,
     TResult? Function()? onSignInFacebook,
     TResult? Function()? onSignInApple,
     TResult? Function()? onForgotPassword,
     TResult? Function()? onClearPage,
   }) {
-    return onLogin?.call();
+    return onLogin?.call(ctx);
   }
 
   @override
@@ -1393,7 +1420,7 @@ class _$OnLoginImpl implements OnLogin {
     TResult Function(bool value)? onSelectedRemember,
     TResult Function(bool value)? onVisibilityPassword,
     TResult Function(PageCommand pageCommand)? onNavigate,
-    TResult Function()? onLogin,
+    TResult Function(BuildContext ctx)? onLogin,
     TResult Function()? onSignInGoogle,
     TResult Function()? onSignInFacebook,
     TResult Function()? onSignInApple,
@@ -1402,7 +1429,7 @@ class _$OnLoginImpl implements OnLogin {
     required TResult orElse(),
   }) {
     if (onLogin != null) {
-      return onLogin();
+      return onLogin(ctx);
     }
     return orElse();
   }
@@ -1470,7 +1497,15 @@ class _$OnLoginImpl implements OnLogin {
 }
 
 abstract class OnLogin implements LoginEvent {
-  const factory OnLogin() = _$OnLoginImpl;
+  const factory OnLogin(final BuildContext ctx) = _$OnLoginImpl;
+
+  BuildContext get ctx;
+
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$OnLoginImplCopyWith<_$OnLoginImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1520,7 +1555,7 @@ class _$OnSignInGoogleImpl implements OnSignInGoogle {
     required TResult Function(bool value) onSelectedRemember,
     required TResult Function(bool value) onVisibilityPassword,
     required TResult Function(PageCommand pageCommand) onNavigate,
-    required TResult Function() onLogin,
+    required TResult Function(BuildContext ctx) onLogin,
     required TResult Function() onSignInGoogle,
     required TResult Function() onSignInFacebook,
     required TResult Function() onSignInApple,
@@ -1539,7 +1574,7 @@ class _$OnSignInGoogleImpl implements OnSignInGoogle {
     TResult? Function(bool value)? onSelectedRemember,
     TResult? Function(bool value)? onVisibilityPassword,
     TResult? Function(PageCommand pageCommand)? onNavigate,
-    TResult? Function()? onLogin,
+    TResult? Function(BuildContext ctx)? onLogin,
     TResult? Function()? onSignInGoogle,
     TResult? Function()? onSignInFacebook,
     TResult? Function()? onSignInApple,
@@ -1558,7 +1593,7 @@ class _$OnSignInGoogleImpl implements OnSignInGoogle {
     TResult Function(bool value)? onSelectedRemember,
     TResult Function(bool value)? onVisibilityPassword,
     TResult Function(PageCommand pageCommand)? onNavigate,
-    TResult Function()? onLogin,
+    TResult Function(BuildContext ctx)? onLogin,
     TResult Function()? onSignInGoogle,
     TResult Function()? onSignInFacebook,
     TResult Function()? onSignInApple,
@@ -1685,7 +1720,7 @@ class _$OnSignInFacebookImpl implements OnSignInFacebook {
     required TResult Function(bool value) onSelectedRemember,
     required TResult Function(bool value) onVisibilityPassword,
     required TResult Function(PageCommand pageCommand) onNavigate,
-    required TResult Function() onLogin,
+    required TResult Function(BuildContext ctx) onLogin,
     required TResult Function() onSignInGoogle,
     required TResult Function() onSignInFacebook,
     required TResult Function() onSignInApple,
@@ -1704,7 +1739,7 @@ class _$OnSignInFacebookImpl implements OnSignInFacebook {
     TResult? Function(bool value)? onSelectedRemember,
     TResult? Function(bool value)? onVisibilityPassword,
     TResult? Function(PageCommand pageCommand)? onNavigate,
-    TResult? Function()? onLogin,
+    TResult? Function(BuildContext ctx)? onLogin,
     TResult? Function()? onSignInGoogle,
     TResult? Function()? onSignInFacebook,
     TResult? Function()? onSignInApple,
@@ -1723,7 +1758,7 @@ class _$OnSignInFacebookImpl implements OnSignInFacebook {
     TResult Function(bool value)? onSelectedRemember,
     TResult Function(bool value)? onVisibilityPassword,
     TResult Function(PageCommand pageCommand)? onNavigate,
-    TResult Function()? onLogin,
+    TResult Function(BuildContext ctx)? onLogin,
     TResult Function()? onSignInGoogle,
     TResult Function()? onSignInFacebook,
     TResult Function()? onSignInApple,
@@ -1850,7 +1885,7 @@ class _$OnSignInAppleImpl implements OnSignInApple {
     required TResult Function(bool value) onSelectedRemember,
     required TResult Function(bool value) onVisibilityPassword,
     required TResult Function(PageCommand pageCommand) onNavigate,
-    required TResult Function() onLogin,
+    required TResult Function(BuildContext ctx) onLogin,
     required TResult Function() onSignInGoogle,
     required TResult Function() onSignInFacebook,
     required TResult Function() onSignInApple,
@@ -1869,7 +1904,7 @@ class _$OnSignInAppleImpl implements OnSignInApple {
     TResult? Function(bool value)? onSelectedRemember,
     TResult? Function(bool value)? onVisibilityPassword,
     TResult? Function(PageCommand pageCommand)? onNavigate,
-    TResult? Function()? onLogin,
+    TResult? Function(BuildContext ctx)? onLogin,
     TResult? Function()? onSignInGoogle,
     TResult? Function()? onSignInFacebook,
     TResult? Function()? onSignInApple,
@@ -1888,7 +1923,7 @@ class _$OnSignInAppleImpl implements OnSignInApple {
     TResult Function(bool value)? onSelectedRemember,
     TResult Function(bool value)? onVisibilityPassword,
     TResult Function(PageCommand pageCommand)? onNavigate,
-    TResult Function()? onLogin,
+    TResult Function(BuildContext ctx)? onLogin,
     TResult Function()? onSignInGoogle,
     TResult Function()? onSignInFacebook,
     TResult Function()? onSignInApple,
@@ -2015,7 +2050,7 @@ class _$OnForgotPasswordImpl implements OnForgotPassword {
     required TResult Function(bool value) onSelectedRemember,
     required TResult Function(bool value) onVisibilityPassword,
     required TResult Function(PageCommand pageCommand) onNavigate,
-    required TResult Function() onLogin,
+    required TResult Function(BuildContext ctx) onLogin,
     required TResult Function() onSignInGoogle,
     required TResult Function() onSignInFacebook,
     required TResult Function() onSignInApple,
@@ -2034,7 +2069,7 @@ class _$OnForgotPasswordImpl implements OnForgotPassword {
     TResult? Function(bool value)? onSelectedRemember,
     TResult? Function(bool value)? onVisibilityPassword,
     TResult? Function(PageCommand pageCommand)? onNavigate,
-    TResult? Function()? onLogin,
+    TResult? Function(BuildContext ctx)? onLogin,
     TResult? Function()? onSignInGoogle,
     TResult? Function()? onSignInFacebook,
     TResult? Function()? onSignInApple,
@@ -2053,7 +2088,7 @@ class _$OnForgotPasswordImpl implements OnForgotPassword {
     TResult Function(bool value)? onSelectedRemember,
     TResult Function(bool value)? onVisibilityPassword,
     TResult Function(PageCommand pageCommand)? onNavigate,
-    TResult Function()? onLogin,
+    TResult Function(BuildContext ctx)? onLogin,
     TResult Function()? onSignInGoogle,
     TResult Function()? onSignInFacebook,
     TResult Function()? onSignInApple,
@@ -2180,7 +2215,7 @@ class _$OnClearPageImpl implements OnClearPage {
     required TResult Function(bool value) onSelectedRemember,
     required TResult Function(bool value) onVisibilityPassword,
     required TResult Function(PageCommand pageCommand) onNavigate,
-    required TResult Function() onLogin,
+    required TResult Function(BuildContext ctx) onLogin,
     required TResult Function() onSignInGoogle,
     required TResult Function() onSignInFacebook,
     required TResult Function() onSignInApple,
@@ -2199,7 +2234,7 @@ class _$OnClearPageImpl implements OnClearPage {
     TResult? Function(bool value)? onSelectedRemember,
     TResult? Function(bool value)? onVisibilityPassword,
     TResult? Function(PageCommand pageCommand)? onNavigate,
-    TResult? Function()? onLogin,
+    TResult? Function(BuildContext ctx)? onLogin,
     TResult? Function()? onSignInGoogle,
     TResult? Function()? onSignInFacebook,
     TResult? Function()? onSignInApple,
@@ -2218,7 +2253,7 @@ class _$OnClearPageImpl implements OnClearPage {
     TResult Function(bool value)? onSelectedRemember,
     TResult Function(bool value)? onVisibilityPassword,
     TResult Function(PageCommand pageCommand)? onNavigate,
-    TResult Function()? onLogin,
+    TResult Function(BuildContext ctx)? onLogin,
     TResult Function()? onSignInGoogle,
     TResult Function()? onSignInFacebook,
     TResult Function()? onSignInApple,
@@ -2306,6 +2341,8 @@ mixin _$LoginState {
   bool get visibilityOffPassword => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
   String? get password => throw _privateConstructorUsedError;
+  String? get errEmail => throw _privateConstructorUsedError;
+  String? get errPassword => throw _privateConstructorUsedError;
 
   /// Create a copy of LoginState
   /// with the given fields replaced by the non-null parameter values.
@@ -2326,7 +2363,9 @@ abstract class $LoginStateCopyWith<$Res> {
       bool isEnable,
       bool visibilityOffPassword,
       String? email,
-      String? password});
+      String? password,
+      String? errEmail,
+      String? errPassword});
 }
 
 /// @nodoc
@@ -2350,6 +2389,8 @@ class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
     Object? visibilityOffPassword = null,
     Object? email = freezed,
     Object? password = freezed,
+    Object? errEmail = freezed,
+    Object? errPassword = freezed,
   }) {
     return _then(_value.copyWith(
       pageCommand: freezed == pageCommand
@@ -2376,6 +2417,14 @@ class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String?,
+      errEmail: freezed == errEmail
+          ? _value.errEmail
+          : errEmail // ignore: cast_nullable_to_non_nullable
+              as String?,
+      errPassword: freezed == errPassword
+          ? _value.errPassword
+          : errPassword // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -2394,7 +2443,9 @@ abstract class _$$LoginStateImplCopyWith<$Res>
       bool isEnable,
       bool visibilityOffPassword,
       String? email,
-      String? password});
+      String? password,
+      String? errEmail,
+      String? errPassword});
 }
 
 /// @nodoc
@@ -2416,6 +2467,8 @@ class __$$LoginStateImplCopyWithImpl<$Res>
     Object? visibilityOffPassword = null,
     Object? email = freezed,
     Object? password = freezed,
+    Object? errEmail = freezed,
+    Object? errPassword = freezed,
   }) {
     return _then(_$LoginStateImpl(
       pageCommand: freezed == pageCommand
@@ -2442,6 +2495,14 @@ class __$$LoginStateImplCopyWithImpl<$Res>
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String?,
+      errEmail: freezed == errEmail
+          ? _value.errEmail
+          : errEmail // ignore: cast_nullable_to_non_nullable
+              as String?,
+      errPassword: freezed == errPassword
+          ? _value.errPassword
+          : errPassword // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -2455,7 +2516,9 @@ class _$LoginStateImpl extends _LoginState {
       this.isEnable = false,
       this.visibilityOffPassword = true,
       this.email,
-      this.password})
+      this.password,
+      this.errEmail,
+      this.errPassword})
       : super._();
 
   @override
@@ -2473,10 +2536,14 @@ class _$LoginStateImpl extends _LoginState {
   final String? email;
   @override
   final String? password;
+  @override
+  final String? errEmail;
+  @override
+  final String? errPassword;
 
   @override
   String toString() {
-    return 'LoginState(pageCommand: $pageCommand, isRememberMe: $isRememberMe, isEnable: $isEnable, visibilityOffPassword: $visibilityOffPassword, email: $email, password: $password)';
+    return 'LoginState(pageCommand: $pageCommand, isRememberMe: $isRememberMe, isEnable: $isEnable, visibilityOffPassword: $visibilityOffPassword, email: $email, password: $password, errEmail: $errEmail, errPassword: $errPassword)';
   }
 
   @override
@@ -2494,12 +2561,16 @@ class _$LoginStateImpl extends _LoginState {
                 other.visibilityOffPassword == visibilityOffPassword) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.password, password) ||
-                other.password == password));
+                other.password == password) &&
+            (identical(other.errEmail, errEmail) ||
+                other.errEmail == errEmail) &&
+            (identical(other.errPassword, errPassword) ||
+                other.errPassword == errPassword));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, pageCommand, isRememberMe,
-      isEnable, visibilityOffPassword, email, password);
+      isEnable, visibilityOffPassword, email, password, errEmail, errPassword);
 
   /// Create a copy of LoginState
   /// with the given fields replaced by the non-null parameter values.
@@ -2517,7 +2588,9 @@ abstract class _LoginState extends LoginState {
       final bool isEnable,
       final bool visibilityOffPassword,
       final String? email,
-      final String? password}) = _$LoginStateImpl;
+      final String? password,
+      final String? errEmail,
+      final String? errPassword}) = _$LoginStateImpl;
   const _LoginState._() : super._();
 
   @override
@@ -2532,6 +2605,10 @@ abstract class _LoginState extends LoginState {
   String? get email;
   @override
   String? get password;
+  @override
+  String? get errEmail;
+  @override
+  String? get errPassword;
 
   /// Create a copy of LoginState
   /// with the given fields replaced by the non-null parameter values.

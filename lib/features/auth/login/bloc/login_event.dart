@@ -8,7 +8,7 @@ part of 'login_bloc.dart';
   const factory LoginEvent.onSelectedRemember(bool value) = OnSelectedRemember;
   const factory LoginEvent.onVisibilityPassword(bool value) = OnVisibilityPassword;
   const factory LoginEvent.onNavigate(PageCommand pageCommand) = OnNavigate;
-  const factory LoginEvent.onLogin() = OnLogin;
+  const factory LoginEvent.onLogin(BuildContext ctx) = OnLogin;
   const factory LoginEvent.onSignInGoogle() = OnSignInGoogle;
   const factory LoginEvent.onSignInFacebook() = OnSignInFacebook;
   const factory LoginEvent.onSignInApple() = OnSignInApple;

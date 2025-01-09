@@ -81,5 +81,8 @@
   "hint_text_password": "Password",
   "title_create_your_account": "Create Your Account",
   "txt_already_have_an_account": "Already have an account? ",
-  "txt_sign_in": "Sign in"
+  "txt_sign_in": "Sign in",
+  "err_email_invalid": "Email is invalid",
+  "err_invalid_password": "Password must contain at least one uppercase letter, one lowercase letter, and one number.",
+  "err_invalid_pass": "Password must contain at least 5 characters including uppercase, lowercase and numbers"
 }

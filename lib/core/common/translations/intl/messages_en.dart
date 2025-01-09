@@ -39,6 +39,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "btn_update": MessageLookupByLibrary.simpleMessage("Update"),
         "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
             "Enjoy watching Full-HD movies, without restrictions and without ads"),
+        "err_email_invalid":
+            MessageLookupByLibrary.simpleMessage("Email is invalid"),
+        "err_invalid_pass": MessageLookupByLibrary.simpleMessage(
+            "Password must contain at least 5 characters including uppercase, lowercase and numbers"),
+        "err_invalid_password": MessageLookupByLibrary.simpleMessage(
+            "Password must contain at least one uppercase letter, one lowercase letter, and one number."),
         "female": MessageLookupByLibrary.simpleMessage("Female"),
         "hint_full_name": MessageLookupByLibrary.simpleMessage("Full name"),
         "hint_text_country": MessageLookupByLibrary.simpleMessage("Country"),

@@ -13,7 +13,9 @@ class EmailInput extends StatelessWidget {
   Widget build(BuildContext context) {
     TextEditingController ctrEmail = TextEditingController();
     return BlocBuilder<LoginBloc, LoginState>(
-      buildWhen: (previous, current) => previous.email != current.email,
+      buildWhen: (previous, current) =>
+          previous.email != current.email ||
+          previous.errEmail != current.errEmail,
       bloc: bloc,
       builder: (context, state) {
         ctrEmail.text = state.email ?? "";
@@ -21,6 +23,7 @@ class EmailInput extends StatelessWidget {
           initValue: state.email,
           hintText: S.of(context).hint_text_email,
           keyboardType: TextInputType.emailAddress,
+          error: state.errEmail,
           prefixWidget: SvgWidget(ic: 'assets/icons/ic_email.svg'),
           onChanged: (val) => bloc.add(LoginEvent.onChangeEmail(val)),
           ctr: ctrEmail,

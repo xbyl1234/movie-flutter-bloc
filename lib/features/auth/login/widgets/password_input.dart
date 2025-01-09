@@ -12,19 +12,24 @@ class PasswordInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<LoginBloc, LoginState>(
-      buildWhen: (previous, current) => previous.password != current.password,
+      buildWhen: (previous, current) =>
+          previous.password != current.password ||
+          previous.errPassword != current.errPassword ||
+          previous.visibilityOffPassword != current.visibilityOffPassword,
       bloc: bloc,
       builder: (context, state) {
         return CustomTextField(
           initValue: state.password,
           hintText: S.of(context).hint_text_password,
           obscureText: state.visibilityOffPassword,
+          error: state.errPassword,
           prefixWidget: SvgWidget(ic: 'assets/icons/ic_password.svg'),
           icon: state.visibilityOffPassword
               ? Icons.visibility
               : Icons.visibility_off,
           actionRight: () {
-            bloc.add(LoginEvent.onVisibilityPassword(!state.visibilityOffPassword));
+            bloc.add(
+                LoginEvent.onVisibilityPassword(!state.visibilityOffPassword));
           },
           onChanged: (val) => bloc.add(LoginEvent.onChangePassword(val)),
         );

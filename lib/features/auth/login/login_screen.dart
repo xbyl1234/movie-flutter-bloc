@@ -62,7 +62,7 @@ class LoginScreen extends StatelessWidget {
                   bloc: bloc,
                 ),
                 const SizedBox(
-                  height: 16,
+                  height: 24,
                 ),
                 PasswordInput(
                   bloc: bloc,
@@ -197,6 +197,8 @@ class LoginScreen extends StatelessWidget {
     if (pageCommand.page == signUpRoute) {
       final result = await Navigator.pushNamed(ctx, signUpRoute);
       bloc.add(LoginEvent.onChangeEmail('$result'));
+    } else if (pageCommand.page == mainRoute) {
+      Navigator.pushNamedAndRemoveUntil(ctx, mainRoute, (route) => false);
     } else {
       Navigator.pushNamed(ctx, pageCommand.page!);
     }

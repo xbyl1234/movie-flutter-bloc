@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/core/bloc/page_command.dart';
+import 'package:movie/core/common/contants/routers.dart';
 import 'package:movie/di/dependency_injection.dart';
 import 'package:movie/features/auth/sign_up/bloc/sign_up_bloc.dart';
 import 'package:movie/features/auth/sign_up/widgets/email_input.dart';
@@ -32,7 +33,9 @@ class SignUpScreen extends StatelessWidget {
             listener: (context, state) {
               if (state.pageCommand is PageCommandNavigatorPage) {
                 final pageCommand = state.pageCommand as PageCommandNavigatorPage;
-                Navigator.pop(context, pageCommand.argument);
+                if (pageCommand.page == loginRoute) {
+                  Navigator.pop(context, pageCommand.argument);
+                }
               }
               bloc.add(SignUpEvent.onClearPage());
             },
@@ -68,7 +71,7 @@ class SignUpScreen extends StatelessWidget {
                     return CustomButton(
                         btnText: S.of(context).btn_sign_up,
                         enable: state.isEnable,
-                        action: () => bloc.add(SignUpEvent.onSignUp()));
+                        action: () => bloc.add(SignUpEvent.onSignUp(context)));
                   },
                 ),
                 const SizedBox(
@@ -100,8 +103,7 @@ class SignUpScreen extends StatelessWidget {
                   height: 20,
                 ),
                 SignUpOrSignInSocial(
-                  onPressedFaceBook: () =>
-                      bloc.add(SignUpEvent.onSignUpFacebook()),
+                  onPressedFaceBook: () => bloc.add(SignUpEvent.onSignUpFacebook()),
                   onPressedGoogle: () => bloc.add(SignUpEvent.onSignUpGoogle()),
                   onPressedApple: () => bloc.add(SignUpEvent.onSignUpApple()),
                 ),

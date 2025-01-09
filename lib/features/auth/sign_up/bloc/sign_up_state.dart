@@ -9,6 +9,8 @@ class SignUpState with _$SignUpState {
     @Default(true) bool visibilityOffPassword,
     String? email,
     String? password,
+    String? errEmail,
+    String? errPassword,
   }) = _SignUpState;
 }
 
