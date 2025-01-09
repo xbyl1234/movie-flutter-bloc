@@ -31,7 +31,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "btn_change": MessageLookupByLibrary.simpleMessage("Change"),
         "btn_continue": MessageLookupByLibrary.simpleMessage("Continue"),
         "btn_download": MessageLookupByLibrary.simpleMessage("Download"),
+        "btn_forgot_fassword":
+            MessageLookupByLibrary.simpleMessage("Forgot  password?"),
+        "btn_login": MessageLookupByLibrary.simpleMessage("Login"),
         "btn_play": MessageLookupByLibrary.simpleMessage("Play"),
+        "btn_sign_up": MessageLookupByLibrary.simpleMessage("Sign up"),
         "btn_update": MessageLookupByLibrary.simpleMessage("Update"),
         "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
             "Enjoy watching Full-HD movies, without restrictions and without ads"),
@@ -40,6 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hint_text_country": MessageLookupByLibrary.simpleMessage("Country"),
         "hint_text_email": MessageLookupByLibrary.simpleMessage("Email"),
         "hint_text_gender": MessageLookupByLibrary.simpleMessage("Gender"),
+        "hint_text_password": MessageLookupByLibrary.simpleMessage("Password"),
         "hint_text_phone_number":
             MessageLookupByLibrary.simpleMessage("Phone number"),
         "hint_text_search_country":
@@ -75,6 +80,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "tf_expiry_date": MessageLookupByLibrary.simpleMessage("Expiry Date"),
         "title_add_new_card":
             MessageLookupByLibrary.simpleMessage("Add New Card"),
+        "title_create_your_account":
+            MessageLookupByLibrary.simpleMessage("Create Your Account"),
         "title_edit_profile":
             MessageLookupByLibrary.simpleMessage("Edit Profile"),
         "title_gender": MessageLookupByLibrary.simpleMessage("Gender"),
@@ -97,17 +104,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "title_upcoming": MessageLookupByLibrary.simpleMessage("Upcoming"),
         "txt_allows_streaming_of4k":
             MessageLookupByLibrary.simpleMessage("Allows streaming of 4K."),
+        "txt_already_have_an_account":
+            MessageLookupByLibrary.simpleMessage("Already have an account? "),
         "txt_amount": MessageLookupByLibrary.simpleMessage("Amount"),
         "txt_congratulations":
             MessageLookupByLibrary.simpleMessage("Congratulations!"),
         "txt_content_congratulations": m0,
         "txt_content_join_premium": MessageLookupByLibrary.simpleMessage(
             "Enjoy watching Full-HD movies, without restrictions and without ads"),
+        "txt_dont_have_an_account":
+            MessageLookupByLibrary.simpleMessage("Don’t have an account? "),
         "txt_join_premium":
             MessageLookupByLibrary.simpleMessage("Join Premium!"),
+        "txt_login_to_your_account":
+            MessageLookupByLibrary.simpleMessage("Login to Your Account"),
         "txt_month": MessageLookupByLibrary.simpleMessage("month"),
+        "txt_or_continue_with":
+            MessageLookupByLibrary.simpleMessage("or continue with"),
+        "txt_remember_me": MessageLookupByLibrary.simpleMessage("Remember me"),
         "txt_select_payment_method": MessageLookupByLibrary.simpleMessage(
             "Select the payment method you want to use."),
+        "txt_sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
         "txt_tax": MessageLookupByLibrary.simpleMessage("Tax"),
         "txt_total": MessageLookupByLibrary.simpleMessage("Total"),
         "txt_video_audio_quality_is_better":

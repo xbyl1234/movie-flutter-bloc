@@ -31,7 +31,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "btn_change": MessageLookupByLibrary.simpleMessage("Thay đổi"),
         "btn_continue": MessageLookupByLibrary.simpleMessage("Tiếp tục"),
         "btn_download": MessageLookupByLibrary.simpleMessage("Tải về"),
+        "btn_forgot_fassword":
+            MessageLookupByLibrary.simpleMessage("Forgot  password?"),
+        "btn_login": MessageLookupByLibrary.simpleMessage("Login"),
         "btn_play": MessageLookupByLibrary.simpleMessage("Chơi"),
+        "btn_sign_up": MessageLookupByLibrary.simpleMessage("Sign up"),
         "btn_update": MessageLookupByLibrary.simpleMessage("Cập nhật"),
         "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
             "Thưởng thức phim Full-HD, không giới hạn và không có quảng cáo"),
@@ -40,6 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hint_text_country": MessageLookupByLibrary.simpleMessage("Quốc gia"),
         "hint_text_email": MessageLookupByLibrary.simpleMessage("Email"),
         "hint_text_gender": MessageLookupByLibrary.simpleMessage("Giới tính"),
+        "hint_text_password": MessageLookupByLibrary.simpleMessage("Password"),
         "hint_text_phone_number":
             MessageLookupByLibrary.simpleMessage("Số điện thoại"),
         "hint_text_search_country":
@@ -76,6 +81,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "tf_expiry_date": MessageLookupByLibrary.simpleMessage("Ngày hết hạn"),
         "title_add_new_card":
             MessageLookupByLibrary.simpleMessage("Thêm thẻ mới"),
+        "title_create_your_account":
+            MessageLookupByLibrary.simpleMessage("Create Your Account"),
         "title_edit_profile":
             MessageLookupByLibrary.simpleMessage("Cập nhật thông tin"),
         "title_gender": MessageLookupByLibrary.simpleMessage("Giới tính"),
@@ -97,17 +104,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "title_upcoming": MessageLookupByLibrary.simpleMessage("Sắp tới"),
         "txt_allows_streaming_of4k": MessageLookupByLibrary.simpleMessage(
             "Cho phép phát trực tuyến 4K."),
+        "txt_already_have_an_account":
+            MessageLookupByLibrary.simpleMessage("Already have an account? "),
         "txt_amount": MessageLookupByLibrary.simpleMessage("Số lượng"),
         "txt_congratulations":
             MessageLookupByLibrary.simpleMessage("Xin chúc mừng!"),
         "txt_content_congratulations": m0,
         "txt_content_join_premium": MessageLookupByLibrary.simpleMessage(
             "Thưởng thức phim Full-HD, không giới hạn và không có quảng cáo"),
+        "txt_dont_have_an_account":
+            MessageLookupByLibrary.simpleMessage("Don’t have an account? "),
         "txt_join_premium":
             MessageLookupByLibrary.simpleMessage("Đăng ký Premium!"),
+        "txt_login_to_your_account":
+            MessageLookupByLibrary.simpleMessage("Login to Your Account"),
         "txt_month": MessageLookupByLibrary.simpleMessage("tháng"),
+        "txt_or_continue_with":
+            MessageLookupByLibrary.simpleMessage("or continue with"),
+        "txt_remember_me": MessageLookupByLibrary.simpleMessage("Remember me"),
         "txt_select_payment_method": MessageLookupByLibrary.simpleMessage(
             "Chọn phương thức thanh toán bạn muốn sử dụng."),
+        "txt_sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
         "txt_tax": MessageLookupByLibrary.simpleMessage("Thuế"),
         "txt_total": MessageLookupByLibrary.simpleMessage("Tổng tiền"),
         "txt_video_audio_quality_is_better":

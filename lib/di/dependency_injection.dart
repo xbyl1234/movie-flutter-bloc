@@ -1,4 +1,6 @@
 import 'package:get_it/get_it.dart';
+import 'package:movie/features/auth/login/bloc/login_bloc.dart';
+import 'package:movie/features/auth/sign_up/bloc/sign_up_bloc.dart';
 import 'package:movie/features/confirm_payment/bloc/confirm_payment_bloc.dart';
 import 'package:movie/features/language/bloc/language_bloc.dart';
 import 'package:movie/features/main/screens/profile/bloc/profile_bloc.dart';
@@ -33,12 +35,13 @@ Future<void> init() async {
   getIt.registerSingleton<MovieProvider>((MovieProvider()));
   getIt.registerSingleton<MovieApiService>((MovieApiService(getIt.get())));
 
-  getIt.registerLazySingleton<SearchMovieProvider>(() => SearchMovieProvider());
-  getIt.registerLazySingleton<SearchMovieApiService>(
-      () => SearchMovieApiService(getIt.get()));
+  getIt.registerFactory<LoginBloc>(() => LoginBloc());
+  getIt.registerFactory<SignUpBloc>(() => SignUpBloc());
 
-  getIt.registerSingleton<MovieDetailRepository>(
-      MovieDetailRepositoryImpl(getIt.get()));
+  getIt.registerLazySingleton<SearchMovieProvider>(() => SearchMovieProvider());
+  getIt.registerLazySingleton<SearchMovieApiService>(() => SearchMovieApiService(getIt.get()));
+
+  getIt.registerSingleton<MovieDetailRepository>(MovieDetailRepositoryImpl(getIt.get()));
   getIt.registerSingleton<MovieDetailUseCase>(MovieDetailUseCase(getIt.get()));
 
   getIt.registerSingleton<ListMovieRepository>(

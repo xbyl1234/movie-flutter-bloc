@@ -699,6 +699,116 @@ class S {
       args: [],
     );
   }
+
+  /// `Sign up`
+  String get btn_sign_up {
+    return Intl.message(
+      'Sign up',
+      name: 'btn_sign_up',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don’t have an account? `
+  String get txt_dont_have_an_account {
+    return Intl.message(
+      'Don’t have an account? ',
+      name: 'txt_dont_have_an_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `or continue with`
+  String get txt_or_continue_with {
+    return Intl.message(
+      'or continue with',
+      name: 'txt_or_continue_with',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot  password?`
+  String get btn_forgot_fassword {
+    return Intl.message(
+      'Forgot  password?',
+      name: 'btn_forgot_fassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get btn_login {
+    return Intl.message(
+      'Login',
+      name: 'btn_login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remember me`
+  String get txt_remember_me {
+    return Intl.message(
+      'Remember me',
+      name: 'txt_remember_me',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login to Your Account`
+  String get txt_login_to_your_account {
+    return Intl.message(
+      'Login to Your Account',
+      name: 'txt_login_to_your_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get hint_text_password {
+    return Intl.message(
+      'Password',
+      name: 'hint_text_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create Your Account`
+  String get title_create_your_account {
+    return Intl.message(
+      'Create Your Account',
+      name: 'title_create_your_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account? `
+  String get txt_already_have_an_account {
+    return Intl.message(
+      'Already have an account? ',
+      name: 'txt_already_have_an_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign in`
+  String get txt_sign_in {
+    return Intl.message(
+      'Sign in',
+      name: 'txt_sign_in',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

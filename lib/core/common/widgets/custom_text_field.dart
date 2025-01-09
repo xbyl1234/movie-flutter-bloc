@@ -16,6 +16,9 @@ class CustomTextField extends StatefulWidget {
   final List<TextInputFormatter>? inputFormatters;
   final TextInputAction textInputAction;
   final Widget? prefixWidget;
+  final bool obscureText;
+  final IconData? icon;
+  final TextEditingController? ctr;
 
   const CustomTextField({
     super.key,
@@ -32,6 +35,9 @@ class CustomTextField extends StatefulWidget {
     this.inputFormatters,
     this.textInputAction = TextInputAction.none,
     this.prefixWidget,
+    this.obscureText = false,
+    this.icon,
+    this.ctr,
   });
 
   @override
@@ -39,18 +45,16 @@ class CustomTextField extends StatefulWidget {
 }
 
 class _CustomTextFieldState extends State<CustomTextField> {
-  late TextEditingController controller;
 
   @override
   void initState() {
     super.initState();
-    controller = TextEditingController(text: widget.initValue);
   }
 
   @override
   void dispose() {
     super.dispose();
-    controller.dispose();
+    widget.ctr?.clear();
   }
 
   @override
@@ -68,7 +72,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
           ),
         ],
         TextFormField(
-          controller: controller,
+          controller: widget.ctr,
+          obscureText: widget.obscureText,
+          style: TextStyle(color: Colors.black),
           textInputAction: widget.textInputAction,
           onChanged: (val) =>
               widget.onChanged != null ? widget.onChanged!(val) : null,
@@ -79,10 +85,12 @@ class _CustomTextFieldState extends State<CustomTextField> {
           decoration: InputDecoration(
               hintText: widget.hintText,
               prefixIcon: widget.prefixWidget,
-              suffixIcon: widget.icRight != null
+              suffixIcon: widget.icRight != null || widget.icon != null
                   ? InkWell(
                       onTap: () => widget.actionRight!.call(),
-                      child: SvgWidget(ic: widget.icRight!))
+                      child: widget.icon != null
+                          ? Icon(widget.icon)
+                          : SvgWidget(ic: widget.icRight!))
                   : null,
               counterText: ''),
         ),
