@@ -32,31 +32,31 @@ final GetIt getIt = GetIt.instance;
 
 Future<void> init() async {
   getIt.registerSingleton(AppCubit());
-  getIt.registerSingleton<MovieProvider>((MovieProvider()));
-  getIt.registerSingleton<MovieApiService>((MovieApiService(getIt.get())));
+  getIt.registerLazySingleton(() => MovieProvider());
+  getIt.registerLazySingleton(() => MovieApiService(getIt.get()));
 
-  getIt.registerFactory<LoginBloc>(() => LoginBloc());
-  getIt.registerFactory<SignUpBloc>(() => SignUpBloc());
+  getIt.registerFactory(() => LoginBloc());
+  getIt.registerFactory(() => SignUpBloc());
 
-  getIt.registerLazySingleton<SearchMovieProvider>(() => SearchMovieProvider());
-  getIt.registerLazySingleton<SearchMovieApiService>(() => SearchMovieApiService(getIt.get()));
+  getIt.registerLazySingleton(() => SearchMovieProvider());
+  getIt.registerLazySingleton(() => SearchMovieApiService(getIt.get()));
 
   getIt.registerSingleton<MovieDetailRepository>(MovieDetailRepositoryImpl(getIt.get()));
   getIt.registerSingleton<MovieDetailUseCase>(MovieDetailUseCase(getIt.get()));
 
-  getIt.registerSingleton<ListMovieRepository>(
-      ListMovieRepositoryImpl(getIt.get()));
+  getIt.registerSingleton<ListMovieRepository>(ListMovieRepositoryImpl(getIt.get()));
   getIt.registerSingleton<ListMovieUseCase>(ListMovieUseCase(getIt.get()));
 
   getIt.registerFactory(() => ListMovieCubit(getIt.get()));
   getIt.registerSingleton(ReviewUseCase(getIt.get()));
   getIt.registerSingleton(TrailerUseCase(getIt.get()));
 
-  getIt.registerSingleton<HomeCubit>(HomeCubit(
+  getIt.registerSingleton(HomeCubit(
     movieDetailUseCase: getIt.get(),
     listMovieUseCase: getIt.get(),
     trailerUseCase: getIt.get(),
   ));
+
   getIt.registerFactory(() => MovieDetailBlocCubit(
         detailUseCase: getIt.get(),
         listMovieUseCase: getIt.get(),
@@ -64,21 +64,20 @@ Future<void> init() async {
         trailerUseCase: getIt.get(),
       ));
 
-  getIt.registerLazySingleton<SearchMoviesRepository>(
-    () => SearchMoviesRepositoryImpl(getIt.get()),
-  );
-  getIt.registerLazySingleton<SearchUseCase>(() => SearchUseCase(getIt.get()));
-  getIt.registerLazySingleton<ExploreCubit>(() => ExploreCubit(getIt.get()));
+  getIt.registerLazySingleton<SearchMoviesRepository>(() => SearchMoviesRepositoryImpl(getIt.get()));
 
-  getIt.registerFactory<PaymentsBloc>(() => PaymentsBloc());
+  getIt.registerLazySingleton(() => SearchUseCase(getIt.get()));
+  getIt.registerLazySingleton(() => ExploreCubit(getIt.get()));
 
-  getIt.registerFactory<ConfirmPaymentBloc>(() => ConfirmPaymentBloc());
+  getIt.registerFactory(() => PaymentsBloc());
 
-  getIt.registerFactory<AddCardBloc>(() => AddCardBloc());
+  getIt.registerFactory(() => ConfirmPaymentBloc());
 
-  getIt.registerLazySingleton<ProfileBloc>(() => ProfileBloc());
+  getIt.registerFactory(() => AddCardBloc());
 
-  getIt.registerFactory<LanguageBloc>(() => LanguageBloc());
+  getIt.registerLazySingleton(() => ProfileBloc());
 
-  getIt.registerFactory<EditProfileBloc>(() => EditProfileBloc());
+  getIt.registerFactory(() => LanguageBloc());
+
+  getIt.registerFactory(() => EditProfileBloc());
 }
