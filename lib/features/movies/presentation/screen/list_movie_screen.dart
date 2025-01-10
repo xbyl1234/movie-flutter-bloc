@@ -1,11 +1,11 @@
 import 'package:loading_animation_widget/loading_animation_widget.dart';
-import 'package:movie/core/bloc/base_movie_status.dart';
 import 'package:movie/core/common/widgets/custom_app_bar.dart';
 import 'package:movie/core/common/widgets/item_movie.dart';
 import 'package:movie/core/common/widgets/loading.dart';
 import 'package:movie/di/dependency_injection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../../core/bloc/page_state.dart';
 import '../bloc/list_movie_cubit.dart';
 
 class ListMovieArg {
@@ -25,18 +25,18 @@ class ListMovieScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(title: arg.title),
       body: BlocBuilder<ListMovieCubit, ListMovieState>(
-        bloc: cubit..onGetListMovie(arg.path, BaseMovieStatus.loading),
+        bloc: cubit..onGetListMovie(arg.path, PageState.loading),
         builder: (context, state) {
-          if (state.status == BaseMovieStatus.loading) {
+          if (state.status == PageState.loading) {
             return Loading();
-          } else if (state.status == BaseMovieStatus.success ||
-              state.status == BaseMovieStatus.loadMore) {
+          } else if (state.status == PageState.success ||
+              state.status == PageState.loadMore) {
             return NotificationListener(
               onNotification: (ScrollNotification scrollInfo) {
                 final metrics = scrollInfo.metrics;
                 if (!metrics.atEdge) return true;
                 if (metrics.pixels == 0) return true;
-                cubit.onGetListMovie(arg.path, BaseMovieStatus.loadMore);
+                cubit.onGetListMovie(arg.path, PageState.loadMore);
                 return true;
               },
               child: GridView.builder(

@@ -1,4 +1,3 @@
-import 'package:movie/core/bloc/base_movie_status.dart';
 import 'package:movie/core/bloc/page_command.dart';
 import 'package:movie/core/config/network_constants.dart';
 import 'package:movie/di/dependency_injection.dart';
@@ -7,6 +6,7 @@ import 'package:movie/features/main/screens/home/view/main_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/bloc/page_state.dart';
 import '../../../../core/common/widgets/loading.dart';
 import 'bloc/home_cubit.dart';
 
@@ -47,9 +47,9 @@ class _HomeScreenState extends State<HomeScreen>
           }
         },
         builder: (context, state) {
-          if (state.status == BaseMovieStatus.loading) {
+          if (state.status == PageState.loading) {
             return const Loading();
-          } else if (state.status == BaseMovieStatus.success) {
+          } else if (state.status == PageState.success) {
             return RefreshIndicator(
               onRefresh: () async {
                 cubit
@@ -82,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen>
               ),
             );
           }
-          return const Text('Error');
+          return const SizedBox.shrink();
         },
       ),
     );

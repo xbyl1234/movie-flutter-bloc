@@ -2336,6 +2336,7 @@ abstract class OnClearPage implements LoginEvent {
 /// @nodoc
 mixin _$LoginState {
   PageCommand? get pageCommand => throw _privateConstructorUsedError;
+  PageState get status => throw _privateConstructorUsedError;
   bool get isRememberMe => throw _privateConstructorUsedError;
   bool get isEnable => throw _privateConstructorUsedError;
   bool get visibilityOffPassword => throw _privateConstructorUsedError;
@@ -2359,6 +2360,7 @@ abstract class $LoginStateCopyWith<$Res> {
   @useResult
   $Res call(
       {PageCommand? pageCommand,
+      PageState status,
       bool isRememberMe,
       bool isEnable,
       bool visibilityOffPassword,
@@ -2384,6 +2386,7 @@ class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
   @override
   $Res call({
     Object? pageCommand = freezed,
+    Object? status = null,
     Object? isRememberMe = null,
     Object? isEnable = null,
     Object? visibilityOffPassword = null,
@@ -2397,6 +2400,10 @@ class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
           ? _value.pageCommand
           : pageCommand // ignore: cast_nullable_to_non_nullable
               as PageCommand?,
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as PageState,
       isRememberMe: null == isRememberMe
           ? _value.isRememberMe
           : isRememberMe // ignore: cast_nullable_to_non_nullable
@@ -2439,6 +2446,7 @@ abstract class _$$LoginStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {PageCommand? pageCommand,
+      PageState status,
       bool isRememberMe,
       bool isEnable,
       bool visibilityOffPassword,
@@ -2462,6 +2470,7 @@ class __$$LoginStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? pageCommand = freezed,
+    Object? status = null,
     Object? isRememberMe = null,
     Object? isEnable = null,
     Object? visibilityOffPassword = null,
@@ -2475,6 +2484,10 @@ class __$$LoginStateImplCopyWithImpl<$Res>
           ? _value.pageCommand
           : pageCommand // ignore: cast_nullable_to_non_nullable
               as PageCommand?,
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as PageState,
       isRememberMe: null == isRememberMe
           ? _value.isRememberMe
           : isRememberMe // ignore: cast_nullable_to_non_nullable
@@ -2512,6 +2525,7 @@ class __$$LoginStateImplCopyWithImpl<$Res>
 class _$LoginStateImpl extends _LoginState {
   const _$LoginStateImpl(
       {this.pageCommand,
+      this.status = PageState.init,
       this.isRememberMe = false,
       this.isEnable = false,
       this.visibilityOffPassword = true,
@@ -2523,6 +2537,9 @@ class _$LoginStateImpl extends _LoginState {
 
   @override
   final PageCommand? pageCommand;
+  @override
+  @JsonKey()
+  final PageState status;
   @override
   @JsonKey()
   final bool isRememberMe;
@@ -2543,7 +2560,7 @@ class _$LoginStateImpl extends _LoginState {
 
   @override
   String toString() {
-    return 'LoginState(pageCommand: $pageCommand, isRememberMe: $isRememberMe, isEnable: $isEnable, visibilityOffPassword: $visibilityOffPassword, email: $email, password: $password, errEmail: $errEmail, errPassword: $errPassword)';
+    return 'LoginState(pageCommand: $pageCommand, status: $status, isRememberMe: $isRememberMe, isEnable: $isEnable, visibilityOffPassword: $visibilityOffPassword, email: $email, password: $password, errEmail: $errEmail, errPassword: $errPassword)';
   }
 
   @override
@@ -2553,6 +2570,7 @@ class _$LoginStateImpl extends _LoginState {
             other is _$LoginStateImpl &&
             (identical(other.pageCommand, pageCommand) ||
                 other.pageCommand == pageCommand) &&
+            (identical(other.status, status) || other.status == status) &&
             (identical(other.isRememberMe, isRememberMe) ||
                 other.isRememberMe == isRememberMe) &&
             (identical(other.isEnable, isEnable) ||
@@ -2569,8 +2587,17 @@ class _$LoginStateImpl extends _LoginState {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, pageCommand, isRememberMe,
-      isEnable, visibilityOffPassword, email, password, errEmail, errPassword);
+  int get hashCode => Object.hash(
+      runtimeType,
+      pageCommand,
+      status,
+      isRememberMe,
+      isEnable,
+      visibilityOffPassword,
+      email,
+      password,
+      errEmail,
+      errPassword);
 
   /// Create a copy of LoginState
   /// with the given fields replaced by the non-null parameter values.
@@ -2584,6 +2611,7 @@ class _$LoginStateImpl extends _LoginState {
 abstract class _LoginState extends LoginState {
   const factory _LoginState(
       {final PageCommand? pageCommand,
+      final PageState status,
       final bool isRememberMe,
       final bool isEnable,
       final bool visibilityOffPassword,
@@ -2595,6 +2623,8 @@ abstract class _LoginState extends LoginState {
 
   @override
   PageCommand? get pageCommand;
+  @override
+  PageState get status;
   @override
   bool get isRememberMe;
   @override

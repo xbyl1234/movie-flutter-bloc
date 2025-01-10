@@ -7,6 +7,7 @@ import 'package:movie/features/main/screens/profile/bloc/profile_bloc.dart';
 import 'package:movie/features/payments/bloc/payments_bloc.dart';
 import 'package:movie/features/splash/bloc/splash_bloc.dart';
 import '../core/cubit/app_cubit.dart';
+import '../core/data/data_resource/local/manager_shared_preferences.dart';
 import '../core/data/data_resource/remote/movie/movie_api_service.dart';
 import '../core/data/data_resource/remote/movie/search_movie_api_service.dart';
 import '../core/network/movie_provider.dart';
@@ -33,6 +34,13 @@ final GetIt getIt = GetIt.instance;
 
 Future<void> init() async {
   getIt.registerSingleton(AppCubit());
+
+  getIt.registerSingletonAsync(() async {
+    final ManagerSharedPreferences preferences = ManagerSharedPreferences();
+    await preferences.init();
+    return preferences;
+  });
+
   getIt.registerLazySingleton(() => MovieProvider());
   getIt.registerLazySingleton(() => MovieApiService(getIt.get()));
 
@@ -43,10 +51,12 @@ Future<void> init() async {
   getIt.registerLazySingleton(() => SearchMovieProvider());
   getIt.registerLazySingleton(() => SearchMovieApiService(getIt.get()));
 
-  getIt.registerSingleton<MovieDetailRepository>(MovieDetailRepositoryImpl(getIt.get()));
+  getIt.registerSingleton<MovieDetailRepository>(
+      MovieDetailRepositoryImpl(getIt.get()));
   getIt.registerSingleton<MovieDetailUseCase>(MovieDetailUseCase(getIt.get()));
 
-  getIt.registerSingleton<ListMovieRepository>(ListMovieRepositoryImpl(getIt.get()));
+  getIt.registerSingleton<ListMovieRepository>(
+      ListMovieRepositoryImpl(getIt.get()));
   getIt.registerSingleton<ListMovieUseCase>(ListMovieUseCase(getIt.get()));
 
   getIt.registerFactory(() => ListMovieCubit(getIt.get()));
@@ -66,7 +76,8 @@ Future<void> init() async {
         trailerUseCase: getIt.get(),
       ));
 
-  getIt.registerLazySingleton<SearchMoviesRepository>(() => SearchMoviesRepositoryImpl(getIt.get()));
+  getIt.registerLazySingleton<SearchMoviesRepository>(
+      () => SearchMoviesRepositoryImpl(getIt.get()));
 
   getIt.registerLazySingleton(() => SearchUseCase(getIt.get()));
   getIt.registerLazySingleton(() => ExploreCubit(getIt.get()));

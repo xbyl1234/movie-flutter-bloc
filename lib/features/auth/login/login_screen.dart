@@ -4,11 +4,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:movie/core/bloc/page_command.dart';
 import 'package:movie/core/common/resource/app_assets.dart';
+import 'package:movie/core/common/utils/dialog_utils.dart';
 import 'package:movie/di/dependency_injection.dart';
 import 'package:movie/features/auth/login/bloc/login_bloc.dart';
 import 'package:movie/features/auth/login/widgets/button_login.dart';
 import 'package:movie/features/auth/login/widgets/email_input.dart';
 import 'package:movie/features/auth/login/widgets/password_input.dart';
+import '../../../core/bloc/page_state.dart';
 import '../../../core/common/constant/error.dart';
 import '../../../core/common/constant/routers.dart';
 import '../../../core/common/translations/l10n.dart';
@@ -49,6 +51,9 @@ class LoginScreen extends StatelessWidget {
           } else if (state.pageCommand is PageCommandDialog) {
             onDialog(context, state.pageCommand as PageCommandDialog);
           }
+          // else if (state.status == PageState.loading) {
+          //   DialogUtils.loading(context);
+          // }
           bloc.add(LoginEvent.onClearPage());
         },
         child: Scaffold(

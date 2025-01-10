@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:movie/core/bloc/base_movie_status.dart';
 import 'package:movie/core/bloc/page_command.dart';
 import 'package:movie/core/common/constant/routers.dart';
 import 'package:movie/core/config/network_constants.dart';
@@ -12,6 +11,7 @@ import 'package:movie/features/movies/domain/list_movie_use_case/list_movie.dart
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/features/watch_video/watch_video_screen.dart';
 
+import '../../../../../core/bloc/page_state.dart';
 import '../../../../movie_detail/data/model/trailer_model.dart';
 import '../../../../movie_detail/domain/use_case/trailer_use_case.dart';
 part 'home_state.dart';
@@ -37,54 +37,51 @@ class HomeCubit extends Cubit<HomeState> {
 
   void getMovieDetail() async {
     try {
-      emit(state.copyWith(status: BaseMovieStatus.loading));
+      emit(state.copyWith(status: PageState.loading));
       List<int> ids = [278, 238, 240, 424, 389, 129, 497, 680, 372058, 122, 13];
       Random random = Random();
       int index = random.nextInt(ids.length);
       MovieModel? data = await _movieDetailUseCase('${ids[index]}');
       if (data != null) {
-        emit(state.copyWith(status: BaseMovieStatus.success, movie: data));
+        emit(state.copyWith(status: PageState.success, movie: data));
       } else {
-        emit(state.copyWith(status: BaseMovieStatus.empty));
+        emit(state.copyWith(status: PageState.empty));
       }
     } catch (_) {
-      emit(state.copyWith(status: BaseMovieStatus.error));
+      emit(state.copyWith(status: PageState.error));
     }
   }
 
   void getMovies(String api) async {
     try {
-      emit(state.copyWith(
-        status: BaseMovieStatus.loading,
-      ));
       final data = await _listMovieUseCase(QueryRequest('en_US', 1, api));
       if (data.movies.isNotEmpty) {
         if (api == apiNowPlaying) {
           emit(state.copyWith(
-            status: BaseMovieStatus.success,
+            status: PageState.success,
             nowPlayMovies: data.movies,
           ));
         } else if (api == apiTopRate) {
           emit(state.copyWith(
-            status: BaseMovieStatus.success,
+            status: PageState.success,
             topRateMovies: data.movies,
           ));
         } else if (api == apiUpcoming) {
           emit(state.copyWith(
-            status: BaseMovieStatus.success,
+            status: PageState.success,
             upComingMovies: data.movies,
           ));
         } else if (api == apiPopular) {
           emit(state.copyWith(
-            status: BaseMovieStatus.success,
+            status: PageState.success,
             popularMovies: data.movies,
           ));
         }
       } else {
-        emit(state.copyWith(status: BaseMovieStatus.empty));
+        emit(state.copyWith(status: PageState.empty));
       }
     } catch (_) {
-      emit(state.copyWith(status: BaseMovieStatus.error));
+      emit(state.copyWith(status: PageState.error));
     }
   }
 
@@ -94,7 +91,7 @@ class HomeCubit extends Cubit<HomeState> {
       if (response.trailers.isNotEmpty) {
         emit(
           state.copyWith(
-            status: BaseMovieStatus.success,
+            status: PageState.success,
             pageCommand: PageCommandNavigatorPage(
               page: watchVideoRoute,
               argument: WatchVideoArguments(
@@ -107,7 +104,7 @@ class HomeCubit extends Cubit<HomeState> {
         );
       }
     } catch (_) {
-      emit(state.copyWith(status: BaseMovieStatus.success));
+      emit(state.copyWith(status: PageState.success));
     }
   }
 }

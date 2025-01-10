@@ -1,8 +1,8 @@
-import 'package:movie/core/bloc/base_movie_status.dart';
 import 'package:movie/core/common/widgets/item_movie.dart';
 import 'package:movie/core/data/model/movie_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../../core/bloc/page_state.dart';
 import '../bloc/movie_detail_bloc_cubit.dart';
 
 class SimilarMoviesView extends StatelessWidget {
@@ -15,7 +15,7 @@ class SimilarMoviesView extends StatelessWidget {
     return BlocBuilder<MovieDetailBlocCubit, MovieDetailState>(
       bloc: cubit,
       builder: (context, state) {
-        if (state.status == BaseMovieStatus.success) {
+        if (state.status == PageState.success) {
           List<MovieModel> data = state.similarMovies;
           return GridView.builder(
             key: const PageStorageKey('ExploreStorageKey'),

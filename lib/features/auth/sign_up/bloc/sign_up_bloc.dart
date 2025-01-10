@@ -6,6 +6,8 @@ import 'package:movie/core/bloc/page_command.dart';
 import 'package:movie/core/common/constant/routers.dart';
 import 'package:movie/core/common/extensions/valid_email.dart';
 import 'package:movie/core/common/extensions/valid_password.dart';
+import 'package:movie/core/common/utils/dialog_utils.dart';
+import '../../../../core/bloc/page_state.dart';
 import '../../../../core/common/constant/error.dart';
 import '../../../../core/common/translations/l10n.dart';
 part 'sign_up_bloc.freezed.dart';
@@ -32,18 +34,19 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
         emit(state.copyWith(errPassword: S.of(event.ctx).err_invalid_password));
       } else {
         try {
-          UserCredential userCredential =
-              await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          DialogUtils.loading();
+          await FirebaseAuth.instance.createUserWithEmailAndPassword(
             email: state.email!,
             password: state.password!,
           );
-          await userCredential.user?.sendEmailVerification();
+          //await userCredential.user?.sendEmailVerification();
           emit(
             state.copyWith(
+                status: PageState.success,
                 pageCommand: PageCommandNavigatorPage(
-              page: loginRoute,
-              argument: state.email,
-            )),
+                  page: loginRoute,
+                  argument: state.email,
+                )),
           );
         } on FirebaseAuthException catch (e) {
           String code = '';
@@ -54,12 +57,16 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
           } else {
             code = e.code;
           }
-          emit(state.copyWith(pageCommand: PageCommandShowAlertError(code)));
+          emit(state.copyWith(
+              status: PageState.success,
+              pageCommand: PageCommandShowAlertError(code)));
         } catch (e) {
           emit(state.copyWith(
+            status: PageState.success,
             pageCommand: PageCommandShowAlertError(unknownError),
           ));
         }
+        DialogUtils.hideLoading();
       }
     });
     on<OnClearPage>((event, emit) {

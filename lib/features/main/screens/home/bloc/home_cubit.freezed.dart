@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$HomeState {
-  BaseMovieStatus get status => throw _privateConstructorUsedError;
+  PageState get status => throw _privateConstructorUsedError;
   PageCommand? get pageCommand => throw _privateConstructorUsedError;
   MovieModel? get movie => throw _privateConstructorUsedError;
   List<MovieModel> get nowPlayMovies => throw _privateConstructorUsedError;
@@ -37,7 +37,7 @@ abstract class $HomeStateCopyWith<$Res> {
       _$HomeStateCopyWithImpl<$Res, HomeState>;
   @useResult
   $Res call(
-      {BaseMovieStatus status,
+      {PageState status,
       PageCommand? pageCommand,
       MovieModel? movie,
       List<MovieModel> nowPlayMovies,
@@ -73,7 +73,7 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as BaseMovieStatus,
+              as PageState,
       pageCommand: freezed == pageCommand
           ? _value.pageCommand
           : pageCommand // ignore: cast_nullable_to_non_nullable
@@ -111,7 +111,7 @@ abstract class _$$HomeStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {BaseMovieStatus status,
+      {PageState status,
       PageCommand? pageCommand,
       MovieModel? movie,
       List<MovieModel> nowPlayMovies,
@@ -145,7 +145,7 @@ class __$$HomeStateImplCopyWithImpl<$Res>
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as BaseMovieStatus,
+              as PageState,
       pageCommand: freezed == pageCommand
           ? _value.pageCommand
           : pageCommand // ignore: cast_nullable_to_non_nullable
@@ -178,7 +178,7 @@ class __$$HomeStateImplCopyWithImpl<$Res>
 
 class _$HomeStateImpl extends _HomeState {
   const _$HomeStateImpl(
-      {this.status = BaseMovieStatus.init,
+      {this.status = PageState.init,
       this.pageCommand,
       this.movie,
       final List<MovieModel> nowPlayMovies = const [],
@@ -193,7 +193,7 @@ class _$HomeStateImpl extends _HomeState {
 
   @override
   @JsonKey()
-  final BaseMovieStatus status;
+  final PageState status;
   @override
   final PageCommand? pageCommand;
   @override
@@ -280,7 +280,7 @@ class _$HomeStateImpl extends _HomeState {
 
 abstract class _HomeState extends HomeState {
   const factory _HomeState(
-      {final BaseMovieStatus status,
+      {final PageState status,
       final PageCommand? pageCommand,
       final MovieModel? movie,
       final List<MovieModel> nowPlayMovies,
@@ -290,7 +290,7 @@ abstract class _HomeState extends HomeState {
   const _HomeState._() : super._();
 
   @override
-  BaseMovieStatus get status;
+  PageState get status;
   @override
   PageCommand? get pageCommand;
   @override

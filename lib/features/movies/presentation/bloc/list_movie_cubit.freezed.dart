@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$ListMovieState {
-  BaseMovieStatus get status => throw _privateConstructorUsedError;
+  PageState get status => throw _privateConstructorUsedError;
   int get page => throw _privateConstructorUsedError;
   int get totalPages => throw _privateConstructorUsedError;
   List<MovieModel> get movies => throw _privateConstructorUsedError;
@@ -36,7 +36,7 @@ abstract class $ListMovieStateCopyWith<$Res> {
       _$ListMovieStateCopyWithImpl<$Res, ListMovieState>;
   @useResult
   $Res call(
-      {BaseMovieStatus status,
+      {PageState status,
       int page,
       int totalPages,
       List<MovieModel> movies,
@@ -68,7 +68,7 @@ class _$ListMovieStateCopyWithImpl<$Res, $Val extends ListMovieState>
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as BaseMovieStatus,
+              as PageState,
       page: null == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -98,7 +98,7 @@ abstract class _$$ListMovieStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {BaseMovieStatus status,
+      {PageState status,
       int page,
       int totalPages,
       List<MovieModel> movies,
@@ -128,7 +128,7 @@ class __$$ListMovieStateImplCopyWithImpl<$Res>
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as BaseMovieStatus,
+              as PageState,
       page: null == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -153,7 +153,7 @@ class __$$ListMovieStateImplCopyWithImpl<$Res>
 
 class _$ListMovieStateImpl extends _ListMovieState {
   const _$ListMovieStateImpl(
-      {this.status = BaseMovieStatus.init,
+      {this.status = PageState.init,
       this.page = 1,
       this.totalPages = 1,
       final List<MovieModel> movies = const [],
@@ -163,7 +163,7 @@ class _$ListMovieStateImpl extends _ListMovieState {
 
   @override
   @JsonKey()
-  final BaseMovieStatus status;
+  final PageState status;
   @override
   @JsonKey()
   final int page;
@@ -218,7 +218,7 @@ class _$ListMovieStateImpl extends _ListMovieState {
 
 abstract class _ListMovieState extends ListMovieState {
   const factory _ListMovieState(
-      {final BaseMovieStatus status,
+      {final PageState status,
       final int page,
       final int totalPages,
       final List<MovieModel> movies,
@@ -226,7 +226,7 @@ abstract class _ListMovieState extends ListMovieState {
   const _ListMovieState._() : super._();
 
   @override
-  BaseMovieStatus get status;
+  PageState get status;
   @override
   int get page;
   @override

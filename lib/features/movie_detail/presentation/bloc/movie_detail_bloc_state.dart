@@ -5,7 +5,7 @@ class MovieDetailState with _$MovieDetailState {
   const MovieDetailState._();
 
   const factory MovieDetailState({
-    @Default(BaseMovieStatus.init) BaseMovieStatus status,
+    @Default(PageState.init) PageState status,
     PageCommand? pageCommand,
     MovieModel? movie,
     ReviewsResponse? reviews,

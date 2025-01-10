@@ -12,6 +12,8 @@ import 'di/dependency_injection.dart';
 import 'features/main/screens/explore/presentation/bloc/explore_cubit.dart';
 import 'features/main/screens/home/bloc/home_cubit.dart';
 
+GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+
 void main() async {
   await appConfig();
   runApp(const App());
@@ -32,6 +34,7 @@ class App extends StatelessWidget {
           buildWhen: (previous, current) => previous != current,
           builder: (context, state) {
             return MaterialApp(
+              navigatorKey: navigatorKey,
               initialRoute: splashRoute,
               onGenerateRoute: AppRouters().generateRoute,
               title: 'Movie',

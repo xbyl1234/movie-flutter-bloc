@@ -1,4 +1,3 @@
-import 'package:movie/core/bloc/base_movie_status.dart';
 import 'package:movie/core/common/widgets/item_movie.dart';
 import 'package:movie/di/dependency_injection.dart';
 import 'package:movie/features/main/screens/explore/presentation/bloc/explore_cubit.dart';
@@ -7,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../../../../core/bloc/page_state.dart';
 import '../../../../../../core/common/widgets/loading.dart';
 import '../../../../../../core/common/widgets/svg_widget.dart';
 
@@ -42,9 +42,9 @@ class _ExploreScreenState extends State<ExploreScreen>
           BlocConsumer<ExploreCubit, ExploreState>(
             listener: (context, state) {},
             builder: (context, state) {
-              if (state.status == BaseMovieStatus.loading) {
+              if (state.status == PageState.loading) {
                 return const Center(child: Loading());
-              } else if (state.status == BaseMovieStatus.success) {
+              } else if (state.status == PageState.success) {
                 return Expanded(
                   child: GridView.builder(
                     key: const PageStorageKey('ExploreStorageKey'),

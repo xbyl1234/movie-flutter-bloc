@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$MovieDetailState {
-  BaseMovieStatus get status => throw _privateConstructorUsedError;
+  PageState get status => throw _privateConstructorUsedError;
   PageCommand? get pageCommand => throw _privateConstructorUsedError;
   MovieModel? get movie => throw _privateConstructorUsedError;
   ReviewsResponse? get reviews => throw _privateConstructorUsedError;
@@ -37,7 +37,7 @@ abstract class $MovieDetailStateCopyWith<$Res> {
       _$MovieDetailStateCopyWithImpl<$Res, MovieDetailState>;
   @useResult
   $Res call(
-      {BaseMovieStatus status,
+      {PageState status,
       PageCommand? pageCommand,
       MovieModel? movie,
       ReviewsResponse? reviews,
@@ -71,7 +71,7 @@ class _$MovieDetailStateCopyWithImpl<$Res, $Val extends MovieDetailState>
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as BaseMovieStatus,
+              as PageState,
       pageCommand: freezed == pageCommand
           ? _value.pageCommand
           : pageCommand // ignore: cast_nullable_to_non_nullable
@@ -105,7 +105,7 @@ abstract class _$$MovieDetailStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {BaseMovieStatus status,
+      {PageState status,
       PageCommand? pageCommand,
       MovieModel? movie,
       ReviewsResponse? reviews,
@@ -137,7 +137,7 @@ class __$$MovieDetailStateImplCopyWithImpl<$Res>
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as BaseMovieStatus,
+              as PageState,
       pageCommand: freezed == pageCommand
           ? _value.pageCommand
           : pageCommand // ignore: cast_nullable_to_non_nullable
@@ -166,7 +166,7 @@ class __$$MovieDetailStateImplCopyWithImpl<$Res>
 
 class _$MovieDetailStateImpl extends _MovieDetailState {
   const _$MovieDetailStateImpl(
-      {this.status = BaseMovieStatus.init,
+      {this.status = PageState.init,
       this.pageCommand,
       this.movie,
       this.reviews,
@@ -178,7 +178,7 @@ class _$MovieDetailStateImpl extends _MovieDetailState {
 
   @override
   @JsonKey()
-  final BaseMovieStatus status;
+  final PageState status;
   @override
   final PageCommand? pageCommand;
   @override
@@ -246,7 +246,7 @@ class _$MovieDetailStateImpl extends _MovieDetailState {
 
 abstract class _MovieDetailState extends MovieDetailState {
   const factory _MovieDetailState(
-      {final BaseMovieStatus status,
+      {final PageState status,
       final PageCommand? pageCommand,
       final MovieModel? movie,
       final ReviewsResponse? reviews,
@@ -255,7 +255,7 @@ abstract class _MovieDetailState extends MovieDetailState {
   const _MovieDetailState._() : super._();
 
   @override
-  BaseMovieStatus get status;
+  PageState get status;
   @override
   PageCommand? get pageCommand;
   @override

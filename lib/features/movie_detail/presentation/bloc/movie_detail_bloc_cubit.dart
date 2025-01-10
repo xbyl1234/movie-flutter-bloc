@@ -1,5 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:movie/core/bloc/base_movie_status.dart';
 import 'package:movie/core/bloc/page_command.dart';
 import 'package:movie/core/data/model/movie_model.dart';
 import 'package:movie/features/movie_detail/data/model/review_model.dart';
@@ -9,6 +8,7 @@ import 'package:movie/features/movie_detail/domain/use_case/review_use_case.dart
 import 'package:movie/features/movie_detail/domain/use_case/trailer_use_case.dart';
 import 'package:movie/features/movies/domain/list_movie_use_case/list_movie.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../../core/bloc/page_state.dart';
 import '../../../../core/config/network_constants.dart';
 import '../../../../core/data/model/request/query_request.dart';
 part 'movie_detail_bloc_cubit.freezed.dart';
@@ -33,16 +33,16 @@ class MovieDetailBlocCubit extends Cubit<MovieDetailState> {
 
   void getDetailMovie(String id) async {
     try {
-      emit(state.copyWith(status: BaseMovieStatus.loading));
+      emit(state.copyWith(status: PageState.loading));
       MovieModel? movie = await _detailUseCase(id);
       emit(
         state.copyWith(
             status:
-                movie != null ? BaseMovieStatus.success : BaseMovieStatus.empty,
+                movie != null ? PageState.success : PageState.empty,
             movie: movie),
       );
     } catch (_) {
-      emit(state.copyWith(status: BaseMovieStatus.success));
+      emit(state.copyWith(status: PageState.success));
     }
   }
 
@@ -52,12 +52,12 @@ class MovieDetailBlocCubit extends Cubit<MovieDetailState> {
           await _listMovieUseCase(QueryRequest("en_US", 1, apiSimilar, id));
       if (response.movies.isNotEmpty) {
         emit(state.copyWith(
-            status: BaseMovieStatus.success, similarMovies: response.movies));
+            status: PageState.success, similarMovies: response.movies));
       } else {
-        emit(state.copyWith(status: BaseMovieStatus.empty));
+        emit(state.copyWith(status: PageState.empty));
       }
     } catch (e) {
-      emit(state.copyWith(status: BaseMovieStatus.success));
+      emit(state.copyWith(status: PageState.success));
     }
   }
 
@@ -67,12 +67,12 @@ class MovieDetailBlocCubit extends Cubit<MovieDetailState> {
       if (response.trailers.isNotEmpty) {
         emit(
           state.copyWith(
-              status: BaseMovieStatus.success,
+              status: PageState.success,
               trailersMovie: response.trailers),
         );
       }
     } catch (_) {
-      emit(state.copyWith(status: BaseMovieStatus.success));
+      emit(state.copyWith(status: PageState.success));
     }
   }
 
@@ -80,12 +80,12 @@ class MovieDetailBlocCubit extends Cubit<MovieDetailState> {
     try {
       ReviewsResponse result = await _reviewUseCase(id);
       if (result.reviews.isNotEmpty) {
-        emit(state.copyWith(status: BaseMovieStatus.success, reviews: result));
+        emit(state.copyWith(status: PageState.success, reviews: result));
       } else {
-        emit(state.copyWith(status: BaseMovieStatus.empty));
+        emit(state.copyWith(status: PageState.empty));
       }
     } catch (e) {
-      emit(state.copyWith(status: BaseMovieStatus.success));
+      emit(state.copyWith(status: PageState.success));
     }
   }
 }

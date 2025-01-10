@@ -1,17 +1,17 @@
 part of 'explore_cubit.dart';
 
 class ExploreState extends Equatable {
-  final BaseMovieStatus status;
+  final PageState status;
   final ExploreData data;
 
   const ExploreState({required this.status, required this.data});
 
-  factory ExploreState.init() => const ExploreState(status: BaseMovieStatus.init, data: ExploreData());
+  factory ExploreState.init() => const ExploreState(status: PageState.init, data: ExploreData());
 
   @override
   List<Object?> get props => [status, data];
 
-  ExploreState copyWith({final BaseMovieStatus? status, final ExploreData? data}) {
+  ExploreState copyWith({final PageState? status, final ExploreData? data}) {
     return ExploreState(status: status ?? this.status, data: data ?? this.data);
   }
 }

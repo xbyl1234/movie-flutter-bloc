@@ -5,7 +5,7 @@ class HomeState with _$HomeState {
   const HomeState._();
 
   const factory HomeState({
-    @Default(BaseMovieStatus.init) BaseMovieStatus status,
+    @Default(PageState.init) PageState status,
     PageCommand? pageCommand,
     MovieModel? movie,
     @Default([]) List<MovieModel> nowPlayMovies,

@@ -1,4 +1,3 @@
-import 'package:movie/core/bloc/base_movie_status.dart';
 import 'package:movie/core/common/extensions/text_style_extension.dart';
 import 'package:movie/di/dependency_injection.dart';
 import 'package:movie/features/movie_detail/data/model/review_model.dart';

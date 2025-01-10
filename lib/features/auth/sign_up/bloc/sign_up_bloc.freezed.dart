@@ -1388,6 +1388,7 @@ abstract class OnClearPage implements SignUpEvent {
 /// @nodoc
 mixin _$SignUpState {
   PageCommand? get pageCommand => throw _privateConstructorUsedError;
+  PageState get status => throw _privateConstructorUsedError;
   bool get isEnable => throw _privateConstructorUsedError;
   bool get visibilityOffPassword => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
@@ -1410,6 +1411,7 @@ abstract class $SignUpStateCopyWith<$Res> {
   @useResult
   $Res call(
       {PageCommand? pageCommand,
+      PageState status,
       bool isEnable,
       bool visibilityOffPassword,
       String? email,
@@ -1434,6 +1436,7 @@ class _$SignUpStateCopyWithImpl<$Res, $Val extends SignUpState>
   @override
   $Res call({
     Object? pageCommand = freezed,
+    Object? status = null,
     Object? isEnable = null,
     Object? visibilityOffPassword = null,
     Object? email = freezed,
@@ -1446,6 +1449,10 @@ class _$SignUpStateCopyWithImpl<$Res, $Val extends SignUpState>
           ? _value.pageCommand
           : pageCommand // ignore: cast_nullable_to_non_nullable
               as PageCommand?,
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as PageState,
       isEnable: null == isEnable
           ? _value.isEnable
           : isEnable // ignore: cast_nullable_to_non_nullable
@@ -1484,6 +1491,7 @@ abstract class _$$SignUpStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {PageCommand? pageCommand,
+      PageState status,
       bool isEnable,
       bool visibilityOffPassword,
       String? email,
@@ -1506,6 +1514,7 @@ class __$$SignUpStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? pageCommand = freezed,
+    Object? status = null,
     Object? isEnable = null,
     Object? visibilityOffPassword = null,
     Object? email = freezed,
@@ -1518,6 +1527,10 @@ class __$$SignUpStateImplCopyWithImpl<$Res>
           ? _value.pageCommand
           : pageCommand // ignore: cast_nullable_to_non_nullable
               as PageCommand?,
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as PageState,
       isEnable: null == isEnable
           ? _value.isEnable
           : isEnable // ignore: cast_nullable_to_non_nullable
@@ -1551,6 +1564,7 @@ class __$$SignUpStateImplCopyWithImpl<$Res>
 class _$SignUpStateImpl extends _SignUpState {
   const _$SignUpStateImpl(
       {this.pageCommand,
+      this.status = PageState.init,
       this.isEnable = false,
       this.visibilityOffPassword = true,
       this.email,
@@ -1561,6 +1575,9 @@ class _$SignUpStateImpl extends _SignUpState {
 
   @override
   final PageCommand? pageCommand;
+  @override
+  @JsonKey()
+  final PageState status;
   @override
   @JsonKey()
   final bool isEnable;
@@ -1578,7 +1595,7 @@ class _$SignUpStateImpl extends _SignUpState {
 
   @override
   String toString() {
-    return 'SignUpState(pageCommand: $pageCommand, isEnable: $isEnable, visibilityOffPassword: $visibilityOffPassword, email: $email, password: $password, errEmail: $errEmail, errPassword: $errPassword)';
+    return 'SignUpState(pageCommand: $pageCommand, status: $status, isEnable: $isEnable, visibilityOffPassword: $visibilityOffPassword, email: $email, password: $password, errEmail: $errEmail, errPassword: $errPassword)';
   }
 
   @override
@@ -1588,6 +1605,7 @@ class _$SignUpStateImpl extends _SignUpState {
             other is _$SignUpStateImpl &&
             (identical(other.pageCommand, pageCommand) ||
                 other.pageCommand == pageCommand) &&
+            (identical(other.status, status) || other.status == status) &&
             (identical(other.isEnable, isEnable) ||
                 other.isEnable == isEnable) &&
             (identical(other.visibilityOffPassword, visibilityOffPassword) ||
@@ -1602,7 +1620,7 @@ class _$SignUpStateImpl extends _SignUpState {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, pageCommand, isEnable,
+  int get hashCode => Object.hash(runtimeType, pageCommand, status, isEnable,
       visibilityOffPassword, email, password, errEmail, errPassword);
 
   /// Create a copy of SignUpState
@@ -1617,6 +1635,7 @@ class _$SignUpStateImpl extends _SignUpState {
 abstract class _SignUpState extends SignUpState {
   const factory _SignUpState(
       {final PageCommand? pageCommand,
+      final PageState status,
       final bool isEnable,
       final bool visibilityOffPassword,
       final String? email,
@@ -1627,6 +1646,8 @@ abstract class _SignUpState extends SignUpState {
 
   @override
   PageCommand? get pageCommand;
+  @override
+  PageState get status;
   @override
   bool get isEnable;
   @override

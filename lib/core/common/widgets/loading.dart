@@ -10,9 +10,12 @@ class Loading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: LoadingAnimationWidget.hexagonDots(
-          color: Theme.of(context).primaryColor, size: size),
+    return PopScope(
+      canPop: false,
+      child: Center(
+        child: LoadingAnimationWidget.hexagonDots(
+            color: Theme.of(context).primaryColor, size: size),
+      ),
     );
   }
 }

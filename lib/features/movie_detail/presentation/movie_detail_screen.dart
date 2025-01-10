@@ -1,9 +1,9 @@
-import 'package:movie/core/bloc/base_movie_status.dart';
 import 'package:movie/core/data/model/movie_model.dart';
 import 'package:movie/di/dependency_injection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sliver_tools/sliver_tools.dart';
+import '../../../core/bloc/page_state.dart';
 import '../../../core/common/translations/l10n.dart';
 import '../../../core/common/widgets/image_widget.dart';
 import '../../../core/common/widgets/loading.dart';
@@ -60,7 +60,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> with TickerProvid
           buildWhen: (previous, current) => previous.movie != current.movie,
           listener: (context, state) {},
           builder: (context, state) {
-            if (state.status == BaseMovieStatus.loading) {
+            if (state.status == PageState.loading) {
               return const Loading();
             }
             MovieModel? movie = state.movie;
