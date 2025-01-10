@@ -33,18 +33,35 @@ class MessageLookup extends MessageLookupByLibrary {
         "btn_download": MessageLookupByLibrary.simpleMessage("Download"),
         "btn_forgot_fassword":
             MessageLookupByLibrary.simpleMessage("Forgot  password?"),
+        "btn_get_started": MessageLookupByLibrary.simpleMessage("Get Started"),
         "btn_login": MessageLookupByLibrary.simpleMessage("Login"),
         "btn_play": MessageLookupByLibrary.simpleMessage("Play"),
         "btn_sign_up": MessageLookupByLibrary.simpleMessage("Sign up"),
         "btn_update": MessageLookupByLibrary.simpleMessage("Update"),
         "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
             "Enjoy watching Full-HD movies, without restrictions and without ads"),
+        "des_wellcome_movie": MessageLookupByLibrary.simpleMessage(
+            "The best movie streaming app of the century to make your days great!"),
+        "err_account_already_axists_for_that_email":
+            MessageLookupByLibrary.simpleMessage(
+                "The account already exists for that email."),
+        "err_an_error_occurred_please_check_again":
+            MessageLookupByLibrary.simpleMessage(
+                "An error occurred, please check again"),
+        "err_check_again_email_password": MessageLookupByLibrary.simpleMessage(
+            "Please check again email or password."),
         "err_email_invalid":
             MessageLookupByLibrary.simpleMessage("Email is invalid"),
         "err_invalid_pass": MessageLookupByLibrary.simpleMessage(
             "Password must contain at least 5 characters including uppercase, lowercase and numbers"),
         "err_invalid_password": MessageLookupByLibrary.simpleMessage(
             "Password must contain at least one uppercase letter, one lowercase letter, and one number."),
+        "err_no_user_found_for_that_email":
+            MessageLookupByLibrary.simpleMessage(
+                "No user found for that email."),
+        "err_password_providedIs_too_weak":
+            MessageLookupByLibrary.simpleMessage(
+                "The password provided is too weak."),
         "female": MessageLookupByLibrary.simpleMessage("Female"),
         "hint_full_name": MessageLookupByLibrary.simpleMessage("Full name"),
         "hint_text_country": MessageLookupByLibrary.simpleMessage("Country"),
@@ -70,6 +87,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Privacy Policy"),
         "label_menu_security": MessageLookupByLibrary.simpleMessage("Security"),
         "male": MessageLookupByLibrary.simpleMessage("Male"),
+        "mgs_verify_email": MessageLookupByLibrary.simpleMessage(
+            "A verification email has been sent to your address. Please check your inbox to complete the verification process"),
         "see_all": MessageLookupByLibrary.simpleMessage("See all"),
         "tab_comments": MessageLookupByLibrary.simpleMessage("Comments"),
         "tab_download": MessageLookupByLibrary.simpleMessage("Download"),
@@ -108,6 +127,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Top 10 Movies This Week"),
         "title_top_rate": MessageLookupByLibrary.simpleMessage("Top rate"),
         "title_upcoming": MessageLookupByLibrary.simpleMessage("Upcoming"),
+        "title_verify_your_email":
+            MessageLookupByLibrary.simpleMessage("Verify your email"),
+        "title_welcome_to_movie":
+            MessageLookupByLibrary.simpleMessage("Welcome to Movie"),
         "txt_allows_streaming_of4k":
             MessageLookupByLibrary.simpleMessage("Allows streaming of 4K."),
         "txt_already_have_an_account":

@@ -22,7 +22,7 @@ import 'package:movie/features/wellcome/wellcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../features/splash/splash_screen.dart';
-import '../common/contants/routers.dart';
+import '../common/constant/routers.dart';
 
 class AppRouters {
   final MainBloc mainBloc = MainBloc();

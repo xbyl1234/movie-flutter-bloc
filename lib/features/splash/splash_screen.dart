@@ -1,41 +1,45 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:movie/core/bloc/page_command.dart';
+import 'package:movie/core/common/resource/app_assets.dart';
 import 'package:movie/core/common/widgets/loading.dart';
+import 'package:movie/di/dependency_injection.dart';
+import 'package:movie/features/splash/bloc/splash_bloc.dart';
 
-import '../../core/common/contants/routers.dart';
-import '../../core/common/widgets/svg_widget.dart';
-
-class SplashScreen extends StatefulWidget {
+class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
   @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState() {
-    super.initState();
-    Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushNamedAndRemoveUntil(context, welComeRoute, (route) => false);
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Spacer(),
-            SvgWidget(ic: 'assets/icons/ic_logo.svg',),
-            Spacer(),
-            Loading(),
-            SizedBox(
-              height: 54,
-            ),
-          ],
+    return Scaffold(
+      body: BlocProvider<SplashBloc>(
+        create: (_) => getIt<SplashBloc>()..add(SplashEvent.onNavigate()),
+        child: BlocListener<SplashBloc, SplashState>(
+          listener: (context, state) {
+            if (state.pageCmd is PageCommandNavigatorPage) {
+              final pageCmd = state.pageCmd as PageCommandNavigatorPage;
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                pageCmd.page!,
+                (route) => false,
+              );
+            }
+          },
+          child: Stack(
+            children: [
+              Positioned(bottom: 120, left: 0, right: 0, child: Loading()),
+              Align(
+                alignment: Alignment.center,
+                child: SvgPicture.asset(
+                  AppAssets.ic_logo_svg,
+                  fit: BoxFit.cover,
+                  height: 84,
+                  width: 84,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

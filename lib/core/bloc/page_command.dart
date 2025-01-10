@@ -51,6 +51,7 @@ class PageCommandDialog extends PageCommand {
   PageCommandDialog({required this.type, this.argument});
 }
 
+
 /// Using to show snackbar / toast / flushbar
 class PageCommandShowAlertError extends PageCommand {
   String msg;

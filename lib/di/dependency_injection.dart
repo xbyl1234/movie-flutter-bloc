@@ -5,6 +5,7 @@ import 'package:movie/features/confirm_payment/bloc/confirm_payment_bloc.dart';
 import 'package:movie/features/language/bloc/language_bloc.dart';
 import 'package:movie/features/main/screens/profile/bloc/profile_bloc.dart';
 import 'package:movie/features/payments/bloc/payments_bloc.dart';
+import 'package:movie/features/splash/bloc/splash_bloc.dart';
 import '../core/cubit/app_cubit.dart';
 import '../core/data/data_resource/remote/movie/movie_api_service.dart';
 import '../core/data/data_resource/remote/movie/search_movie_api_service.dart';
@@ -35,6 +36,7 @@ Future<void> init() async {
   getIt.registerLazySingleton(() => MovieProvider());
   getIt.registerLazySingleton(() => MovieApiService(getIt.get()));
 
+  getIt.registerFactory(() => SplashBloc());
   getIt.registerFactory(() => LoginBloc());
   getIt.registerFactory(() => SignUpBloc());
 

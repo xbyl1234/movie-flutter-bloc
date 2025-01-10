@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:movie/core/cubit/app_cubit.dart';
-import 'core/common/contants/routers.dart';
+import 'core/common/constant/routers.dart';
 import 'core/common/resource/theme.dart';
 import 'core/common/translations/l10n.dart';
 import 'core/common/widgets/custom_error_widget.dart';

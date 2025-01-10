@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../core/bloc/page_command.dart';
-import '../../../core/common/contants/routers.dart';
+import '../../../core/common/constant/routers.dart';
 import '../../../core/common/translations/l10n.dart';
 import '../../../core/common/widgets/custom_button.dart';
 import '../../confirm_payment/confirm_payment_screen.dart';

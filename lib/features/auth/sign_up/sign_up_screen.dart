@@ -2,11 +2,13 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/core/bloc/page_command.dart';
-import 'package:movie/core/common/contants/routers.dart';
+import 'package:movie/core/common/constant/routers.dart';
+import 'package:movie/core/common/resource/app_assets.dart';
 import 'package:movie/di/dependency_injection.dart';
 import 'package:movie/features/auth/sign_up/bloc/sign_up_bloc.dart';
 import 'package:movie/features/auth/sign_up/widgets/email_input.dart';
 import 'package:movie/features/auth/sign_up/widgets/password_input.dart';
+import '../../../core/common/constant/error.dart';
 import '../../../core/common/translations/l10n.dart';
 import '../../../core/common/widgets/custom_button.dart';
 import '../../../core/common/widgets/svg_widget.dart';
@@ -32,17 +34,28 @@ class SignUpScreen extends StatelessWidget {
           child: BlocListener<SignUpBloc, SignUpState>(
             listener: (context, state) {
               if (state.pageCommand is PageCommandNavigatorPage) {
-                final pageCommand = state.pageCommand as PageCommandNavigatorPage;
-                if (pageCommand.page == loginRoute) {
-                  Navigator.pop(context, pageCommand.argument);
+                final pageCmd = state.pageCommand as PageCommandNavigatorPage;
+                if (pageCmd.page == loginRoute) {
+                  Navigator.pop(context, pageCmd.argument);
                 }
+              } else if (state.pageCommand is PageCommandShowAlertError) {
+                final pageCmd = state.pageCommand as PageCommandShowAlertError;
+                if (pageCmd.msg == weakPassword) {
+                  pageCmd.msg = S.of(context).err_password_providedIs_too_weak;
+                } else if (pageCmd.msg == emailAlreadyInUse) {
+                  pageCmd.msg = S.of(context).err_an_error_occurred_please_check_again;
+                }
+                final snackBar = SnackBar(
+                  content: Text(pageCmd.msg),
+                );
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
               }
               bloc.add(SignUpEvent.onClearPage());
             },
             child: Column(
               children: [
                 const SvgWidget(
-                  ic: 'assets/icons/ic_logo.svg',
+                  ic: AppAssets.ic_logo_svg,
                 ),
                 const SizedBox(
                   height: 32,
@@ -71,7 +84,10 @@ class SignUpScreen extends StatelessWidget {
                     return CustomButton(
                         btnText: S.of(context).btn_sign_up,
                         enable: state.isEnable,
-                        action: () => bloc.add(SignUpEvent.onSignUp(context)));
+                        action: () {
+                          FocusScope.of(context).requestFocus(FocusNode());
+                          bloc.add(SignUpEvent.onSignUp(context));
+                        });
                   },
                 ),
                 const SizedBox(
@@ -103,7 +119,8 @@ class SignUpScreen extends StatelessWidget {
                   height: 20,
                 ),
                 SignUpOrSignInSocial(
-                  onPressedFaceBook: () => bloc.add(SignUpEvent.onSignUpFacebook()),
+                  onPressedFaceBook: () =>
+                      bloc.add(SignUpEvent.onSignUpFacebook()),
                   onPressedGoogle: () => bloc.add(SignUpEvent.onSignUpGoogle()),
                   onPressedApple: () => bloc.add(SignUpEvent.onSignUpApple()),
                 ),

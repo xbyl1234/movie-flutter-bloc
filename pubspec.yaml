@@ -30,6 +30,7 @@ dependencies:
   shared_preferences: ^2.3.4
   freezed_annotation: ^2.4.4
   firebase_core: ^3.9.0
+  firebase_auth: ^5.4.0
   cached_network_image: ^3.4.1
 
 dev_dependencies:
@@ -41,12 +42,22 @@ dev_dependencies:
   json_serializable: ^6.6.2
   flutter_lints: ^5.0.0
   freezed: ^2.5.7
+  assets_gen:
 
 flutter_intl:
   main_locale: en
   enabled: true
   output_dir: lib/core/common/translations
   arb_dir: lib/core/common/translations
+
+assets_gen:
+  output: core/common/resource/app_assets.dart
+  class_name: AppAssets
+  enable: true
+  gen_package_path: false
+  ignore_resolution: false
+  omit_path_levels: 2
+  exclude:
 
 flutter:
 

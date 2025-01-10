@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/common/contants/routers.dart';
+import '../../../../../core/common/constant/routers.dart';
 import '../../../../../core/data/model/movie_model.dart';
 import '../../../../movies/presentation/screen/list_movie_screen.dart';
 import 'movies_widget.dart';

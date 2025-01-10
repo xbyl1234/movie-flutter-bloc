@@ -1,7 +1,7 @@
 import 'package:movie/core/data/model/movie_model.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/common/contants/routers.dart';
+import '../../../../../core/common/constant/routers.dart';
 import '../../../../../core/common/widgets/image_widget.dart';
 import '../../../../../core/config/network_constants.dart';
 

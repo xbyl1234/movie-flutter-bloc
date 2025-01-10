@@ -84,5 +84,15 @@
   "txt_sign_in": "Sign in",
   "err_email_invalid": "Email is invalid",
   "err_invalid_password": "Password must contain at least one uppercase letter, one lowercase letter, and one number.",
-  "err_invalid_pass": "Password must contain at least 5 characters including uppercase, lowercase and numbers"
+  "err_invalid_pass": "Password must contain at least 5 characters including uppercase, lowercase and numbers",
+  "err_no_user_found_for_that_email": "No user found for that email.",
+  "err_check_again_email_password": "Please check again email or password.",
+  "err_password_providedIs_too_weak": "The password provided is too weak.",
+  "err_account_already_axists_for_that_email": "The account already exists for that email.",
+  "err_an_error_occurred_please_check_again": "An error occurred, please check again",
+  "title_verify_your_email": "Verify your email",
+  "mgs_verify_email": "A verification email has been sent to your address. Please check your inbox to complete the verification process",
+  "btn_get_started": "Get Started",
+  "title_welcome_to_movie": "Welcome to Movie",
+  "des_wellcome_movie": "The best movie streaming app of the century to make your days great!"
 }

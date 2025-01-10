@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../core/common/contants/routers.dart';
+import '../../../../core/common/constant/routers.dart';
 import '../../../../core/common/translations/l10n.dart';
 import '../../../../core/common/utils/times_utils.dart';
 import '../../../../core/common/widgets/svg_widget.dart';

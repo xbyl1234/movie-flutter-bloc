@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-import '../../../../core/common/contants/routers.dart';
+import '../../../../core/common/constant/routers.dart';
 import '../../../../core/common/widgets/image_widget.dart';
 import '../../../watch_video/watch_video_screen.dart';
 import '../../data/model/trailer_model.dart';

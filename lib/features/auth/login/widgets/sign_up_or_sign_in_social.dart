@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:movie/core/common/resource/app_assets.dart';
 
 class SignUpOrSignInSocial extends StatelessWidget {
   final VoidCallback onPressedFaceBook;
@@ -29,7 +30,7 @@ class SignUpOrSignInSocial extends StatelessWidget {
                   side: const BorderSide(
                     color: Colors.grey,
                   ))),
-          child: SvgPicture.asset('assets/icons/facebook.svg'),
+          child: SvgPicture.asset(AppAssets.facebook_svg),
         ),
         OutlinedButton(
           onPressed: () => onPressedGoogle.call(),
@@ -39,7 +40,7 @@ class SignUpOrSignInSocial extends StatelessWidget {
                   side: const BorderSide(
                     color: Colors.grey,
                   ))),
-          child: SvgPicture.asset('assets/icons/google.svg'),
+          child: SvgPicture.asset(AppAssets.google_svg),
         ),
         if (Platform.isIOS)
           OutlinedButton(
@@ -50,7 +51,7 @@ class SignUpOrSignInSocial extends StatelessWidget {
                     side: const BorderSide(
                       color: Colors.grey,
                     ))),
-            child: SvgPicture.asset('assets/icons/apple.svg'),
+            child: SvgPicture.asset(AppAssets.apple_svg),
           ),
       ],
     );

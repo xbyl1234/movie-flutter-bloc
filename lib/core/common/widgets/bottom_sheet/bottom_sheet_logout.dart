@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../contants/routers.dart';
+import '../../constant/routers.dart';
 import '../svg_widget.dart';
 
 class BottomSheetLogout extends StatelessWidget {

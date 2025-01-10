@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/common/contants/routers.dart';
+import '../../../../../core/common/constant/routers.dart';
 import '../../../../../core/common/resource/icons.dart';
 import '../../../../../core/common/translations/l10n.dart';
 import '../../../../../core/common/widgets/svg_widget.dart';

@@ -4,7 +4,7 @@ import 'package:movie/core/common/extensions/text_style_extension.dart';
 import 'package:movie/features/movie_detail/data/model/review_model.dart';
 
 import '../../../../core/bloc/base_movie_status.dart';
-import '../../../../core/common/contants/routers.dart';
+import '../../../../core/common/constant/routers.dart';
 import '../../../../core/common/widgets/svg_widget.dart';
 import '../../../../core/config/network_constants.dart';
 import '../bloc/movie_detail_bloc_cubit.dart';

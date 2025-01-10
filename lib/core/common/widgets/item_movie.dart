@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../config/network_constants.dart';
 import '../../data/model/movie_model.dart';
-import '../contants/routers.dart';
+import '../constant/routers.dart';
 import 'image_widget.dart';
 
 class ItemMovie extends StatelessWidget {

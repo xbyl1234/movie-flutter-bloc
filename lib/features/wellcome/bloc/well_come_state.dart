@@ -1,18 +1,10 @@
 part of 'well_come_bloc.dart';
 
-@immutable
-abstract class WellComeState {}
-
-class WellComeInitial extends WellComeState {
-  final int changeIndex;
-
-  WellComeInitial({required this.changeIndex});
-}
-
-class WellComeActionButton extends WellComeState {}
-
-class CheckboxState extends WellComeState {
-  final bool value;
-
-  CheckboxState(this.value);
+@freezed
+class WellComeState with _$WellComeState {
+  const  WellComeState._();
+  const factory WellComeState({
+    PageCommand? cmd,
+    @Default(0) int position,
+}) = _WellComeState;
 }

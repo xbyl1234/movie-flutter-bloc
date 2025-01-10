@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:movie/core/bloc/page_command.dart';
-import 'package:movie/core/common/contants/routers.dart';
+import 'package:movie/core/common/constant/routers.dart';
 import 'package:movie/core/common/widgets/custom_button.dart';
 import 'package:movie/core/common/widgets/svg_widget.dart';
 import 'package:movie/core/data/model/payment.dart';

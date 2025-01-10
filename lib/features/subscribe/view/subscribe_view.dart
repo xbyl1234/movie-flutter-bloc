@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movie/core/common/contants/routers.dart';
+import 'package:movie/core/common/constant/routers.dart';
 import '../../../core/common/translations/l10n.dart';
 import '../../../core/common/widgets/item_subscribe.dart';
 import '../../confirm_payment/confirm_payment_screen.dart';

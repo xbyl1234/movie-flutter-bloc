@@ -16,7 +16,10 @@ class ButtonLogin extends StatelessWidget {
         return CustomButton(
           btnText: S.of(context).btn_login,
           enable: state.isEnable,
-          action: () => bloc.add(LoginEvent.onLogin(context)),
+          action: () {
+            FocusScope.of(context).requestFocus(FocusNode());
+            bloc.add(LoginEvent.onLogin(context));
+          },
         );
       },
     );

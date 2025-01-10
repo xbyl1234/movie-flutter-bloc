@@ -1,23 +1,15 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:movie/core/bloc/page_command.dart';
 
 part 'well_come_event.dart';
 part 'well_come_state.dart';
+part 'well_come_bloc.freezed.dart';
 
 class WellComeBloc extends Bloc<WellComeEvent, WellComeState> {
-  WellComeBloc() : super(WellComeInitial(changeIndex: 0)) {
-    on<WellComeEvent>((event, emit) {
-      if (event is ViewChangeEvent) {
-        emit(WellComeInitial(changeIndex: event.index));
-      }
-
-      if (event is ActionButtonEvent) {
-        emit(WellComeActionButton());
-      }
-
-      if (event is CheckboxEvent) {
-        emit(CheckboxState(event.value));
-      }
+  WellComeBloc() : super(const WellComeState()) {
+    on<_OnPageView>((event, emit) {
+      emit(state.copyWith(position: event.index));
     });
   }
 }

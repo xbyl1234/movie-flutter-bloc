@@ -1,10 +1,15 @@
+import 'dart:developer';
+
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:movie/core/common/contants/routers.dart';
+import 'package:movie/core/common/constant/routers.dart';
+import 'package:movie/core/common/enums/dialog_type.dart';
 import 'package:movie/core/common/extensions/valid_email.dart';
 import 'package:movie/core/common/extensions/valid_password.dart';
 import '../../../../core/bloc/page_command.dart';
+import '../../../../core/common/constant/error.dart';
 import '../../../../core/common/translations/l10n.dart';
 part 'login_bloc.freezed.dart';
 part 'login_event.dart';
@@ -29,7 +34,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     on<OnChangeEmail>((event, emit) {
       emit(state.copyWith(email: event.value, isEnable: isEnable));
     });
-    on<OnLogin>((event, emit) {
+    on<OnLogin>((event, emit) async {
       if (!state.email!.isValidEmail) {
         emit(state.copyWith(errEmail: S.of(event.ctx).err_email_invalid));
       } else if (state.password!.length < 5) {
@@ -37,10 +42,38 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       } else if (!state.password!.isValidPassWord) {
         emit(state.copyWith(errPassword: S.of(event.ctx).err_invalid_password));
       } else {
-        emit(state.copyWith(
-            pageCommand: PageCommandNavigatorPage(
-          page: mainRoute,
-        )));
+        try {
+          UserCredential userCredential =
+              await FirebaseAuth.instance.signInWithEmailAndPassword(
+            email: state.email!,
+            password: state.password!,
+          );
+          if (userCredential.user != null && userCredential.user!.emailVerified) {
+            emit(state.copyWith(
+                pageCommand: PageCommandNavigatorPage(
+                    page: mainRoute,
+                    argument: userCredential.credential?.accessToken)));
+          } else {
+            emit(state.copyWith(
+                pageCommand: PageCommandDialog(type: DialogType.verifyOtp,)));
+          }
+        } on FirebaseAuthException catch (e) {
+          String code = '';
+          if (e.code == userNotFound) {
+            code = userNotFound;
+          } else if (e.code == invalidCredential) {
+            code = invalidCredential;
+          } else {
+            code = e.code;
+          }
+          emit(state.copyWith(pageCommand: PageCommandShowAlertError(code)));
+          log(e.code);
+          log('${e.message}');
+        } catch (e) {
+          emit(state.copyWith(
+            pageCommand: PageCommandShowAlertError(unknownError),
+          ));
+        }
       }
     });
     on<OnNavigate>((event, emit) {

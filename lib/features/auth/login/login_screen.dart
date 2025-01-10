@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:movie/core/bloc/page_command.dart';
+import 'package:movie/core/common/resource/app_assets.dart';
 import 'package:movie/di/dependency_injection.dart';
 import 'package:movie/features/auth/login/bloc/login_bloc.dart';
 import 'package:movie/features/auth/login/widgets/button_login.dart';
 import 'package:movie/features/auth/login/widgets/email_input.dart';
 import 'package:movie/features/auth/login/widgets/password_input.dart';
-import '../../../core/common/contants/routers.dart';
+import '../../../core/common/constant/error.dart';
+import '../../../core/common/constant/routers.dart';
 import '../../../core/common/translations/l10n.dart';
 import '../../../core/common/widgets/svg_widget.dart';
 import '../../../core/common/widgets/text_widget.dart';
@@ -19,7 +21,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bloc = getIt.get<LoginBloc>();
+    final bloc = getIt<LoginBloc>();
     return BlocProvider(
       create: (context) => bloc..add(LoginEvent.onInitData()),
       child: BlocListener<LoginBloc, LoginState>(
@@ -31,6 +33,21 @@ class LoginScreen extends StatelessWidget {
               state.pageCommand as PageCommandNavigatorPage,
               bloc,
             );
+          } else if (state.pageCommand is PageCommandShowAlertError) {
+            final pageCmd = state.pageCommand as PageCommandShowAlertError;
+            if (pageCmd.msg == userNotFound) {
+              pageCmd.msg = S.of(context).err_no_user_found_for_that_email;
+            } else if (pageCmd.msg == invalidCredential) {
+              pageCmd.msg = S.of(context).err_check_again_email_password;
+            } else if (pageCmd.msg == unknownError) {
+              pageCmd.msg = S.of(context).err_no_user_found_for_that_email;
+            }
+            final snackBar = SnackBar(
+              content: Text(pageCmd.msg),
+            );
+            ScaffoldMessenger.of(context).showSnackBar(snackBar);
+          } else if (state.pageCommand is PageCommandDialog) {
+            onDialog(context, state.pageCommand as PageCommandDialog);
           }
           bloc.add(LoginEvent.onClearPage());
         },
@@ -46,7 +63,7 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               children: [
                 const SvgWidget(
-                  ic: 'assets/icons/ic_logo.svg',
+                  ic: AppAssets.ic_logo_svg,
                 ),
                 const SizedBox(
                   height: 32,
@@ -85,12 +102,12 @@ class LoginScreen extends StatelessWidget {
                           AnimatedCrossFade(
                             duration: const Duration(milliseconds: 250),
                             firstChild: SvgPicture.asset(
-                              'assets/icons/ic_checked.svg',
+                              AppAssets.ic_checked_svg,
                               width: 16,
                               height: 16,
                             ),
                             secondChild: SvgPicture.asset(
-                              'assets/icons/ic_unchecked.svg',
+                              AppAssets.ic_unchecked_svg,
                               width: 16,
                               height: 16,
                             ),
@@ -187,6 +204,21 @@ class LoginScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void onDialog(
+    BuildContext context,
+    PageCommandDialog page,
+  ) {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            backgroundColor: Colors.white,
+            title: Text(S.of(context).title_verify_your_email),
+            content: Text(S.of(context).mgs_verify_email),
+          );
+        });
   }
 
   void onNavigate(

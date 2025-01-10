@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movie/core/common/contants/routers.dart';
+import 'package:movie/core/common/constant/routers.dart';
 
 import '../translations/l10n.dart';
 

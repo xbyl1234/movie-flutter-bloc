@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:movie/core/bloc/base_movie_status.dart';
 import 'package:movie/core/bloc/page_command.dart';
-import 'package:movie/core/common/contants/routers.dart';
+import 'package:movie/core/common/constant/routers.dart';
 import 'package:movie/core/config/network_constants.dart';
 import 'package:movie/core/data/model/movie_model.dart';
 import 'package:movie/core/data/model/request/query_request.dart';

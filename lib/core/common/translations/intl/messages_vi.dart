@@ -32,25 +32,40 @@ class MessageLookup extends MessageLookupByLibrary {
         "btn_continue": MessageLookupByLibrary.simpleMessage("Tiếp tục"),
         "btn_download": MessageLookupByLibrary.simpleMessage("Tải về"),
         "btn_forgot_fassword":
-            MessageLookupByLibrary.simpleMessage("Forgot  password?"),
-        "btn_login": MessageLookupByLibrary.simpleMessage("Login"),
+            MessageLookupByLibrary.simpleMessage("Quên mật khẩu?"),
+        "btn_get_started": MessageLookupByLibrary.simpleMessage("Get Started"),
+        "btn_login": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
         "btn_play": MessageLookupByLibrary.simpleMessage("Chơi"),
-        "btn_sign_up": MessageLookupByLibrary.simpleMessage("Sign up"),
+        "btn_sign_up": MessageLookupByLibrary.simpleMessage("Đăng ký"),
         "btn_update": MessageLookupByLibrary.simpleMessage("Cập nhật"),
         "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
             "Thưởng thức phim Full-HD, không giới hạn và không có quảng cáo"),
+        "des_wellcome_movie": MessageLookupByLibrary.simpleMessage(
+            "The best movie streaming app of the century to make your days great!"),
+        "err_account_already_axists_for_that_email":
+            MessageLookupByLibrary.simpleMessage("Địa chỉ email đã tồn tại."),
+        "err_an_error_occurred_please_check_again":
+            MessageLookupByLibrary.simpleMessage(
+                "Có lỗi xảy ra, vui lòng thử lại."),
+        "err_check_again_email_password": MessageLookupByLibrary.simpleMessage(
+            "Vui lòng kiểm tra lại email hoặc mật khẩu."),
         "err_email_invalid":
-            MessageLookupByLibrary.simpleMessage("Email is invalid"),
+            MessageLookupByLibrary.simpleMessage("Địa chỉ email không hợp lệ"),
         "err_invalid_pass": MessageLookupByLibrary.simpleMessage(
-            "Password must contain at least 5 characters including uppercase, lowercase and numbers"),
+            "Mật khẩu phải từ 5 kí tự và bao gồm kí tự hoa, thường và chữ số."),
         "err_invalid_password": MessageLookupByLibrary.simpleMessage(
-            "Password must contain at least one uppercase letter, one lowercase letter, and one number."),
+            "Mật khẩu phải chứa kí tự hoa, thường và chữ số."),
+        "err_no_user_found_for_that_email":
+            MessageLookupByLibrary.simpleMessage(
+                "Địa chỉ email không tồn tại."),
+        "err_password_providedIs_too_weak":
+            MessageLookupByLibrary.simpleMessage("Mật khẩu quá yếu."),
         "female": MessageLookupByLibrary.simpleMessage("Nữ"),
         "hint_full_name": MessageLookupByLibrary.simpleMessage("Họ tên"),
         "hint_text_country": MessageLookupByLibrary.simpleMessage("Quốc gia"),
         "hint_text_email": MessageLookupByLibrary.simpleMessage("Email"),
         "hint_text_gender": MessageLookupByLibrary.simpleMessage("Giới tính"),
-        "hint_text_password": MessageLookupByLibrary.simpleMessage("Password"),
+        "hint_text_password": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
         "hint_text_phone_number":
             MessageLookupByLibrary.simpleMessage("Số điện thoại"),
         "hint_text_search_country":
@@ -71,6 +86,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Chính sách bảo mật"),
         "label_menu_security": MessageLookupByLibrary.simpleMessage("Bảo mật"),
         "male": MessageLookupByLibrary.simpleMessage("Nam"),
+        "mgs_verify_email": MessageLookupByLibrary.simpleMessage(
+            "Email xác thực đã được gửi đến địa chỉ của bạn. Hãy kiểm tra hộp thư để hoàn tất quá trình xác thực."),
         "see_all": MessageLookupByLibrary.simpleMessage("Xem thêm"),
         "tab_comments": MessageLookupByLibrary.simpleMessage("Bình luận"),
         "tab_download": MessageLookupByLibrary.simpleMessage("Tải xuống"),
@@ -88,7 +105,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "title_add_new_card":
             MessageLookupByLibrary.simpleMessage("Thêm thẻ mới"),
         "title_create_your_account":
-            MessageLookupByLibrary.simpleMessage("Create Your Account"),
+            MessageLookupByLibrary.simpleMessage("Tạo tài khoản"),
         "title_edit_profile":
             MessageLookupByLibrary.simpleMessage("Cập nhật thông tin"),
         "title_gender": MessageLookupByLibrary.simpleMessage("Giới tính"),
@@ -108,10 +125,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Top 10 phim tuần này"),
         "title_top_rate": MessageLookupByLibrary.simpleMessage("Đánh giá cao"),
         "title_upcoming": MessageLookupByLibrary.simpleMessage("Sắp tới"),
+        "title_verify_your_email":
+            MessageLookupByLibrary.simpleMessage("Xác thực email"),
+        "title_welcome_to_movie":
+            MessageLookupByLibrary.simpleMessage("Welcome to Movie"),
         "txt_allows_streaming_of4k": MessageLookupByLibrary.simpleMessage(
             "Cho phép phát trực tuyến 4K."),
         "txt_already_have_an_account":
-            MessageLookupByLibrary.simpleMessage("Already have an account? "),
+            MessageLookupByLibrary.simpleMessage("Đã có tài khoản? "),
         "txt_amount": MessageLookupByLibrary.simpleMessage("Số lượng"),
         "txt_congratulations":
             MessageLookupByLibrary.simpleMessage("Xin chúc mừng!"),
@@ -119,18 +140,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "txt_content_join_premium": MessageLookupByLibrary.simpleMessage(
             "Thưởng thức phim Full-HD, không giới hạn và không có quảng cáo"),
         "txt_dont_have_an_account":
-            MessageLookupByLibrary.simpleMessage("Don’t have an account? "),
+            MessageLookupByLibrary.simpleMessage("Bạn chưa có tài khoản? "),
         "txt_join_premium":
             MessageLookupByLibrary.simpleMessage("Đăng ký Premium!"),
         "txt_login_to_your_account":
-            MessageLookupByLibrary.simpleMessage("Login to Your Account"),
+            MessageLookupByLibrary.simpleMessage("Đăng nhập tài khoản"),
         "txt_month": MessageLookupByLibrary.simpleMessage("tháng"),
         "txt_or_continue_with":
-            MessageLookupByLibrary.simpleMessage("or continue with"),
-        "txt_remember_me": MessageLookupByLibrary.simpleMessage("Remember me"),
+            MessageLookupByLibrary.simpleMessage("hoặc tiếp tục với"),
+        "txt_remember_me":
+            MessageLookupByLibrary.simpleMessage("Ghi nhớ đăng nhập"),
         "txt_select_payment_method": MessageLookupByLibrary.simpleMessage(
             "Chọn phương thức thanh toán bạn muốn sử dụng."),
-        "txt_sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
+        "txt_sign_in": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
         "txt_tax": MessageLookupByLibrary.simpleMessage("Thuế"),
         "txt_total": MessageLookupByLibrary.simpleMessage("Tổng tiền"),
         "txt_video_audio_quality_is_better":

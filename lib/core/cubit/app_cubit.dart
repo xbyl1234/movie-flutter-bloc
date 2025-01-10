@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../common/contants/language_code.dart';
+import '../common/constant/language_code.dart';
 part 'app_state.dart';
 part 'app_cubit.freezed.dart';
 
