@@ -43,8 +43,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
         emit(state.copyWith(errPassword: S.of(event.ctx).err_invalid_password));
       } else {
         try {
-          UserCredential userCredential =
-              await FirebaseAuth.instance.signInWithEmailAndPassword(
+          final userCredential = await FirebaseAuth.instance.signInWithEmailAndPassword(
             email: state.email!,
             password: state.password!,
           );
@@ -55,7 +54,9 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
                     argument: userCredential.credential?.accessToken)));
           } else {
             emit(state.copyWith(
-                pageCommand: PageCommandDialog(type: DialogType.verifyOtp,)));
+                pageCommand: PageCommandDialog(
+              type: DialogType.verifyOtp,
+            )));
           }
         } on FirebaseAuthException catch (e) {
           String code = '';

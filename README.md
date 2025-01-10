@@ -1,5 +1,5 @@
-# movie
-# https://www.themoviedb.org/
+# Application Movie
+# https://developer.themoviedb.org
 
 # Learn 
  - https://medium.com/@ayalon.idan/getit-v8-migration-examples-24344ed1a130
@@ -11,3 +11,6 @@
 - flutter build apk --release lib/main.dart --flavor dev
 - flutter build appbundle lib/main.dart --flavor dev
 - flutter build appbundle lib/main.dart --flavor prod
+- flutter build ipa --release lib/main.dart --flavor dev
+- flutter build ipa --release lib/main.dart --flavor prod
+
