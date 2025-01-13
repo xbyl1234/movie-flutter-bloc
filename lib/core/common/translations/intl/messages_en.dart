@@ -111,6 +111,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Edit Profile"),
         "title_gender": MessageLookupByLibrary.simpleMessage("Gender"),
         "title_language": MessageLookupByLibrary.simpleMessage("Language"),
+        "title_my_list": MessageLookupByLibrary.simpleMessage("My List"),
         "title_new_release":
             MessageLookupByLibrary.simpleMessage("New Releases"),
         "title_now_playing":
@@ -131,6 +132,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Verify your email"),
         "title_welcome_to_movie":
             MessageLookupByLibrary.simpleMessage("Welcome to Movie"),
+        "txt_all_categories":
+            MessageLookupByLibrary.simpleMessage("All Categories"),
         "txt_allows_streaming_of4k":
             MessageLookupByLibrary.simpleMessage("Allows streaming of 4K."),
         "txt_already_have_an_account":
@@ -145,9 +148,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Don’t have an account? "),
         "txt_join_premium":
             MessageLookupByLibrary.simpleMessage("Join Premium!"),
+        "txt_k_drama": MessageLookupByLibrary.simpleMessage("K Drama"),
         "txt_login_to_your_account":
             MessageLookupByLibrary.simpleMessage("Login to Your Account"),
         "txt_month": MessageLookupByLibrary.simpleMessage("month"),
+        "txt_movie": MessageLookupByLibrary.simpleMessage("Movie"),
         "txt_or_continue_with":
             MessageLookupByLibrary.simpleMessage("or continue with"),
         "txt_remember_me": MessageLookupByLibrary.simpleMessage("Remember me"),
@@ -156,6 +161,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "txt_sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
         "txt_tax": MessageLookupByLibrary.simpleMessage("Tax"),
         "txt_total": MessageLookupByLibrary.simpleMessage("Total"),
+        "txt_tv_series": MessageLookupByLibrary.simpleMessage("TV Series"),
         "txt_video_audio_quality_is_better":
             MessageLookupByLibrary.simpleMessage(
                 "Video & Audio Quality is Better."),

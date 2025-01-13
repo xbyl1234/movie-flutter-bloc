@@ -94,5 +94,10 @@
   "mgs_verify_email": "A verification email has been sent to your address. Please check your inbox to complete the verification process",
   "btn_get_started": "Get Started",
   "title_welcome_to_movie": "Welcome to Movie",
-  "des_wellcome_movie": "The best movie streaming app of the century to make your days great!"
+  "des_wellcome_movie": "The best movie streaming app of the century to make your days great!",
+  "title_my_list": "My List",
+  "txt_all_categories": "All Categories",
+  "txt_movie": "Movie",
+  "txt_tv_series": "TV Series",
+  "txt_k_drama": "K Drama"
 }

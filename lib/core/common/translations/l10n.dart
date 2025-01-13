@@ -939,6 +939,56 @@ class S {
       args: [],
     );
   }
+
+  /// `My List`
+  String get title_my_list {
+    return Intl.message(
+      'My List',
+      name: 'title_my_list',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All Categories`
+  String get txt_all_categories {
+    return Intl.message(
+      'All Categories',
+      name: 'txt_all_categories',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Movie`
+  String get txt_movie {
+    return Intl.message(
+      'Movie',
+      name: 'txt_movie',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `TV Series`
+  String get txt_tv_series {
+    return Intl.message(
+      'TV Series',
+      name: 'txt_tv_series',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `K Drama`
+  String get txt_k_drama {
+    return Intl.message(
+      'K Drama',
+      name: 'txt_k_drama',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

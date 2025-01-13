@@ -110,6 +110,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Cập nhật thông tin"),
         "title_gender": MessageLookupByLibrary.simpleMessage("Giới tính"),
         "title_language": MessageLookupByLibrary.simpleMessage("Ngôn ngữ"),
+        "title_my_list": MessageLookupByLibrary.simpleMessage("My List"),
         "title_new_release":
             MessageLookupByLibrary.simpleMessage("Bản phát hành mới"),
         "title_now_playing": MessageLookupByLibrary.simpleMessage("Đang chiếu"),
@@ -129,6 +130,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Xác thực email"),
         "title_welcome_to_movie":
             MessageLookupByLibrary.simpleMessage("Welcome to Movie"),
+        "txt_all_categories":
+            MessageLookupByLibrary.simpleMessage("All Categories"),
         "txt_allows_streaming_of4k": MessageLookupByLibrary.simpleMessage(
             "Cho phép phát trực tuyến 4K."),
         "txt_already_have_an_account":
@@ -143,9 +146,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Bạn chưa có tài khoản? "),
         "txt_join_premium":
             MessageLookupByLibrary.simpleMessage("Đăng ký Premium!"),
+        "txt_k_drama": MessageLookupByLibrary.simpleMessage("K Drama"),
         "txt_login_to_your_account":
             MessageLookupByLibrary.simpleMessage("Đăng nhập tài khoản"),
         "txt_month": MessageLookupByLibrary.simpleMessage("tháng"),
+        "txt_movie": MessageLookupByLibrary.simpleMessage("Movie"),
         "txt_or_continue_with":
             MessageLookupByLibrary.simpleMessage("hoặc tiếp tục với"),
         "txt_remember_me":
@@ -155,6 +160,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "txt_sign_in": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
         "txt_tax": MessageLookupByLibrary.simpleMessage("Thuế"),
         "txt_total": MessageLookupByLibrary.simpleMessage("Tổng tiền"),
+        "txt_tv_series": MessageLookupByLibrary.simpleMessage("TV Series"),
         "txt_video_audio_quality_is_better":
             MessageLookupByLibrary.simpleMessage(
                 "Chất lượng video và âm thanh tốt hơn."),

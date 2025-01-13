@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movie/di/dependency_injection.dart';
+import 'package:movie/features/main/screens/my_list/widgets/my_list_view.dart';
+import '../../../../core/common/resource/app_assets.dart';
+import '../../../../core/common/translations/l10n.dart';
 import '../../../../core/common/widgets/svg_widget.dart';
+import 'bloc/my_list_bloc.dart';
 
 class MyListScreen extends StatefulWidget {
   const MyListScreen({super.key});
@@ -10,20 +15,29 @@ class MyListScreen extends StatefulWidget {
 }
 
 class _MyListScreenState extends State<MyListScreen> with AutomaticKeepAliveClientMixin {
+
   @override
   bool get wantKeepAlive => true;
+
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    return Scaffold(
-      appBar: AppBar(
-        leading: const SvgWidget(ic: 'assets/icons/ic_logo.svg'),
-        title: Text('My List',
-            style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Colors.black, fontSize: 18)),
-      ),
-      body: const Column(children: [
+    return BlocProvider<MyListBloc>(
+      create: (_) => getIt<MyListBloc>()..add(MyListEvent.fetchAllMovies()),
+      child: Scaffold(
+        appBar: AppBar(
+          leading: const SvgWidget(ic: AppAssets.ic_logo_svg),
+          title: Text(
+            S.of(context).title_my_list,
+          ),
+        ),
+        body: BlocListener<MyListBloc, MyListState>(
+          listener: (context, state) {
 
-      ],),
+          },
+          child: MyListView(),
+        ),
+      ),
     );
   }
 }
