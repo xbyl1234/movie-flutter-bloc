@@ -137,6 +137,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "txt_already_have_an_account":
             MessageLookupByLibrary.simpleMessage("Đã có tài khoản? "),
         "txt_amount": MessageLookupByLibrary.simpleMessage("Số lượng"),
+        "txt_animal": MessageLookupByLibrary.simpleMessage("Animal"),
         "txt_congratulations":
             MessageLookupByLibrary.simpleMessage("Xin chúc mừng!"),
         "txt_content_congratulations": m0,

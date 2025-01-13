@@ -3,6 +3,7 @@ import '../translations/l10n.dart';
 enum CategoryType {
   all,
   movie,
+  animal,
   tvSeries,
   kDrama;
 
@@ -16,6 +17,8 @@ enum CategoryType {
         return S.current.txt_tv_series;
       case CategoryType.kDrama:
         return S.current.txt_k_drama;
+      case CategoryType.animal:
+        return S.current.txt_animal;
     }
   }
 }

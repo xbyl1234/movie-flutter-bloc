@@ -4,6 +4,7 @@ import 'package:movie/features/auth/sign_up/bloc/sign_up_bloc.dart';
 import 'package:movie/features/confirm_payment/bloc/confirm_payment_bloc.dart';
 import 'package:movie/features/language/bloc/language_bloc.dart';
 import 'package:movie/features/main/bloc/main_bloc.dart';
+import 'package:movie/features/main/screens/explore/presentation/bloc/explore_bloc.dart';
 import 'package:movie/features/main/screens/my_list/bloc/my_list_bloc.dart';
 import 'package:movie/features/main/screens/profile/bloc/profile_bloc.dart';
 import 'package:movie/features/payments/bloc/payments_bloc.dart';
@@ -20,7 +21,6 @@ import '../features/edit_profile/bloc/edit_profile_bloc.dart';
 import '../features/main/screens/explore/data/repository/search_movies_repository_impld.dart';
 import '../features/main/screens/explore/domain/repository/search_movies_repository.dart';
 import '../features/main/screens/explore/domain/use_case/search_use_case.dart';
-import '../features/main/screens/explore/presentation/bloc/explore_cubit.dart';
 import '../features/main/screens/home/bloc/home_cubit.dart';
 import '../features/movie_detail/data/repository/movie_detail_repository_impl.dart';
 import '../features/movie_detail/domain/repository/movie_detail_repository.dart';
@@ -93,7 +93,7 @@ Future<void> init() async {
   );
 
   getIt.registerLazySingleton(() => SearchUseCase(getIt.get()));
-  getIt.registerLazySingleton(() => ExploreCubit(getIt.get()));
+  getIt.registerLazySingleton(() => ExploreBloc());
 
   getIt.registerFactory(() => PaymentsBloc());
 

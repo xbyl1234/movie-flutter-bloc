@@ -139,6 +139,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "txt_already_have_an_account":
             MessageLookupByLibrary.simpleMessage("Already have an account? "),
         "txt_amount": MessageLookupByLibrary.simpleMessage("Amount"),
+        "txt_animal": MessageLookupByLibrary.simpleMessage("Animal"),
         "txt_congratulations":
             MessageLookupByLibrary.simpleMessage("Congratulations!"),
         "txt_content_congratulations": m0,

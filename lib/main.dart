@@ -9,7 +9,6 @@ import 'core/common/widgets/custom_error_widget.dart';
 import 'core/config/app_config.dart';
 import 'core/config/app_routes.dart';
 import 'di/dependency_injection.dart';
-import 'features/main/screens/explore/presentation/bloc/explore_cubit.dart';
 import 'features/main/screens/home/bloc/home_cubit.dart';
 
 GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
@@ -28,7 +27,6 @@ class App extends StatelessWidget {
         providers: [
           BlocProvider(create: (_) => getIt.get<AppCubit>()..getLocale()),
           BlocProvider<HomeCubit>.value(value: getIt<HomeCubit>()),
-          BlocProvider<ExploreCubit>.value(value: getIt<ExploreCubit>()),
         ],
         child: BlocBuilder<AppCubit, AppState>(
           buildWhen: (previous, current) => previous != current,

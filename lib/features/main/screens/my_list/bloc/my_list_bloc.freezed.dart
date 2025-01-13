@@ -22,6 +22,7 @@ mixin _$MyListEvent {
     required TResult Function() fetchMovies,
     required TResult Function() fetchTvSeries,
     required TResult Function() fetchKDrama,
+    required TResult Function() fetchAnimalMovies,
     required TResult Function(CategoryType type) selectedCategory,
   }) =>
       throw _privateConstructorUsedError;
@@ -31,6 +32,7 @@ mixin _$MyListEvent {
     TResult? Function()? fetchMovies,
     TResult? Function()? fetchTvSeries,
     TResult? Function()? fetchKDrama,
+    TResult? Function()? fetchAnimalMovies,
     TResult? Function(CategoryType type)? selectedCategory,
   }) =>
       throw _privateConstructorUsedError;
@@ -40,6 +42,7 @@ mixin _$MyListEvent {
     TResult Function()? fetchMovies,
     TResult Function()? fetchTvSeries,
     TResult Function()? fetchKDrama,
+    TResult Function()? fetchAnimalMovies,
     TResult Function(CategoryType type)? selectedCategory,
     required TResult orElse(),
   }) =>
@@ -50,6 +53,7 @@ mixin _$MyListEvent {
     required TResult Function(_FetchMovies value) fetchMovies,
     required TResult Function(_FetchTvSeries value) fetchTvSeries,
     required TResult Function(_FetchKDrama value) fetchKDrama,
+    required TResult Function(_FetchAnimalMovies value) fetchAnimalMovies,
     required TResult Function(_SelectedCategory value) selectedCategory,
   }) =>
       throw _privateConstructorUsedError;
@@ -59,6 +63,7 @@ mixin _$MyListEvent {
     TResult? Function(_FetchMovies value)? fetchMovies,
     TResult? Function(_FetchTvSeries value)? fetchTvSeries,
     TResult? Function(_FetchKDrama value)? fetchKDrama,
+    TResult? Function(_FetchAnimalMovies value)? fetchAnimalMovies,
     TResult? Function(_SelectedCategory value)? selectedCategory,
   }) =>
       throw _privateConstructorUsedError;
@@ -68,6 +73,7 @@ mixin _$MyListEvent {
     TResult Function(_FetchMovies value)? fetchMovies,
     TResult Function(_FetchTvSeries value)? fetchTvSeries,
     TResult Function(_FetchKDrama value)? fetchKDrama,
+    TResult Function(_FetchAnimalMovies value)? fetchAnimalMovies,
     TResult Function(_SelectedCategory value)? selectedCategory,
     required TResult orElse(),
   }) =>
@@ -140,6 +146,7 @@ class _$FetchAllMoviesImpl implements _FetchAllMovies {
     required TResult Function() fetchMovies,
     required TResult Function() fetchTvSeries,
     required TResult Function() fetchKDrama,
+    required TResult Function() fetchAnimalMovies,
     required TResult Function(CategoryType type) selectedCategory,
   }) {
     return fetchAllMovies();
@@ -152,6 +159,7 @@ class _$FetchAllMoviesImpl implements _FetchAllMovies {
     TResult? Function()? fetchMovies,
     TResult? Function()? fetchTvSeries,
     TResult? Function()? fetchKDrama,
+    TResult? Function()? fetchAnimalMovies,
     TResult? Function(CategoryType type)? selectedCategory,
   }) {
     return fetchAllMovies?.call();
@@ -164,6 +172,7 @@ class _$FetchAllMoviesImpl implements _FetchAllMovies {
     TResult Function()? fetchMovies,
     TResult Function()? fetchTvSeries,
     TResult Function()? fetchKDrama,
+    TResult Function()? fetchAnimalMovies,
     TResult Function(CategoryType type)? selectedCategory,
     required TResult orElse(),
   }) {
@@ -180,6 +189,7 @@ class _$FetchAllMoviesImpl implements _FetchAllMovies {
     required TResult Function(_FetchMovies value) fetchMovies,
     required TResult Function(_FetchTvSeries value) fetchTvSeries,
     required TResult Function(_FetchKDrama value) fetchKDrama,
+    required TResult Function(_FetchAnimalMovies value) fetchAnimalMovies,
     required TResult Function(_SelectedCategory value) selectedCategory,
   }) {
     return fetchAllMovies(this);
@@ -192,6 +202,7 @@ class _$FetchAllMoviesImpl implements _FetchAllMovies {
     TResult? Function(_FetchMovies value)? fetchMovies,
     TResult? Function(_FetchTvSeries value)? fetchTvSeries,
     TResult? Function(_FetchKDrama value)? fetchKDrama,
+    TResult? Function(_FetchAnimalMovies value)? fetchAnimalMovies,
     TResult? Function(_SelectedCategory value)? selectedCategory,
   }) {
     return fetchAllMovies?.call(this);
@@ -204,6 +215,7 @@ class _$FetchAllMoviesImpl implements _FetchAllMovies {
     TResult Function(_FetchMovies value)? fetchMovies,
     TResult Function(_FetchTvSeries value)? fetchTvSeries,
     TResult Function(_FetchKDrama value)? fetchKDrama,
+    TResult Function(_FetchAnimalMovies value)? fetchAnimalMovies,
     TResult Function(_SelectedCategory value)? selectedCategory,
     required TResult orElse(),
   }) {
@@ -263,6 +275,7 @@ class _$FetchMoviesImpl implements _FetchMovies {
     required TResult Function() fetchMovies,
     required TResult Function() fetchTvSeries,
     required TResult Function() fetchKDrama,
+    required TResult Function() fetchAnimalMovies,
     required TResult Function(CategoryType type) selectedCategory,
   }) {
     return fetchMovies();
@@ -275,6 +288,7 @@ class _$FetchMoviesImpl implements _FetchMovies {
     TResult? Function()? fetchMovies,
     TResult? Function()? fetchTvSeries,
     TResult? Function()? fetchKDrama,
+    TResult? Function()? fetchAnimalMovies,
     TResult? Function(CategoryType type)? selectedCategory,
   }) {
     return fetchMovies?.call();
@@ -287,6 +301,7 @@ class _$FetchMoviesImpl implements _FetchMovies {
     TResult Function()? fetchMovies,
     TResult Function()? fetchTvSeries,
     TResult Function()? fetchKDrama,
+    TResult Function()? fetchAnimalMovies,
     TResult Function(CategoryType type)? selectedCategory,
     required TResult orElse(),
   }) {
@@ -303,6 +318,7 @@ class _$FetchMoviesImpl implements _FetchMovies {
     required TResult Function(_FetchMovies value) fetchMovies,
     required TResult Function(_FetchTvSeries value) fetchTvSeries,
     required TResult Function(_FetchKDrama value) fetchKDrama,
+    required TResult Function(_FetchAnimalMovies value) fetchAnimalMovies,
     required TResult Function(_SelectedCategory value) selectedCategory,
   }) {
     return fetchMovies(this);
@@ -315,6 +331,7 @@ class _$FetchMoviesImpl implements _FetchMovies {
     TResult? Function(_FetchMovies value)? fetchMovies,
     TResult? Function(_FetchTvSeries value)? fetchTvSeries,
     TResult? Function(_FetchKDrama value)? fetchKDrama,
+    TResult? Function(_FetchAnimalMovies value)? fetchAnimalMovies,
     TResult? Function(_SelectedCategory value)? selectedCategory,
   }) {
     return fetchMovies?.call(this);
@@ -327,6 +344,7 @@ class _$FetchMoviesImpl implements _FetchMovies {
     TResult Function(_FetchMovies value)? fetchMovies,
     TResult Function(_FetchTvSeries value)? fetchTvSeries,
     TResult Function(_FetchKDrama value)? fetchKDrama,
+    TResult Function(_FetchAnimalMovies value)? fetchAnimalMovies,
     TResult Function(_SelectedCategory value)? selectedCategory,
     required TResult orElse(),
   }) {
@@ -386,6 +404,7 @@ class _$FetchTvSeriesImpl implements _FetchTvSeries {
     required TResult Function() fetchMovies,
     required TResult Function() fetchTvSeries,
     required TResult Function() fetchKDrama,
+    required TResult Function() fetchAnimalMovies,
     required TResult Function(CategoryType type) selectedCategory,
   }) {
     return fetchTvSeries();
@@ -398,6 +417,7 @@ class _$FetchTvSeriesImpl implements _FetchTvSeries {
     TResult? Function()? fetchMovies,
     TResult? Function()? fetchTvSeries,
     TResult? Function()? fetchKDrama,
+    TResult? Function()? fetchAnimalMovies,
     TResult? Function(CategoryType type)? selectedCategory,
   }) {
     return fetchTvSeries?.call();
@@ -410,6 +430,7 @@ class _$FetchTvSeriesImpl implements _FetchTvSeries {
     TResult Function()? fetchMovies,
     TResult Function()? fetchTvSeries,
     TResult Function()? fetchKDrama,
+    TResult Function()? fetchAnimalMovies,
     TResult Function(CategoryType type)? selectedCategory,
     required TResult orElse(),
   }) {
@@ -426,6 +447,7 @@ class _$FetchTvSeriesImpl implements _FetchTvSeries {
     required TResult Function(_FetchMovies value) fetchMovies,
     required TResult Function(_FetchTvSeries value) fetchTvSeries,
     required TResult Function(_FetchKDrama value) fetchKDrama,
+    required TResult Function(_FetchAnimalMovies value) fetchAnimalMovies,
     required TResult Function(_SelectedCategory value) selectedCategory,
   }) {
     return fetchTvSeries(this);
@@ -438,6 +460,7 @@ class _$FetchTvSeriesImpl implements _FetchTvSeries {
     TResult? Function(_FetchMovies value)? fetchMovies,
     TResult? Function(_FetchTvSeries value)? fetchTvSeries,
     TResult? Function(_FetchKDrama value)? fetchKDrama,
+    TResult? Function(_FetchAnimalMovies value)? fetchAnimalMovies,
     TResult? Function(_SelectedCategory value)? selectedCategory,
   }) {
     return fetchTvSeries?.call(this);
@@ -450,6 +473,7 @@ class _$FetchTvSeriesImpl implements _FetchTvSeries {
     TResult Function(_FetchMovies value)? fetchMovies,
     TResult Function(_FetchTvSeries value)? fetchTvSeries,
     TResult Function(_FetchKDrama value)? fetchKDrama,
+    TResult Function(_FetchAnimalMovies value)? fetchAnimalMovies,
     TResult Function(_SelectedCategory value)? selectedCategory,
     required TResult orElse(),
   }) {
@@ -509,6 +533,7 @@ class _$FetchKDramaImpl implements _FetchKDrama {
     required TResult Function() fetchMovies,
     required TResult Function() fetchTvSeries,
     required TResult Function() fetchKDrama,
+    required TResult Function() fetchAnimalMovies,
     required TResult Function(CategoryType type) selectedCategory,
   }) {
     return fetchKDrama();
@@ -521,6 +546,7 @@ class _$FetchKDramaImpl implements _FetchKDrama {
     TResult? Function()? fetchMovies,
     TResult? Function()? fetchTvSeries,
     TResult? Function()? fetchKDrama,
+    TResult? Function()? fetchAnimalMovies,
     TResult? Function(CategoryType type)? selectedCategory,
   }) {
     return fetchKDrama?.call();
@@ -533,6 +559,7 @@ class _$FetchKDramaImpl implements _FetchKDrama {
     TResult Function()? fetchMovies,
     TResult Function()? fetchTvSeries,
     TResult Function()? fetchKDrama,
+    TResult Function()? fetchAnimalMovies,
     TResult Function(CategoryType type)? selectedCategory,
     required TResult orElse(),
   }) {
@@ -549,6 +576,7 @@ class _$FetchKDramaImpl implements _FetchKDrama {
     required TResult Function(_FetchMovies value) fetchMovies,
     required TResult Function(_FetchTvSeries value) fetchTvSeries,
     required TResult Function(_FetchKDrama value) fetchKDrama,
+    required TResult Function(_FetchAnimalMovies value) fetchAnimalMovies,
     required TResult Function(_SelectedCategory value) selectedCategory,
   }) {
     return fetchKDrama(this);
@@ -561,6 +589,7 @@ class _$FetchKDramaImpl implements _FetchKDrama {
     TResult? Function(_FetchMovies value)? fetchMovies,
     TResult? Function(_FetchTvSeries value)? fetchTvSeries,
     TResult? Function(_FetchKDrama value)? fetchKDrama,
+    TResult? Function(_FetchAnimalMovies value)? fetchAnimalMovies,
     TResult? Function(_SelectedCategory value)? selectedCategory,
   }) {
     return fetchKDrama?.call(this);
@@ -573,6 +602,7 @@ class _$FetchKDramaImpl implements _FetchKDrama {
     TResult Function(_FetchMovies value)? fetchMovies,
     TResult Function(_FetchTvSeries value)? fetchTvSeries,
     TResult Function(_FetchKDrama value)? fetchKDrama,
+    TResult Function(_FetchAnimalMovies value)? fetchAnimalMovies,
     TResult Function(_SelectedCategory value)? selectedCategory,
     required TResult orElse(),
   }) {
@@ -585,6 +615,135 @@ class _$FetchKDramaImpl implements _FetchKDrama {
 
 abstract class _FetchKDrama implements MyListEvent {
   const factory _FetchKDrama() = _$FetchKDramaImpl;
+}
+
+/// @nodoc
+abstract class _$$FetchAnimalMoviesImplCopyWith<$Res> {
+  factory _$$FetchAnimalMoviesImplCopyWith(_$FetchAnimalMoviesImpl value,
+          $Res Function(_$FetchAnimalMoviesImpl) then) =
+      __$$FetchAnimalMoviesImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FetchAnimalMoviesImplCopyWithImpl<$Res>
+    extends _$MyListEventCopyWithImpl<$Res, _$FetchAnimalMoviesImpl>
+    implements _$$FetchAnimalMoviesImplCopyWith<$Res> {
+  __$$FetchAnimalMoviesImplCopyWithImpl(_$FetchAnimalMoviesImpl _value,
+      $Res Function(_$FetchAnimalMoviesImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of MyListEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$FetchAnimalMoviesImpl implements _FetchAnimalMovies {
+  const _$FetchAnimalMoviesImpl();
+
+  @override
+  String toString() {
+    return 'MyListEvent.fetchAnimalMovies()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$FetchAnimalMoviesImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchAllMovies,
+    required TResult Function() fetchMovies,
+    required TResult Function() fetchTvSeries,
+    required TResult Function() fetchKDrama,
+    required TResult Function() fetchAnimalMovies,
+    required TResult Function(CategoryType type) selectedCategory,
+  }) {
+    return fetchAnimalMovies();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchAllMovies,
+    TResult? Function()? fetchMovies,
+    TResult? Function()? fetchTvSeries,
+    TResult? Function()? fetchKDrama,
+    TResult? Function()? fetchAnimalMovies,
+    TResult? Function(CategoryType type)? selectedCategory,
+  }) {
+    return fetchAnimalMovies?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchAllMovies,
+    TResult Function()? fetchMovies,
+    TResult Function()? fetchTvSeries,
+    TResult Function()? fetchKDrama,
+    TResult Function()? fetchAnimalMovies,
+    TResult Function(CategoryType type)? selectedCategory,
+    required TResult orElse(),
+  }) {
+    if (fetchAnimalMovies != null) {
+      return fetchAnimalMovies();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchAllMovies value) fetchAllMovies,
+    required TResult Function(_FetchMovies value) fetchMovies,
+    required TResult Function(_FetchTvSeries value) fetchTvSeries,
+    required TResult Function(_FetchKDrama value) fetchKDrama,
+    required TResult Function(_FetchAnimalMovies value) fetchAnimalMovies,
+    required TResult Function(_SelectedCategory value) selectedCategory,
+  }) {
+    return fetchAnimalMovies(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchAllMovies value)? fetchAllMovies,
+    TResult? Function(_FetchMovies value)? fetchMovies,
+    TResult? Function(_FetchTvSeries value)? fetchTvSeries,
+    TResult? Function(_FetchKDrama value)? fetchKDrama,
+    TResult? Function(_FetchAnimalMovies value)? fetchAnimalMovies,
+    TResult? Function(_SelectedCategory value)? selectedCategory,
+  }) {
+    return fetchAnimalMovies?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchAllMovies value)? fetchAllMovies,
+    TResult Function(_FetchMovies value)? fetchMovies,
+    TResult Function(_FetchTvSeries value)? fetchTvSeries,
+    TResult Function(_FetchKDrama value)? fetchKDrama,
+    TResult Function(_FetchAnimalMovies value)? fetchAnimalMovies,
+    TResult Function(_SelectedCategory value)? selectedCategory,
+    required TResult orElse(),
+  }) {
+    if (fetchAnimalMovies != null) {
+      return fetchAnimalMovies(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchAnimalMovies implements MyListEvent {
+  const factory _FetchAnimalMovies() = _$FetchAnimalMoviesImpl;
 }
 
 /// @nodoc
@@ -660,6 +819,7 @@ class _$SelectedCategoryImpl implements _SelectedCategory {
     required TResult Function() fetchMovies,
     required TResult Function() fetchTvSeries,
     required TResult Function() fetchKDrama,
+    required TResult Function() fetchAnimalMovies,
     required TResult Function(CategoryType type) selectedCategory,
   }) {
     return selectedCategory(type);
@@ -672,6 +832,7 @@ class _$SelectedCategoryImpl implements _SelectedCategory {
     TResult? Function()? fetchMovies,
     TResult? Function()? fetchTvSeries,
     TResult? Function()? fetchKDrama,
+    TResult? Function()? fetchAnimalMovies,
     TResult? Function(CategoryType type)? selectedCategory,
   }) {
     return selectedCategory?.call(type);
@@ -684,6 +845,7 @@ class _$SelectedCategoryImpl implements _SelectedCategory {
     TResult Function()? fetchMovies,
     TResult Function()? fetchTvSeries,
     TResult Function()? fetchKDrama,
+    TResult Function()? fetchAnimalMovies,
     TResult Function(CategoryType type)? selectedCategory,
     required TResult orElse(),
   }) {
@@ -700,6 +862,7 @@ class _$SelectedCategoryImpl implements _SelectedCategory {
     required TResult Function(_FetchMovies value) fetchMovies,
     required TResult Function(_FetchTvSeries value) fetchTvSeries,
     required TResult Function(_FetchKDrama value) fetchKDrama,
+    required TResult Function(_FetchAnimalMovies value) fetchAnimalMovies,
     required TResult Function(_SelectedCategory value) selectedCategory,
   }) {
     return selectedCategory(this);
@@ -712,6 +875,7 @@ class _$SelectedCategoryImpl implements _SelectedCategory {
     TResult? Function(_FetchMovies value)? fetchMovies,
     TResult? Function(_FetchTvSeries value)? fetchTvSeries,
     TResult? Function(_FetchKDrama value)? fetchKDrama,
+    TResult? Function(_FetchAnimalMovies value)? fetchAnimalMovies,
     TResult? Function(_SelectedCategory value)? selectedCategory,
   }) {
     return selectedCategory?.call(this);
@@ -724,6 +888,7 @@ class _$SelectedCategoryImpl implements _SelectedCategory {
     TResult Function(_FetchMovies value)? fetchMovies,
     TResult Function(_FetchTvSeries value)? fetchTvSeries,
     TResult Function(_FetchKDrama value)? fetchKDrama,
+    TResult Function(_FetchAnimalMovies value)? fetchAnimalMovies,
     TResult Function(_SelectedCategory value)? selectedCategory,
     required TResult orElse(),
   }) {

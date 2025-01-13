@@ -1,29 +1,10 @@
-part of 'explore_cubit.dart';
+part of 'explore_bloc.dart';
 
-class ExploreState extends Equatable {
-  final PageState status;
-  final ExploreData data;
-
-  const ExploreState({required this.status, required this.data});
-
-  factory ExploreState.init() => const ExploreState(status: PageState.init, data: ExploreData());
-
-  @override
-  List<Object?> get props => [status, data];
-
-  ExploreState copyWith({final PageState? status, final ExploreData? data}) {
-    return ExploreState(status: status ?? this.status, data: data ?? this.data);
-  }
-}
-
-class ExploreData extends Equatable {
-  final List<MovieModel> movies;
-
-  const ExploreData({this.movies = const []});
-
-  @override
-  List<Object?> get props => [movies];
-
-  ExploreData copyWith({final List<MovieModel>? movies}) =>
-      ExploreData(movies: movies ?? this.movies);
+@freezed
+class ExploreState with _$ExploreState {
+  const ExploreState._();
+  const factory ExploreState({
+    @Default(PageState.init) PageState status,
+    @Default([]) List<MovieModel> movies,
+  }) = _ExploreState;
 }
