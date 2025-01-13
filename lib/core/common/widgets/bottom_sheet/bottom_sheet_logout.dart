@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movie/core/data/data_resource/local/manager_shared_preferences.dart';
 import 'package:movie/di/dependency_injection.dart';
-
+import 'package:movie/features/main/bloc/main_bloc.dart';
+import '../../../data/data_resource/local/manager_shared_preferences.dart';
 import '../../constant/routers.dart';
 import '../svg_widget.dart';
 
@@ -63,6 +63,7 @@ class BottomSheetLogout extends StatelessWidget {
               ),
               TextButton(
                   onPressed: () {
+                    getIt.resetLazySingleton<MainBloc>();
                     getIt<ManagerSharedPreferences>().setBool("loggedIn", false);
                     Navigator.pushNamedAndRemoveUntil(context, loginRoute, (route) => false);
                   },

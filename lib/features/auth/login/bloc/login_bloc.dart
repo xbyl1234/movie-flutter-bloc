@@ -44,7 +44,6 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
         emit(state.copyWith(errPassword: S.of(event.ctx).err_invalid_password));
       } else {
         try {
-          //emit(state.copyWith(status: PageState.loading));
           DialogUtils.loading();
           final userCredential =
               await FirebaseAuth.instance.signInWithEmailAndPassword(

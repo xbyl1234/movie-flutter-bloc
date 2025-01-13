@@ -1,8 +1,7 @@
+part of 'main_bloc.dart';
 
-abstract class MainEvent {}
-
-class TabChangeEvent extends MainEvent {
-  final int tabIndex;
-
-  TabChangeEvent(this.tabIndex);
+@freezed
+class MainEvent with _$MainEvent {
+  const factory MainEvent.onChangePage(int index) = _OnChangePage;
 }
+

@@ -14,3 +14,7 @@
 - flutter build ipa --release lib/main.dart --flavor dev
 - flutter build ipa --release lib/main.dart --flavor prod
 
+
+## 
+- flutter pub run build_runner build --delete-conflicting-outputs
+

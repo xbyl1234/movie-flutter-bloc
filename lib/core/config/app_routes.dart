@@ -8,7 +8,6 @@ import 'package:movie/features/comments/post_comment_screen.dart';
 import 'package:movie/features/confirm_payment/confirm_payment_screen.dart';
 import 'package:movie/features/edit_profile/edit_profile_screen.dart';
 import 'package:movie/features/language/language_screen.dart';
-import 'package:movie/features/main/bloc/main_bloc.dart';
 import 'package:movie/features/main/screens/main_screen.dart';
 import 'package:movie/features/movie_detail/presentation/movie_detail_screen.dart';
 import 'package:movie/features/movies/presentation/bloc/list_movie_cubit.dart';
@@ -17,17 +16,13 @@ import 'package:movie/features/notification/notification_screen.dart';
 import 'package:movie/features/payments/payments_screen.dart';
 import 'package:movie/features/subscribe/subscribe_screen.dart';
 import 'package:movie/features/watch_video/watch_video_screen.dart';
-import 'package:movie/features/wellcome/bloc/well_come_bloc.dart';
-import 'package:movie/features/wellcome/wellcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../features/splash/splash_screen.dart';
+import '../../features/well_come/well_come_screen.dart';
 import '../common/constant/routers.dart';
 
 class AppRouters {
-  final MainBloc mainBloc = MainBloc();
-  final WellComeBloc wellComeBloc = WellComeBloc();
-
   Route<dynamic> generateRoute(RouteSettings settings) {
     final args = settings.arguments;
     switch (settings.name) {
@@ -37,14 +32,16 @@ class AppRouters {
         );
       case welComeRoute:
         return MaterialPageRoute(
-            builder: (_) => BlocProvider<WellComeBloc>.value(
-                  value: wellComeBloc,
-                  child: const WellComeScreen(),
-                ));
+          builder: (_) => const WellComeScreen(),
+        );
       case loginRoute:
-        return MaterialPageRoute(builder: (_) => const LoginScreen());
+        return MaterialPageRoute(
+          builder: (_) => const LoginScreen(),
+        );
       case signUpRoute:
-        return MaterialPageRoute(builder: (_) => const SignUpScreen());
+        return MaterialPageRoute(
+          builder: (_) => const SignUpScreen(),
+        );
       case forgotPassRoute:
         return MaterialPageRoute(
           builder: (_) => const ForgotPassWordScreen(),
@@ -74,21 +71,24 @@ class AppRouters {
         );
       case mainRoute:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider<MainBloc>.value(
-            value: mainBloc,
-            child: const MainScreen(),
-          ),
+          builder: (_) => const MainScreen(),
         );
       case editProfileRoute:
-        return MaterialPageRoute(builder: (_) => const EditProfileScreen());
+        return MaterialPageRoute(
+          builder: (_) => const EditProfileScreen(),
+        );
       case notificationRoute:
-        return MaterialPageRoute(builder: (_) => const NotificationScreen());
+        return MaterialPageRoute(
+          builder: (_) => const NotificationScreen(),
+        );
       case languageRoute:
         return MaterialPageRoute(
           builder: (_) => const LanguageScreen(),
         );
       case subscribeRouter:
-        return MaterialPageRoute(builder: (_) => const SubscribeScreen());
+        return MaterialPageRoute(
+          builder: (_) => const SubscribeScreen(),
+        );
       case paymentsRoute:
         return MaterialPageRoute(
           builder: (_) => PaymentsScreen(
@@ -105,7 +105,9 @@ class AppRouters {
           builder: (_) => const AddCardScreen(),
         );
       default:
-        return MaterialPageRoute(builder: (_) => CustomErrorWidget());
+        return MaterialPageRoute(
+          builder: (_) => CustomErrorWidget(),
+        );
     }
   }
 }

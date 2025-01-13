@@ -1,10 +1,12 @@
 
-abstract class MainState {
-  final int tabIndex;
+part of 'main_bloc.dart';
 
-  const MainState({required this.tabIndex});
+@freezed
+class MainState with _$MainState {
+  const MainState._();
+  const factory MainState({
+    @Default(0) int index,
+ }) = _MainState;
 }
 
-class MainInitial extends MainState {
-  const MainInitial({required super.tabIndex});
-}
+

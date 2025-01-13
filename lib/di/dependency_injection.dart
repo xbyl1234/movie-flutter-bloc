@@ -3,9 +3,11 @@ import 'package:movie/features/auth/login/bloc/login_bloc.dart';
 import 'package:movie/features/auth/sign_up/bloc/sign_up_bloc.dart';
 import 'package:movie/features/confirm_payment/bloc/confirm_payment_bloc.dart';
 import 'package:movie/features/language/bloc/language_bloc.dart';
+import 'package:movie/features/main/bloc/main_bloc.dart';
 import 'package:movie/features/main/screens/profile/bloc/profile_bloc.dart';
 import 'package:movie/features/payments/bloc/payments_bloc.dart';
 import 'package:movie/features/splash/bloc/splash_bloc.dart';
+import 'package:movie/features/well_come/bloc/well_come_bloc.dart';
 import '../core/cubit/app_cubit.dart';
 import '../core/data/data_resource/local/manager_shared_preferences.dart';
 import '../core/data/data_resource/remote/movie/movie_api_service.dart';
@@ -36,27 +38,34 @@ Future<void> init() async {
   getIt.registerSingleton(AppCubit());
 
   getIt.registerSingletonAsync(() async {
-    final ManagerSharedPreferences preferences = ManagerSharedPreferences();
+    final preferences = ManagerSharedPreferences();
     await preferences.init();
     return preferences;
   });
 
-  getIt.registerLazySingleton(() => MovieProvider());
-  getIt.registerLazySingleton(() => MovieApiService(getIt.get()));
 
   getIt.registerFactory(() => SplashBloc());
-  getIt.registerFactory(() => LoginBloc());
+  getIt.registerFactory(() => WellComeBloc());
   getIt.registerFactory(() => SignUpBloc());
+  getIt.registerFactory(() => LoginBloc());
 
+  getIt.registerLazySingleton(() => MainBloc());
+
+  getIt.registerLazySingleton(() => MovieProvider());
+  getIt.registerLazySingleton(() => MovieApiService(getIt.get()));
   getIt.registerLazySingleton(() => SearchMovieProvider());
   getIt.registerLazySingleton(() => SearchMovieApiService(getIt.get()));
 
   getIt.registerSingleton<MovieDetailRepository>(
-      MovieDetailRepositoryImpl(getIt.get()));
-  getIt.registerSingleton<MovieDetailUseCase>(MovieDetailUseCase(getIt.get()));
+    MovieDetailRepositoryImpl(getIt.get()),
+  );
+  getIt.registerSingleton<MovieDetailUseCase>(
+    MovieDetailUseCase(getIt.get()),
+  );
 
   getIt.registerSingleton<ListMovieRepository>(
-      ListMovieRepositoryImpl(getIt.get()));
+    ListMovieRepositoryImpl(getIt.get()),
+  );
   getIt.registerSingleton<ListMovieUseCase>(ListMovieUseCase(getIt.get()));
 
   getIt.registerFactory(() => ListMovieCubit(getIt.get()));
@@ -77,7 +86,8 @@ Future<void> init() async {
       ));
 
   getIt.registerLazySingleton<SearchMoviesRepository>(
-      () => SearchMoviesRepositoryImpl(getIt.get()));
+    () => SearchMoviesRepositoryImpl(getIt.get()),
+  );
 
   getIt.registerLazySingleton(() => SearchUseCase(getIt.get()));
   getIt.registerLazySingleton(() => ExploreCubit(getIt.get()));
