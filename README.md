@@ -38,13 +38,9 @@ Run the following commands from your terminal:
 </table>
 
 ## Video 
-<table>
-   <tbody>
-    <tr>
-      <td width="1%"><img src="https://youtu.be/PvvRz4UFN1w"/></td>
-    </tr>
-  </tbody>
-</table>
+<video width="640" height="360" controls>
+    <source src="https://youtu.be/PvvRz4UFN1w" type="video/mp4">
+</video>
 
 
 # Learn 
