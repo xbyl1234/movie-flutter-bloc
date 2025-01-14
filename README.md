@@ -20,12 +20,12 @@ Run the following commands from your terminal:
     <tr>
       <td width="1%"><img src="https://raw.githubusercontent.com/dev-mobile-vn/movie-flutter-bloc/refs/heads/master/assets/screenshots/wellcome.png"/></td>
       <td width="1%"><img src="https://raw.githubusercontent.com/dev-mobile-vn/movie-flutter-bloc/refs/heads/master/assets/screenshots/login.png"/></td>
-       <td width="1%"><img src="https://raw.githubusercontent.com/dev-mobile-vn/movie-flutter-bloc/refs/heads/master/assets/screenshots/login2.png"/></td>
+      <td width="1%"><img src="https://raw.githubusercontent.com/dev-mobile-vn/movie-flutter-bloc/refs/heads/master/assets/screenshots/login2.png"/></td>
     </tr>
     <tr>
       <td width="1%"><img src="https://raw.githubusercontent.com/dev-mobile-vn/movie-flutter-bloc/refs/heads/master/assets/screenshots/home.png"/></td>
       <td width="1%"><img src="https://raw.githubusercontent.com/dev-mobile-vn/movie-flutter-bloc/refs/heads/master/assets/screenshots/upcoming.png"/></td>
-       <td width="1%"><img src="https://raw.githubusercontent.com/dev-mobile-vn/movie-flutter-bloc/refs/heads/master/assets/screenshots/detail.png"/></td>
+      <td width="1%"><img src="https://raw.githubusercontent.com/dev-mobile-vn/movie-flutter-bloc/refs/heads/master/assets/screenshots/detail.png"/></td>
     </tr>
     <tr>
      <td width="1%"><img src="https://raw.githubusercontent.com/dev-mobile-vn/movie-flutter-bloc/refs/heads/master/assets/screenshots/detail2.png"/></td>
@@ -50,6 +50,7 @@ Run the following commands from your terminal:
 - https://medium.com/@ayalon.idan/getit-v8-migration-examples-24344ed1a130
 - https://medium.com/@sasicse990
 - https://medium.com/search?q=getIt+fluter
+- https://medium.com/@akhil-ge0rge
 - https://www.burkharts.net/apps/blog/lets-get-this-party-started-startup-orchestration-with-getit/
 
 ## Build app cmd

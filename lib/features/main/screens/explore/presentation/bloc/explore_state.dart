@@ -6,5 +6,8 @@ class ExploreState with _$ExploreState {
   const factory ExploreState({
     @Default(PageState.init) PageState status,
     @Default([]) List<MovieModel> movies,
+    @Default([]) List<GenreModel> genreList,
+    @Default([]) List<CountryModel> countryList,
+    @Default([]) List<String> dateList,
   }) = _ExploreState;
 }

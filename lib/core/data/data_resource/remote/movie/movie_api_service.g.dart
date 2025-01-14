@@ -38,7 +38,7 @@ class _MovieApiService implements MovieApiService {
     )
             .compose(
               _dio.options,
-              'now_playing',
+              'movie/now_playing',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -47,7 +47,7 @@ class _MovieApiService implements MovieApiService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = await compute(deserializeMovieResponse, _result.data!);
+    final value = MovieResponse.fromJson(_result.data!);
     return value;
   }
 
@@ -71,7 +71,7 @@ class _MovieApiService implements MovieApiService {
     )
             .compose(
               _dio.options,
-              'popular',
+              'movie/popular',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -80,7 +80,7 @@ class _MovieApiService implements MovieApiService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = await compute(deserializeMovieResponse, _result.data!);
+    final value = MovieResponse.fromJson(_result.data!);
     return value;
   }
 
@@ -117,7 +117,7 @@ class _MovieApiService implements MovieApiService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = await compute(deserializeMovieResponse, _result.data!);
+    final value = MovieResponse.fromJson(_result.data!);
     return value;
   }
 
@@ -141,7 +141,7 @@ class _MovieApiService implements MovieApiService {
     )
             .compose(
               _dio.options,
-              'top_rated',
+              'movie/top_rated',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -150,7 +150,7 @@ class _MovieApiService implements MovieApiService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = await compute(deserializeMovieResponse, _result.data!);
+    final value = MovieResponse.fromJson(_result.data!);
     return value;
   }
 
@@ -176,7 +176,7 @@ class _MovieApiService implements MovieApiService {
     )
             .compose(
               _dio.options,
-              '${id}/${path}',
+              'movie/${id}/${path}',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -185,7 +185,7 @@ class _MovieApiService implements MovieApiService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = await compute(deserializeMovieResponse, _result.data!);
+    final value = MovieResponse.fromJson(_result.data!);
     return value;
   }
 
@@ -203,7 +203,7 @@ class _MovieApiService implements MovieApiService {
     )
             .compose(
               _dio.options,
-              '${id}?language=en-US',
+              'movie/${id}?language=en-US',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -212,9 +212,8 @@ class _MovieApiService implements MovieApiService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data == null
-        ? null
-        : await compute(deserializeMovieModel, _result.data!);
+    final value =
+        _result.data == null ? null : MovieModel.fromJson(_result.data!);
     return value;
   }
 
@@ -232,7 +231,7 @@ class _MovieApiService implements MovieApiService {
     )
             .compose(
               _dio.options,
-              '${id}/reviews',
+              'movie/${id}/reviews',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -241,7 +240,7 @@ class _MovieApiService implements MovieApiService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = await compute(deserializeReviewsResponse, _result.data!);
+    final value = ReviewsResponse.fromJson(_result.data!);
     return value;
   }
 
@@ -259,7 +258,7 @@ class _MovieApiService implements MovieApiService {
     )
             .compose(
               _dio.options,
-              '${id}/videos?language=en-US',
+              'movie/${id}/videos?language=en-US',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -268,7 +267,63 @@ class _MovieApiService implements MovieApiService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = await compute(deserializeTrailerResponse, _result.data!);
+    final value = TrailerResponse.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<List<CountryModel>> getCountryList() async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final Map<String, dynamic>? _data = null;
+    final _result = await _dio
+        .fetch<List<dynamic>>(_setStreamType<List<CountryModel>>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'configuration/countries?language=en-US',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    var value = _result.data!
+        .map((dynamic i) => CountryModel.fromJson(i as Map<String, dynamic>))
+        .toList();
+    return value;
+  }
+
+  @override
+  Future<GenreResponse> getGenreList() async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final Map<String, dynamic>? _data = null;
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<GenreResponse>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'genre/movie/list?language=en',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = GenreResponse.fromJson(_result.data!);
     return value;
   }
 
