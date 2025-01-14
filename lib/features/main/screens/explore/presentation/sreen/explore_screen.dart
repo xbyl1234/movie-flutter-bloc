@@ -15,36 +15,36 @@ class ExploreScreen extends StatelessWidget {
       top: false,
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 24),
-            child: SearchMovie(),
-          ),
-          BlocConsumer<ExploreBloc, ExploreState>(
-            listener: (context, state) {},
-            builder: (context, state) {
-              if (state.status == PageState.loading) {
-                return const Center(child: Loading());
-              } else if (state.status == PageState.success) {
-                return Expanded(
-                  child: GridView.builder(
-                    key: const PageStorageKey('ExploreStorageKey'),
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
-                    gridDelegate:
-                        const SliverGridDelegateWithMaxCrossAxisExtent(
-                            maxCrossAxisExtent: 200,
-                            childAspectRatio: 3 / 4,
-                            crossAxisSpacing: 8,
-                            mainAxisSpacing: 8),
-                    itemBuilder: (context, index) {
-                      return ItemMovie(item: state.movies[index]);
-                    },
-                    itemCount: state.movies.length,
-                  ),
-                );
-              }
-              return const SizedBox();
-            },
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.only(bottom: 24),
+          //   child: SearchMovie(),
+          // ),
+          // BlocConsumer<ExploreBloc, ExploreState>(
+          //   listener: (context, state) {},
+          //   builder: (context, state) {
+          //     if (state.status == PageState.loading) {
+          //       return const Center(child: Loading());
+          //     } else if (state.status == PageState.success) {
+          //       return Expanded(
+          //         child: GridView.builder(
+          //           key: const PageStorageKey('ExploreStorageKey'),
+          //           padding: const EdgeInsets.symmetric(horizontal: 16),
+          //           gridDelegate:
+          //               const SliverGridDelegateWithMaxCrossAxisExtent(
+          //                   maxCrossAxisExtent: 200,
+          //                   childAspectRatio: 3 / 4,
+          //                   crossAxisSpacing: 8,
+          //                   mainAxisSpacing: 8),
+          //           itemBuilder: (context, index) {
+          //             return ItemMovie(item: state.movies[index]);
+          //           },
+          //           itemCount: state.movies.length,
+          //         ),
+          //       );
+          //     }
+          //     return const SizedBox();
+          //   },
+          // ),
         ],
       ),
     );
