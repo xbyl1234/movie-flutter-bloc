@@ -15,9 +15,9 @@ Run the following commands from your terminal:
 <table width="100%">
   <tbody>
     <tr>
-      <td width="1%"><img src="https://user-images.githubusercontent.com/72301141/206411105-4a64ada8-2a9c-4804-ad59-59302a6a82c5.jpg"/></td>
-      <td width="1%"><img src="https://user-images.githubusercontent.com/72301141/206417378-9da25e84-bf21-401c-bf23-bce3b352311e.jpg"/></td>
-       <td width="1%"><img src="https://user-images.githubusercontent.com/72301141/206417548-787625af-f4b1-4c9d-8aac-fa9bd7c47bfb.jpg"/></td>
+      <td width="1%"><img src="https://raw.githubusercontent.com/dev-mobile-vn/movie-flutter-bloc/refs/heads/master/assets/screenshots/wellcome.png"/></td>
+      <td width="1%"><img src="https://raw.githubusercontent.com/dev-mobile-vn/movie-flutter-bloc/refs/heads/master/assets/screenshots/login.png"/></td>
+       <td width="1%"><img src="https://raw.githubusercontent.com/dev-mobile-vn/movie-flutter-bloc/refs/heads/master/assets/screenshots/login2.png"/></td>
     </tr>
     <tr>
       <td width="1%"><img src="https://user-images.githubusercontent.com/72301141/206417565-01bc0f8c-27a4-4648-a845-0a7c29a957c2.jpg"/></td>
