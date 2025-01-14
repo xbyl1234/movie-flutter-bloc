@@ -6,11 +6,10 @@ import 'package:intl/intl.dart';
 import 'package:movie/core/bloc/page_state.dart';
 import 'package:movie/core/data/model/country_model.dart';
 import 'package:movie/core/data/model/genre_model.dart';
-import 'package:movie/features/main/screens/explore/domain/use_case/country_use_case.dart';
-
 import '../../../../../../core/data/model/movie_model.dart';
 import '../../../../../../core/data/model/request/search_query.dart';
 import '../../../../../../core/data/model/response/movie_response.dart';
+import '../../domain/use_case/country_use_case.dart';
 import '../../domain/use_case/genre_use_case.dart';
 import '../../domain/use_case/search_use_case.dart';
 
@@ -22,7 +21,13 @@ class ExploreBloc extends Bloc<ExploreEvent, ExploreState> {
   final SearchUseCase _searchUseCase;
   final CountryUseCase _countryUseCase;
   final GenreUseCase _genreUseCase;
-  ExploreBloc(this._searchUseCase, this._countryUseCase, this._genreUseCase) : super(const ExploreState()) {
+  Timer? _debounceTimer;
+  ExploreBloc(
+    this._searchUseCase,
+    this._countryUseCase,
+    this._genreUseCase,
+  ) : super(const ExploreState()) {
+    on<_OnChanged>(_onChanged);
     on<_OnSearch>(_onSearch);
     on<_InitDataBottomSheet>(_initDataBottomSheet);
     on<_FetchCountry>(_fetchCountry);
@@ -32,7 +37,8 @@ class ExploreBloc extends Bloc<ExploreEvent, ExploreState> {
     on<_OnSelectedDate>(_onSelectedDate);
   }
 
-  FutureOr<void> _initDataBottomSheet(_InitDataBottomSheet event, Emitter<ExploreState> emit) {
+  FutureOr<void> _initDataBottomSheet(
+      _InitDataBottomSheet event, Emitter<ExploreState> emit) {
     DateTime currentDate = DateTime.now();
     List<String> dateList = [];
     dateList.add('All Periods');
@@ -48,7 +54,8 @@ class ExploreBloc extends Bloc<ExploreEvent, ExploreState> {
     emit(state.copyWith(dateList: dateList));
   }
 
-  Future<void> _fetchCountry(_FetchCountry event, Emitter<ExploreState> emit) async{
+  Future<void> _fetchCountry(
+      _FetchCountry event, Emitter<ExploreState> emit) async {
     _countryUseCase.call();
   }
 
@@ -65,10 +72,24 @@ class ExploreBloc extends Bloc<ExploreEvent, ExploreState> {
   FutureOr<void> _onSelectedDate(
       _OnSelectedDate event, Emitter<ExploreState> emit) {}
 
+  Future<void> _onChanged(_OnChanged event, Emitter<ExploreState> emit) async {
+    if (_debounceTimer?.isActive ?? false) {
+      _debounceTimer?.cancel();
+    }
+    _debounceTimer = Timer(Duration(milliseconds: 800), () {
+      add(ExploreEvent.onSearch(event.text));
+    });
+  }
+
   Future<void> _onSearch(_OnSearch event, Emitter<ExploreState> emit) async {
+    if (event.text.isEmpty && state.searchText != null) {
+      emit(state.copyWith(searchText: null, movies: []));
+      return;
+    }
     emit(
       state.copyWith(
         status: PageState.loading,
+        searchText: event.text,
       ),
     );
     try {
@@ -86,5 +107,11 @@ class ExploreBloc extends Bloc<ExploreEvent, ExploreState> {
         status: PageState.error,
       ));
     }
+  }
+
+  @override
+  Future<void> close() {
+    _debounceTimer?.cancel();
+    return super.close();
   }
 }

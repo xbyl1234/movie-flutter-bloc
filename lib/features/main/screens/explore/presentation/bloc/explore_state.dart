@@ -9,5 +9,6 @@ class ExploreState with _$ExploreState {
     @Default([]) List<GenreModel> genreList,
     @Default([]) List<CountryModel> countryList,
     @Default([]) List<String> dateList,
+    String? searchText,
   }) = _ExploreState;
 }
