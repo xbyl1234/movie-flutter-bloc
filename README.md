@@ -38,7 +38,7 @@ Run the following commands from your terminal:
 </table>
 
 ## Video 
-[!Play movie](https://youtu.be/PvvRz4UFN1w)
+[Play movie](https://youtu.be/PvvRz4UFN1w)
 
 
 
