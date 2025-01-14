@@ -37,6 +37,15 @@ Run the following commands from your terminal:
   </tbody>
 </table>
 
+## Video 
+<table>
+   <tbody>
+    <tr>
+      <td width="1%"><img src="https://youtu.be/PvvRz4UFN1w"/></td>
+    </tr>
+  </tbody>
+</table>
+
 
 # Learn 
  - https://medium.com/@ayalon.idan/getit-v8-migration-examples-24344ed1a130
