@@ -89,6 +89,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "male": MessageLookupByLibrary.simpleMessage("Male"),
         "mgs_verify_email": MessageLookupByLibrary.simpleMessage(
             "A verification email has been sent to your address. Please check your inbox to complete the verification process"),
+        "search": MessageLookupByLibrary.simpleMessage("Search"),
         "see_all": MessageLookupByLibrary.simpleMessage("See all"),
         "tab_comments": MessageLookupByLibrary.simpleMessage("Comments"),
         "tab_download": MessageLookupByLibrary.simpleMessage("Download"),

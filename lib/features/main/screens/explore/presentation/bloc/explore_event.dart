@@ -2,6 +2,7 @@ part of 'explore_bloc.dart';
 
 @freezed
 class ExploreEvent with _$ExploreEvent {
+  const factory ExploreEvent.onChanged(String text) = _OnChanged;
   const factory ExploreEvent.onSearch(String text) = _OnSearch;
   const factory ExploreEvent.initDataBottomSheet() = _InitDataBottomSheet;
   const factory ExploreEvent.fetchCountry() = _FetchCountry;

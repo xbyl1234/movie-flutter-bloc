@@ -18,6 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$ExploreEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
@@ -31,6 +32,7 @@ mixin _$ExploreEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
@@ -44,6 +46,7 @@ mixin _$ExploreEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
@@ -58,6 +61,7 @@ mixin _$ExploreEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
@@ -71,6 +75,7 @@ mixin _$ExploreEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
@@ -84,6 +89,7 @@ mixin _$ExploreEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
@@ -117,6 +123,194 @@ class _$ExploreEventCopyWithImpl<$Res, $Val extends ExploreEvent>
 
   /// Create a copy of ExploreEvent
   /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+abstract class _$$OnChangedImplCopyWith<$Res> {
+  factory _$$OnChangedImplCopyWith(
+          _$OnChangedImpl value, $Res Function(_$OnChangedImpl) then) =
+      __$$OnChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String text});
+}
+
+/// @nodoc
+class __$$OnChangedImplCopyWithImpl<$Res>
+    extends _$ExploreEventCopyWithImpl<$Res, _$OnChangedImpl>
+    implements _$$OnChangedImplCopyWith<$Res> {
+  __$$OnChangedImplCopyWithImpl(
+      _$OnChangedImpl _value, $Res Function(_$OnChangedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? text = null,
+  }) {
+    return _then(_$OnChangedImpl(
+      null == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OnChangedImpl implements _OnChanged {
+  const _$OnChangedImpl(this.text);
+
+  @override
+  final String text;
+
+  @override
+  String toString() {
+    return 'ExploreEvent.onChanged(text: $text)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnChangedImpl &&
+            (identical(other.text, text) || other.text == text));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, text);
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnChangedImplCopyWith<_$OnChangedImpl> get copyWith =>
+      __$$OnChangedImplCopyWithImpl<_$OnChangedImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String text) onChanged,
+    required TResult Function(String text) onSearch,
+    required TResult Function() initDataBottomSheet,
+    required TResult Function() fetchCountry,
+    required TResult Function() fetchGenre,
+    required TResult Function() onReset,
+    required TResult Function() onSubmit,
+    required TResult Function(CountryModel country) onSelectedCountry,
+    required TResult Function(String date) onSelectedDate,
+    required TResult Function(GenreModel genre) onSelectedGenre,
+  }) {
+    return onChanged(text);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String text)? onChanged,
+    TResult? Function(String text)? onSearch,
+    TResult? Function()? initDataBottomSheet,
+    TResult? Function()? fetchCountry,
+    TResult? Function()? fetchGenre,
+    TResult? Function()? onReset,
+    TResult? Function()? onSubmit,
+    TResult? Function(CountryModel country)? onSelectedCountry,
+    TResult? Function(String date)? onSelectedDate,
+    TResult? Function(GenreModel genre)? onSelectedGenre,
+  }) {
+    return onChanged?.call(text);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String text)? onChanged,
+    TResult Function(String text)? onSearch,
+    TResult Function()? initDataBottomSheet,
+    TResult Function()? fetchCountry,
+    TResult Function()? fetchGenre,
+    TResult Function()? onReset,
+    TResult Function()? onSubmit,
+    TResult Function(CountryModel country)? onSelectedCountry,
+    TResult Function(String date)? onSelectedDate,
+    TResult Function(GenreModel genre)? onSelectedGenre,
+    required TResult orElse(),
+  }) {
+    if (onChanged != null) {
+      return onChanged(text);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_OnChanged value) onChanged,
+    required TResult Function(_OnSearch value) onSearch,
+    required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
+    required TResult Function(_FetchCountry value) fetchCountry,
+    required TResult Function(_FetchGenre value) fetchGenre,
+    required TResult Function(_OnReset value) onReset,
+    required TResult Function(_OnSubmit value) onSubmit,
+    required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedDate value) onSelectedDate,
+    required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+  }) {
+    return onChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnChanged value)? onChanged,
+    TResult? Function(_OnSearch value)? onSearch,
+    TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
+    TResult? Function(_FetchCountry value)? fetchCountry,
+    TResult? Function(_FetchGenre value)? fetchGenre,
+    TResult? Function(_OnReset value)? onReset,
+    TResult? Function(_OnSubmit value)? onSubmit,
+    TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedDate value)? onSelectedDate,
+    TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+  }) {
+    return onChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnChanged value)? onChanged,
+    TResult Function(_OnSearch value)? onSearch,
+    TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
+    TResult Function(_FetchCountry value)? fetchCountry,
+    TResult Function(_FetchGenre value)? fetchGenre,
+    TResult Function(_OnReset value)? onReset,
+    TResult Function(_OnSubmit value)? onSubmit,
+    TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedDate value)? onSelectedDate,
+    TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    required TResult orElse(),
+  }) {
+    if (onChanged != null) {
+      return onChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnChanged implements ExploreEvent {
+  const factory _OnChanged(final String text) = _$OnChangedImpl;
+
+  String get text;
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$OnChangedImplCopyWith<_$OnChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -187,6 +381,7 @@ class _$OnSearchImpl implements _OnSearch {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
@@ -203,6 +398,7 @@ class _$OnSearchImpl implements _OnSearch {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
@@ -219,6 +415,7 @@ class _$OnSearchImpl implements _OnSearch {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
@@ -239,6 +436,7 @@ class _$OnSearchImpl implements _OnSearch {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
@@ -255,6 +453,7 @@ class _$OnSearchImpl implements _OnSearch {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
@@ -271,6 +470,7 @@ class _$OnSearchImpl implements _OnSearch {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
@@ -343,6 +543,7 @@ class _$InitDataBottomSheetImpl implements _InitDataBottomSheet {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
@@ -359,6 +560,7 @@ class _$InitDataBottomSheetImpl implements _InitDataBottomSheet {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
@@ -375,6 +577,7 @@ class _$InitDataBottomSheetImpl implements _InitDataBottomSheet {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
@@ -395,6 +598,7 @@ class _$InitDataBottomSheetImpl implements _InitDataBottomSheet {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
@@ -411,6 +615,7 @@ class _$InitDataBottomSheetImpl implements _InitDataBottomSheet {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
@@ -427,6 +632,7 @@ class _$InitDataBottomSheetImpl implements _InitDataBottomSheet {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
@@ -490,6 +696,7 @@ class _$FetchCountryImpl implements _FetchCountry {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
@@ -506,6 +713,7 @@ class _$FetchCountryImpl implements _FetchCountry {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
@@ -522,6 +730,7 @@ class _$FetchCountryImpl implements _FetchCountry {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
@@ -542,6 +751,7 @@ class _$FetchCountryImpl implements _FetchCountry {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
@@ -558,6 +768,7 @@ class _$FetchCountryImpl implements _FetchCountry {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
@@ -574,6 +785,7 @@ class _$FetchCountryImpl implements _FetchCountry {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
@@ -637,6 +849,7 @@ class _$FetchGenreImpl implements _FetchGenre {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
@@ -653,6 +866,7 @@ class _$FetchGenreImpl implements _FetchGenre {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
@@ -669,6 +883,7 @@ class _$FetchGenreImpl implements _FetchGenre {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
@@ -689,6 +904,7 @@ class _$FetchGenreImpl implements _FetchGenre {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
@@ -705,6 +921,7 @@ class _$FetchGenreImpl implements _FetchGenre {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
@@ -721,6 +938,7 @@ class _$FetchGenreImpl implements _FetchGenre {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
@@ -784,6 +1002,7 @@ class _$OnResetImpl implements _OnReset {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
@@ -800,6 +1019,7 @@ class _$OnResetImpl implements _OnReset {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
@@ -816,6 +1036,7 @@ class _$OnResetImpl implements _OnReset {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
@@ -836,6 +1057,7 @@ class _$OnResetImpl implements _OnReset {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
@@ -852,6 +1074,7 @@ class _$OnResetImpl implements _OnReset {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
@@ -868,6 +1091,7 @@ class _$OnResetImpl implements _OnReset {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
@@ -931,6 +1155,7 @@ class _$OnSubmitImpl implements _OnSubmit {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
@@ -947,6 +1172,7 @@ class _$OnSubmitImpl implements _OnSubmit {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
@@ -963,6 +1189,7 @@ class _$OnSubmitImpl implements _OnSubmit {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
@@ -983,6 +1210,7 @@ class _$OnSubmitImpl implements _OnSubmit {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
@@ -999,6 +1227,7 @@ class _$OnSubmitImpl implements _OnSubmit {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
@@ -1015,6 +1244,7 @@ class _$OnSubmitImpl implements _OnSubmit {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
@@ -1106,6 +1336,7 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
@@ -1122,6 +1353,7 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
@@ -1138,6 +1370,7 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
@@ -1158,6 +1391,7 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
@@ -1174,6 +1408,7 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
@@ -1190,6 +1425,7 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
@@ -1290,6 +1526,7 @@ class _$OnSelectedDateImpl implements _OnSelectedDate {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
@@ -1306,6 +1543,7 @@ class _$OnSelectedDateImpl implements _OnSelectedDate {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
@@ -1322,6 +1560,7 @@ class _$OnSelectedDateImpl implements _OnSelectedDate {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
@@ -1342,6 +1581,7 @@ class _$OnSelectedDateImpl implements _OnSelectedDate {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
@@ -1358,6 +1598,7 @@ class _$OnSelectedDateImpl implements _OnSelectedDate {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
@@ -1374,6 +1615,7 @@ class _$OnSelectedDateImpl implements _OnSelectedDate {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
@@ -1473,6 +1715,7 @@ class _$OnSelectedGenreImpl implements _OnSelectedGenre {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
@@ -1489,6 +1732,7 @@ class _$OnSelectedGenreImpl implements _OnSelectedGenre {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
@@ -1505,6 +1749,7 @@ class _$OnSelectedGenreImpl implements _OnSelectedGenre {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
@@ -1525,6 +1770,7 @@ class _$OnSelectedGenreImpl implements _OnSelectedGenre {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
@@ -1541,6 +1787,7 @@ class _$OnSelectedGenreImpl implements _OnSelectedGenre {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
@@ -1557,6 +1804,7 @@ class _$OnSelectedGenreImpl implements _OnSelectedGenre {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
@@ -1595,6 +1843,7 @@ mixin _$ExploreState {
   List<GenreModel> get genreList => throw _privateConstructorUsedError;
   List<CountryModel> get countryList => throw _privateConstructorUsedError;
   List<String> get dateList => throw _privateConstructorUsedError;
+  String? get searchText => throw _privateConstructorUsedError;
 
   /// Create a copy of ExploreState
   /// with the given fields replaced by the non-null parameter values.
@@ -1614,7 +1863,8 @@ abstract class $ExploreStateCopyWith<$Res> {
       List<MovieModel> movies,
       List<GenreModel> genreList,
       List<CountryModel> countryList,
-      List<String> dateList});
+      List<String> dateList,
+      String? searchText});
 }
 
 /// @nodoc
@@ -1637,6 +1887,7 @@ class _$ExploreStateCopyWithImpl<$Res, $Val extends ExploreState>
     Object? genreList = null,
     Object? countryList = null,
     Object? dateList = null,
+    Object? searchText = freezed,
   }) {
     return _then(_value.copyWith(
       status: null == status
@@ -1659,6 +1910,10 @@ class _$ExploreStateCopyWithImpl<$Res, $Val extends ExploreState>
           ? _value.dateList
           : dateList // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      searchText: freezed == searchText
+          ? _value.searchText
+          : searchText // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -1676,7 +1931,8 @@ abstract class _$$ExploreStateImplCopyWith<$Res>
       List<MovieModel> movies,
       List<GenreModel> genreList,
       List<CountryModel> countryList,
-      List<String> dateList});
+      List<String> dateList,
+      String? searchText});
 }
 
 /// @nodoc
@@ -1697,6 +1953,7 @@ class __$$ExploreStateImplCopyWithImpl<$Res>
     Object? genreList = null,
     Object? countryList = null,
     Object? dateList = null,
+    Object? searchText = freezed,
   }) {
     return _then(_$ExploreStateImpl(
       status: null == status
@@ -1719,6 +1976,10 @@ class __$$ExploreStateImplCopyWithImpl<$Res>
           ? _value._dateList
           : dateList // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      searchText: freezed == searchText
+          ? _value.searchText
+          : searchText // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1731,7 +1992,8 @@ class _$ExploreStateImpl extends _ExploreState {
       final List<MovieModel> movies = const [],
       final List<GenreModel> genreList = const [],
       final List<CountryModel> countryList = const [],
-      final List<String> dateList = const []})
+      final List<String> dateList = const [],
+      this.searchText})
       : _movies = movies,
         _genreList = genreList,
         _countryList = countryList,
@@ -1778,8 +2040,11 @@ class _$ExploreStateImpl extends _ExploreState {
   }
 
   @override
+  final String? searchText;
+
+  @override
   String toString() {
-    return 'ExploreState(status: $status, movies: $movies, genreList: $genreList, countryList: $countryList, dateList: $dateList)';
+    return 'ExploreState(status: $status, movies: $movies, genreList: $genreList, countryList: $countryList, dateList: $dateList, searchText: $searchText)';
   }
 
   @override
@@ -1793,7 +2058,9 @@ class _$ExploreStateImpl extends _ExploreState {
                 .equals(other._genreList, _genreList) &&
             const DeepCollectionEquality()
                 .equals(other._countryList, _countryList) &&
-            const DeepCollectionEquality().equals(other._dateList, _dateList));
+            const DeepCollectionEquality().equals(other._dateList, _dateList) &&
+            (identical(other.searchText, searchText) ||
+                other.searchText == searchText));
   }
 
   @override
@@ -1803,7 +2070,8 @@ class _$ExploreStateImpl extends _ExploreState {
       const DeepCollectionEquality().hash(_movies),
       const DeepCollectionEquality().hash(_genreList),
       const DeepCollectionEquality().hash(_countryList),
-      const DeepCollectionEquality().hash(_dateList));
+      const DeepCollectionEquality().hash(_dateList),
+      searchText);
 
   /// Create a copy of ExploreState
   /// with the given fields replaced by the non-null parameter values.
@@ -1820,7 +2088,8 @@ abstract class _ExploreState extends ExploreState {
       final List<MovieModel> movies,
       final List<GenreModel> genreList,
       final List<CountryModel> countryList,
-      final List<String> dateList}) = _$ExploreStateImpl;
+      final List<String> dateList,
+      final String? searchText}) = _$ExploreStateImpl;
   const _ExploreState._() : super._();
 
   @override
@@ -1833,6 +2102,8 @@ abstract class _ExploreState extends ExploreState {
   List<CountryModel> get countryList;
   @override
   List<String> get dateList;
+  @override
+  String? get searchText;
 
   /// Create a copy of ExploreState
   /// with the given fields replaced by the non-null parameter values.

@@ -100,5 +100,6 @@
   "txt_movie": "Movie",
   "txt_tv_series": "TV Series",
   "txt_k_drama": "K Drama",
-  "txt_animal": "Animal"
+  "txt_animal": "Animal",
+  "search": "Search"
 }

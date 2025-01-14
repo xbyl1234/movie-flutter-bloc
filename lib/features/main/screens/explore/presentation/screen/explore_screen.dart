@@ -25,7 +25,7 @@ class ExploreScreen extends StatelessWidget {
             listener: (context, state) {},
             builder: (context, state) {
               if (state.status == PageState.loading) {
-                return const Center(child: Loading());
+                return const Align(child: Loading());
               } else if (state.status == PageState.success) {
                 return Expanded(
                   child: GridView.builder(

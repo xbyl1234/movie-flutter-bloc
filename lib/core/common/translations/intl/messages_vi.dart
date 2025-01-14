@@ -88,6 +88,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "male": MessageLookupByLibrary.simpleMessage("Nam"),
         "mgs_verify_email": MessageLookupByLibrary.simpleMessage(
             "Email xác thực đã được gửi đến địa chỉ của bạn. Hãy kiểm tra hộp thư để hoàn tất quá trình xác thực."),
+        "search": MessageLookupByLibrary.simpleMessage("Search"),
         "see_all": MessageLookupByLibrary.simpleMessage("Xem thêm"),
         "tab_comments": MessageLookupByLibrary.simpleMessage("Bình luận"),
         "tab_download": MessageLookupByLibrary.simpleMessage("Tải xuống"),
