@@ -63,7 +63,7 @@ class SearchMovie extends StatelessWidget {
                             height: 24,
                             width: 32,
                             color: state.searchText != null
-                                ? Colors.red.withOpacity(0.3)
+                                ? Theme.of(context).colorScheme.primary
                                 : Color(0xffBDBDBD),
                           ),
                         )),
