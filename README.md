@@ -8,6 +8,8 @@ Run the following commands from your terminal:
 1) `git clone https://github.com/dev-mobile-vn/movie-flutter-bloc` to clone this repository
 
 2) `flutter pub get` in the project root directory to install all the required dependencies.
+3) Config to run app
+   [View](https://raw.githubusercontent.com/dev-mobile-vn/movie-flutter-bloc/refs/heads/master/assets/screenshots/config_run.png) 
 
 
 ## Note 
