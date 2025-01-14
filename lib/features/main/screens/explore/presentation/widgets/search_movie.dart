@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
+import 'package:movie/core/common/resource/app_assets.dart';
+import 'package:movie/di/dependency_injection.dart';
 import '../../../../../../core/common/widgets/svg_widget.dart';
+import '../bloc/explore_bloc.dart';
 import 'filter_search_movie.dart';
 
 class SearchMovie extends StatelessWidget {
@@ -21,7 +23,7 @@ class SearchMovie extends StatelessWidget {
               height: 58,
               child: TextFormField(
                 onChanged: (String value) {
-
+                  getIt<ExploreBloc>().add(ExploreEvent.onSearch(value));
                 },
                 decoration: InputDecoration(
                     contentPadding: const EdgeInsets.symmetric(
@@ -40,7 +42,7 @@ class SearchMovie extends StatelessWidget {
                     prefixIcon: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8),
                       child: SvgPicture.asset(
-                        'assets/icons/ic_search.svg',
+                        AppAssets.ic_search_svg,
                         height: 24,
                         width: 32,
                         color: Colors.red.withOpacity(0.5),
@@ -68,7 +70,7 @@ class SearchMovie extends StatelessWidget {
                     color: Colors.red.withOpacity(0.3),
                     borderRadius: BorderRadius.circular(8.0)),
                 child: const SvgWidget(
-                  ic: 'assets/icons/ic_filter.svg',
+                  ic: AppAssets.ic_filter_svg,
                 )),
           )
         ],
