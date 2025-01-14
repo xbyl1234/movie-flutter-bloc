@@ -46,5 +46,5 @@ Run the following commands from your terminal:
 [Play movie](https://youtu.be/PvvRz4UFN1w)
 
 ## Design 
-[View](https://www.figma.com/design/j7M1gdcFDISNPI9aHyg31e/Mova---Movie-Streaming-App-UI-Kit?node-id=1330-11992&t=FadYPhlpRxfFYt69-0)
+[View](https://www.figma.com/design/j7M1gdcFDISNPI9aHyg31e/Mova---Movie-Streaming-App-UI-Kit?node-id=727-25421&p=f&t=eTXzBifZd2gZvSxM-0)
 
