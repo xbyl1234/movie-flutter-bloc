@@ -4,19 +4,21 @@ import 'package:movie/core/data/model/response/movie_response.dart';
 import 'package:movie/features/main/screens/explore/domain/repository/search_movies_repository.dart';
 import 'package:dio/dio.dart';
 
-
 class SearchMoviesRepositoryImpl extends SearchMoviesRepository {
   final SearchMovieApiService _service;
-
   SearchMoviesRepositoryImpl(this._service);
+
   @override
-  Future<MovieResponse> searchMoviesMovies(SearchQuery query) async{
+  Future<MovieResponse> searchMoviesMovies(SearchQuery query) async {
     try {
       return await _service.searchMovies(
-          query.query, query.includeAdult, query.lang, query.page);
+        query.query,
+        query.includeAdult,
+        query.lang,
+        query.page,
+      );
     } on DioException catch (_) {
       rethrow;
     }
   }
-
 }
