@@ -1,4 +1,4 @@
-# Application Movie
+# Application Movie DB
 # https://developer.themoviedb.org
 
 ## Setup
