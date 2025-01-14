@@ -10,6 +10,9 @@ Run the following commands from your terminal:
 2) `flutter pub get` in the project root directory to install all the required dependencies.
 
 
+## Note 
+ Since calling the Movie DB API requires an API key, I’ve pushed the .env file to avoid everyone having to fetch a new API key. Please note that during development, you should keep the .env file in .gitignore to prevent it from being pushed to the repository and to avoid exposing sensitive information.
+   
 ## Screenshots
 
 <table width="100%">
