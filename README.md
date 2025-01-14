@@ -65,3 +65,5 @@ Run the following commands from your terminal:
 ## 
 - flutter pub run build_runner build --delete-conflicting-outputs
 
+### License
+Copyright (C) 2024 Truong Pham
