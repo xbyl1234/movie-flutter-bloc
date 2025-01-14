@@ -38,7 +38,7 @@ Run the following commands from your terminal:
 </table>
 
 ## Video 
-<iframe width="560" height="315" src="https://youtu.be/PvvRz4UFN1w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+[Watch this video](https://youtu.be/PvvRz4UFN1w)
 
 
 
