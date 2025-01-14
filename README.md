@@ -38,7 +38,8 @@ Run the following commands from your terminal:
 </table>
 
 ## Video 
-[Watch this video](https://youtu.be/PvvRz4UFN1w)
+[![Watch this video](https://raw.githubusercontent.com/dev-mobile-vn/movie-flutter-bloc/refs/heads/master/assets/screenshots/home.png)](https://youtu.be/PvvRz4UFN1w)
+
 
 
 
