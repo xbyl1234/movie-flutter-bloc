@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$AppState {
   Locale get locale => throw _privateConstructorUsedError;
+  bool get isDarkMode => throw _privateConstructorUsedError;
 
   /// Create a copy of AppState
   /// with the given fields replaced by the non-null parameter values.
@@ -30,7 +31,7 @@ abstract class $AppStateCopyWith<$Res> {
   factory $AppStateCopyWith(AppState value, $Res Function(AppState) then) =
       _$AppStateCopyWithImpl<$Res, AppState>;
   @useResult
-  $Res call({Locale locale});
+  $Res call({Locale locale, bool isDarkMode});
 }
 
 /// @nodoc
@@ -49,12 +50,17 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
   @override
   $Res call({
     Object? locale = null,
+    Object? isDarkMode = null,
   }) {
     return _then(_value.copyWith(
       locale: null == locale
           ? _value.locale
           : locale // ignore: cast_nullable_to_non_nullable
               as Locale,
+      isDarkMode: null == isDarkMode
+          ? _value.isDarkMode
+          : isDarkMode // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -67,7 +73,7 @@ abstract class _$$AppStateImplCopyWith<$Res>
       __$$AppStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Locale locale});
+  $Res call({Locale locale, bool isDarkMode});
 }
 
 /// @nodoc
@@ -84,12 +90,17 @@ class __$$AppStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? locale = null,
+    Object? isDarkMode = null,
   }) {
     return _then(_$AppStateImpl(
       locale: null == locale
           ? _value.locale
           : locale // ignore: cast_nullable_to_non_nullable
               as Locale,
+      isDarkMode: null == isDarkMode
+          ? _value.isDarkMode
+          : isDarkMode // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -97,15 +108,20 @@ class __$$AppStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$AppStateImpl extends _AppState {
-  const _$AppStateImpl({this.locale = LanguageLocale.en}) : super._();
+  const _$AppStateImpl(
+      {this.locale = LanguageLocale.en, this.isDarkMode = false})
+      : super._();
 
   @override
   @JsonKey()
   final Locale locale;
+  @override
+  @JsonKey()
+  final bool isDarkMode;
 
   @override
   String toString() {
-    return 'AppState(locale: $locale)';
+    return 'AppState(locale: $locale, isDarkMode: $isDarkMode)';
   }
 
   @override
@@ -113,11 +129,13 @@ class _$AppStateImpl extends _AppState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AppStateImpl &&
-            (identical(other.locale, locale) || other.locale == locale));
+            (identical(other.locale, locale) || other.locale == locale) &&
+            (identical(other.isDarkMode, isDarkMode) ||
+                other.isDarkMode == isDarkMode));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, locale);
+  int get hashCode => Object.hash(runtimeType, locale, isDarkMode);
 
   /// Create a copy of AppState
   /// with the given fields replaced by the non-null parameter values.
@@ -129,11 +147,14 @@ class _$AppStateImpl extends _AppState {
 }
 
 abstract class _AppState extends AppState {
-  const factory _AppState({final Locale locale}) = _$AppStateImpl;
+  const factory _AppState({final Locale locale, final bool isDarkMode}) =
+      _$AppStateImpl;
   const _AppState._() : super._();
 
   @override
   Locale get locale;
+  @override
+  bool get isDarkMode;
 
   /// Create a copy of AppState
   /// with the given fields replaced by the non-null parameter values.

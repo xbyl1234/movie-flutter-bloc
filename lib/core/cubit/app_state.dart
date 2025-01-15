@@ -6,5 +6,6 @@ class AppState with _$AppState {
 
   const factory AppState({
     @Default(LanguageLocale.en) Locale locale,
+    @Default(false) bool isDarkMode,
   }) = _AppState;
 }
