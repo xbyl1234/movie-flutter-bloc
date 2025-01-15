@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/core/common/enums/category_filter_type.dart';
+import 'package:movie/core/common/widgets/svg_widget.dart';
 import '../../../../../../core/common/enums/soft_filter_type.dart';
 import '../../../../../../core/common/translations/l10n.dart';
 import '../../../../../../di/dependency_injection.dart';
@@ -12,11 +13,9 @@ class BottomSheetFilter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextStyle? titleMedium = Theme.of(context).textTheme.titleMedium;
     return Container(
       height: (MediaQuery.of(context).size.height * 0.80),
-      padding: const EdgeInsets.only(
-        top: 8,
-      ),
       width: MediaQuery.sizeOf(context).width,
       decoration: const BoxDecoration(
         color: Colors.white,
@@ -37,23 +36,42 @@ class BottomSheetFilter extends StatelessWidget {
             return Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Center(
+                Align(child: SvgWidget(ic: 'assets/icons/ic_line_filter.svg')),
+                Align(
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 16, bottom: 20),
                     child: Text(
-                  S.of(context).title_sort_filter,
-                  style: Theme.of(context)
-                      .textTheme
-                      .titleLarge!
-                      .copyWith(color: Theme.of(context).colorScheme.primary),
-                )),
-                Text(S.of(context).txt_filter_categories),
-                CustomListFilter(data: CategoryFilterType.values),
-                Text(S.of(context).txt_filter_regions),
+                      S.of(context).title_sort_filter,
+                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                            color: Theme.of(context).colorScheme.primary,
+                            fontSize: 24,
+                          ),
+                    ),
+                  ),
+                ),
+                Text(S.of(context).txt_filter_categories, style: titleMedium),
+                CustomListFilter(
+                  data: CategoryFilterType.values,
+                ),
+                Text(
+                  S.of(context).txt_filter_regions,
+                  style: titleMedium,
+                ),
                 CustomListFilter(data: state.countryList),
-                Text(S.of(context).txt_filter_genre),
+                Text(
+                  S.of(context).txt_filter_genre,
+                  style: titleMedium,
+                ),
                 CustomListFilter(data: state.genreList),
-                Text(S.of(context).txt_filter_time_periods),
+                Text(
+                  S.of(context).txt_filter_time_periods,
+                  style: titleMedium,
+                ),
                 CustomListFilter(data: state.dateList),
-                Text(S.of(context).txt_filter_sort),
+                Text(
+                  S.of(context).txt_filter_sort,
+                  style: titleMedium,
+                ),
                 CustomListFilter(data: SoftFilterType.values),
                 Divider(),
                 buttonFilter(context)
