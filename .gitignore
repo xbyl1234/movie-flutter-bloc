@@ -9,6 +9,7 @@
 .buildlog/
 .history
 .svn/
+*.env
 .swiftpm/
 migrate_working_dir/
 
@@ -44,8 +45,4 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-.env
-
-# Ignore the dev.env file
-dev.env
-prod.env
+/lib/core/common/environment/environment.dart
