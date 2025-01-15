@@ -18,10 +18,7 @@ class ExploreScreen extends StatelessWidget {
       top: false,
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 24),
-            child: SearchMovie(),
-          ),
+          SearchMovie(),
           Expanded(
             child: BlocConsumer<ExploreBloc, ExploreState>(
               bloc: getIt<ExploreBloc>()..add(ExploreEvent.fetchData()),

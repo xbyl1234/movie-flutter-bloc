@@ -4,7 +4,6 @@ import 'package:movie/core/common/enums/category_filter_type.dart';
 import 'package:movie/core/common/enums/soft_filter_type.dart';
 import 'package:movie/core/data/model/country_model.dart';
 import 'package:movie/core/data/model/genre_model.dart';
-
 import '../../../../../../di/dependency_injection.dart';
 import '../bloc/explore_bloc.dart';
 

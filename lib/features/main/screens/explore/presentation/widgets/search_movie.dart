@@ -9,16 +9,20 @@ import '../bloc/explore_bloc.dart';
 import 'bottom_sheet_filter.dart';
 
 class SearchMovie extends StatelessWidget {
-  const SearchMovie({
-    super.key,
-  });
+  const SearchMovie({super.key});
 
   @override
   Widget build(BuildContext context) {
     TextEditingController ctrSearch = TextEditingController(text: null);
     return Padding(
-      padding: const EdgeInsets.only(left: 16, right: 16, top: kToolbarHeight),
+      padding: EdgeInsets.only(
+        left: 16,
+        right: 16,
+        bottom: 24,
+        top: MediaQuery.paddingOf(context).top + 20,
+      ),
       child: Row(
+        spacing: 8,
         children: [
           Expanded(
             child: SizedBox(
@@ -32,7 +36,8 @@ class SearchMovie extends StatelessWidget {
                   return TextFormField(
                     controller: ctrSearch,
                     onTap: () {
-                      if (state.searchText == null && !state.enableColorBorderSearch) {
+                      if (state.searchText == null &&
+                          !state.enableColorBorderSearch) {
                         getIt<ExploreBloc>().add(
                           ExploreEvent.onEnableColorBorderSearch(true),
                         );
@@ -100,9 +105,6 @@ class SearchMovie extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(
-            width: 8,
-          ),
           InkWell(
             onTap: () {
               showModalBottomSheet(
@@ -119,9 +121,7 @@ class SearchMovie extends StatelessWidget {
                   color: Colors.red.withOpacity(0.3),
                   borderRadius: BorderRadius.circular(8.0),
                 ),
-                child: const SvgWidget(
-                  ic: AppAssets.ic_filter_svg,
-                )),
+                child: const SvgWidget(ic: AppAssets.ic_filter_svg)),
           )
         ],
       ),

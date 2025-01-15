@@ -34,7 +34,6 @@ class BottomSheetFilter extends StatelessWidget {
               previous.genreList != current.genreList ||
               previous.dateList != current.dateList,
           builder: (context, state) {
-            print(state.dateList);
             return Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -68,7 +67,7 @@ class BottomSheetFilter extends StatelessWidget {
 
   Widget buttonFilter(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 24),
+      padding: const EdgeInsets.only(top: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.max,
