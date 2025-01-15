@@ -101,5 +101,7 @@
   "txt_tv_series": "TV Series",
   "txt_k_drama": "K Drama",
   "txt_animal": "Animal",
-  "search": "Search"
+  "search": "Search",
+  "txt_not_found": "Not Found",
+  "txt_des_not_found_movie": "Sorry, the keyword you entered could not be found. Try to check again or search with other keywords."
 }

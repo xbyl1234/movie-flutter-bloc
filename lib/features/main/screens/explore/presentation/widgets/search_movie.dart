@@ -15,6 +15,7 @@ class SearchMovie extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController ctrSearch = TextEditingController(text: null);
     return Padding(
       padding: const EdgeInsets.only(left: 16, right: 16, top: kToolbarHeight),
       child: Row(
@@ -25,48 +26,74 @@ class SearchMovie extends StatelessWidget {
               child: BlocBuilder<ExploreBloc, ExploreState>(
                 bloc: getIt<ExploreBloc>(),
                 builder: (context, state) {
+                  ctrSearch.text = state.searchText ?? "";
                   return TextFormField(
+                    controller: ctrSearch,
+                    onTap: () {
+                      if (state.searchText == null &&
+                          !state.enableColorBorderSearch) {
+                        getIt<ExploreBloc>().add(
+                          ExploreEvent.onEnableColorBorderSearch(),
+                        );
+                      }
+                    },
                     onChanged: (String value) {
                       getIt<ExploreBloc>().add(ExploreEvent.onChanged(value));
                     },
                     decoration: InputDecoration(
-                        contentPadding: const EdgeInsets.symmetric(
-                            vertical: 16, horizontal: 16),
-                        fillColor: state.searchText != null
-                            ? Colors.red.withOpacity(0.3)
-                            : Color(0xffF5F5F5),
-                        hintText: S.of(context).search,
-                        hintStyle: Theme.of(context)
-                            .textTheme
-                            .titleMedium!
-                            .copyWith(color: Color(0xffBDBDBD)),
-                        border: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: state.searchText != null
-                                    ? Theme.of(context).colorScheme.primary
-                                    : Color(0xffF5F5F5))),
-                        focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8),
-                            borderSide: BorderSide(
-                                color: state.searchText != null
-                                    ? Theme.of(context).colorScheme.primary
-                                    : Color(0xffF5F5F5))),
-                        prefixIconConstraints: const BoxConstraints(
-                            maxHeight: 24,
-                            maxWidth: 40,
-                            minHeight: 24,
-                            minWidth: 40),
-                        prefixIcon: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 8),
-                          child: SvgPicture.asset(
-                            AppAssets.ic_search_svg,
-                            height: 24,
-                            width: 32,
-                            color: state.searchText != null
-                                ? Theme.of(context).colorScheme.primary
-                                : Color(0xffBDBDBD),
-                          ),
-                        )),
+                      contentPadding: const EdgeInsets.symmetric(
+                        vertical: 16,
+                        horizontal: 16,
+                      ),
+                      fillColor: state.enableColorBorderSearch
+                          ? Colors.red.withOpacity(0.3)
+                          : Color(0xffF5F5F5),
+                      hintText: S.of(context).search,
+                      hintStyle: Theme.of(context)
+                          .textTheme
+                          .titleMedium!
+                          .copyWith(color: Color(0xffBDBDBD)),
+                      border: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: state.enableColorBorderSearch
+                                  ? Theme.of(context).colorScheme.primary
+                                  : Color(0xffF5F5F5))),
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8),
+                          borderSide: BorderSide(
+                              color: state.enableColorBorderSearch
+                                  ? Theme.of(context).colorScheme.primary
+                                  : Color(0xffF5F5F5))),
+                      prefixIconConstraints: const BoxConstraints(
+                          maxHeight: 24,
+                          maxWidth: 40,
+                          minHeight: 24,
+                          minWidth: 40),
+                      prefixIcon: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        child: SvgPicture.asset(
+                          AppAssets.ic_search_svg,
+                          height: 24,
+                          width: 32,
+                          color: state.enableColorBorderSearch
+                              ? Theme.of(context).colorScheme.primary
+                              : Color(0xffBDBDBD),
+                        ),
+                      ),
+                      suffixIcon: state.searchText != null
+                          ? GestureDetector(
+                              onTap: () {
+                                ctrSearch.text = '';
+                                getIt<ExploreBloc>()
+                                    .add(ExploreEvent.onClearSearch());
+                              },
+                              child: Icon(
+                                Icons.clear,
+                                color: Theme.of(context).colorScheme.primary,
+                              ),
+                            )
+                          : null,
+                    ),
                   );
                 },
               ),
@@ -88,8 +115,9 @@ class SearchMovie extends StatelessWidget {
                 height: 52,
                 width: 52,
                 decoration: BoxDecoration(
-                    color: Colors.red.withOpacity(0.3),
-                    borderRadius: BorderRadius.circular(8.0)),
+                  color: Colors.red.withOpacity(0.3),
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
                 child: const SvgWidget(
                   ic: AppAssets.ic_filter_svg,
                 )),

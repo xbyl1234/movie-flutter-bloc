@@ -35,6 +35,16 @@ class ExploreBloc extends Bloc<ExploreEvent, ExploreState> {
     on<_OnSelectedCountry>(_onSelectedCountry);
     on<_OnSelectedGenre>(_onSelectedGenre);
     on<_OnSelectedDate>(_onSelectedDate);
+    on<_OnClearSearch>(_onClearSearch);
+    on<_OnEnableColorBorderSearch>(_onEnableColorBorderSearch);
+  }
+
+  FutureOr<void> _onClearSearch(_OnClearSearch event, Emitter<ExploreState> emit)  {
+    emit(state.copyWith(status: PageState.success, movies: []));
+  }
+
+  FutureOr<void> _onEnableColorBorderSearch(_OnEnableColorBorderSearch event, Emitter<ExploreState> emit)  {
+    emit(state.copyWith(enableColorBorderSearch: true));
   }
 
   FutureOr<void> _initDataBottomSheet(
@@ -83,7 +93,11 @@ class ExploreBloc extends Bloc<ExploreEvent, ExploreState> {
 
   Future<void> _onSearch(_OnSearch event, Emitter<ExploreState> emit) async {
     if (event.text.isEmpty && state.searchText != null) {
-      emit(state.copyWith(searchText: null, movies: []));
+      emit(state.copyWith(
+        searchText: null,
+        movies: [],
+        status: PageState.empty,
+      ));
       return;
     }
     emit(

@@ -144,6 +144,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "txt_content_congratulations": m0,
         "txt_content_join_premium": MessageLookupByLibrary.simpleMessage(
             "Thưởng thức phim Full-HD, không giới hạn và không có quảng cáo"),
+        "txt_des_not_found_movie": MessageLookupByLibrary.simpleMessage(
+            "Sorry, the keyword you entered could not be found. Try to check again or search with other keywords."),
         "txt_dont_have_an_account":
             MessageLookupByLibrary.simpleMessage("Bạn chưa có tài khoản? "),
         "txt_join_premium":
@@ -153,6 +155,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Đăng nhập tài khoản"),
         "txt_month": MessageLookupByLibrary.simpleMessage("tháng"),
         "txt_movie": MessageLookupByLibrary.simpleMessage("Movie"),
+        "txt_not_found": MessageLookupByLibrary.simpleMessage("Not Found"),
         "txt_or_continue_with":
             MessageLookupByLibrary.simpleMessage("hoặc tiếp tục với"),
         "txt_remember_me":

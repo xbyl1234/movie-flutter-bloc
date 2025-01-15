@@ -1009,6 +1009,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Not Found`
+  String get txt_not_found {
+    return Intl.message(
+      'Not Found',
+      name: 'txt_not_found',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sorry, the keyword you entered could not be found. Try to check again or search with other keywords.`
+  String get txt_des_not_found_movie {
+    return Intl.message(
+      'Sorry, the keyword you entered could not be found. Try to check again or search with other keywords.',
+      name: 'txt_des_not_found_movie',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

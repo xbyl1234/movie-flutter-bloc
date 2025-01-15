@@ -12,4 +12,6 @@ class ExploreEvent with _$ExploreEvent {
   const factory ExploreEvent.onSelectedCountry(CountryModel country) = _OnSelectedCountry;
   const factory ExploreEvent.onSelectedDate(String date) = _OnSelectedDate;
   const factory ExploreEvent.onSelectedGenre(GenreModel genre) = _OnSelectedGenre;
+  const factory ExploreEvent.onClearSearch() = _OnClearSearch;
+  const factory ExploreEvent.onEnableColorBorderSearch() = _OnEnableColorBorderSearch;
 }

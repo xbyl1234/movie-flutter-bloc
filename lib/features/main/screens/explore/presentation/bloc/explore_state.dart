@@ -10,5 +10,6 @@ class ExploreState with _$ExploreState {
     @Default([]) List<CountryModel> countryList,
     @Default([]) List<String> dateList,
     String? searchText,
+    @Default(false)bool enableColorBorderSearch,
   }) = _ExploreState;
 }

@@ -28,6 +28,8 @@ mixin _$ExploreEvent {
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function() onClearSearch,
+    required TResult Function() onEnableColorBorderSearch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,6 +44,8 @@ mixin _$ExploreEvent {
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function()? onClearSearch,
+    TResult? Function()? onEnableColorBorderSearch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +60,8 @@ mixin _$ExploreEvent {
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function()? onClearSearch,
+    TResult Function()? onEnableColorBorderSearch,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -71,6 +77,9 @@ mixin _$ExploreEvent {
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -85,6 +94,9 @@ mixin _$ExploreEvent {
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -99,6 +111,9 @@ mixin _$ExploreEvent {
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -203,6 +218,8 @@ class _$OnChangedImpl implements _OnChanged {
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function() onClearSearch,
+    required TResult Function() onEnableColorBorderSearch,
   }) {
     return onChanged(text);
   }
@@ -220,6 +237,8 @@ class _$OnChangedImpl implements _OnChanged {
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function()? onClearSearch,
+    TResult? Function()? onEnableColorBorderSearch,
   }) {
     return onChanged?.call(text);
   }
@@ -237,6 +256,8 @@ class _$OnChangedImpl implements _OnChanged {
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function()? onClearSearch,
+    TResult Function()? onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onChanged != null) {
@@ -258,6 +279,9 @@ class _$OnChangedImpl implements _OnChanged {
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) {
     return onChanged(this);
   }
@@ -275,6 +299,9 @@ class _$OnChangedImpl implements _OnChanged {
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) {
     return onChanged?.call(this);
   }
@@ -292,6 +319,9 @@ class _$OnChangedImpl implements _OnChanged {
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onChanged != null) {
@@ -391,6 +421,8 @@ class _$OnSearchImpl implements _OnSearch {
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function() onClearSearch,
+    required TResult Function() onEnableColorBorderSearch,
   }) {
     return onSearch(text);
   }
@@ -408,6 +440,8 @@ class _$OnSearchImpl implements _OnSearch {
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function()? onClearSearch,
+    TResult? Function()? onEnableColorBorderSearch,
   }) {
     return onSearch?.call(text);
   }
@@ -425,6 +459,8 @@ class _$OnSearchImpl implements _OnSearch {
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function()? onClearSearch,
+    TResult Function()? onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onSearch != null) {
@@ -446,6 +482,9 @@ class _$OnSearchImpl implements _OnSearch {
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) {
     return onSearch(this);
   }
@@ -463,6 +502,9 @@ class _$OnSearchImpl implements _OnSearch {
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) {
     return onSearch?.call(this);
   }
@@ -480,6 +522,9 @@ class _$OnSearchImpl implements _OnSearch {
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onSearch != null) {
@@ -553,6 +598,8 @@ class _$InitDataBottomSheetImpl implements _InitDataBottomSheet {
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function() onClearSearch,
+    required TResult Function() onEnableColorBorderSearch,
   }) {
     return initDataBottomSheet();
   }
@@ -570,6 +617,8 @@ class _$InitDataBottomSheetImpl implements _InitDataBottomSheet {
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function()? onClearSearch,
+    TResult? Function()? onEnableColorBorderSearch,
   }) {
     return initDataBottomSheet?.call();
   }
@@ -587,6 +636,8 @@ class _$InitDataBottomSheetImpl implements _InitDataBottomSheet {
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function()? onClearSearch,
+    TResult Function()? onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (initDataBottomSheet != null) {
@@ -608,6 +659,9 @@ class _$InitDataBottomSheetImpl implements _InitDataBottomSheet {
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) {
     return initDataBottomSheet(this);
   }
@@ -625,6 +679,9 @@ class _$InitDataBottomSheetImpl implements _InitDataBottomSheet {
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) {
     return initDataBottomSheet?.call(this);
   }
@@ -642,6 +699,9 @@ class _$InitDataBottomSheetImpl implements _InitDataBottomSheet {
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (initDataBottomSheet != null) {
@@ -706,6 +766,8 @@ class _$FetchCountryImpl implements _FetchCountry {
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function() onClearSearch,
+    required TResult Function() onEnableColorBorderSearch,
   }) {
     return fetchCountry();
   }
@@ -723,6 +785,8 @@ class _$FetchCountryImpl implements _FetchCountry {
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function()? onClearSearch,
+    TResult? Function()? onEnableColorBorderSearch,
   }) {
     return fetchCountry?.call();
   }
@@ -740,6 +804,8 @@ class _$FetchCountryImpl implements _FetchCountry {
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function()? onClearSearch,
+    TResult Function()? onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (fetchCountry != null) {
@@ -761,6 +827,9 @@ class _$FetchCountryImpl implements _FetchCountry {
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) {
     return fetchCountry(this);
   }
@@ -778,6 +847,9 @@ class _$FetchCountryImpl implements _FetchCountry {
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) {
     return fetchCountry?.call(this);
   }
@@ -795,6 +867,9 @@ class _$FetchCountryImpl implements _FetchCountry {
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (fetchCountry != null) {
@@ -859,6 +934,8 @@ class _$FetchGenreImpl implements _FetchGenre {
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function() onClearSearch,
+    required TResult Function() onEnableColorBorderSearch,
   }) {
     return fetchGenre();
   }
@@ -876,6 +953,8 @@ class _$FetchGenreImpl implements _FetchGenre {
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function()? onClearSearch,
+    TResult? Function()? onEnableColorBorderSearch,
   }) {
     return fetchGenre?.call();
   }
@@ -893,6 +972,8 @@ class _$FetchGenreImpl implements _FetchGenre {
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function()? onClearSearch,
+    TResult Function()? onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (fetchGenre != null) {
@@ -914,6 +995,9 @@ class _$FetchGenreImpl implements _FetchGenre {
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) {
     return fetchGenre(this);
   }
@@ -931,6 +1015,9 @@ class _$FetchGenreImpl implements _FetchGenre {
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) {
     return fetchGenre?.call(this);
   }
@@ -948,6 +1035,9 @@ class _$FetchGenreImpl implements _FetchGenre {
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (fetchGenre != null) {
@@ -1012,6 +1102,8 @@ class _$OnResetImpl implements _OnReset {
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function() onClearSearch,
+    required TResult Function() onEnableColorBorderSearch,
   }) {
     return onReset();
   }
@@ -1029,6 +1121,8 @@ class _$OnResetImpl implements _OnReset {
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function()? onClearSearch,
+    TResult? Function()? onEnableColorBorderSearch,
   }) {
     return onReset?.call();
   }
@@ -1046,6 +1140,8 @@ class _$OnResetImpl implements _OnReset {
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function()? onClearSearch,
+    TResult Function()? onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onReset != null) {
@@ -1067,6 +1163,9 @@ class _$OnResetImpl implements _OnReset {
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) {
     return onReset(this);
   }
@@ -1084,6 +1183,9 @@ class _$OnResetImpl implements _OnReset {
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) {
     return onReset?.call(this);
   }
@@ -1101,6 +1203,9 @@ class _$OnResetImpl implements _OnReset {
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onReset != null) {
@@ -1165,6 +1270,8 @@ class _$OnSubmitImpl implements _OnSubmit {
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function() onClearSearch,
+    required TResult Function() onEnableColorBorderSearch,
   }) {
     return onSubmit();
   }
@@ -1182,6 +1289,8 @@ class _$OnSubmitImpl implements _OnSubmit {
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function()? onClearSearch,
+    TResult? Function()? onEnableColorBorderSearch,
   }) {
     return onSubmit?.call();
   }
@@ -1199,6 +1308,8 @@ class _$OnSubmitImpl implements _OnSubmit {
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function()? onClearSearch,
+    TResult Function()? onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onSubmit != null) {
@@ -1220,6 +1331,9 @@ class _$OnSubmitImpl implements _OnSubmit {
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) {
     return onSubmit(this);
   }
@@ -1237,6 +1351,9 @@ class _$OnSubmitImpl implements _OnSubmit {
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) {
     return onSubmit?.call(this);
   }
@@ -1254,6 +1371,9 @@ class _$OnSubmitImpl implements _OnSubmit {
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onSubmit != null) {
@@ -1346,6 +1466,8 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function() onClearSearch,
+    required TResult Function() onEnableColorBorderSearch,
   }) {
     return onSelectedCountry(country);
   }
@@ -1363,6 +1485,8 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function()? onClearSearch,
+    TResult? Function()? onEnableColorBorderSearch,
   }) {
     return onSelectedCountry?.call(country);
   }
@@ -1380,6 +1504,8 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function()? onClearSearch,
+    TResult Function()? onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onSelectedCountry != null) {
@@ -1401,6 +1527,9 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) {
     return onSelectedCountry(this);
   }
@@ -1418,6 +1547,9 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) {
     return onSelectedCountry?.call(this);
   }
@@ -1435,6 +1567,9 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onSelectedCountry != null) {
@@ -1536,6 +1671,8 @@ class _$OnSelectedDateImpl implements _OnSelectedDate {
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function() onClearSearch,
+    required TResult Function() onEnableColorBorderSearch,
   }) {
     return onSelectedDate(date);
   }
@@ -1553,6 +1690,8 @@ class _$OnSelectedDateImpl implements _OnSelectedDate {
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function()? onClearSearch,
+    TResult? Function()? onEnableColorBorderSearch,
   }) {
     return onSelectedDate?.call(date);
   }
@@ -1570,6 +1709,8 @@ class _$OnSelectedDateImpl implements _OnSelectedDate {
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function()? onClearSearch,
+    TResult Function()? onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onSelectedDate != null) {
@@ -1591,6 +1732,9 @@ class _$OnSelectedDateImpl implements _OnSelectedDate {
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) {
     return onSelectedDate(this);
   }
@@ -1608,6 +1752,9 @@ class _$OnSelectedDateImpl implements _OnSelectedDate {
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) {
     return onSelectedDate?.call(this);
   }
@@ -1625,6 +1772,9 @@ class _$OnSelectedDateImpl implements _OnSelectedDate {
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onSelectedDate != null) {
@@ -1725,6 +1875,8 @@ class _$OnSelectedGenreImpl implements _OnSelectedGenre {
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function() onClearSearch,
+    required TResult Function() onEnableColorBorderSearch,
   }) {
     return onSelectedGenre(genre);
   }
@@ -1742,6 +1894,8 @@ class _$OnSelectedGenreImpl implements _OnSelectedGenre {
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function()? onClearSearch,
+    TResult? Function()? onEnableColorBorderSearch,
   }) {
     return onSelectedGenre?.call(genre);
   }
@@ -1759,6 +1913,8 @@ class _$OnSelectedGenreImpl implements _OnSelectedGenre {
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function()? onClearSearch,
+    TResult Function()? onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onSelectedGenre != null) {
@@ -1780,6 +1936,9 @@ class _$OnSelectedGenreImpl implements _OnSelectedGenre {
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) {
     return onSelectedGenre(this);
   }
@@ -1797,6 +1956,9 @@ class _$OnSelectedGenreImpl implements _OnSelectedGenre {
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) {
     return onSelectedGenre?.call(this);
   }
@@ -1814,6 +1976,9 @@ class _$OnSelectedGenreImpl implements _OnSelectedGenre {
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onSelectedGenre != null) {
@@ -1837,6 +2002,345 @@ abstract class _OnSelectedGenre implements ExploreEvent {
 }
 
 /// @nodoc
+abstract class _$$OnClearSearchImplCopyWith<$Res> {
+  factory _$$OnClearSearchImplCopyWith(
+          _$OnClearSearchImpl value, $Res Function(_$OnClearSearchImpl) then) =
+      __$$OnClearSearchImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$OnClearSearchImplCopyWithImpl<$Res>
+    extends _$ExploreEventCopyWithImpl<$Res, _$OnClearSearchImpl>
+    implements _$$OnClearSearchImplCopyWith<$Res> {
+  __$$OnClearSearchImplCopyWithImpl(
+      _$OnClearSearchImpl _value, $Res Function(_$OnClearSearchImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$OnClearSearchImpl implements _OnClearSearch {
+  const _$OnClearSearchImpl();
+
+  @override
+  String toString() {
+    return 'ExploreEvent.onClearSearch()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$OnClearSearchImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String text) onChanged,
+    required TResult Function(String text) onSearch,
+    required TResult Function() initDataBottomSheet,
+    required TResult Function() fetchCountry,
+    required TResult Function() fetchGenre,
+    required TResult Function() onReset,
+    required TResult Function() onSubmit,
+    required TResult Function(CountryModel country) onSelectedCountry,
+    required TResult Function(String date) onSelectedDate,
+    required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function() onClearSearch,
+    required TResult Function() onEnableColorBorderSearch,
+  }) {
+    return onClearSearch();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String text)? onChanged,
+    TResult? Function(String text)? onSearch,
+    TResult? Function()? initDataBottomSheet,
+    TResult? Function()? fetchCountry,
+    TResult? Function()? fetchGenre,
+    TResult? Function()? onReset,
+    TResult? Function()? onSubmit,
+    TResult? Function(CountryModel country)? onSelectedCountry,
+    TResult? Function(String date)? onSelectedDate,
+    TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function()? onClearSearch,
+    TResult? Function()? onEnableColorBorderSearch,
+  }) {
+    return onClearSearch?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String text)? onChanged,
+    TResult Function(String text)? onSearch,
+    TResult Function()? initDataBottomSheet,
+    TResult Function()? fetchCountry,
+    TResult Function()? fetchGenre,
+    TResult Function()? onReset,
+    TResult Function()? onSubmit,
+    TResult Function(CountryModel country)? onSelectedCountry,
+    TResult Function(String date)? onSelectedDate,
+    TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function()? onClearSearch,
+    TResult Function()? onEnableColorBorderSearch,
+    required TResult orElse(),
+  }) {
+    if (onClearSearch != null) {
+      return onClearSearch();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_OnChanged value) onChanged,
+    required TResult Function(_OnSearch value) onSearch,
+    required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
+    required TResult Function(_FetchCountry value) fetchCountry,
+    required TResult Function(_FetchGenre value) fetchGenre,
+    required TResult Function(_OnReset value) onReset,
+    required TResult Function(_OnSubmit value) onSubmit,
+    required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedDate value) onSelectedDate,
+    required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
+  }) {
+    return onClearSearch(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnChanged value)? onChanged,
+    TResult? Function(_OnSearch value)? onSearch,
+    TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
+    TResult? Function(_FetchCountry value)? fetchCountry,
+    TResult? Function(_FetchGenre value)? fetchGenre,
+    TResult? Function(_OnReset value)? onReset,
+    TResult? Function(_OnSubmit value)? onSubmit,
+    TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedDate value)? onSelectedDate,
+    TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
+  }) {
+    return onClearSearch?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnChanged value)? onChanged,
+    TResult Function(_OnSearch value)? onSearch,
+    TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
+    TResult Function(_FetchCountry value)? fetchCountry,
+    TResult Function(_FetchGenre value)? fetchGenre,
+    TResult Function(_OnReset value)? onReset,
+    TResult Function(_OnSubmit value)? onSubmit,
+    TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedDate value)? onSelectedDate,
+    TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
+    required TResult orElse(),
+  }) {
+    if (onClearSearch != null) {
+      return onClearSearch(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnClearSearch implements ExploreEvent {
+  const factory _OnClearSearch() = _$OnClearSearchImpl;
+}
+
+/// @nodoc
+abstract class _$$OnEnableColorBorderSearchImplCopyWith<$Res> {
+  factory _$$OnEnableColorBorderSearchImplCopyWith(
+          _$OnEnableColorBorderSearchImpl value,
+          $Res Function(_$OnEnableColorBorderSearchImpl) then) =
+      __$$OnEnableColorBorderSearchImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$OnEnableColorBorderSearchImplCopyWithImpl<$Res>
+    extends _$ExploreEventCopyWithImpl<$Res, _$OnEnableColorBorderSearchImpl>
+    implements _$$OnEnableColorBorderSearchImplCopyWith<$Res> {
+  __$$OnEnableColorBorderSearchImplCopyWithImpl(
+      _$OnEnableColorBorderSearchImpl _value,
+      $Res Function(_$OnEnableColorBorderSearchImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$OnEnableColorBorderSearchImpl implements _OnEnableColorBorderSearch {
+  const _$OnEnableColorBorderSearchImpl();
+
+  @override
+  String toString() {
+    return 'ExploreEvent.onEnableColorBorderSearch()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnEnableColorBorderSearchImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String text) onChanged,
+    required TResult Function(String text) onSearch,
+    required TResult Function() initDataBottomSheet,
+    required TResult Function() fetchCountry,
+    required TResult Function() fetchGenre,
+    required TResult Function() onReset,
+    required TResult Function() onSubmit,
+    required TResult Function(CountryModel country) onSelectedCountry,
+    required TResult Function(String date) onSelectedDate,
+    required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function() onClearSearch,
+    required TResult Function() onEnableColorBorderSearch,
+  }) {
+    return onEnableColorBorderSearch();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String text)? onChanged,
+    TResult? Function(String text)? onSearch,
+    TResult? Function()? initDataBottomSheet,
+    TResult? Function()? fetchCountry,
+    TResult? Function()? fetchGenre,
+    TResult? Function()? onReset,
+    TResult? Function()? onSubmit,
+    TResult? Function(CountryModel country)? onSelectedCountry,
+    TResult? Function(String date)? onSelectedDate,
+    TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function()? onClearSearch,
+    TResult? Function()? onEnableColorBorderSearch,
+  }) {
+    return onEnableColorBorderSearch?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String text)? onChanged,
+    TResult Function(String text)? onSearch,
+    TResult Function()? initDataBottomSheet,
+    TResult Function()? fetchCountry,
+    TResult Function()? fetchGenre,
+    TResult Function()? onReset,
+    TResult Function()? onSubmit,
+    TResult Function(CountryModel country)? onSelectedCountry,
+    TResult Function(String date)? onSelectedDate,
+    TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function()? onClearSearch,
+    TResult Function()? onEnableColorBorderSearch,
+    required TResult orElse(),
+  }) {
+    if (onEnableColorBorderSearch != null) {
+      return onEnableColorBorderSearch();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_OnChanged value) onChanged,
+    required TResult Function(_OnSearch value) onSearch,
+    required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
+    required TResult Function(_FetchCountry value) fetchCountry,
+    required TResult Function(_FetchGenre value) fetchGenre,
+    required TResult Function(_OnReset value) onReset,
+    required TResult Function(_OnSubmit value) onSubmit,
+    required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedDate value) onSelectedDate,
+    required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
+  }) {
+    return onEnableColorBorderSearch(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnChanged value)? onChanged,
+    TResult? Function(_OnSearch value)? onSearch,
+    TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
+    TResult? Function(_FetchCountry value)? fetchCountry,
+    TResult? Function(_FetchGenre value)? fetchGenre,
+    TResult? Function(_OnReset value)? onReset,
+    TResult? Function(_OnSubmit value)? onSubmit,
+    TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedDate value)? onSelectedDate,
+    TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
+  }) {
+    return onEnableColorBorderSearch?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnChanged value)? onChanged,
+    TResult Function(_OnSearch value)? onSearch,
+    TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
+    TResult Function(_FetchCountry value)? fetchCountry,
+    TResult Function(_FetchGenre value)? fetchGenre,
+    TResult Function(_OnReset value)? onReset,
+    TResult Function(_OnSubmit value)? onSubmit,
+    TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedDate value)? onSelectedDate,
+    TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
+    required TResult orElse(),
+  }) {
+    if (onEnableColorBorderSearch != null) {
+      return onEnableColorBorderSearch(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnEnableColorBorderSearch implements ExploreEvent {
+  const factory _OnEnableColorBorderSearch() = _$OnEnableColorBorderSearchImpl;
+}
+
+/// @nodoc
 mixin _$ExploreState {
   PageState get status => throw _privateConstructorUsedError;
   List<MovieModel> get movies => throw _privateConstructorUsedError;
@@ -1844,6 +2348,7 @@ mixin _$ExploreState {
   List<CountryModel> get countryList => throw _privateConstructorUsedError;
   List<String> get dateList => throw _privateConstructorUsedError;
   String? get searchText => throw _privateConstructorUsedError;
+  bool get enableColorBorderSearch => throw _privateConstructorUsedError;
 
   /// Create a copy of ExploreState
   /// with the given fields replaced by the non-null parameter values.
@@ -1864,7 +2369,8 @@ abstract class $ExploreStateCopyWith<$Res> {
       List<GenreModel> genreList,
       List<CountryModel> countryList,
       List<String> dateList,
-      String? searchText});
+      String? searchText,
+      bool enableColorBorderSearch});
 }
 
 /// @nodoc
@@ -1888,6 +2394,7 @@ class _$ExploreStateCopyWithImpl<$Res, $Val extends ExploreState>
     Object? countryList = null,
     Object? dateList = null,
     Object? searchText = freezed,
+    Object? enableColorBorderSearch = null,
   }) {
     return _then(_value.copyWith(
       status: null == status
@@ -1914,6 +2421,10 @@ class _$ExploreStateCopyWithImpl<$Res, $Val extends ExploreState>
           ? _value.searchText
           : searchText // ignore: cast_nullable_to_non_nullable
               as String?,
+      enableColorBorderSearch: null == enableColorBorderSearch
+          ? _value.enableColorBorderSearch
+          : enableColorBorderSearch // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -1932,7 +2443,8 @@ abstract class _$$ExploreStateImplCopyWith<$Res>
       List<GenreModel> genreList,
       List<CountryModel> countryList,
       List<String> dateList,
-      String? searchText});
+      String? searchText,
+      bool enableColorBorderSearch});
 }
 
 /// @nodoc
@@ -1954,6 +2466,7 @@ class __$$ExploreStateImplCopyWithImpl<$Res>
     Object? countryList = null,
     Object? dateList = null,
     Object? searchText = freezed,
+    Object? enableColorBorderSearch = null,
   }) {
     return _then(_$ExploreStateImpl(
       status: null == status
@@ -1980,6 +2493,10 @@ class __$$ExploreStateImplCopyWithImpl<$Res>
           ? _value.searchText
           : searchText // ignore: cast_nullable_to_non_nullable
               as String?,
+      enableColorBorderSearch: null == enableColorBorderSearch
+          ? _value.enableColorBorderSearch
+          : enableColorBorderSearch // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -1993,7 +2510,8 @@ class _$ExploreStateImpl extends _ExploreState {
       final List<GenreModel> genreList = const [],
       final List<CountryModel> countryList = const [],
       final List<String> dateList = const [],
-      this.searchText})
+      this.searchText,
+      this.enableColorBorderSearch = false})
       : _movies = movies,
         _genreList = genreList,
         _countryList = countryList,
@@ -2041,10 +2559,13 @@ class _$ExploreStateImpl extends _ExploreState {
 
   @override
   final String? searchText;
+  @override
+  @JsonKey()
+  final bool enableColorBorderSearch;
 
   @override
   String toString() {
-    return 'ExploreState(status: $status, movies: $movies, genreList: $genreList, countryList: $countryList, dateList: $dateList, searchText: $searchText)';
+    return 'ExploreState(status: $status, movies: $movies, genreList: $genreList, countryList: $countryList, dateList: $dateList, searchText: $searchText, enableColorBorderSearch: $enableColorBorderSearch)';
   }
 
   @override
@@ -2060,7 +2581,10 @@ class _$ExploreStateImpl extends _ExploreState {
                 .equals(other._countryList, _countryList) &&
             const DeepCollectionEquality().equals(other._dateList, _dateList) &&
             (identical(other.searchText, searchText) ||
-                other.searchText == searchText));
+                other.searchText == searchText) &&
+            (identical(
+                    other.enableColorBorderSearch, enableColorBorderSearch) ||
+                other.enableColorBorderSearch == enableColorBorderSearch));
   }
 
   @override
@@ -2071,7 +2595,8 @@ class _$ExploreStateImpl extends _ExploreState {
       const DeepCollectionEquality().hash(_genreList),
       const DeepCollectionEquality().hash(_countryList),
       const DeepCollectionEquality().hash(_dateList),
-      searchText);
+      searchText,
+      enableColorBorderSearch);
 
   /// Create a copy of ExploreState
   /// with the given fields replaced by the non-null parameter values.
@@ -2089,7 +2614,8 @@ abstract class _ExploreState extends ExploreState {
       final List<GenreModel> genreList,
       final List<CountryModel> countryList,
       final List<String> dateList,
-      final String? searchText}) = _$ExploreStateImpl;
+      final String? searchText,
+      final bool enableColorBorderSearch}) = _$ExploreStateImpl;
   const _ExploreState._() : super._();
 
   @override
@@ -2104,6 +2630,8 @@ abstract class _ExploreState extends ExploreState {
   List<String> get dateList;
   @override
   String? get searchText;
+  @override
+  bool get enableColorBorderSearch;
 
   /// Create a copy of ExploreState
   /// with the given fields replaced by the non-null parameter values.
