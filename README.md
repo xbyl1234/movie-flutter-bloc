@@ -54,6 +54,7 @@ Run the following commands from your terminal:
 - https://medium.com/search?q=getIt+fluter
 - https://medium.com/@akhil-ge0rge
 - https://www.burkharts.net/apps/blog/lets-get-this-party-started-startup-orchestration-with-getit/
+- https://freedium.cfd/https://blog.stackademic.com/flutter-projects-with-source-code-d6a352d1e191
 
 ## Build app cmd
 - flutter build apk --release lib/main.dart --flavor dev

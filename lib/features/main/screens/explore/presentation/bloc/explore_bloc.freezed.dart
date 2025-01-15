@@ -18,87 +18,120 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$ExploreEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() fetchData,
     required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
     required TResult Function() fetchGenre,
     required TResult Function() onReset,
-    required TResult Function() onSubmit,
+    required TResult Function() onApply,
+    required TResult Function(CategoryFilterType type) onSelectedCategory,
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function(SoftFilterType type) onSelectedSoft,
+    required TResult Function() onClearSearch,
+    required TResult Function(bool value) onEnableColorBorderSearch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchData,
     TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
     TResult? Function()? fetchGenre,
     TResult? Function()? onReset,
-    TResult? Function()? onSubmit,
+    TResult? Function()? onApply,
+    TResult? Function(CategoryFilterType type)? onSelectedCategory,
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function(SoftFilterType type)? onSelectedSoft,
+    TResult? Function()? onClearSearch,
+    TResult? Function(bool value)? onEnableColorBorderSearch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchData,
     TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
     TResult Function()? fetchGenre,
     TResult Function()? onReset,
-    TResult Function()? onSubmit,
+    TResult Function()? onApply,
+    TResult Function(CategoryFilterType type)? onSelectedCategory,
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function(SoftFilterType type)? onSelectedSoft,
+    TResult Function()? onClearSearch,
+    TResult Function(bool value)? onEnableColorBorderSearch,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_FetchData value) fetchData,
     required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
     required TResult Function(_FetchGenre value) fetchGenre,
     required TResult Function(_OnReset value) onReset,
-    required TResult Function(_OnSubmit value) onSubmit,
+    required TResult Function(_OnApply value) onApply,
+    required TResult Function(_OnSelectedCategory value) onSelectedCategory,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnSelectedSoft value) onSelectedSoft,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchData value)? fetchData,
     TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
     TResult? Function(_FetchGenre value)? fetchGenre,
     TResult? Function(_OnReset value)? onReset,
-    TResult? Function(_OnSubmit value)? onSubmit,
+    TResult? Function(_OnApply value)? onApply,
+    TResult? Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchData value)? fetchData,
     TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
     TResult Function(_FetchGenre value)? fetchGenre,
     TResult Function(_OnReset value)? onReset,
-    TResult Function(_OnSubmit value)? onSubmit,
+    TResult Function(_OnApply value)? onApply,
+    TResult Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -123,6 +156,192 @@ class _$ExploreEventCopyWithImpl<$Res, $Val extends ExploreEvent>
 
   /// Create a copy of ExploreEvent
   /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+abstract class _$$FetchDataImplCopyWith<$Res> {
+  factory _$$FetchDataImplCopyWith(
+          _$FetchDataImpl value, $Res Function(_$FetchDataImpl) then) =
+      __$$FetchDataImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FetchDataImplCopyWithImpl<$Res>
+    extends _$ExploreEventCopyWithImpl<$Res, _$FetchDataImpl>
+    implements _$$FetchDataImplCopyWith<$Res> {
+  __$$FetchDataImplCopyWithImpl(
+      _$FetchDataImpl _value, $Res Function(_$FetchDataImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$FetchDataImpl implements _FetchData {
+  const _$FetchDataImpl();
+
+  @override
+  String toString() {
+    return 'ExploreEvent.fetchData()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$FetchDataImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchData,
+    required TResult Function(String text) onChanged,
+    required TResult Function(String text) onSearch,
+    required TResult Function() initDataBottomSheet,
+    required TResult Function() fetchCountry,
+    required TResult Function() fetchGenre,
+    required TResult Function() onReset,
+    required TResult Function() onApply,
+    required TResult Function(CategoryFilterType type) onSelectedCategory,
+    required TResult Function(CountryModel country) onSelectedCountry,
+    required TResult Function(String date) onSelectedDate,
+    required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function(SoftFilterType type) onSelectedSoft,
+    required TResult Function() onClearSearch,
+    required TResult Function(bool value) onEnableColorBorderSearch,
+  }) {
+    return fetchData();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchData,
+    TResult? Function(String text)? onChanged,
+    TResult? Function(String text)? onSearch,
+    TResult? Function()? initDataBottomSheet,
+    TResult? Function()? fetchCountry,
+    TResult? Function()? fetchGenre,
+    TResult? Function()? onReset,
+    TResult? Function()? onApply,
+    TResult? Function(CategoryFilterType type)? onSelectedCategory,
+    TResult? Function(CountryModel country)? onSelectedCountry,
+    TResult? Function(String date)? onSelectedDate,
+    TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function(SoftFilterType type)? onSelectedSoft,
+    TResult? Function()? onClearSearch,
+    TResult? Function(bool value)? onEnableColorBorderSearch,
+  }) {
+    return fetchData?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchData,
+    TResult Function(String text)? onChanged,
+    TResult Function(String text)? onSearch,
+    TResult Function()? initDataBottomSheet,
+    TResult Function()? fetchCountry,
+    TResult Function()? fetchGenre,
+    TResult Function()? onReset,
+    TResult Function()? onApply,
+    TResult Function(CategoryFilterType type)? onSelectedCategory,
+    TResult Function(CountryModel country)? onSelectedCountry,
+    TResult Function(String date)? onSelectedDate,
+    TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function(SoftFilterType type)? onSelectedSoft,
+    TResult Function()? onClearSearch,
+    TResult Function(bool value)? onEnableColorBorderSearch,
+    required TResult orElse(),
+  }) {
+    if (fetchData != null) {
+      return fetchData();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchData value) fetchData,
+    required TResult Function(_OnChanged value) onChanged,
+    required TResult Function(_OnSearch value) onSearch,
+    required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
+    required TResult Function(_FetchCountry value) fetchCountry,
+    required TResult Function(_FetchGenre value) fetchGenre,
+    required TResult Function(_OnReset value) onReset,
+    required TResult Function(_OnApply value) onApply,
+    required TResult Function(_OnSelectedCategory value) onSelectedCategory,
+    required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedDate value) onSelectedDate,
+    required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnSelectedSoft value) onSelectedSoft,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
+  }) {
+    return fetchData(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchData value)? fetchData,
+    TResult? Function(_OnChanged value)? onChanged,
+    TResult? Function(_OnSearch value)? onSearch,
+    TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
+    TResult? Function(_FetchCountry value)? fetchCountry,
+    TResult? Function(_FetchGenre value)? fetchGenre,
+    TResult? Function(_OnReset value)? onReset,
+    TResult? Function(_OnApply value)? onApply,
+    TResult? Function(_OnSelectedCategory value)? onSelectedCategory,
+    TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedDate value)? onSelectedDate,
+    TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
+  }) {
+    return fetchData?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchData value)? fetchData,
+    TResult Function(_OnChanged value)? onChanged,
+    TResult Function(_OnSearch value)? onSearch,
+    TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
+    TResult Function(_FetchCountry value)? fetchCountry,
+    TResult Function(_FetchGenre value)? fetchGenre,
+    TResult Function(_OnReset value)? onReset,
+    TResult Function(_OnApply value)? onApply,
+    TResult Function(_OnSelectedCategory value)? onSelectedCategory,
+    TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedDate value)? onSelectedDate,
+    TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
+    required TResult orElse(),
+  }) {
+    if (fetchData != null) {
+      return fetchData(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchData implements ExploreEvent {
+  const factory _FetchData() = _$FetchDataImpl;
 }
 
 /// @nodoc
@@ -193,16 +412,21 @@ class _$OnChangedImpl implements _OnChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() fetchData,
     required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
     required TResult Function() fetchGenre,
     required TResult Function() onReset,
-    required TResult Function() onSubmit,
+    required TResult Function() onApply,
+    required TResult Function(CategoryFilterType type) onSelectedCategory,
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function(SoftFilterType type) onSelectedSoft,
+    required TResult Function() onClearSearch,
+    required TResult Function(bool value) onEnableColorBorderSearch,
   }) {
     return onChanged(text);
   }
@@ -210,16 +434,21 @@ class _$OnChangedImpl implements _OnChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchData,
     TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
     TResult? Function()? fetchGenre,
     TResult? Function()? onReset,
-    TResult? Function()? onSubmit,
+    TResult? Function()? onApply,
+    TResult? Function(CategoryFilterType type)? onSelectedCategory,
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function(SoftFilterType type)? onSelectedSoft,
+    TResult? Function()? onClearSearch,
+    TResult? Function(bool value)? onEnableColorBorderSearch,
   }) {
     return onChanged?.call(text);
   }
@@ -227,16 +456,21 @@ class _$OnChangedImpl implements _OnChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchData,
     TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
     TResult Function()? fetchGenre,
     TResult Function()? onReset,
-    TResult Function()? onSubmit,
+    TResult Function()? onApply,
+    TResult Function(CategoryFilterType type)? onSelectedCategory,
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function(SoftFilterType type)? onSelectedSoft,
+    TResult Function()? onClearSearch,
+    TResult Function(bool value)? onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onChanged != null) {
@@ -248,16 +482,22 @@ class _$OnChangedImpl implements _OnChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_FetchData value) fetchData,
     required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
     required TResult Function(_FetchGenre value) fetchGenre,
     required TResult Function(_OnReset value) onReset,
-    required TResult Function(_OnSubmit value) onSubmit,
+    required TResult Function(_OnApply value) onApply,
+    required TResult Function(_OnSelectedCategory value) onSelectedCategory,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnSelectedSoft value) onSelectedSoft,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) {
     return onChanged(this);
   }
@@ -265,16 +505,22 @@ class _$OnChangedImpl implements _OnChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchData value)? fetchData,
     TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
     TResult? Function(_FetchGenre value)? fetchGenre,
     TResult? Function(_OnReset value)? onReset,
-    TResult? Function(_OnSubmit value)? onSubmit,
+    TResult? Function(_OnApply value)? onApply,
+    TResult? Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) {
     return onChanged?.call(this);
   }
@@ -282,16 +528,22 @@ class _$OnChangedImpl implements _OnChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchData value)? fetchData,
     TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
     TResult Function(_FetchGenre value)? fetchGenre,
     TResult Function(_OnReset value)? onReset,
-    TResult Function(_OnSubmit value)? onSubmit,
+    TResult Function(_OnApply value)? onApply,
+    TResult Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onChanged != null) {
@@ -381,16 +633,21 @@ class _$OnSearchImpl implements _OnSearch {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() fetchData,
     required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
     required TResult Function() fetchGenre,
     required TResult Function() onReset,
-    required TResult Function() onSubmit,
+    required TResult Function() onApply,
+    required TResult Function(CategoryFilterType type) onSelectedCategory,
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function(SoftFilterType type) onSelectedSoft,
+    required TResult Function() onClearSearch,
+    required TResult Function(bool value) onEnableColorBorderSearch,
   }) {
     return onSearch(text);
   }
@@ -398,16 +655,21 @@ class _$OnSearchImpl implements _OnSearch {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchData,
     TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
     TResult? Function()? fetchGenre,
     TResult? Function()? onReset,
-    TResult? Function()? onSubmit,
+    TResult? Function()? onApply,
+    TResult? Function(CategoryFilterType type)? onSelectedCategory,
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function(SoftFilterType type)? onSelectedSoft,
+    TResult? Function()? onClearSearch,
+    TResult? Function(bool value)? onEnableColorBorderSearch,
   }) {
     return onSearch?.call(text);
   }
@@ -415,16 +677,21 @@ class _$OnSearchImpl implements _OnSearch {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchData,
     TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
     TResult Function()? fetchGenre,
     TResult Function()? onReset,
-    TResult Function()? onSubmit,
+    TResult Function()? onApply,
+    TResult Function(CategoryFilterType type)? onSelectedCategory,
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function(SoftFilterType type)? onSelectedSoft,
+    TResult Function()? onClearSearch,
+    TResult Function(bool value)? onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onSearch != null) {
@@ -436,16 +703,22 @@ class _$OnSearchImpl implements _OnSearch {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_FetchData value) fetchData,
     required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
     required TResult Function(_FetchGenre value) fetchGenre,
     required TResult Function(_OnReset value) onReset,
-    required TResult Function(_OnSubmit value) onSubmit,
+    required TResult Function(_OnApply value) onApply,
+    required TResult Function(_OnSelectedCategory value) onSelectedCategory,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnSelectedSoft value) onSelectedSoft,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) {
     return onSearch(this);
   }
@@ -453,16 +726,22 @@ class _$OnSearchImpl implements _OnSearch {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchData value)? fetchData,
     TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
     TResult? Function(_FetchGenre value)? fetchGenre,
     TResult? Function(_OnReset value)? onReset,
-    TResult? Function(_OnSubmit value)? onSubmit,
+    TResult? Function(_OnApply value)? onApply,
+    TResult? Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) {
     return onSearch?.call(this);
   }
@@ -470,16 +749,22 @@ class _$OnSearchImpl implements _OnSearch {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchData value)? fetchData,
     TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
     TResult Function(_FetchGenre value)? fetchGenre,
     TResult Function(_OnReset value)? onReset,
-    TResult Function(_OnSubmit value)? onSubmit,
+    TResult Function(_OnApply value)? onApply,
+    TResult Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onSearch != null) {
@@ -543,16 +828,21 @@ class _$InitDataBottomSheetImpl implements _InitDataBottomSheet {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() fetchData,
     required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
     required TResult Function() fetchGenre,
     required TResult Function() onReset,
-    required TResult Function() onSubmit,
+    required TResult Function() onApply,
+    required TResult Function(CategoryFilterType type) onSelectedCategory,
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function(SoftFilterType type) onSelectedSoft,
+    required TResult Function() onClearSearch,
+    required TResult Function(bool value) onEnableColorBorderSearch,
   }) {
     return initDataBottomSheet();
   }
@@ -560,16 +850,21 @@ class _$InitDataBottomSheetImpl implements _InitDataBottomSheet {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchData,
     TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
     TResult? Function()? fetchGenre,
     TResult? Function()? onReset,
-    TResult? Function()? onSubmit,
+    TResult? Function()? onApply,
+    TResult? Function(CategoryFilterType type)? onSelectedCategory,
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function(SoftFilterType type)? onSelectedSoft,
+    TResult? Function()? onClearSearch,
+    TResult? Function(bool value)? onEnableColorBorderSearch,
   }) {
     return initDataBottomSheet?.call();
   }
@@ -577,16 +872,21 @@ class _$InitDataBottomSheetImpl implements _InitDataBottomSheet {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchData,
     TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
     TResult Function()? fetchGenre,
     TResult Function()? onReset,
-    TResult Function()? onSubmit,
+    TResult Function()? onApply,
+    TResult Function(CategoryFilterType type)? onSelectedCategory,
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function(SoftFilterType type)? onSelectedSoft,
+    TResult Function()? onClearSearch,
+    TResult Function(bool value)? onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (initDataBottomSheet != null) {
@@ -598,16 +898,22 @@ class _$InitDataBottomSheetImpl implements _InitDataBottomSheet {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_FetchData value) fetchData,
     required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
     required TResult Function(_FetchGenre value) fetchGenre,
     required TResult Function(_OnReset value) onReset,
-    required TResult Function(_OnSubmit value) onSubmit,
+    required TResult Function(_OnApply value) onApply,
+    required TResult Function(_OnSelectedCategory value) onSelectedCategory,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnSelectedSoft value) onSelectedSoft,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) {
     return initDataBottomSheet(this);
   }
@@ -615,16 +921,22 @@ class _$InitDataBottomSheetImpl implements _InitDataBottomSheet {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchData value)? fetchData,
     TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
     TResult? Function(_FetchGenre value)? fetchGenre,
     TResult? Function(_OnReset value)? onReset,
-    TResult? Function(_OnSubmit value)? onSubmit,
+    TResult? Function(_OnApply value)? onApply,
+    TResult? Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) {
     return initDataBottomSheet?.call(this);
   }
@@ -632,16 +944,22 @@ class _$InitDataBottomSheetImpl implements _InitDataBottomSheet {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchData value)? fetchData,
     TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
     TResult Function(_FetchGenre value)? fetchGenre,
     TResult Function(_OnReset value)? onReset,
-    TResult Function(_OnSubmit value)? onSubmit,
+    TResult Function(_OnApply value)? onApply,
+    TResult Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (initDataBottomSheet != null) {
@@ -696,16 +1014,21 @@ class _$FetchCountryImpl implements _FetchCountry {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() fetchData,
     required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
     required TResult Function() fetchGenre,
     required TResult Function() onReset,
-    required TResult Function() onSubmit,
+    required TResult Function() onApply,
+    required TResult Function(CategoryFilterType type) onSelectedCategory,
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function(SoftFilterType type) onSelectedSoft,
+    required TResult Function() onClearSearch,
+    required TResult Function(bool value) onEnableColorBorderSearch,
   }) {
     return fetchCountry();
   }
@@ -713,16 +1036,21 @@ class _$FetchCountryImpl implements _FetchCountry {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchData,
     TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
     TResult? Function()? fetchGenre,
     TResult? Function()? onReset,
-    TResult? Function()? onSubmit,
+    TResult? Function()? onApply,
+    TResult? Function(CategoryFilterType type)? onSelectedCategory,
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function(SoftFilterType type)? onSelectedSoft,
+    TResult? Function()? onClearSearch,
+    TResult? Function(bool value)? onEnableColorBorderSearch,
   }) {
     return fetchCountry?.call();
   }
@@ -730,16 +1058,21 @@ class _$FetchCountryImpl implements _FetchCountry {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchData,
     TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
     TResult Function()? fetchGenre,
     TResult Function()? onReset,
-    TResult Function()? onSubmit,
+    TResult Function()? onApply,
+    TResult Function(CategoryFilterType type)? onSelectedCategory,
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function(SoftFilterType type)? onSelectedSoft,
+    TResult Function()? onClearSearch,
+    TResult Function(bool value)? onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (fetchCountry != null) {
@@ -751,16 +1084,22 @@ class _$FetchCountryImpl implements _FetchCountry {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_FetchData value) fetchData,
     required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
     required TResult Function(_FetchGenre value) fetchGenre,
     required TResult Function(_OnReset value) onReset,
-    required TResult Function(_OnSubmit value) onSubmit,
+    required TResult Function(_OnApply value) onApply,
+    required TResult Function(_OnSelectedCategory value) onSelectedCategory,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnSelectedSoft value) onSelectedSoft,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) {
     return fetchCountry(this);
   }
@@ -768,16 +1107,22 @@ class _$FetchCountryImpl implements _FetchCountry {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchData value)? fetchData,
     TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
     TResult? Function(_FetchGenre value)? fetchGenre,
     TResult? Function(_OnReset value)? onReset,
-    TResult? Function(_OnSubmit value)? onSubmit,
+    TResult? Function(_OnApply value)? onApply,
+    TResult? Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) {
     return fetchCountry?.call(this);
   }
@@ -785,16 +1130,22 @@ class _$FetchCountryImpl implements _FetchCountry {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchData value)? fetchData,
     TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
     TResult Function(_FetchGenre value)? fetchGenre,
     TResult Function(_OnReset value)? onReset,
-    TResult Function(_OnSubmit value)? onSubmit,
+    TResult Function(_OnApply value)? onApply,
+    TResult Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (fetchCountry != null) {
@@ -849,16 +1200,21 @@ class _$FetchGenreImpl implements _FetchGenre {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() fetchData,
     required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
     required TResult Function() fetchGenre,
     required TResult Function() onReset,
-    required TResult Function() onSubmit,
+    required TResult Function() onApply,
+    required TResult Function(CategoryFilterType type) onSelectedCategory,
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function(SoftFilterType type) onSelectedSoft,
+    required TResult Function() onClearSearch,
+    required TResult Function(bool value) onEnableColorBorderSearch,
   }) {
     return fetchGenre();
   }
@@ -866,16 +1222,21 @@ class _$FetchGenreImpl implements _FetchGenre {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchData,
     TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
     TResult? Function()? fetchGenre,
     TResult? Function()? onReset,
-    TResult? Function()? onSubmit,
+    TResult? Function()? onApply,
+    TResult? Function(CategoryFilterType type)? onSelectedCategory,
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function(SoftFilterType type)? onSelectedSoft,
+    TResult? Function()? onClearSearch,
+    TResult? Function(bool value)? onEnableColorBorderSearch,
   }) {
     return fetchGenre?.call();
   }
@@ -883,16 +1244,21 @@ class _$FetchGenreImpl implements _FetchGenre {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchData,
     TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
     TResult Function()? fetchGenre,
     TResult Function()? onReset,
-    TResult Function()? onSubmit,
+    TResult Function()? onApply,
+    TResult Function(CategoryFilterType type)? onSelectedCategory,
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function(SoftFilterType type)? onSelectedSoft,
+    TResult Function()? onClearSearch,
+    TResult Function(bool value)? onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (fetchGenre != null) {
@@ -904,16 +1270,22 @@ class _$FetchGenreImpl implements _FetchGenre {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_FetchData value) fetchData,
     required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
     required TResult Function(_FetchGenre value) fetchGenre,
     required TResult Function(_OnReset value) onReset,
-    required TResult Function(_OnSubmit value) onSubmit,
+    required TResult Function(_OnApply value) onApply,
+    required TResult Function(_OnSelectedCategory value) onSelectedCategory,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnSelectedSoft value) onSelectedSoft,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) {
     return fetchGenre(this);
   }
@@ -921,16 +1293,22 @@ class _$FetchGenreImpl implements _FetchGenre {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchData value)? fetchData,
     TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
     TResult? Function(_FetchGenre value)? fetchGenre,
     TResult? Function(_OnReset value)? onReset,
-    TResult? Function(_OnSubmit value)? onSubmit,
+    TResult? Function(_OnApply value)? onApply,
+    TResult? Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) {
     return fetchGenre?.call(this);
   }
@@ -938,16 +1316,22 @@ class _$FetchGenreImpl implements _FetchGenre {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchData value)? fetchData,
     TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
     TResult Function(_FetchGenre value)? fetchGenre,
     TResult Function(_OnReset value)? onReset,
-    TResult Function(_OnSubmit value)? onSubmit,
+    TResult Function(_OnApply value)? onApply,
+    TResult Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (fetchGenre != null) {
@@ -1002,16 +1386,21 @@ class _$OnResetImpl implements _OnReset {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() fetchData,
     required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
     required TResult Function() fetchGenre,
     required TResult Function() onReset,
-    required TResult Function() onSubmit,
+    required TResult Function() onApply,
+    required TResult Function(CategoryFilterType type) onSelectedCategory,
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function(SoftFilterType type) onSelectedSoft,
+    required TResult Function() onClearSearch,
+    required TResult Function(bool value) onEnableColorBorderSearch,
   }) {
     return onReset();
   }
@@ -1019,16 +1408,21 @@ class _$OnResetImpl implements _OnReset {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchData,
     TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
     TResult? Function()? fetchGenre,
     TResult? Function()? onReset,
-    TResult? Function()? onSubmit,
+    TResult? Function()? onApply,
+    TResult? Function(CategoryFilterType type)? onSelectedCategory,
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function(SoftFilterType type)? onSelectedSoft,
+    TResult? Function()? onClearSearch,
+    TResult? Function(bool value)? onEnableColorBorderSearch,
   }) {
     return onReset?.call();
   }
@@ -1036,16 +1430,21 @@ class _$OnResetImpl implements _OnReset {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchData,
     TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
     TResult Function()? fetchGenre,
     TResult Function()? onReset,
-    TResult Function()? onSubmit,
+    TResult Function()? onApply,
+    TResult Function(CategoryFilterType type)? onSelectedCategory,
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function(SoftFilterType type)? onSelectedSoft,
+    TResult Function()? onClearSearch,
+    TResult Function(bool value)? onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onReset != null) {
@@ -1057,16 +1456,22 @@ class _$OnResetImpl implements _OnReset {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_FetchData value) fetchData,
     required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
     required TResult Function(_FetchGenre value) fetchGenre,
     required TResult Function(_OnReset value) onReset,
-    required TResult Function(_OnSubmit value) onSubmit,
+    required TResult Function(_OnApply value) onApply,
+    required TResult Function(_OnSelectedCategory value) onSelectedCategory,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnSelectedSoft value) onSelectedSoft,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) {
     return onReset(this);
   }
@@ -1074,16 +1479,22 @@ class _$OnResetImpl implements _OnReset {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchData value)? fetchData,
     TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
     TResult? Function(_FetchGenre value)? fetchGenre,
     TResult? Function(_OnReset value)? onReset,
-    TResult? Function(_OnSubmit value)? onSubmit,
+    TResult? Function(_OnApply value)? onApply,
+    TResult? Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) {
     return onReset?.call(this);
   }
@@ -1091,16 +1502,22 @@ class _$OnResetImpl implements _OnReset {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchData value)? fetchData,
     TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
     TResult Function(_FetchGenre value)? fetchGenre,
     TResult Function(_OnReset value)? onReset,
-    TResult Function(_OnSubmit value)? onSubmit,
+    TResult Function(_OnApply value)? onApply,
+    TResult Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onReset != null) {
@@ -1115,18 +1532,18 @@ abstract class _OnReset implements ExploreEvent {
 }
 
 /// @nodoc
-abstract class _$$OnSubmitImplCopyWith<$Res> {
-  factory _$$OnSubmitImplCopyWith(
-          _$OnSubmitImpl value, $Res Function(_$OnSubmitImpl) then) =
-      __$$OnSubmitImplCopyWithImpl<$Res>;
+abstract class _$$OnApplyImplCopyWith<$Res> {
+  factory _$$OnApplyImplCopyWith(
+          _$OnApplyImpl value, $Res Function(_$OnApplyImpl) then) =
+      __$$OnApplyImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$OnSubmitImplCopyWithImpl<$Res>
-    extends _$ExploreEventCopyWithImpl<$Res, _$OnSubmitImpl>
-    implements _$$OnSubmitImplCopyWith<$Res> {
-  __$$OnSubmitImplCopyWithImpl(
-      _$OnSubmitImpl _value, $Res Function(_$OnSubmitImpl) _then)
+class __$$OnApplyImplCopyWithImpl<$Res>
+    extends _$ExploreEventCopyWithImpl<$Res, _$OnApplyImpl>
+    implements _$$OnApplyImplCopyWith<$Res> {
+  __$$OnApplyImplCopyWithImpl(
+      _$OnApplyImpl _value, $Res Function(_$OnApplyImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of ExploreEvent
@@ -1135,18 +1552,18 @@ class __$$OnSubmitImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OnSubmitImpl implements _OnSubmit {
-  const _$OnSubmitImpl();
+class _$OnApplyImpl implements _OnApply {
+  const _$OnApplyImpl();
 
   @override
   String toString() {
-    return 'ExploreEvent.onSubmit()';
+    return 'ExploreEvent.onApply()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$OnSubmitImpl);
+        (other.runtimeType == runtimeType && other is _$OnApplyImpl);
   }
 
   @override
@@ -1155,54 +1572,69 @@ class _$OnSubmitImpl implements _OnSubmit {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() fetchData,
     required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
     required TResult Function() fetchGenre,
     required TResult Function() onReset,
-    required TResult Function() onSubmit,
+    required TResult Function() onApply,
+    required TResult Function(CategoryFilterType type) onSelectedCategory,
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function(SoftFilterType type) onSelectedSoft,
+    required TResult Function() onClearSearch,
+    required TResult Function(bool value) onEnableColorBorderSearch,
   }) {
-    return onSubmit();
+    return onApply();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchData,
     TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
     TResult? Function()? fetchGenre,
     TResult? Function()? onReset,
-    TResult? Function()? onSubmit,
+    TResult? Function()? onApply,
+    TResult? Function(CategoryFilterType type)? onSelectedCategory,
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function(SoftFilterType type)? onSelectedSoft,
+    TResult? Function()? onClearSearch,
+    TResult? Function(bool value)? onEnableColorBorderSearch,
   }) {
-    return onSubmit?.call();
+    return onApply?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchData,
     TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
     TResult Function()? fetchGenre,
     TResult Function()? onReset,
-    TResult Function()? onSubmit,
+    TResult Function()? onApply,
+    TResult Function(CategoryFilterType type)? onSelectedCategory,
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function(SoftFilterType type)? onSelectedSoft,
+    TResult Function()? onClearSearch,
+    TResult Function(bool value)? onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
-    if (onSubmit != null) {
-      return onSubmit();
+    if (onApply != null) {
+      return onApply();
     }
     return orElse();
   }
@@ -1210,61 +1642,302 @@ class _$OnSubmitImpl implements _OnSubmit {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_FetchData value) fetchData,
     required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
     required TResult Function(_FetchGenre value) fetchGenre,
     required TResult Function(_OnReset value) onReset,
-    required TResult Function(_OnSubmit value) onSubmit,
+    required TResult Function(_OnApply value) onApply,
+    required TResult Function(_OnSelectedCategory value) onSelectedCategory,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnSelectedSoft value) onSelectedSoft,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) {
-    return onSubmit(this);
+    return onApply(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchData value)? fetchData,
     TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
     TResult? Function(_FetchGenre value)? fetchGenre,
     TResult? Function(_OnReset value)? onReset,
-    TResult? Function(_OnSubmit value)? onSubmit,
+    TResult? Function(_OnApply value)? onApply,
+    TResult? Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) {
-    return onSubmit?.call(this);
+    return onApply?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchData value)? fetchData,
     TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
     TResult Function(_FetchGenre value)? fetchGenre,
     TResult Function(_OnReset value)? onReset,
-    TResult Function(_OnSubmit value)? onSubmit,
+    TResult Function(_OnApply value)? onApply,
+    TResult Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
-    if (onSubmit != null) {
-      return onSubmit(this);
+    if (onApply != null) {
+      return onApply(this);
     }
     return orElse();
   }
 }
 
-abstract class _OnSubmit implements ExploreEvent {
-  const factory _OnSubmit() = _$OnSubmitImpl;
+abstract class _OnApply implements ExploreEvent {
+  const factory _OnApply() = _$OnApplyImpl;
+}
+
+/// @nodoc
+abstract class _$$OnSelectedCategoryImplCopyWith<$Res> {
+  factory _$$OnSelectedCategoryImplCopyWith(_$OnSelectedCategoryImpl value,
+          $Res Function(_$OnSelectedCategoryImpl) then) =
+      __$$OnSelectedCategoryImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({CategoryFilterType type});
+}
+
+/// @nodoc
+class __$$OnSelectedCategoryImplCopyWithImpl<$Res>
+    extends _$ExploreEventCopyWithImpl<$Res, _$OnSelectedCategoryImpl>
+    implements _$$OnSelectedCategoryImplCopyWith<$Res> {
+  __$$OnSelectedCategoryImplCopyWithImpl(_$OnSelectedCategoryImpl _value,
+      $Res Function(_$OnSelectedCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = null,
+  }) {
+    return _then(_$OnSelectedCategoryImpl(
+      null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CategoryFilterType,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OnSelectedCategoryImpl implements _OnSelectedCategory {
+  const _$OnSelectedCategoryImpl(this.type);
+
+  @override
+  final CategoryFilterType type;
+
+  @override
+  String toString() {
+    return 'ExploreEvent.onSelectedCategory(type: $type)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnSelectedCategoryImpl &&
+            (identical(other.type, type) || other.type == type));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, type);
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnSelectedCategoryImplCopyWith<_$OnSelectedCategoryImpl> get copyWith =>
+      __$$OnSelectedCategoryImplCopyWithImpl<_$OnSelectedCategoryImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchData,
+    required TResult Function(String text) onChanged,
+    required TResult Function(String text) onSearch,
+    required TResult Function() initDataBottomSheet,
+    required TResult Function() fetchCountry,
+    required TResult Function() fetchGenre,
+    required TResult Function() onReset,
+    required TResult Function() onApply,
+    required TResult Function(CategoryFilterType type) onSelectedCategory,
+    required TResult Function(CountryModel country) onSelectedCountry,
+    required TResult Function(String date) onSelectedDate,
+    required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function(SoftFilterType type) onSelectedSoft,
+    required TResult Function() onClearSearch,
+    required TResult Function(bool value) onEnableColorBorderSearch,
+  }) {
+    return onSelectedCategory(type);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchData,
+    TResult? Function(String text)? onChanged,
+    TResult? Function(String text)? onSearch,
+    TResult? Function()? initDataBottomSheet,
+    TResult? Function()? fetchCountry,
+    TResult? Function()? fetchGenre,
+    TResult? Function()? onReset,
+    TResult? Function()? onApply,
+    TResult? Function(CategoryFilterType type)? onSelectedCategory,
+    TResult? Function(CountryModel country)? onSelectedCountry,
+    TResult? Function(String date)? onSelectedDate,
+    TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function(SoftFilterType type)? onSelectedSoft,
+    TResult? Function()? onClearSearch,
+    TResult? Function(bool value)? onEnableColorBorderSearch,
+  }) {
+    return onSelectedCategory?.call(type);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchData,
+    TResult Function(String text)? onChanged,
+    TResult Function(String text)? onSearch,
+    TResult Function()? initDataBottomSheet,
+    TResult Function()? fetchCountry,
+    TResult Function()? fetchGenre,
+    TResult Function()? onReset,
+    TResult Function()? onApply,
+    TResult Function(CategoryFilterType type)? onSelectedCategory,
+    TResult Function(CountryModel country)? onSelectedCountry,
+    TResult Function(String date)? onSelectedDate,
+    TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function(SoftFilterType type)? onSelectedSoft,
+    TResult Function()? onClearSearch,
+    TResult Function(bool value)? onEnableColorBorderSearch,
+    required TResult orElse(),
+  }) {
+    if (onSelectedCategory != null) {
+      return onSelectedCategory(type);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchData value) fetchData,
+    required TResult Function(_OnChanged value) onChanged,
+    required TResult Function(_OnSearch value) onSearch,
+    required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
+    required TResult Function(_FetchCountry value) fetchCountry,
+    required TResult Function(_FetchGenre value) fetchGenre,
+    required TResult Function(_OnReset value) onReset,
+    required TResult Function(_OnApply value) onApply,
+    required TResult Function(_OnSelectedCategory value) onSelectedCategory,
+    required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedDate value) onSelectedDate,
+    required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnSelectedSoft value) onSelectedSoft,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
+  }) {
+    return onSelectedCategory(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchData value)? fetchData,
+    TResult? Function(_OnChanged value)? onChanged,
+    TResult? Function(_OnSearch value)? onSearch,
+    TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
+    TResult? Function(_FetchCountry value)? fetchCountry,
+    TResult? Function(_FetchGenre value)? fetchGenre,
+    TResult? Function(_OnReset value)? onReset,
+    TResult? Function(_OnApply value)? onApply,
+    TResult? Function(_OnSelectedCategory value)? onSelectedCategory,
+    TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedDate value)? onSelectedDate,
+    TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
+  }) {
+    return onSelectedCategory?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchData value)? fetchData,
+    TResult Function(_OnChanged value)? onChanged,
+    TResult Function(_OnSearch value)? onSearch,
+    TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
+    TResult Function(_FetchCountry value)? fetchCountry,
+    TResult Function(_FetchGenre value)? fetchGenre,
+    TResult Function(_OnReset value)? onReset,
+    TResult Function(_OnApply value)? onApply,
+    TResult Function(_OnSelectedCategory value)? onSelectedCategory,
+    TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedDate value)? onSelectedDate,
+    TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
+    required TResult orElse(),
+  }) {
+    if (onSelectedCategory != null) {
+      return onSelectedCategory(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnSelectedCategory implements ExploreEvent {
+  const factory _OnSelectedCategory(final CategoryFilterType type) =
+      _$OnSelectedCategoryImpl;
+
+  CategoryFilterType get type;
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$OnSelectedCategoryImplCopyWith<_$OnSelectedCategoryImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1336,16 +2009,21 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() fetchData,
     required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
     required TResult Function() fetchGenre,
     required TResult Function() onReset,
-    required TResult Function() onSubmit,
+    required TResult Function() onApply,
+    required TResult Function(CategoryFilterType type) onSelectedCategory,
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function(SoftFilterType type) onSelectedSoft,
+    required TResult Function() onClearSearch,
+    required TResult Function(bool value) onEnableColorBorderSearch,
   }) {
     return onSelectedCountry(country);
   }
@@ -1353,16 +2031,21 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchData,
     TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
     TResult? Function()? fetchGenre,
     TResult? Function()? onReset,
-    TResult? Function()? onSubmit,
+    TResult? Function()? onApply,
+    TResult? Function(CategoryFilterType type)? onSelectedCategory,
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function(SoftFilterType type)? onSelectedSoft,
+    TResult? Function()? onClearSearch,
+    TResult? Function(bool value)? onEnableColorBorderSearch,
   }) {
     return onSelectedCountry?.call(country);
   }
@@ -1370,16 +2053,21 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchData,
     TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
     TResult Function()? fetchGenre,
     TResult Function()? onReset,
-    TResult Function()? onSubmit,
+    TResult Function()? onApply,
+    TResult Function(CategoryFilterType type)? onSelectedCategory,
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function(SoftFilterType type)? onSelectedSoft,
+    TResult Function()? onClearSearch,
+    TResult Function(bool value)? onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onSelectedCountry != null) {
@@ -1391,16 +2079,22 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_FetchData value) fetchData,
     required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
     required TResult Function(_FetchGenre value) fetchGenre,
     required TResult Function(_OnReset value) onReset,
-    required TResult Function(_OnSubmit value) onSubmit,
+    required TResult Function(_OnApply value) onApply,
+    required TResult Function(_OnSelectedCategory value) onSelectedCategory,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnSelectedSoft value) onSelectedSoft,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) {
     return onSelectedCountry(this);
   }
@@ -1408,16 +2102,22 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchData value)? fetchData,
     TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
     TResult? Function(_FetchGenre value)? fetchGenre,
     TResult? Function(_OnReset value)? onReset,
-    TResult? Function(_OnSubmit value)? onSubmit,
+    TResult? Function(_OnApply value)? onApply,
+    TResult? Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) {
     return onSelectedCountry?.call(this);
   }
@@ -1425,16 +2125,22 @@ class _$OnSelectedCountryImpl implements _OnSelectedCountry {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchData value)? fetchData,
     TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
     TResult Function(_FetchGenre value)? fetchGenre,
     TResult Function(_OnReset value)? onReset,
-    TResult Function(_OnSubmit value)? onSubmit,
+    TResult Function(_OnApply value)? onApply,
+    TResult Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onSelectedCountry != null) {
@@ -1526,16 +2232,21 @@ class _$OnSelectedDateImpl implements _OnSelectedDate {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() fetchData,
     required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
     required TResult Function() fetchGenre,
     required TResult Function() onReset,
-    required TResult Function() onSubmit,
+    required TResult Function() onApply,
+    required TResult Function(CategoryFilterType type) onSelectedCategory,
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function(SoftFilterType type) onSelectedSoft,
+    required TResult Function() onClearSearch,
+    required TResult Function(bool value) onEnableColorBorderSearch,
   }) {
     return onSelectedDate(date);
   }
@@ -1543,16 +2254,21 @@ class _$OnSelectedDateImpl implements _OnSelectedDate {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchData,
     TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
     TResult? Function()? fetchGenre,
     TResult? Function()? onReset,
-    TResult? Function()? onSubmit,
+    TResult? Function()? onApply,
+    TResult? Function(CategoryFilterType type)? onSelectedCategory,
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function(SoftFilterType type)? onSelectedSoft,
+    TResult? Function()? onClearSearch,
+    TResult? Function(bool value)? onEnableColorBorderSearch,
   }) {
     return onSelectedDate?.call(date);
   }
@@ -1560,16 +2276,21 @@ class _$OnSelectedDateImpl implements _OnSelectedDate {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchData,
     TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
     TResult Function()? fetchGenre,
     TResult Function()? onReset,
-    TResult Function()? onSubmit,
+    TResult Function()? onApply,
+    TResult Function(CategoryFilterType type)? onSelectedCategory,
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function(SoftFilterType type)? onSelectedSoft,
+    TResult Function()? onClearSearch,
+    TResult Function(bool value)? onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onSelectedDate != null) {
@@ -1581,16 +2302,22 @@ class _$OnSelectedDateImpl implements _OnSelectedDate {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_FetchData value) fetchData,
     required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
     required TResult Function(_FetchGenre value) fetchGenre,
     required TResult Function(_OnReset value) onReset,
-    required TResult Function(_OnSubmit value) onSubmit,
+    required TResult Function(_OnApply value) onApply,
+    required TResult Function(_OnSelectedCategory value) onSelectedCategory,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnSelectedSoft value) onSelectedSoft,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) {
     return onSelectedDate(this);
   }
@@ -1598,16 +2325,22 @@ class _$OnSelectedDateImpl implements _OnSelectedDate {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchData value)? fetchData,
     TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
     TResult? Function(_FetchGenre value)? fetchGenre,
     TResult? Function(_OnReset value)? onReset,
-    TResult? Function(_OnSubmit value)? onSubmit,
+    TResult? Function(_OnApply value)? onApply,
+    TResult? Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) {
     return onSelectedDate?.call(this);
   }
@@ -1615,16 +2348,22 @@ class _$OnSelectedDateImpl implements _OnSelectedDate {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchData value)? fetchData,
     TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
     TResult Function(_FetchGenre value)? fetchGenre,
     TResult Function(_OnReset value)? onReset,
-    TResult Function(_OnSubmit value)? onSubmit,
+    TResult Function(_OnApply value)? onApply,
+    TResult Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onSelectedDate != null) {
@@ -1715,16 +2454,21 @@ class _$OnSelectedGenreImpl implements _OnSelectedGenre {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() fetchData,
     required TResult Function(String text) onChanged,
     required TResult Function(String text) onSearch,
     required TResult Function() initDataBottomSheet,
     required TResult Function() fetchCountry,
     required TResult Function() fetchGenre,
     required TResult Function() onReset,
-    required TResult Function() onSubmit,
+    required TResult Function() onApply,
+    required TResult Function(CategoryFilterType type) onSelectedCategory,
     required TResult Function(CountryModel country) onSelectedCountry,
     required TResult Function(String date) onSelectedDate,
     required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function(SoftFilterType type) onSelectedSoft,
+    required TResult Function() onClearSearch,
+    required TResult Function(bool value) onEnableColorBorderSearch,
   }) {
     return onSelectedGenre(genre);
   }
@@ -1732,16 +2476,21 @@ class _$OnSelectedGenreImpl implements _OnSelectedGenre {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchData,
     TResult? Function(String text)? onChanged,
     TResult? Function(String text)? onSearch,
     TResult? Function()? initDataBottomSheet,
     TResult? Function()? fetchCountry,
     TResult? Function()? fetchGenre,
     TResult? Function()? onReset,
-    TResult? Function()? onSubmit,
+    TResult? Function()? onApply,
+    TResult? Function(CategoryFilterType type)? onSelectedCategory,
     TResult? Function(CountryModel country)? onSelectedCountry,
     TResult? Function(String date)? onSelectedDate,
     TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function(SoftFilterType type)? onSelectedSoft,
+    TResult? Function()? onClearSearch,
+    TResult? Function(bool value)? onEnableColorBorderSearch,
   }) {
     return onSelectedGenre?.call(genre);
   }
@@ -1749,16 +2498,21 @@ class _$OnSelectedGenreImpl implements _OnSelectedGenre {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchData,
     TResult Function(String text)? onChanged,
     TResult Function(String text)? onSearch,
     TResult Function()? initDataBottomSheet,
     TResult Function()? fetchCountry,
     TResult Function()? fetchGenre,
     TResult Function()? onReset,
-    TResult Function()? onSubmit,
+    TResult Function()? onApply,
+    TResult Function(CategoryFilterType type)? onSelectedCategory,
     TResult Function(CountryModel country)? onSelectedCountry,
     TResult Function(String date)? onSelectedDate,
     TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function(SoftFilterType type)? onSelectedSoft,
+    TResult Function()? onClearSearch,
+    TResult Function(bool value)? onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onSelectedGenre != null) {
@@ -1770,16 +2524,22 @@ class _$OnSelectedGenreImpl implements _OnSelectedGenre {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_FetchData value) fetchData,
     required TResult Function(_OnChanged value) onChanged,
     required TResult Function(_OnSearch value) onSearch,
     required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
     required TResult Function(_FetchCountry value) fetchCountry,
     required TResult Function(_FetchGenre value) fetchGenre,
     required TResult Function(_OnReset value) onReset,
-    required TResult Function(_OnSubmit value) onSubmit,
+    required TResult Function(_OnApply value) onApply,
+    required TResult Function(_OnSelectedCategory value) onSelectedCategory,
     required TResult Function(_OnSelectedCountry value) onSelectedCountry,
     required TResult Function(_OnSelectedDate value) onSelectedDate,
     required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnSelectedSoft value) onSelectedSoft,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
   }) {
     return onSelectedGenre(this);
   }
@@ -1787,16 +2547,22 @@ class _$OnSelectedGenreImpl implements _OnSelectedGenre {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchData value)? fetchData,
     TResult? Function(_OnChanged value)? onChanged,
     TResult? Function(_OnSearch value)? onSearch,
     TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult? Function(_FetchCountry value)? fetchCountry,
     TResult? Function(_FetchGenre value)? fetchGenre,
     TResult? Function(_OnReset value)? onReset,
-    TResult? Function(_OnSubmit value)? onSubmit,
+    TResult? Function(_OnApply value)? onApply,
+    TResult? Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult? Function(_OnSelectedDate value)? onSelectedDate,
     TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
   }) {
     return onSelectedGenre?.call(this);
   }
@@ -1804,16 +2570,22 @@ class _$OnSelectedGenreImpl implements _OnSelectedGenre {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchData value)? fetchData,
     TResult Function(_OnChanged value)? onChanged,
     TResult Function(_OnSearch value)? onSearch,
     TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
     TResult Function(_FetchCountry value)? fetchCountry,
     TResult Function(_FetchGenre value)? fetchGenre,
     TResult Function(_OnReset value)? onReset,
-    TResult Function(_OnSubmit value)? onSubmit,
+    TResult Function(_OnApply value)? onApply,
+    TResult Function(_OnSelectedCategory value)? onSelectedCategory,
     TResult Function(_OnSelectedCountry value)? onSelectedCountry,
     TResult Function(_OnSelectedDate value)? onSelectedDate,
     TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
     required TResult orElse(),
   }) {
     if (onSelectedGenre != null) {
@@ -1837,13 +2609,654 @@ abstract class _OnSelectedGenre implements ExploreEvent {
 }
 
 /// @nodoc
+abstract class _$$OnSelectedSoftImplCopyWith<$Res> {
+  factory _$$OnSelectedSoftImplCopyWith(_$OnSelectedSoftImpl value,
+          $Res Function(_$OnSelectedSoftImpl) then) =
+      __$$OnSelectedSoftImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({SoftFilterType type});
+}
+
+/// @nodoc
+class __$$OnSelectedSoftImplCopyWithImpl<$Res>
+    extends _$ExploreEventCopyWithImpl<$Res, _$OnSelectedSoftImpl>
+    implements _$$OnSelectedSoftImplCopyWith<$Res> {
+  __$$OnSelectedSoftImplCopyWithImpl(
+      _$OnSelectedSoftImpl _value, $Res Function(_$OnSelectedSoftImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = null,
+  }) {
+    return _then(_$OnSelectedSoftImpl(
+      null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as SoftFilterType,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OnSelectedSoftImpl implements _OnSelectedSoft {
+  const _$OnSelectedSoftImpl(this.type);
+
+  @override
+  final SoftFilterType type;
+
+  @override
+  String toString() {
+    return 'ExploreEvent.onSelectedSoft(type: $type)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnSelectedSoftImpl &&
+            (identical(other.type, type) || other.type == type));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, type);
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnSelectedSoftImplCopyWith<_$OnSelectedSoftImpl> get copyWith =>
+      __$$OnSelectedSoftImplCopyWithImpl<_$OnSelectedSoftImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchData,
+    required TResult Function(String text) onChanged,
+    required TResult Function(String text) onSearch,
+    required TResult Function() initDataBottomSheet,
+    required TResult Function() fetchCountry,
+    required TResult Function() fetchGenre,
+    required TResult Function() onReset,
+    required TResult Function() onApply,
+    required TResult Function(CategoryFilterType type) onSelectedCategory,
+    required TResult Function(CountryModel country) onSelectedCountry,
+    required TResult Function(String date) onSelectedDate,
+    required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function(SoftFilterType type) onSelectedSoft,
+    required TResult Function() onClearSearch,
+    required TResult Function(bool value) onEnableColorBorderSearch,
+  }) {
+    return onSelectedSoft(type);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchData,
+    TResult? Function(String text)? onChanged,
+    TResult? Function(String text)? onSearch,
+    TResult? Function()? initDataBottomSheet,
+    TResult? Function()? fetchCountry,
+    TResult? Function()? fetchGenre,
+    TResult? Function()? onReset,
+    TResult? Function()? onApply,
+    TResult? Function(CategoryFilterType type)? onSelectedCategory,
+    TResult? Function(CountryModel country)? onSelectedCountry,
+    TResult? Function(String date)? onSelectedDate,
+    TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function(SoftFilterType type)? onSelectedSoft,
+    TResult? Function()? onClearSearch,
+    TResult? Function(bool value)? onEnableColorBorderSearch,
+  }) {
+    return onSelectedSoft?.call(type);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchData,
+    TResult Function(String text)? onChanged,
+    TResult Function(String text)? onSearch,
+    TResult Function()? initDataBottomSheet,
+    TResult Function()? fetchCountry,
+    TResult Function()? fetchGenre,
+    TResult Function()? onReset,
+    TResult Function()? onApply,
+    TResult Function(CategoryFilterType type)? onSelectedCategory,
+    TResult Function(CountryModel country)? onSelectedCountry,
+    TResult Function(String date)? onSelectedDate,
+    TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function(SoftFilterType type)? onSelectedSoft,
+    TResult Function()? onClearSearch,
+    TResult Function(bool value)? onEnableColorBorderSearch,
+    required TResult orElse(),
+  }) {
+    if (onSelectedSoft != null) {
+      return onSelectedSoft(type);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchData value) fetchData,
+    required TResult Function(_OnChanged value) onChanged,
+    required TResult Function(_OnSearch value) onSearch,
+    required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
+    required TResult Function(_FetchCountry value) fetchCountry,
+    required TResult Function(_FetchGenre value) fetchGenre,
+    required TResult Function(_OnReset value) onReset,
+    required TResult Function(_OnApply value) onApply,
+    required TResult Function(_OnSelectedCategory value) onSelectedCategory,
+    required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedDate value) onSelectedDate,
+    required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnSelectedSoft value) onSelectedSoft,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
+  }) {
+    return onSelectedSoft(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchData value)? fetchData,
+    TResult? Function(_OnChanged value)? onChanged,
+    TResult? Function(_OnSearch value)? onSearch,
+    TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
+    TResult? Function(_FetchCountry value)? fetchCountry,
+    TResult? Function(_FetchGenre value)? fetchGenre,
+    TResult? Function(_OnReset value)? onReset,
+    TResult? Function(_OnApply value)? onApply,
+    TResult? Function(_OnSelectedCategory value)? onSelectedCategory,
+    TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedDate value)? onSelectedDate,
+    TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
+  }) {
+    return onSelectedSoft?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchData value)? fetchData,
+    TResult Function(_OnChanged value)? onChanged,
+    TResult Function(_OnSearch value)? onSearch,
+    TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
+    TResult Function(_FetchCountry value)? fetchCountry,
+    TResult Function(_FetchGenre value)? fetchGenre,
+    TResult Function(_OnReset value)? onReset,
+    TResult Function(_OnApply value)? onApply,
+    TResult Function(_OnSelectedCategory value)? onSelectedCategory,
+    TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedDate value)? onSelectedDate,
+    TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
+    required TResult orElse(),
+  }) {
+    if (onSelectedSoft != null) {
+      return onSelectedSoft(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnSelectedSoft implements ExploreEvent {
+  const factory _OnSelectedSoft(final SoftFilterType type) =
+      _$OnSelectedSoftImpl;
+
+  SoftFilterType get type;
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$OnSelectedSoftImplCopyWith<_$OnSelectedSoftImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$OnClearSearchImplCopyWith<$Res> {
+  factory _$$OnClearSearchImplCopyWith(
+          _$OnClearSearchImpl value, $Res Function(_$OnClearSearchImpl) then) =
+      __$$OnClearSearchImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$OnClearSearchImplCopyWithImpl<$Res>
+    extends _$ExploreEventCopyWithImpl<$Res, _$OnClearSearchImpl>
+    implements _$$OnClearSearchImplCopyWith<$Res> {
+  __$$OnClearSearchImplCopyWithImpl(
+      _$OnClearSearchImpl _value, $Res Function(_$OnClearSearchImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$OnClearSearchImpl implements _OnClearSearch {
+  const _$OnClearSearchImpl();
+
+  @override
+  String toString() {
+    return 'ExploreEvent.onClearSearch()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$OnClearSearchImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchData,
+    required TResult Function(String text) onChanged,
+    required TResult Function(String text) onSearch,
+    required TResult Function() initDataBottomSheet,
+    required TResult Function() fetchCountry,
+    required TResult Function() fetchGenre,
+    required TResult Function() onReset,
+    required TResult Function() onApply,
+    required TResult Function(CategoryFilterType type) onSelectedCategory,
+    required TResult Function(CountryModel country) onSelectedCountry,
+    required TResult Function(String date) onSelectedDate,
+    required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function(SoftFilterType type) onSelectedSoft,
+    required TResult Function() onClearSearch,
+    required TResult Function(bool value) onEnableColorBorderSearch,
+  }) {
+    return onClearSearch();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchData,
+    TResult? Function(String text)? onChanged,
+    TResult? Function(String text)? onSearch,
+    TResult? Function()? initDataBottomSheet,
+    TResult? Function()? fetchCountry,
+    TResult? Function()? fetchGenre,
+    TResult? Function()? onReset,
+    TResult? Function()? onApply,
+    TResult? Function(CategoryFilterType type)? onSelectedCategory,
+    TResult? Function(CountryModel country)? onSelectedCountry,
+    TResult? Function(String date)? onSelectedDate,
+    TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function(SoftFilterType type)? onSelectedSoft,
+    TResult? Function()? onClearSearch,
+    TResult? Function(bool value)? onEnableColorBorderSearch,
+  }) {
+    return onClearSearch?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchData,
+    TResult Function(String text)? onChanged,
+    TResult Function(String text)? onSearch,
+    TResult Function()? initDataBottomSheet,
+    TResult Function()? fetchCountry,
+    TResult Function()? fetchGenre,
+    TResult Function()? onReset,
+    TResult Function()? onApply,
+    TResult Function(CategoryFilterType type)? onSelectedCategory,
+    TResult Function(CountryModel country)? onSelectedCountry,
+    TResult Function(String date)? onSelectedDate,
+    TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function(SoftFilterType type)? onSelectedSoft,
+    TResult Function()? onClearSearch,
+    TResult Function(bool value)? onEnableColorBorderSearch,
+    required TResult orElse(),
+  }) {
+    if (onClearSearch != null) {
+      return onClearSearch();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchData value) fetchData,
+    required TResult Function(_OnChanged value) onChanged,
+    required TResult Function(_OnSearch value) onSearch,
+    required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
+    required TResult Function(_FetchCountry value) fetchCountry,
+    required TResult Function(_FetchGenre value) fetchGenre,
+    required TResult Function(_OnReset value) onReset,
+    required TResult Function(_OnApply value) onApply,
+    required TResult Function(_OnSelectedCategory value) onSelectedCategory,
+    required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedDate value) onSelectedDate,
+    required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnSelectedSoft value) onSelectedSoft,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
+  }) {
+    return onClearSearch(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchData value)? fetchData,
+    TResult? Function(_OnChanged value)? onChanged,
+    TResult? Function(_OnSearch value)? onSearch,
+    TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
+    TResult? Function(_FetchCountry value)? fetchCountry,
+    TResult? Function(_FetchGenre value)? fetchGenre,
+    TResult? Function(_OnReset value)? onReset,
+    TResult? Function(_OnApply value)? onApply,
+    TResult? Function(_OnSelectedCategory value)? onSelectedCategory,
+    TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedDate value)? onSelectedDate,
+    TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
+  }) {
+    return onClearSearch?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchData value)? fetchData,
+    TResult Function(_OnChanged value)? onChanged,
+    TResult Function(_OnSearch value)? onSearch,
+    TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
+    TResult Function(_FetchCountry value)? fetchCountry,
+    TResult Function(_FetchGenre value)? fetchGenre,
+    TResult Function(_OnReset value)? onReset,
+    TResult Function(_OnApply value)? onApply,
+    TResult Function(_OnSelectedCategory value)? onSelectedCategory,
+    TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedDate value)? onSelectedDate,
+    TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
+    required TResult orElse(),
+  }) {
+    if (onClearSearch != null) {
+      return onClearSearch(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnClearSearch implements ExploreEvent {
+  const factory _OnClearSearch() = _$OnClearSearchImpl;
+}
+
+/// @nodoc
+abstract class _$$OnEnableColorBorderSearchImplCopyWith<$Res> {
+  factory _$$OnEnableColorBorderSearchImplCopyWith(
+          _$OnEnableColorBorderSearchImpl value,
+          $Res Function(_$OnEnableColorBorderSearchImpl) then) =
+      __$$OnEnableColorBorderSearchImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool value});
+}
+
+/// @nodoc
+class __$$OnEnableColorBorderSearchImplCopyWithImpl<$Res>
+    extends _$ExploreEventCopyWithImpl<$Res, _$OnEnableColorBorderSearchImpl>
+    implements _$$OnEnableColorBorderSearchImplCopyWith<$Res> {
+  __$$OnEnableColorBorderSearchImplCopyWithImpl(
+      _$OnEnableColorBorderSearchImpl _value,
+      $Res Function(_$OnEnableColorBorderSearchImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+  }) {
+    return _then(_$OnEnableColorBorderSearchImpl(
+      null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OnEnableColorBorderSearchImpl implements _OnEnableColorBorderSearch {
+  const _$OnEnableColorBorderSearchImpl(this.value);
+
+  @override
+  final bool value;
+
+  @override
+  String toString() {
+    return 'ExploreEvent.onEnableColorBorderSearch(value: $value)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnEnableColorBorderSearchImpl &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, value);
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnEnableColorBorderSearchImplCopyWith<_$OnEnableColorBorderSearchImpl>
+      get copyWith => __$$OnEnableColorBorderSearchImplCopyWithImpl<
+          _$OnEnableColorBorderSearchImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchData,
+    required TResult Function(String text) onChanged,
+    required TResult Function(String text) onSearch,
+    required TResult Function() initDataBottomSheet,
+    required TResult Function() fetchCountry,
+    required TResult Function() fetchGenre,
+    required TResult Function() onReset,
+    required TResult Function() onApply,
+    required TResult Function(CategoryFilterType type) onSelectedCategory,
+    required TResult Function(CountryModel country) onSelectedCountry,
+    required TResult Function(String date) onSelectedDate,
+    required TResult Function(GenreModel genre) onSelectedGenre,
+    required TResult Function(SoftFilterType type) onSelectedSoft,
+    required TResult Function() onClearSearch,
+    required TResult Function(bool value) onEnableColorBorderSearch,
+  }) {
+    return onEnableColorBorderSearch(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchData,
+    TResult? Function(String text)? onChanged,
+    TResult? Function(String text)? onSearch,
+    TResult? Function()? initDataBottomSheet,
+    TResult? Function()? fetchCountry,
+    TResult? Function()? fetchGenre,
+    TResult? Function()? onReset,
+    TResult? Function()? onApply,
+    TResult? Function(CategoryFilterType type)? onSelectedCategory,
+    TResult? Function(CountryModel country)? onSelectedCountry,
+    TResult? Function(String date)? onSelectedDate,
+    TResult? Function(GenreModel genre)? onSelectedGenre,
+    TResult? Function(SoftFilterType type)? onSelectedSoft,
+    TResult? Function()? onClearSearch,
+    TResult? Function(bool value)? onEnableColorBorderSearch,
+  }) {
+    return onEnableColorBorderSearch?.call(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchData,
+    TResult Function(String text)? onChanged,
+    TResult Function(String text)? onSearch,
+    TResult Function()? initDataBottomSheet,
+    TResult Function()? fetchCountry,
+    TResult Function()? fetchGenre,
+    TResult Function()? onReset,
+    TResult Function()? onApply,
+    TResult Function(CategoryFilterType type)? onSelectedCategory,
+    TResult Function(CountryModel country)? onSelectedCountry,
+    TResult Function(String date)? onSelectedDate,
+    TResult Function(GenreModel genre)? onSelectedGenre,
+    TResult Function(SoftFilterType type)? onSelectedSoft,
+    TResult Function()? onClearSearch,
+    TResult Function(bool value)? onEnableColorBorderSearch,
+    required TResult orElse(),
+  }) {
+    if (onEnableColorBorderSearch != null) {
+      return onEnableColorBorderSearch(value);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchData value) fetchData,
+    required TResult Function(_OnChanged value) onChanged,
+    required TResult Function(_OnSearch value) onSearch,
+    required TResult Function(_InitDataBottomSheet value) initDataBottomSheet,
+    required TResult Function(_FetchCountry value) fetchCountry,
+    required TResult Function(_FetchGenre value) fetchGenre,
+    required TResult Function(_OnReset value) onReset,
+    required TResult Function(_OnApply value) onApply,
+    required TResult Function(_OnSelectedCategory value) onSelectedCategory,
+    required TResult Function(_OnSelectedCountry value) onSelectedCountry,
+    required TResult Function(_OnSelectedDate value) onSelectedDate,
+    required TResult Function(_OnSelectedGenre value) onSelectedGenre,
+    required TResult Function(_OnSelectedSoft value) onSelectedSoft,
+    required TResult Function(_OnClearSearch value) onClearSearch,
+    required TResult Function(_OnEnableColorBorderSearch value)
+        onEnableColorBorderSearch,
+  }) {
+    return onEnableColorBorderSearch(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchData value)? fetchData,
+    TResult? Function(_OnChanged value)? onChanged,
+    TResult? Function(_OnSearch value)? onSearch,
+    TResult? Function(_InitDataBottomSheet value)? initDataBottomSheet,
+    TResult? Function(_FetchCountry value)? fetchCountry,
+    TResult? Function(_FetchGenre value)? fetchGenre,
+    TResult? Function(_OnReset value)? onReset,
+    TResult? Function(_OnApply value)? onApply,
+    TResult? Function(_OnSelectedCategory value)? onSelectedCategory,
+    TResult? Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult? Function(_OnSelectedDate value)? onSelectedDate,
+    TResult? Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult? Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult? Function(_OnClearSearch value)? onClearSearch,
+    TResult? Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
+  }) {
+    return onEnableColorBorderSearch?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchData value)? fetchData,
+    TResult Function(_OnChanged value)? onChanged,
+    TResult Function(_OnSearch value)? onSearch,
+    TResult Function(_InitDataBottomSheet value)? initDataBottomSheet,
+    TResult Function(_FetchCountry value)? fetchCountry,
+    TResult Function(_FetchGenre value)? fetchGenre,
+    TResult Function(_OnReset value)? onReset,
+    TResult Function(_OnApply value)? onApply,
+    TResult Function(_OnSelectedCategory value)? onSelectedCategory,
+    TResult Function(_OnSelectedCountry value)? onSelectedCountry,
+    TResult Function(_OnSelectedDate value)? onSelectedDate,
+    TResult Function(_OnSelectedGenre value)? onSelectedGenre,
+    TResult Function(_OnSelectedSoft value)? onSelectedSoft,
+    TResult Function(_OnClearSearch value)? onClearSearch,
+    TResult Function(_OnEnableColorBorderSearch value)?
+        onEnableColorBorderSearch,
+    required TResult orElse(),
+  }) {
+    if (onEnableColorBorderSearch != null) {
+      return onEnableColorBorderSearch(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnEnableColorBorderSearch implements ExploreEvent {
+  const factory _OnEnableColorBorderSearch(final bool value) =
+      _$OnEnableColorBorderSearchImpl;
+
+  bool get value;
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$OnEnableColorBorderSearchImplCopyWith<_$OnEnableColorBorderSearchImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$ExploreState {
   PageState get status => throw _privateConstructorUsedError;
   List<MovieModel> get movies => throw _privateConstructorUsedError;
   List<GenreModel> get genreList => throw _privateConstructorUsedError;
   List<CountryModel> get countryList => throw _privateConstructorUsedError;
   List<String> get dateList => throw _privateConstructorUsedError;
+  CategoryFilterType? get selectedCategory =>
+      throw _privateConstructorUsedError;
+  GenreModel? get selectedGenre => throw _privateConstructorUsedError;
+  CountryModel? get selectedCountry => throw _privateConstructorUsedError;
+  SoftFilterType? get selectedSoft => throw _privateConstructorUsedError;
+  String? get selectedDate => throw _privateConstructorUsedError;
   String? get searchText => throw _privateConstructorUsedError;
+  bool get enableColorBorderSearch => throw _privateConstructorUsedError;
 
   /// Create a copy of ExploreState
   /// with the given fields replaced by the non-null parameter values.
@@ -1864,7 +3277,13 @@ abstract class $ExploreStateCopyWith<$Res> {
       List<GenreModel> genreList,
       List<CountryModel> countryList,
       List<String> dateList,
-      String? searchText});
+      CategoryFilterType? selectedCategory,
+      GenreModel? selectedGenre,
+      CountryModel? selectedCountry,
+      SoftFilterType? selectedSoft,
+      String? selectedDate,
+      String? searchText,
+      bool enableColorBorderSearch});
 }
 
 /// @nodoc
@@ -1887,7 +3306,13 @@ class _$ExploreStateCopyWithImpl<$Res, $Val extends ExploreState>
     Object? genreList = null,
     Object? countryList = null,
     Object? dateList = null,
+    Object? selectedCategory = freezed,
+    Object? selectedGenre = freezed,
+    Object? selectedCountry = freezed,
+    Object? selectedSoft = freezed,
+    Object? selectedDate = freezed,
     Object? searchText = freezed,
+    Object? enableColorBorderSearch = null,
   }) {
     return _then(_value.copyWith(
       status: null == status
@@ -1910,10 +3335,34 @@ class _$ExploreStateCopyWithImpl<$Res, $Val extends ExploreState>
           ? _value.dateList
           : dateList // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      selectedCategory: freezed == selectedCategory
+          ? _value.selectedCategory
+          : selectedCategory // ignore: cast_nullable_to_non_nullable
+              as CategoryFilterType?,
+      selectedGenre: freezed == selectedGenre
+          ? _value.selectedGenre
+          : selectedGenre // ignore: cast_nullable_to_non_nullable
+              as GenreModel?,
+      selectedCountry: freezed == selectedCountry
+          ? _value.selectedCountry
+          : selectedCountry // ignore: cast_nullable_to_non_nullable
+              as CountryModel?,
+      selectedSoft: freezed == selectedSoft
+          ? _value.selectedSoft
+          : selectedSoft // ignore: cast_nullable_to_non_nullable
+              as SoftFilterType?,
+      selectedDate: freezed == selectedDate
+          ? _value.selectedDate
+          : selectedDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       searchText: freezed == searchText
           ? _value.searchText
           : searchText // ignore: cast_nullable_to_non_nullable
               as String?,
+      enableColorBorderSearch: null == enableColorBorderSearch
+          ? _value.enableColorBorderSearch
+          : enableColorBorderSearch // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -1932,7 +3381,13 @@ abstract class _$$ExploreStateImplCopyWith<$Res>
       List<GenreModel> genreList,
       List<CountryModel> countryList,
       List<String> dateList,
-      String? searchText});
+      CategoryFilterType? selectedCategory,
+      GenreModel? selectedGenre,
+      CountryModel? selectedCountry,
+      SoftFilterType? selectedSoft,
+      String? selectedDate,
+      String? searchText,
+      bool enableColorBorderSearch});
 }
 
 /// @nodoc
@@ -1953,7 +3408,13 @@ class __$$ExploreStateImplCopyWithImpl<$Res>
     Object? genreList = null,
     Object? countryList = null,
     Object? dateList = null,
+    Object? selectedCategory = freezed,
+    Object? selectedGenre = freezed,
+    Object? selectedCountry = freezed,
+    Object? selectedSoft = freezed,
+    Object? selectedDate = freezed,
     Object? searchText = freezed,
+    Object? enableColorBorderSearch = null,
   }) {
     return _then(_$ExploreStateImpl(
       status: null == status
@@ -1976,10 +3437,34 @@ class __$$ExploreStateImplCopyWithImpl<$Res>
           ? _value._dateList
           : dateList // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      selectedCategory: freezed == selectedCategory
+          ? _value.selectedCategory
+          : selectedCategory // ignore: cast_nullable_to_non_nullable
+              as CategoryFilterType?,
+      selectedGenre: freezed == selectedGenre
+          ? _value.selectedGenre
+          : selectedGenre // ignore: cast_nullable_to_non_nullable
+              as GenreModel?,
+      selectedCountry: freezed == selectedCountry
+          ? _value.selectedCountry
+          : selectedCountry // ignore: cast_nullable_to_non_nullable
+              as CountryModel?,
+      selectedSoft: freezed == selectedSoft
+          ? _value.selectedSoft
+          : selectedSoft // ignore: cast_nullable_to_non_nullable
+              as SoftFilterType?,
+      selectedDate: freezed == selectedDate
+          ? _value.selectedDate
+          : selectedDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       searchText: freezed == searchText
           ? _value.searchText
           : searchText // ignore: cast_nullable_to_non_nullable
               as String?,
+      enableColorBorderSearch: null == enableColorBorderSearch
+          ? _value.enableColorBorderSearch
+          : enableColorBorderSearch // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -1993,7 +3478,13 @@ class _$ExploreStateImpl extends _ExploreState {
       final List<GenreModel> genreList = const [],
       final List<CountryModel> countryList = const [],
       final List<String> dateList = const [],
-      this.searchText})
+      this.selectedCategory,
+      this.selectedGenre,
+      this.selectedCountry,
+      this.selectedSoft,
+      this.selectedDate,
+      this.searchText,
+      this.enableColorBorderSearch = false})
       : _movies = movies,
         _genreList = genreList,
         _countryList = countryList,
@@ -2040,11 +3531,24 @@ class _$ExploreStateImpl extends _ExploreState {
   }
 
   @override
+  final CategoryFilterType? selectedCategory;
+  @override
+  final GenreModel? selectedGenre;
+  @override
+  final CountryModel? selectedCountry;
+  @override
+  final SoftFilterType? selectedSoft;
+  @override
+  final String? selectedDate;
+  @override
   final String? searchText;
+  @override
+  @JsonKey()
+  final bool enableColorBorderSearch;
 
   @override
   String toString() {
-    return 'ExploreState(status: $status, movies: $movies, genreList: $genreList, countryList: $countryList, dateList: $dateList, searchText: $searchText)';
+    return 'ExploreState(status: $status, movies: $movies, genreList: $genreList, countryList: $countryList, dateList: $dateList, selectedCategory: $selectedCategory, selectedGenre: $selectedGenre, selectedCountry: $selectedCountry, selectedSoft: $selectedSoft, selectedDate: $selectedDate, searchText: $searchText, enableColorBorderSearch: $enableColorBorderSearch)';
   }
 
   @override
@@ -2059,8 +3563,21 @@ class _$ExploreStateImpl extends _ExploreState {
             const DeepCollectionEquality()
                 .equals(other._countryList, _countryList) &&
             const DeepCollectionEquality().equals(other._dateList, _dateList) &&
+            (identical(other.selectedCategory, selectedCategory) ||
+                other.selectedCategory == selectedCategory) &&
+            (identical(other.selectedGenre, selectedGenre) ||
+                other.selectedGenre == selectedGenre) &&
+            (identical(other.selectedCountry, selectedCountry) ||
+                other.selectedCountry == selectedCountry) &&
+            (identical(other.selectedSoft, selectedSoft) ||
+                other.selectedSoft == selectedSoft) &&
+            (identical(other.selectedDate, selectedDate) ||
+                other.selectedDate == selectedDate) &&
             (identical(other.searchText, searchText) ||
-                other.searchText == searchText));
+                other.searchText == searchText) &&
+            (identical(
+                    other.enableColorBorderSearch, enableColorBorderSearch) ||
+                other.enableColorBorderSearch == enableColorBorderSearch));
   }
 
   @override
@@ -2071,7 +3588,13 @@ class _$ExploreStateImpl extends _ExploreState {
       const DeepCollectionEquality().hash(_genreList),
       const DeepCollectionEquality().hash(_countryList),
       const DeepCollectionEquality().hash(_dateList),
-      searchText);
+      selectedCategory,
+      selectedGenre,
+      selectedCountry,
+      selectedSoft,
+      selectedDate,
+      searchText,
+      enableColorBorderSearch);
 
   /// Create a copy of ExploreState
   /// with the given fields replaced by the non-null parameter values.
@@ -2089,7 +3612,13 @@ abstract class _ExploreState extends ExploreState {
       final List<GenreModel> genreList,
       final List<CountryModel> countryList,
       final List<String> dateList,
-      final String? searchText}) = _$ExploreStateImpl;
+      final CategoryFilterType? selectedCategory,
+      final GenreModel? selectedGenre,
+      final CountryModel? selectedCountry,
+      final SoftFilterType? selectedSoft,
+      final String? selectedDate,
+      final String? searchText,
+      final bool enableColorBorderSearch}) = _$ExploreStateImpl;
   const _ExploreState._() : super._();
 
   @override
@@ -2103,7 +3632,19 @@ abstract class _ExploreState extends ExploreState {
   @override
   List<String> get dateList;
   @override
+  CategoryFilterType? get selectedCategory;
+  @override
+  GenreModel? get selectedGenre;
+  @override
+  CountryModel? get selectedCountry;
+  @override
+  SoftFilterType? get selectedSoft;
+  @override
+  String? get selectedDate;
+  @override
   String? get searchText;
+  @override
+  bool get enableColorBorderSearch;
 
   /// Create a copy of ExploreState
   /// with the given fields replaced by the non-null parameter values.

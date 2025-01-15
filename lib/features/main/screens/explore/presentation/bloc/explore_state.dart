@@ -9,6 +9,12 @@ class ExploreState with _$ExploreState {
     @Default([]) List<GenreModel> genreList,
     @Default([]) List<CountryModel> countryList,
     @Default([]) List<String> dateList,
+    CategoryFilterType? selectedCategory,
+    GenreModel? selectedGenre,
+    CountryModel? selectedCountry,
+    SoftFilterType? selectedSoft,
+    String? selectedDate,
     String? searchText,
+    @Default(false) bool enableColorBorderSearch,
   }) = _ExploreState;
 }
