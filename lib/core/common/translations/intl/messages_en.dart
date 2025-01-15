@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "btn_add": MessageLookupByLibrary.simpleMessage("Add"),
         "btn_add_new_card":
             MessageLookupByLibrary.simpleMessage("Add New Card"),
+        "btn_apply": MessageLookupByLibrary.simpleMessage("Apply"),
         "btn_change": MessageLookupByLibrary.simpleMessage("Change"),
         "btn_continue": MessageLookupByLibrary.simpleMessage("Continue"),
         "btn_download": MessageLookupByLibrary.simpleMessage("Download"),
@@ -36,6 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "btn_get_started": MessageLookupByLibrary.simpleMessage("Get Started"),
         "btn_login": MessageLookupByLibrary.simpleMessage("Login"),
         "btn_play": MessageLookupByLibrary.simpleMessage("Play"),
+        "btn_reset": MessageLookupByLibrary.simpleMessage("Reset"),
         "btn_sign_up": MessageLookupByLibrary.simpleMessage("Sign up"),
         "btn_update": MessageLookupByLibrary.simpleMessage("Update"),
         "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
@@ -91,6 +93,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "A verification email has been sent to your address. Please check your inbox to complete the verification process"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "see_all": MessageLookupByLibrary.simpleMessage("See all"),
+        "soft_latest_release":
+            MessageLookupByLibrary.simpleMessage("Latest Release"),
+        "soft_popularity": MessageLookupByLibrary.simpleMessage("Popularity"),
         "tab_comments": MessageLookupByLibrary.simpleMessage("Comments"),
         "tab_download": MessageLookupByLibrary.simpleMessage("Download"),
         "tab_explore": MessageLookupByLibrary.simpleMessage("Explore"),
@@ -123,6 +128,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Review Summary"),
         "title_selected_country":
             MessageLookupByLibrary.simpleMessage("Countries"),
+        "title_sort_filter":
+            MessageLookupByLibrary.simpleMessage("Sort & Filter"),
         "title_subscribe_to_premium":
             MessageLookupByLibrary.simpleMessage("Subscribe to Premium"),
         "title_top_movie":
@@ -150,6 +157,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "Sorry, the keyword you entered could not be found. Try to check again or search with other keywords."),
         "txt_dont_have_an_account":
             MessageLookupByLibrary.simpleMessage("Don’t have an account? "),
+        "txt_filter_all_periods":
+            MessageLookupByLibrary.simpleMessage("All Periods"),
+        "txt_filter_categories":
+            MessageLookupByLibrary.simpleMessage("Categories"),
+        "txt_filter_genre": MessageLookupByLibrary.simpleMessage("Genre"),
+        "txt_filter_regions": MessageLookupByLibrary.simpleMessage("Regions"),
+        "txt_filter_sort": MessageLookupByLibrary.simpleMessage("Sort"),
+        "txt_filter_time_periods":
+            MessageLookupByLibrary.simpleMessage("Time/Periods"),
         "txt_join_premium":
             MessageLookupByLibrary.simpleMessage("Join Premium!"),
         "txt_k_drama": MessageLookupByLibrary.simpleMessage("K Drama"),

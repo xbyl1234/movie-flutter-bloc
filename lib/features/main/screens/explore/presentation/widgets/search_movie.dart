@@ -6,7 +6,7 @@ import 'package:movie/di/dependency_injection.dart';
 import '../../../../../../core/common/translations/l10n.dart';
 import '../../../../../../core/common/widgets/svg_widget.dart';
 import '../bloc/explore_bloc.dart';
-import 'filter_search_movie.dart';
+import 'bottom_sheet_filter.dart';
 
 class SearchMovie extends StatelessWidget {
   const SearchMovie({
@@ -26,14 +26,15 @@ class SearchMovie extends StatelessWidget {
               child: BlocBuilder<ExploreBloc, ExploreState>(
                 bloc: getIt<ExploreBloc>(),
                 builder: (context, state) {
-                  ctrSearch.text = state.searchText ?? "";
+                  if (state.searchText == null) {
+                    ctrSearch.text = "";
+                  }
                   return TextFormField(
                     controller: ctrSearch,
                     onTap: () {
-                      if (state.searchText == null &&
-                          !state.enableColorBorderSearch) {
+                      if (state.searchText == null && !state.enableColorBorderSearch) {
                         getIt<ExploreBloc>().add(
-                          ExploreEvent.onEnableColorBorderSearch(),
+                          ExploreEvent.onEnableColorBorderSearch(true),
                         );
                       }
                     },
@@ -80,7 +81,7 @@ class SearchMovie extends StatelessWidget {
                               : Color(0xffBDBDBD),
                         ),
                       ),
-                      suffixIcon: state.searchText != null
+                      suffixIcon: state.enableColorBorderSearch
                           ? GestureDetector(
                               onTap: () {
                                 ctrSearch.text = '';
@@ -108,7 +109,7 @@ class SearchMovie extends StatelessWidget {
                   context: context,
                   isScrollControlled: true,
                   builder: (context) {
-                    return const FilterSearchMovie();
+                    return const BottomSheetFilter();
                   });
             },
             child: Container(

@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "btn_add": MessageLookupByLibrary.simpleMessage("Thêm"),
         "btn_add_new_card":
             MessageLookupByLibrary.simpleMessage("Thêm thẻ mới"),
+        "btn_apply": MessageLookupByLibrary.simpleMessage("Apply"),
         "btn_change": MessageLookupByLibrary.simpleMessage("Thay đổi"),
         "btn_continue": MessageLookupByLibrary.simpleMessage("Tiếp tục"),
         "btn_download": MessageLookupByLibrary.simpleMessage("Tải về"),
@@ -36,6 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "btn_get_started": MessageLookupByLibrary.simpleMessage("Get Started"),
         "btn_login": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
         "btn_play": MessageLookupByLibrary.simpleMessage("Chơi"),
+        "btn_reset": MessageLookupByLibrary.simpleMessage("Reset"),
         "btn_sign_up": MessageLookupByLibrary.simpleMessage("Đăng ký"),
         "btn_update": MessageLookupByLibrary.simpleMessage("Cập nhật"),
         "content_subscribe_to_premium": MessageLookupByLibrary.simpleMessage(
@@ -90,6 +92,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Email xác thực đã được gửi đến địa chỉ của bạn. Hãy kiểm tra hộp thư để hoàn tất quá trình xác thực."),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "see_all": MessageLookupByLibrary.simpleMessage("Xem thêm"),
+        "soft_latest_release":
+            MessageLookupByLibrary.simpleMessage("Latest Release"),
+        "soft_popularity": MessageLookupByLibrary.simpleMessage("Popularity"),
         "tab_comments": MessageLookupByLibrary.simpleMessage("Bình luận"),
         "tab_download": MessageLookupByLibrary.simpleMessage("Tải xuống"),
         "tab_explore": MessageLookupByLibrary.simpleMessage("Khám phá"),
@@ -121,6 +126,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Review Summary"),
         "title_selected_country":
             MessageLookupByLibrary.simpleMessage("Danh sách quốc gia"),
+        "title_sort_filter":
+            MessageLookupByLibrary.simpleMessage("Sort & Filter"),
         "title_subscribe_to_premium":
             MessageLookupByLibrary.simpleMessage("Đăng ký Premium"),
         "title_top_movie":
@@ -148,6 +155,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "Sorry, the keyword you entered could not be found. Try to check again or search with other keywords."),
         "txt_dont_have_an_account":
             MessageLookupByLibrary.simpleMessage("Bạn chưa có tài khoản? "),
+        "txt_filter_all_periods":
+            MessageLookupByLibrary.simpleMessage("All Periods"),
+        "txt_filter_categories":
+            MessageLookupByLibrary.simpleMessage("Categories"),
+        "txt_filter_genre": MessageLookupByLibrary.simpleMessage("Genre"),
+        "txt_filter_regions": MessageLookupByLibrary.simpleMessage("Regions"),
+        "txt_filter_sort": MessageLookupByLibrary.simpleMessage("Sort"),
+        "txt_filter_time_periods":
+            MessageLookupByLibrary.simpleMessage("Time/Periods"),
         "txt_join_premium":
             MessageLookupByLibrary.simpleMessage("Đăng ký Premium!"),
         "txt_k_drama": MessageLookupByLibrary.simpleMessage("K Drama"),

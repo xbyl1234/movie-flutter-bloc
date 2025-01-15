@@ -1029,6 +1029,116 @@ class S {
       args: [],
     );
   }
+
+  /// `Popularity`
+  String get soft_popularity {
+    return Intl.message(
+      'Popularity',
+      name: 'soft_popularity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Latest Release`
+  String get soft_latest_release {
+    return Intl.message(
+      'Latest Release',
+      name: 'soft_latest_release',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sort & Filter`
+  String get title_sort_filter {
+    return Intl.message(
+      'Sort & Filter',
+      name: 'title_sort_filter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Categories`
+  String get txt_filter_categories {
+    return Intl.message(
+      'Categories',
+      name: 'txt_filter_categories',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Regions`
+  String get txt_filter_regions {
+    return Intl.message(
+      'Regions',
+      name: 'txt_filter_regions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Genre`
+  String get txt_filter_genre {
+    return Intl.message(
+      'Genre',
+      name: 'txt_filter_genre',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Time/Periods`
+  String get txt_filter_time_periods {
+    return Intl.message(
+      'Time/Periods',
+      name: 'txt_filter_time_periods',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sort`
+  String get txt_filter_sort {
+    return Intl.message(
+      'Sort',
+      name: 'txt_filter_sort',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset`
+  String get btn_reset {
+    return Intl.message(
+      'Reset',
+      name: 'btn_reset',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apply`
+  String get btn_apply {
+    return Intl.message(
+      'Apply',
+      name: 'btn_apply',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All Periods`
+  String get txt_filter_all_periods {
+    return Intl.message(
+      'All Periods',
+      name: 'txt_filter_all_periods',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/core/common/widgets/svg_widget.dart';
 import 'package:movie/di/dependency_injection.dart';
-import '../../../../../../core/bloc/page_state.dart';
-import '../../../../../../core/common/translations/l10n.dart';
-import '../../../../../../core/common/widgets/item_movie.dart';
-import '../../../../../../core/common/widgets/loading.dart';
-import '../bloc/explore_bloc.dart';
-import '../widgets/search_movie.dart';
+import '../../../../../core/bloc/page_state.dart';
+import '../../../../../core/common/translations/l10n.dart';
+import '../../../../../core/common/widgets/item_movie.dart';
+import '../../../../../core/common/widgets/loading.dart';
+import 'bloc/explore_bloc.dart';
+import 'widgets/search_movie.dart';
 
 class ExploreScreen extends StatelessWidget {
   const ExploreScreen({super.key});
@@ -24,7 +24,7 @@ class ExploreScreen extends StatelessWidget {
           ),
           Expanded(
             child: BlocConsumer<ExploreBloc, ExploreState>(
-              bloc: getIt<ExploreBloc>(),
+              bloc: getIt<ExploreBloc>()..add(ExploreEvent.fetchData()),
               listener: (context, state) {},
               builder: (context, state) {
                 if (state.status == PageState.loading) {
