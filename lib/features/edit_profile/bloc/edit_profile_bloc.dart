@@ -1,13 +1,13 @@
 import 'dart:convert';
 
-import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:movie/core/bloc/page_command.dart';
 import 'package:movie/core/common/enums/gender.dart';
 import 'package:movie/core/common/enums/sheet_type.dart';
-import 'package:movie/core/data/model/country_model.dart';
+import '../../../core/data/model/country_local_model.dart';
 
 part 'edit_profile_event.dart';
 part 'edit_profile_state.dart';
@@ -35,7 +35,7 @@ class EditProfileBloc extends Bloc<EditProfileEvent, EditProfileState> {
     });
 
     on<_OnLoadCountry>((event, emit) async {
-      List<CountryModel> countries = await getCountries();
+      List<CountryLocalModel> countries = await getCountries();
       emit(state.copyWith(
         page: PageCommandShowBottomSheet(sheetType: SheetType.country),
         countries: countries,
@@ -43,7 +43,7 @@ class EditProfileBloc extends Bloc<EditProfileEvent, EditProfileState> {
     });
 
     on<_OnLoadCountryCode>((event, emit) async {
-      List<CountryModel> countries = await getCountries();
+      List<CountryLocalModel> countries = await getCountries();
       emit(state.copyWith(
           page: PageCommandShowBottomSheet(sheetType: SheetType.countryCode),
           listCountryCode: countries));
@@ -85,7 +85,7 @@ class EditProfileBloc extends Bloc<EditProfileEvent, EditProfileState> {
       ));
     }
 
-    List<CountryModel> countries = await getCountries();
+    List<CountryLocalModel> countries = await getCountries();
 
     emit(state.copyWith(
       page: PageCommandShowBottomSheet(sheetType: type),
@@ -93,11 +93,11 @@ class EditProfileBloc extends Bloc<EditProfileEvent, EditProfileState> {
     ));
   }
 
-  Future<List<CountryModel>> getCountries() async {
+  Future<List<CountryLocalModel>> getCountries() async {
     String data = await rootBundle.loadString("assets/country/countries.json");
     final json = jsonDecode(data)["countries"] as List;
-    List<CountryModel> countries =
-        json.map((item) => CountryModel.fromJson(item)).toList();
+    List<CountryLocalModel> countries =
+        json.map((item) => CountryLocalModel.fromJson(item)).toList();
     return countries;
   }
 

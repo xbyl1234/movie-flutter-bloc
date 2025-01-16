@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:movie/core/common/widgets/custom_text_field.dart';
-import 'package:movie/core/data/model/country_model.dart';
+import 'package:movie/core/data/model/country_local_model.dart';
 import '../../../core/common/resource/colors.dart';
 import '../../../core/common/translations/l10n.dart';
 import '../../../core/common/widgets/custom_button.dart';
@@ -56,13 +56,14 @@ class ListCountryCodeBottomSheet extends StatelessWidget {
           ),
           Expanded(
             child: BlocBuilder<EditProfileBloc, EditProfileState>(
-              buildWhen: (previous, current) => previous.listCountryCode != current.listCountryCode,
+              buildWhen: (previous, current) =>
+                  previous.listCountryCode != current.listCountryCode,
               bloc: bloc,
               builder: (context, state) {
                 return ListView.builder(
                     padding: EdgeInsets.only(top: 16, bottom: 16),
                     itemBuilder: (context, index) {
-                      CountryModel item = state.listCountryCode[index];
+                      final item = state.listCountryCode[index];
                       return CardCountry(bloc: bloc, item: item);
                     },
                     itemCount: state.listCountryCode.length);
@@ -102,18 +103,16 @@ class CardCountry extends StatelessWidget {
   });
 
   final EditProfileBloc bloc;
-  final CountryModel item;
+  final CountryLocalModel item;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-        onTap: () => bloc
-            .add(EditProfileEvent.onChangeCountryCode(item)),
+        onTap: () => bloc.add(EditProfileEvent.onChangeCountryCode(item)),
         child: BlocBuilder<EditProfileBloc, EditProfileState>(
           bloc: bloc,
           buildWhen: (previous, current) =>
-              previous.selectedCountryCode !=
-              current.selectedCountryCode,
+              previous.selectedCountryCode != current.selectedCountryCode,
           builder: (context, state) {
             return Container(
               width: double.maxFinite,
@@ -122,19 +121,14 @@ class CardCountry extends StatelessWidget {
                 right: 16,
                 top: 16,
               ),
-              padding: EdgeInsets.symmetric(
-                  horizontal: 16, vertical: 8),
+              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(
-                    color: state.selectedCountryCode !=
-                                null &&
-                            state.selectedCountryCode!.code ==
-                                item.code
-                        ? Theme.of(context)
-                            .colorScheme
-                            .primary
+                    color: state.selectedCountryCode != null &&
+                            state.selectedCountryCode!.code == item.code
+                        ? Theme.of(context).colorScheme.primary
                         : Colors.white,
                     width: 1),
                 boxShadow: shadow2,
@@ -149,20 +143,15 @@ class CardCountry extends StatelessWidget {
                   ),
                   Expanded(
                     child: Column(
-                      crossAxisAlignment:
-                          CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           item.name,
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyMedium,
+                          style: Theme.of(context).textTheme.bodyMedium,
                         ),
                         Text(
                           '+${item.countryCode}',
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleSmall,
+                          style: Theme.of(context).textTheme.titleSmall,
                         ),
                       ],
                     ),

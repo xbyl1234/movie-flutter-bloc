@@ -16,9 +16,9 @@ class EditProfileState with _$EditProfileState {
     String? errPhoneNumber,
     @Default(false) bool enable,
     Gender? selectedGender,
-    CountryModel? selectedCountry,
-    @Default([]) List<CountryModel> countries,
-    CountryModel? selectedCountryCode,
-    @Default([]) List<CountryModel> listCountryCode,
+    CountryLocalModel? selectedCountry,
+    @Default([]) List<CountryLocalModel> countries,
+    CountryLocalModel? selectedCountryCode,
+    @Default([]) List<CountryLocalModel> listCountryCode,
   }) = _EditProfileState;
 }

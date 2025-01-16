@@ -1,5 +1,4 @@
 import 'package:get_it/get_it.dart';
-
 import '../core/cubit/app_cubit.dart';
 import '../core/data/data_resource/local/manager_shared_preferences.dart';
 import '../core/data/data_resource/remote/movie/movie_api_service.dart';
@@ -15,6 +14,8 @@ import '../features/language/bloc/language_bloc.dart';
 import '../features/main/bloc/main_bloc.dart';
 import '../features/main/screens/explore/data/repository/search_movies_repository_impld.dart';
 import '../features/main/screens/explore/domain/repository/search_movies_repository.dart';
+import '../features/main/screens/explore/domain/use_case/country_use_case.dart';
+import '../features/main/screens/explore/domain/use_case/genre_use_case.dart';
 import '../features/main/screens/explore/domain/use_case/search_use_case.dart';
 import '../features/main/screens/explore/presentation/bloc/explore_bloc.dart';
 import '../features/main/screens/home/bloc/home_cubit.dart';
@@ -45,7 +46,6 @@ Future<void> init() async {
     await preferences.init();
     return preferences;
   });
-
 
   getIt.registerFactory(() => SplashBloc());
   getIt.registerFactory(() => WellComeBloc());
@@ -91,21 +91,25 @@ Future<void> init() async {
       ));
 
   getIt.registerLazySingleton<SearchMoviesRepository>(
-    () => SearchMoviesRepositoryImpl(getIt.get()),
+    () => SearchMoviesRepositoryImpl(
+      getIt.get(),
+      getIt.get(),
+    ),
   );
 
   getIt.registerLazySingleton(() => SearchUseCase(getIt.get()));
-  getIt.registerLazySingleton(() => ExploreBloc());
+  getIt.registerLazySingleton(() => CountryUseCase(getIt.get()));
+  getIt.registerLazySingleton(() => GenreUseCase(getIt.get()));
+  getIt.registerLazySingleton(() => ExploreBloc(
+        getIt.get(),
+        getIt.get(),
+        getIt.get(),
+      ));
 
   getIt.registerFactory(() => PaymentsBloc());
-
   getIt.registerFactory(() => ConfirmPaymentBloc());
-
   getIt.registerFactory(() => AddCardBloc());
-
   getIt.registerLazySingleton(() => ProfileBloc(getIt.get()));
-
   getIt.registerFactory(() => LanguageBloc());
-
   getIt.registerFactory(() => EditProfileBloc());
 }

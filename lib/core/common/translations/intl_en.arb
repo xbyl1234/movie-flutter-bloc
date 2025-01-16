@@ -100,5 +100,19 @@
   "txt_movie": "Movie",
   "txt_tv_series": "TV Series",
   "txt_k_drama": "K Drama",
-  "txt_animal": "Animal"
+  "txt_animal": "Animal",
+  "search": "Search",
+  "txt_not_found": "Not Found",
+  "txt_des_not_found_movie": "Sorry, the keyword you entered could not be found. Try to check again or search with other keywords.",
+  "soft_popularity": "Popularity",
+  "soft_latest_release": "Latest Release",
+  "title_sort_filter": "Sort & Filter",
+  "txt_filter_categories": "Categories",
+  "txt_filter_regions": "Regions",
+  "txt_filter_genre": "Genre",
+  "txt_filter_time_periods": "Time/Periods",
+  "txt_filter_sort": "Sort",
+  "btn_reset": "Reset",
+  "btn_apply": "Apply",
+  "txt_filter_all_periods": "All Periods"
 }
