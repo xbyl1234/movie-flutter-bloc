@@ -1,4 +1,4 @@
-# Application Movie
+# Application Movie DB
 # https://developer.themoviedb.org
 
 ## Setup
@@ -8,6 +8,8 @@ Run the following commands from your terminal:
 1) `git clone https://github.com/dev-mobile-vn/movie-flutter-bloc` to clone this repository
 
 2) `flutter pub get` in the project root directory to install all the required dependencies.
+3) Config to run app
+   [View](https://raw.githubusercontent.com/dev-mobile-vn/movie-flutter-bloc/refs/heads/master/assets/screenshots/config_run.png) 
 
 
 ## Note 
@@ -44,7 +46,7 @@ Run the following commands from your terminal:
 [Play movie](https://youtu.be/PvvRz4UFN1w)
 
 ## Design 
-[View](https://www.figma.com/design/j7M1gdcFDISNPI9aHyg31e/Mova---Movie-Streaming-App-UI-Kit?node-id=1330-11992&t=FadYPhlpRxfFYt69-0)
+[View](https://www.figma.com/design/j7M1gdcFDISNPI9aHyg31e/Mova---Movie-Streaming-App-UI-Kit?node-id=727-25421&p=f&t=eTXzBifZd2gZvSxM-0)
 
 # Research
 - https://medium.com/@ayalon.idan/getit-v8-migration-examples-24344ed1a130

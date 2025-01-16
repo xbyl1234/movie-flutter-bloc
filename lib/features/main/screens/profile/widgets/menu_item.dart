@@ -27,54 +27,52 @@ class MenuItem extends StatelessWidget {
       onTap: () => action.call(),
       behavior: HitTestBehavior.translucent,
       child: Padding(
-        padding: const EdgeInsets.only(left: 16, top: 20, right: 16),
-        child: Row(
-          children: [
-            SvgWidget(ic: icLeft),
-            const SizedBox(
-              width: 16,
-            ),
-            Text(
-              title,
-              style: Theme.of(context)
-                  .textTheme
-                  .titleMedium!
-                  .copyWith(color: Colors.black, fontSize: 16),
-            ),
-            const Spacer(),
-            if (type == MenuType.language)
-              Padding(
-                padding: const EdgeInsets.only(right: 16),
-                child: BlocBuilder<ProfileBloc, ProfileState>(
-                  bloc: bloc..add(ProfileEvent.onInit()),
-                  builder: (context, state) {
-                    return Text(state.languageName ?? "Not Found",
+          padding: const EdgeInsets.only(left: 16, top: 20, right: 16),
+          child: BlocBuilder<ProfileBloc, ProfileState>(
+            bloc: bloc..add(ProfileEvent.onInit()),
+            builder: (context, state) {
+              return Row(
+                children: [
+                  SvgWidget(ic: icLeft),
+                  const SizedBox(width: 16),
+                  Text(
+                    title,
+                    style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                        color: state.isDarkMode ? Colors.white : Colors.black,
+                        fontSize: 16),
+                  ),
+                  const Spacer(),
+                  if (type == MenuType.language)
+                    Padding(
+                      padding: const EdgeInsets.only(right: 16),
+                      child: Text(
+                        state.languageName ?? "Not Found",
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium!
-                            .copyWith(color: Colors.black, fontSize: 14));
-                  },
-                ),
-              )
-            else if (type == MenuType.darkMode)
-              BlocBuilder<ProfileBloc, ProfileState>(
-                bloc: bloc,
-                builder: (context, state) {
-                  return Container(
+                            .copyWith(
+                                color: state.isDarkMode
+                                    ? Colors.white
+                                    : Colors.black,
+                                fontSize: 14),
+                      ),
+                    )
+                  else if (type == MenuType.darkMode)
+                    Container(
                       width: 44,
                       height: 24,
                       padding: const EdgeInsets.all(2),
                       decoration: BoxDecoration(
                         color: state.isDarkMode
                             ? Colors.white
-                            : Colors.grey.withOpacity(0.5),
+                            : Colors.grey.withValues(alpha: 0.5),
                         border: Border.all(
                             color: state.isDarkMode
                                 ? Theme.of(context)
                                     .colorScheme
                                     .primary
-                                    .withOpacity(0.5)
-                                : Colors.grey.withOpacity(0.5),
+                                    .withValues(alpha: 0.5)
+                                : Colors.grey.withValues(alpha: 0.5),
                             width: state.isDarkMode ? 1 : 0),
                         borderRadius: BorderRadius.circular(12),
                       ),
@@ -89,13 +87,13 @@ class MenuItem extends StatelessWidget {
                                 ? Theme.of(context).colorScheme.primary
                                 : Colors.white,
                             shape: BoxShape.circle),
-                      ));
-                },
-              ),
-            if (type != MenuType.darkMode) SvgWidget(ic: icArrowRight),
-          ],
-        ),
-      ),
+                      ),
+                    ),
+                  if (type != MenuType.darkMode) SvgWidget(ic: icArrowRight),
+                ],
+              );
+            },
+          )),
     );
   }
 }

@@ -1,5 +1,6 @@
 # Miscellaneous
 *.class
+*.env
 *.log
 *.pyc
 *.swp
@@ -9,7 +10,6 @@
 .buildlog/
 .history
 .svn/
-*.env
 .swiftpm/
 migrate_working_dir/
 
@@ -44,5 +44,7 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
-
+/android/app/google-services.json
+/lib/firebase_options.dart
 /lib/core/common/environment/environment.dart
+firebase.json

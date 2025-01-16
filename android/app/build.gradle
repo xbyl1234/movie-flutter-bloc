@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.app.movie"
+    namespace = "com.movie.app"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -20,33 +20,14 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.app.movie"
+        applicationId = "com.movie.app"
         minSdk = 23
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
 
-    flavorDimensions 'default'
 
-    productFlavors {
-        development {
-            dimension 'default'
-            applicationIdSuffix ".dev"
-            versionNameSuffix "-dev"
-            resValue "string", "app_name", "Movie Dev"
-        }
-        staging {
-            dimension 'default'
-            applicationIdSuffix ".stg"
-            versionNameSuffix "-stg"
-            resValue "string", "app_name", "Movie Staging"
-        }
-        production {
-            dimension 'default'
-            resValue "string", "app_name", "Movie"
-        }
-    }
 
     buildTypes {
         release {
