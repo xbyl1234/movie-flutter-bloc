@@ -16,7 +16,7 @@ class SvgWidget extends StatelessWidget {
       width: width,
       height: height,
       fit: BoxFit.none,
-      theme: SvgTheme(currentColor: color ?? Colors.black,),
+      theme: SvgTheme(currentColor: color ?? Colors.white,),
     );
   }
 }

@@ -38,6 +38,7 @@ import '../features/well_come/bloc/well_come_bloc.dart';
 final GetIt getIt = GetIt.instance;
 
 Future<void> init() async {
+
   getIt.registerSingleton(AppCubit());
 
   getIt.registerSingletonAsync(() async {
@@ -108,7 +109,7 @@ Future<void> init() async {
   getIt.registerFactory(() => PaymentsBloc());
   getIt.registerFactory(() => ConfirmPaymentBloc());
   getIt.registerFactory(() => AddCardBloc());
-  getIt.registerLazySingleton(() => ProfileBloc());
+  getIt.registerLazySingleton(() => ProfileBloc(getIt.get()));
   getIt.registerFactory(() => LanguageBloc());
   getIt.registerFactory(() => EditProfileBloc());
 }

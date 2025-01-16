@@ -4,6 +4,8 @@ import 'package:movie/core/network/search_movie_provider.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:retrofit/http.dart';
+
+
 part 'search_movie_api_service.g.dart';
 
 @RestApi(parser: Parser.FlutterCompute)
