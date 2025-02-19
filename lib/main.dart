@@ -9,8 +9,8 @@ import 'core/common/widgets/custom_error_widget.dart';
 import 'core/config/app_config.dart';
 import 'core/config/app_routes.dart';
 import 'di/dependency_injection.dart';
-import 'features/main/screens/home/bloc/home_cubit.dart';
-import 'features/main/screens/profile/bloc/profile_bloc.dart';
+import 'features/home/bloc/home_cubit.dart';
+import 'features/profile/bloc/profile_bloc.dart';
 
 GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 

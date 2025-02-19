@@ -1,5 +1,6 @@
 import 'package:get_it/get_it.dart';
 import '../core/cubit/app_cubit.dart';
+import '../core/data/data_resource/local/local_database.dart';
 import '../core/data/data_resource/remote/movie/movie_api_service.dart';
 import '../core/data/data_resource/remote/movie/search_movie_api_service.dart';
 import '../core/network/movie_provider.dart';
@@ -9,17 +10,15 @@ import '../features/auth/login/bloc/login_bloc.dart';
 import '../features/auth/sign_up/bloc/sign_up_bloc.dart';
 import '../features/confirm_payment/bloc/confirm_payment_bloc.dart';
 import '../features/edit_profile/bloc/edit_profile_bloc.dart';
+import '../features/explore/data/repository/search_movies_repository_impld.dart';
+import '../features/explore/domain/repository/search_movies_repository.dart';
+import '../features/explore/domain/use_case/country_use_case.dart';
+import '../features/explore/domain/use_case/genre_use_case.dart';
+import '../features/explore/domain/use_case/search_use_case.dart';
+import '../features/explore/presentation/bloc/explore_bloc.dart';
+import '../features/home/bloc/home_cubit.dart';
 import '../features/language/bloc/language_bloc.dart';
 import '../features/main/bloc/main_bloc.dart';
-import '../features/main/screens/explore/data/repository/search_movies_repository_impld.dart';
-import '../features/main/screens/explore/domain/repository/search_movies_repository.dart';
-import '../features/main/screens/explore/domain/use_case/country_use_case.dart';
-import '../features/main/screens/explore/domain/use_case/genre_use_case.dart';
-import '../features/main/screens/explore/domain/use_case/search_use_case.dart';
-import '../features/main/screens/explore/presentation/bloc/explore_bloc.dart';
-import '../features/main/screens/home/bloc/home_cubit.dart';
-import '../features/main/screens/my_list/bloc/my_list_bloc.dart';
-import '../features/main/screens/profile/bloc/profile_bloc.dart';
 import '../features/movie_detail/data/repository/movie_detail_repository_impl.dart';
 import '../features/movie_detail/domain/repository/movie_detail_repository.dart';
 import '../features/movie_detail/domain/use_case/movie_detai_use_case.dart';
@@ -30,21 +29,22 @@ import '../features/movies/data/repository/movies_repository_impl.dart';
 import '../features/movies/domain/list_movie_use_case/list_movie.dart';
 import '../features/movies/domain/repository/movies_repository.dart';
 import '../features/movies/presentation/bloc/list_movie_cubit.dart';
+import '../features/my_list/bloc/my_list_bloc.dart';
 import '../features/payments/bloc/payments_bloc.dart';
+import '../features/profile/bloc/profile_bloc.dart';
 import '../features/splash/bloc/splash_bloc.dart';
 import '../features/well_come/bloc/well_come_bloc.dart';
 
 final GetIt getIt = GetIt.instance;
 
 Future<void> init() async {
-
   getIt.registerSingleton<AppCubit>(AppCubit());
 
-  // getIt.registerSingletonAsync(() async {
-  //   final preferences = ManagerSharedPreferences();
-  //   await preferences.init();
-  //   return preferences;
-  // });
+  getIt.registerSingletonAsync(() async {
+    final localDb = LocalDatabase();
+    await localDb.init();
+    return localDb;
+  });
 
   getIt.registerFactory(() => SplashBloc());
   getIt.registerFactory(() => WellComeBloc());
@@ -60,12 +60,8 @@ Future<void> init() async {
   getIt.registerLazySingleton(() => SearchMovieProvider());
   getIt.registerLazySingleton(() => SearchMovieApiService(getIt.get()));
 
-  getIt.registerSingleton<MovieDetailRepository>(
-    MovieDetailRepositoryImpl(getIt.get()),
-  );
-  getIt.registerSingleton<MovieDetailUseCase>(
-    MovieDetailUseCase(getIt.get()),
-  );
+  getIt.registerSingleton<MovieDetailRepository>(MovieDetailRepositoryImpl(getIt.get()));
+  getIt.registerSingleton<MovieDetailUseCase>(MovieDetailUseCase(getIt.get()));
 
   getIt.registerSingleton<ListMovieRepository>(
     ListMovieRepositoryImpl(getIt.get()),

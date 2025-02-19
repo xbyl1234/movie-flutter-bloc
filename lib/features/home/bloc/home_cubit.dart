@@ -12,8 +12,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/features/watch_video/watch_video_screen.dart';
 
 import '../../../../../core/bloc/page_state.dart';
-import '../../../../movie_detail/data/model/trailer_model.dart';
-import '../../../../movie_detail/domain/use_case/trailer_use_case.dart';
+import '../../movie_detail/data/model/trailer_model.dart';
+import '../../movie_detail/domain/use_case/trailer_use_case.dart';
 part 'home_state.dart';
 part 'home_cubit.freezed.dart';
 

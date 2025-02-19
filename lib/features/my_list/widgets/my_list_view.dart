@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movie/features/main/screens/my_list/bloc/my_list_bloc.dart';
-import 'package:movie/features/main/screens/my_list/widgets/categories.dart';
+
+import '../bloc/my_list_bloc.dart';
+import 'categories.dart';
 
 class MyListView extends StatelessWidget {
   const MyListView({super.key});

@@ -7,6 +7,7 @@ import '../../../core/bloc/page_state.dart';
 import '../../../core/common/translations/l10n.dart';
 import '../../../core/common/widgets/image_widget.dart';
 import '../../../core/common/widgets/loading.dart';
+import '../../../core/common/widgets/svg_widget.dart';
 import '../../../core/config/network_constants.dart';
 import 'bloc/movie_detail_bloc_cubit.dart';
 import 'widgets/content_view.dart';

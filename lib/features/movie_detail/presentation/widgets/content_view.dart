@@ -23,34 +23,30 @@ class ContentView extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        Row(
-          children: [
-            const SizedBox(
-              width: 16,
-            ),
-            Expanded(
-              child: Text(
-                movie?.title ?? "",
-                style: Theme.of(context)
-                    .textTheme
-                    .titleMedium!
-                    .copyWith(fontSize: 20, overflow: TextOverflow.ellipsis),
-                maxLines: 1,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Row(
+            spacing: 16,
+            children: [
+              Expanded(
+                child: Text(
+                  movie?.title ?? "",
+                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                        fontSize: 20,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                  maxLines: 1,
+                ),
               ),
-            ),
-            const SvgWidget(
-              ic: 'assets/icons/ic_my_list.svg',
-            ),
-            const SizedBox(
-              width: 20,
-            ),
-            const SvgWidget(
-              ic: 'assets/icons/ic_share.svg',
-            ),
-            const SizedBox(
-              width: 16,
-            ),
-          ],
+               SvgWidget(
+                ic: 'assets/icons/ic_my_list.svg',
+                color: Colors.red,
+              ),
+              const SvgWidget(
+                ic: 'assets/icons/ic_share.svg',
+              ),
+            ],
+          ),
         ),
         const SizedBox(
           height: 12,
@@ -148,8 +144,7 @@ class ContentView extends StatelessWidget {
                     arguments: WatchVideoArguments(
                         index: 0,
                         data: cubit.state.trailersMovie,
-                        isFirstPlay: true
-                    ),
+                        isFirstPlay: true),
                   );
                 },
                 icon: SvgPicture.asset('assets/icons/ic_play.svg'),

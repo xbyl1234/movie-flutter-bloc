@@ -7,7 +7,7 @@ import 'package:movie/features/edit_profile/widgets/list_country_bottom_sheet.da
 import '../../core/common/translations/l10n.dart';
 import '../../core/common/widgets/custom_app_bar.dart';
 import '../../di/dependency_injection.dart';
-import '../main/screens/profile/widgets/avatar_profile.dart';
+import '../profile/widgets/avatar_profile.dart';
 import 'bloc/edit_profile_bloc.dart';
 import 'widgets/country_input.dart';
 import 'widgets/email_input.dart';

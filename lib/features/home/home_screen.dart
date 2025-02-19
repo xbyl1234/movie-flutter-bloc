@@ -1,10 +1,10 @@
 import 'package:movie/core/bloc/page_command.dart';
 import 'package:movie/core/config/network_constants.dart';
 import 'package:movie/di/dependency_injection.dart';
-import 'package:movie/features/main/screens/home/view/banner_view.dart';
-import 'package:movie/features/main/screens/home/view/main_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movie/features/home/view/banner_view.dart';
+import 'package:movie/features/home/view/main_view.dart';
 
 import '../../../../core/bloc/page_state.dart';
 import '../../../../core/common/widgets/loading.dart';
