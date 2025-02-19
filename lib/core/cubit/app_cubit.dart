@@ -36,7 +36,7 @@ class AppCubit extends Cubit<AppState> {
     try {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       bool? isDarkMode = prefs.getBool('isDarkMode');
-        prefs.setBool('isDarkMode', isDarkMode!);
+      prefs.setBool('isDarkMode', isDarkMode!);
       emit(state.copyWith(isDarkMode: isDarkMode));
     } catch (_) {}
   }

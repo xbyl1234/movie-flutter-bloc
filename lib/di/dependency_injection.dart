@@ -1,6 +1,5 @@
 import 'package:get_it/get_it.dart';
 import '../core/cubit/app_cubit.dart';
-import '../core/data/data_resource/local/manager_shared_preferences.dart';
 import '../core/data/data_resource/remote/movie/movie_api_service.dart';
 import '../core/data/data_resource/remote/movie/search_movie_api_service.dart';
 import '../core/network/movie_provider.dart';
@@ -39,13 +38,13 @@ final GetIt getIt = GetIt.instance;
 
 Future<void> init() async {
 
-  getIt.registerSingleton(AppCubit());
+  getIt.registerSingleton<AppCubit>(AppCubit());
 
-  getIt.registerSingletonAsync(() async {
-    final preferences = ManagerSharedPreferences();
-    await preferences.init();
-    return preferences;
-  });
+  // getIt.registerSingletonAsync(() async {
+  //   final preferences = ManagerSharedPreferences();
+  //   await preferences.init();
+  //   return preferences;
+  // });
 
   getIt.registerFactory(() => SplashBloc());
   getIt.registerFactory(() => WellComeBloc());
