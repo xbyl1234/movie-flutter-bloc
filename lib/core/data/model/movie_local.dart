@@ -1,20 +1,28 @@
 final String tableMovie = 'movie';
-final String columnId = '_id';
+final String columnId = 'id';
 final String columnTitle = 'title';
-final String columnUrl = 'url';
+final String columnUrl = 'image';
+final String columnVote = 'vote';
 
 class MovieLocal {
   final int id;
   final String title;
-  final String? url;
+  final String? image;
+  final double? vote;
 
-  MovieLocal({required this.id, required this.title, this.url});
+  MovieLocal({
+    required this.id,
+    required this.title,
+    this.image,
+    this.vote,
+  });
 
   factory MovieLocal.fromJson(Map<String, dynamic> json) {
     return MovieLocal(
       id: json[columnId],
       title: json[columnTitle],
-      url: json[columnUrl],
+      image: json[columnUrl],
+      vote: json[columnVote]
     );
   }
 
@@ -22,7 +30,8 @@ class MovieLocal {
     var map = <String, Object?>{
       columnId: id,
       columnTitle: title,
-      columnUrl: url,
+      columnUrl: image,
+      columnVote: vote
     };
     return map;
   }

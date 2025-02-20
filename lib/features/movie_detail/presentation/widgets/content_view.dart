@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../../../../core/common/constant/routers.dart';
 import '../../../../core/common/translations/l10n.dart';
 import '../../../../core/common/utils/times_utils.dart';
@@ -38,9 +38,18 @@ class ContentView extends StatelessWidget {
                   maxLines: 1,
                 ),
               ),
-               SvgWidget(
-                ic: 'assets/icons/ic_my_list.svg',
-                color: Colors.red,
+              InkWell(
+                onTap: () => cubit.addMyMovie(movie!),
+                child: BlocBuilder<MovieDetailBlocCubit, MovieDetailState>(
+                  builder: (context, state) {
+                    return SvgWidget(
+                      ic: state.isBookMark
+                          ? 'assets/icons/ic_book_mark.svg'
+                          : 'assets/icons/ic_my_list.svg',
+                      color: Colors.red,
+                    );
+                  },
+                ),
               ),
               const SvgWidget(
                 ic: 'assets/icons/ic_share.svg',

@@ -19,6 +19,7 @@ mixin _$MovieDetailState {
   PageState get status => throw _privateConstructorUsedError;
   PageCommand? get pageCommand => throw _privateConstructorUsedError;
   MovieModel? get movie => throw _privateConstructorUsedError;
+  bool get isBookMark => throw _privateConstructorUsedError;
   ReviewsResponse? get reviews => throw _privateConstructorUsedError;
   List<TrailerModel> get trailersMovie => throw _privateConstructorUsedError;
   List<MovieModel> get similarMovies => throw _privateConstructorUsedError;
@@ -40,6 +41,7 @@ abstract class $MovieDetailStateCopyWith<$Res> {
       {PageState status,
       PageCommand? pageCommand,
       MovieModel? movie,
+      bool isBookMark,
       ReviewsResponse? reviews,
       List<TrailerModel> trailersMovie,
       List<MovieModel> similarMovies});
@@ -63,6 +65,7 @@ class _$MovieDetailStateCopyWithImpl<$Res, $Val extends MovieDetailState>
     Object? status = null,
     Object? pageCommand = freezed,
     Object? movie = freezed,
+    Object? isBookMark = null,
     Object? reviews = freezed,
     Object? trailersMovie = null,
     Object? similarMovies = null,
@@ -80,6 +83,10 @@ class _$MovieDetailStateCopyWithImpl<$Res, $Val extends MovieDetailState>
           ? _value.movie
           : movie // ignore: cast_nullable_to_non_nullable
               as MovieModel?,
+      isBookMark: null == isBookMark
+          ? _value.isBookMark
+          : isBookMark // ignore: cast_nullable_to_non_nullable
+              as bool,
       reviews: freezed == reviews
           ? _value.reviews
           : reviews // ignore: cast_nullable_to_non_nullable
@@ -108,6 +115,7 @@ abstract class _$$MovieDetailStateImplCopyWith<$Res>
       {PageState status,
       PageCommand? pageCommand,
       MovieModel? movie,
+      bool isBookMark,
       ReviewsResponse? reviews,
       List<TrailerModel> trailersMovie,
       List<MovieModel> similarMovies});
@@ -129,6 +137,7 @@ class __$$MovieDetailStateImplCopyWithImpl<$Res>
     Object? status = null,
     Object? pageCommand = freezed,
     Object? movie = freezed,
+    Object? isBookMark = null,
     Object? reviews = freezed,
     Object? trailersMovie = null,
     Object? similarMovies = null,
@@ -146,6 +155,10 @@ class __$$MovieDetailStateImplCopyWithImpl<$Res>
           ? _value.movie
           : movie // ignore: cast_nullable_to_non_nullable
               as MovieModel?,
+      isBookMark: null == isBookMark
+          ? _value.isBookMark
+          : isBookMark // ignore: cast_nullable_to_non_nullable
+              as bool,
       reviews: freezed == reviews
           ? _value.reviews
           : reviews // ignore: cast_nullable_to_non_nullable
@@ -169,6 +182,7 @@ class _$MovieDetailStateImpl extends _MovieDetailState {
       {this.status = PageState.init,
       this.pageCommand,
       this.movie,
+      this.isBookMark = false,
       this.reviews,
       final List<TrailerModel> trailersMovie = const [],
       final List<MovieModel> similarMovies = const []})
@@ -183,6 +197,9 @@ class _$MovieDetailStateImpl extends _MovieDetailState {
   final PageCommand? pageCommand;
   @override
   final MovieModel? movie;
+  @override
+  @JsonKey()
+  final bool isBookMark;
   @override
   final ReviewsResponse? reviews;
   final List<TrailerModel> _trailersMovie;
@@ -205,7 +222,7 @@ class _$MovieDetailStateImpl extends _MovieDetailState {
 
   @override
   String toString() {
-    return 'MovieDetailState(status: $status, pageCommand: $pageCommand, movie: $movie, reviews: $reviews, trailersMovie: $trailersMovie, similarMovies: $similarMovies)';
+    return 'MovieDetailState(status: $status, pageCommand: $pageCommand, movie: $movie, isBookMark: $isBookMark, reviews: $reviews, trailersMovie: $trailersMovie, similarMovies: $similarMovies)';
   }
 
   @override
@@ -217,6 +234,8 @@ class _$MovieDetailStateImpl extends _MovieDetailState {
             (identical(other.pageCommand, pageCommand) ||
                 other.pageCommand == pageCommand) &&
             (identical(other.movie, movie) || other.movie == movie) &&
+            (identical(other.isBookMark, isBookMark) ||
+                other.isBookMark == isBookMark) &&
             (identical(other.reviews, reviews) || other.reviews == reviews) &&
             const DeepCollectionEquality()
                 .equals(other._trailersMovie, _trailersMovie) &&
@@ -230,6 +249,7 @@ class _$MovieDetailStateImpl extends _MovieDetailState {
       status,
       pageCommand,
       movie,
+      isBookMark,
       reviews,
       const DeepCollectionEquality().hash(_trailersMovie),
       const DeepCollectionEquality().hash(_similarMovies));
@@ -249,6 +269,7 @@ abstract class _MovieDetailState extends MovieDetailState {
       {final PageState status,
       final PageCommand? pageCommand,
       final MovieModel? movie,
+      final bool isBookMark,
       final ReviewsResponse? reviews,
       final List<TrailerModel> trailersMovie,
       final List<MovieModel> similarMovies}) = _$MovieDetailStateImpl;
@@ -260,6 +281,8 @@ abstract class _MovieDetailState extends MovieDetailState {
   PageCommand? get pageCommand;
   @override
   MovieModel? get movie;
+  @override
+  bool get isBookMark;
   @override
   ReviewsResponse? get reviews;
   @override

@@ -21,6 +21,8 @@ import '../features/language/bloc/language_bloc.dart';
 import '../features/main/bloc/main_bloc.dart';
 import '../features/movie_detail/data/repository/movie_detail_repository_impl.dart';
 import '../features/movie_detail/domain/repository/movie_detail_repository.dart';
+import '../features/movie_detail/domain/use_case/add_my_movie_use_case.dart';
+import '../features/movie_detail/domain/use_case/get_my_movie_use_case.dart';
 import '../features/movie_detail/domain/use_case/movie_detai_use_case.dart';
 import '../features/movie_detail/domain/use_case/review_use_case.dart';
 import '../features/movie_detail/domain/use_case/trailer_use_case.dart';
@@ -60,29 +62,36 @@ Future<void> init() async {
   getIt.registerLazySingleton(() => SearchMovieProvider());
   getIt.registerLazySingleton(() => SearchMovieApiService(getIt.get()));
 
-  getIt.registerSingleton<MovieDetailRepository>(MovieDetailRepositoryImpl(getIt.get()));
-  getIt.registerSingleton<MovieDetailUseCase>(MovieDetailUseCase(getIt.get()));
+  getIt.registerLazySingleton<MovieDetailRepository>(
+      () => MovieDetailRepositoryImpl(getIt.get()));
+  getIt.registerLazySingleton<MovieDetailUseCase>(
+      () => MovieDetailUseCase(getIt.get()));
+  getIt.registerLazySingleton(() => AddMyMovieUseCase(getIt.get()));
+  getIt.registerLazySingleton(() => GetMyMovieUseCase(getIt.get()));
 
-  getIt.registerSingleton<ListMovieRepository>(
-    ListMovieRepositoryImpl(getIt.get()),
+  getIt.registerLazySingleton<ListMovieRepository>(
+    () => ListMovieRepositoryImpl(getIt.get()),
   );
-  getIt.registerSingleton<ListMovieUseCase>(ListMovieUseCase(getIt.get()));
+  getIt.registerLazySingleton<ListMovieUseCase>(
+      () => ListMovieUseCase(getIt.get()));
 
   getIt.registerFactory(() => ListMovieCubit(getIt.get()));
   getIt.registerSingleton(ReviewUseCase(getIt.get()));
   getIt.registerSingleton(TrailerUseCase(getIt.get()));
 
-  getIt.registerSingleton(HomeCubit(
-    movieDetailUseCase: getIt.get(),
-    listMovieUseCase: getIt.get(),
-    trailerUseCase: getIt.get(),
-  ));
+  getIt.registerLazySingleton(() => HomeCubit(
+        movieDetailUseCase: getIt.get(),
+        listMovieUseCase: getIt.get(),
+        trailerUseCase: getIt.get(),
+      ));
 
   getIt.registerFactory(() => MovieDetailBlocCubit(
         detailUseCase: getIt.get(),
         listMovieUseCase: getIt.get(),
         reviewUseCase: getIt.get(),
         trailerUseCase: getIt.get(),
+        addMyMovieUseCase: getIt.get(),
+        getMyMovieUseCase: getIt.get(),
       ));
 
   getIt.registerLazySingleton<SearchMoviesRepository>(
