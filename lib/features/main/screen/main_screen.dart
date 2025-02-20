@@ -5,12 +5,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../core/common/resource/icons.dart';
 import '../../../core/common/translations/l10n.dart';
 import '../../../core/common/widgets/svg_widget.dart';
-import 'download/download_screen.dart';
-import 'explore/presentation/explore_screen.dart';
-import 'home/home_screen.dart';
-import 'my_list/my_list_screen.dart';
-import 'profile/profile_screen.dart';
-
+import '../../download/download_screen.dart';
+import '../../explore/presentation/explore_screen.dart';
+import '../../home/home_screen.dart';
+import '../../my_list/my_list_screen.dart';
+import '../../profile/profile_screen.dart';
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 

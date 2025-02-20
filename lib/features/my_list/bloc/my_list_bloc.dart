@@ -10,7 +10,9 @@ part 'my_list_bloc.freezed.dart';
 
 class MyListBloc extends Bloc<MyListEvent, MyListState> {
   MyListBloc() : super(const MyListState()) {
-    on<_FetchAllMovies>((event, emit) {});
+    on<_FetchAllMovies>((event, emit) {
+
+    });
     on<_SelectedCategory>((event, emit) {
       emit(state.copyWith(selectedCategory: event.type));
       switch (event.type) {
@@ -31,9 +33,17 @@ class MyListBloc extends Bloc<MyListEvent, MyListState> {
           break;
       }
     });
-    on<_FetchMovies>((event, emit) {});
-    on<_FetchTvSeries>((event, emit) {});
-    on<_FetchKDrama>((event, emit) {});
-    on<_FetchAnimalMovies>((event, emit) {});
+    on<_FetchMovies>((event, emit) {
+
+    });
+    on<_FetchTvSeries>((event, emit) {
+
+    });
+    on<_FetchKDrama>((event, emit) {
+
+    });
+    on<_FetchAnimalMovies>((event, emit) {
+
+    });
   }
 }

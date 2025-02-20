@@ -9,8 +9,8 @@ import 'core/common/widgets/custom_error_widget.dart';
 import 'core/config/app_config.dart';
 import 'core/config/app_routes.dart';
 import 'di/dependency_injection.dart';
-import 'features/main/screens/home/bloc/home_cubit.dart';
-import 'features/main/screens/profile/bloc/profile_bloc.dart';
+import 'features/home/bloc/home_cubit.dart';
+import 'features/profile/bloc/profile_bloc.dart';
 
 GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
@@ -26,8 +26,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
         providers: [
-          BlocProvider(create: (_) => getIt.get<AppCubit>()..getLocale()),
-          BlocProvider(create: (_) => getIt.get<AppCubit>()..getDarkMode()),
+          BlocProvider(create: (_) => getIt.get<AppCubit>()..getLocale()..getDarkMode()),
           BlocProvider<HomeCubit>.value(value: getIt<HomeCubit>()),
           BlocProvider(create: (_) => getIt.get<ProfileBloc>()),
         ],

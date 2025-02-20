@@ -2,7 +2,7 @@ import 'package:movie/core/network/network_api_provider.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import '../common/environment/environment.dart';
-import 'contants.dart';
+import 'constants.dart';
 import 'interceptors/error_dio_interceptor.dart';
 import 'interceptors/request_header_interceptor.dart';
 

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/di/dependency_injection.dart';
-import 'package:movie/features/main/screens/my_list/widgets/my_list_view.dart';
 import '../../../../core/common/resource/app_assets.dart';
 import '../../../../core/common/translations/l10n.dart';
 import '../../../../core/common/widgets/svg_widget.dart';
 import 'bloc/my_list_bloc.dart';
+import 'widgets/my_list_view.dart';
 
 class MyListScreen extends StatefulWidget {
   const MyListScreen({super.key});

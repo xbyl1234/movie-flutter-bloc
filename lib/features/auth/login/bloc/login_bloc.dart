@@ -8,19 +8,19 @@ import 'package:movie/core/common/enums/dialog_type.dart';
 import 'package:movie/core/common/extensions/valid_email.dart';
 import 'package:movie/core/common/extensions/valid_password.dart';
 import 'package:movie/core/common/utils/dialog_utils.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../../core/bloc/page_command.dart';
 import '../../../../core/common/constant/error.dart';
 import '../../../../core/common/translations/l10n.dart';
-import '../../../../core/data/data_resource/local/manager_shared_preferences.dart';
-import '../../../../di/dependency_injection.dart';
 part 'login_bloc.freezed.dart';
 part 'login_event.dart';
 part 'login_state.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   LoginBloc() : super(LoginState()) {
-    on<OnInitData>((event, emit) {
-      String? email = getIt.get<ManagerSharedPreferences>().getString("email");
+    on<OnInitData>((event, emit) async{
+      final prefs = await SharedPreferences.getInstance();
+      String? email = prefs.getString("email");
       emit(state.copyWith(isRememberMe: false, email: email));
     });
     on<OnSelectedRemember>((event, emit) {
@@ -57,7 +57,8 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
               page: mainRoute,
               argument: userCredential.credential?.accessToken,
             )));
-            getIt<ManagerSharedPreferences>()
+            final prefs = await SharedPreferences.getInstance();
+            prefs
               ..setBool('loggedIn', true)
               ..setString('email', state.email!);
           } else {

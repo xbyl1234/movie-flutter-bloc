@@ -4,7 +4,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:logger/logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../common/constant/language_code.dart';
 
@@ -36,7 +35,7 @@ class AppCubit extends Cubit<AppState> {
     try {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       bool? isDarkMode = prefs.getBool('isDarkMode');
-        prefs.setBool('isDarkMode', isDarkMode!);
+      prefs.setBool('isDarkMode', isDarkMode!);
       emit(state.copyWith(isDarkMode: isDarkMode));
     } catch (_) {}
   }

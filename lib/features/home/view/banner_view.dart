@@ -21,10 +21,10 @@ class BannerView extends StatelessWidget {
           imageUrl: 'http://image.tmdb.org/t/p/w500${movie.posterPath}',
           fit: BoxFit.fitWidth,
           width: MediaQuery.sizeOf(context).width,
-          height: 350,
+          height: 300,
         ),
         Positioned(
-          top: 56,
+          top: 24,
           width: MediaQuery.sizeOf(context).width,
           child: Row(
             children: [

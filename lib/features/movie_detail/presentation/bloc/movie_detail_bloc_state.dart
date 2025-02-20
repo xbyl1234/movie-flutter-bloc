@@ -8,6 +8,7 @@ class MovieDetailState with _$MovieDetailState {
     @Default(PageState.init) PageState status,
     PageCommand? pageCommand,
     MovieModel? movie,
+    @Default(false) bool isBookMark,
     ReviewsResponse? reviews,
     @Default([]) List<TrailerModel> trailersMovie,
     @Default([]) List<MovieModel> similarMovies,
